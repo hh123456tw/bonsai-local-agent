@@ -50,11 +50,21 @@ python tools/long_context_check.py 262144 base256 --thinking
 
 最新DFlash144實際改檔：17次工具呼叫、連續重複0、65.3秒，四項測試外部重跑通過且測試檔未改。4GiB host cache將13萬token後續追問從約39秒降到約1.1秒，但同一個隨機中段精確查找仍誤答；詳見 [完整摘要](docs/tuning/summary.json)。
 
-## 可以接 Claude 嗎？
+## Claude Code 本機整合
 
-Claude Code 可以以 Anthropic 相容 Messages API 連到本機模型，但模型仍是 Bonsai，並不會變成 Claude。
+已完成 Anthropic Messages 防循環橋接。桌面雙擊「Bonsai Claude Code」（DFlash144K）或「Bonsai Claude Code 基本版256K」，選擇專案資料夾即可。需要安裝 Claude Code CLI；本機模型不需要雲端 API 金鑰，模型仍是 Bonsai。
 
-原始 NInfer 引擎的 `http://127.0.0.1:8080` 支援 `/v1/messages`；目前防循環橋接的 `http://127.0.0.1:8081/v1` 只支援 OpenAI Chat Completions。**直接讓 Claude Code 連 8080 會繞過工具循環恢復層，因此本版沒有將它標為已驗證的 Claude Code 整合。** 不要把 8081 的 OpenAI URL 直接填進 ANTHROPIC_BASE_URL。
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File C:\AI\bonsai\start-claude.ps1
+```
+
+CLI 連 `ANTHROPIC_BASE_URL=http://127.0.0.1:8081`，不加 `/v1`。橋接提供 `/v1/messages`、命名 SSE 事件、`/v1/messages/count_tokens`，工具結果會納入原輪次的重複檢查與24次工具上限。最多糾正重試兩次，仍失敗就明確回報未完成；不直接連會繞過保護的8080。
+
+獨立啟動器使用隔離的 Claude 設定目錄，清除子程序中的個人雲端金鑰，固定本機模型別名及真實窗口。只啟用 Read/Write/Edit/Bash/Glob/Grep，不載入個人 MCP、外掛或專案 Claude 設定；不更動原有 Claude 登入與全域設定。CLI 原有工具授權保留。壓縮觸發窗口分別122880 / 229376，另外預留輸出及工具空間。
+
+實測 Claude Code 2.1.316：DFlash144K 執行13次工具呼叫，連續相同呼叫0次，約44.2秒完成貪吃蛇核心修復；外部重跑四項測試通過，測試檔未變。其中兩次 Bash 呼叫被限定的測試授權拒絕，模型改用允許的操作完成。人工構造的重複工具歷史也經真實 HTTP 觸發糾正，沒有實際執行測試指令。詳見 [驗證紀錄](docs/claude-code-validation.json)。一般改檔測試本身沒有觸發循環恢復。
+
+支援文字及自訂客戶端工具；圖片、文件、雲端內建工具明確拒絕。思考預算1536，過小的輸出額度會關閉思考；輸出上限32768。舊思考不回放，原生引擎的 signature 僅是不透明本機標記，不是 Anthropic 密碼學簽章。完整一輪檢查後才送出 SSE，長文首讀仍可能等數分鐘，API逾時設900秒。此整合不會消除模型原本的長文精確查找誤答。CLI 可能提示自訂模型未知；顯示的美元成本是未知模型的客戶端估算，不代表本機推論產生雲端費用。
 
 參考：[Claude Code gateway 設定](https://code.claude.com/docs/en/llm-gateway-connect)、[模型設定](https://code.claude.com/docs/en/model-config)。Claude 聊天網頁/App 與 Claude Code 是不同的客戶端。
 

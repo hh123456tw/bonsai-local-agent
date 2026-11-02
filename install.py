@@ -81,7 +81,7 @@ def shortcuts(root):
  script.write_text('''$root=$PSScriptRoot
 $ws=New-Object -ComObject WScript.Shell
 $desktop=$ws.SpecialFolders.Item('Desktop')
-foreach($entry in @(@('Bonsai OpenCode 修正版','start.ps1',''),@('Bonsai OpenCode DFlash 144K','start.ps1',' -Profile dflash144'),@('Bonsai OpenCode 基本版256K','start.ps1',' -Profile base256'),@('停止 Bonsai','stop.ps1',''))) {
+foreach($entry in @(@('Bonsai OpenCode 修正版','start.ps1',''),@('Bonsai OpenCode DFlash 144K','start.ps1',' -Profile dflash144'),@('Bonsai OpenCode 基本版256K','start.ps1',' -Profile base256'),@('Bonsai Claude Code','start-claude.ps1',''),@('Bonsai Claude Code 基本版256K','start-claude.ps1',' -Profile base256'),@('停止 Bonsai','stop.ps1',''))) {
  $s=$ws.CreateShortcut((Join-Path $desktop ($entry[0]+'.lnk')))
  $s.TargetPath="$env:WINDIR\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
  $s.Arguments='-NoProfile -ExecutionPolicy Bypass -File "'+(Join-Path $root $entry[1])+'"'+$entry[2]

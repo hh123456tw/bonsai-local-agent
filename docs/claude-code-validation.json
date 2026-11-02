@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-03",
+  "client": "Claude Code 2.1.316",
+  "profile": "dflash144",
+  "context": 147456,
+  "unit_tests": 13,
+  "live_http": {
+    "count_tokens": {
+      "input_tokens": 66
+    },
+    "stream_lifecycle": true,
+    "small_output_cap": true,
+    "openai_regression": true,
+    "repeat_probe_events": [
+      {
+        "time": 1793645816.4185853,
+        "kind": "recovery",
+        "attempt": 0,
+        "reason": "repeated_tool"
+      },
+      {
+        "time": 1793645825.6778612,
+        "kind": "delivered",
+        "protocol": "anthropic",
+        "attempt": 1,
+        "tool_calls": 1,
+        "finish": "tool_calls",
+        "reasoning_tokens": 1049
+      }
+    ],
+    "probe_tool_executed": false
+  },
+  "coding_task": {
+    "tool_calls": 13,
+    "consecutive_identical_calls": 0,
+    "duration_ms": 44154,
+    "external_tests_passed": 4,
+    "test_file_unchanged": true,
+    "permission_denials": 2
+  },
+  "limits": [
+    "Text and client-defined tools only",
+    "Buffered stream after guard checks",
+    "Model quality and long-context retrieval limits remain",
+    "Normal coding fixture did not require loop recovery; synthetic repeat probe checks containment"
+  ],
+  "launcher": {
+    "dflash144": {
+      "real_cli_chat_verified": true,
+      "reported_context": 147456
+    },
+    "base256": {
+      "real_cli_chat_verified": true,
+      "reported_context": 262144
+    },
+    "desktop_shortcuts_created": true,
+    "user_global_claude_settings_modified": false
+  }
+}
