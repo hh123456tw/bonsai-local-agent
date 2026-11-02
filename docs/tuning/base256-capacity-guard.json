@@ -1,0 +1,6 @@
+{
+  "oversize_status": 400,
+  "error": "{\"error\":{\"code\":\"context_length_exceeded\",\"message\":\"prepared prompt exceeds Engine max_context 262144\",\"param\":\"messages\",\"type\":\"invalid_request_error\"}}",
+  "next_generation_status": 200,
+  "next_answer": "OK"
+}

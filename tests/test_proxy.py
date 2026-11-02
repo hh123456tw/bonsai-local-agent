@@ -13,6 +13,9 @@ class Tests(unittest.TestCase):
  def test_thinking_is_bounded_and_not_replayed(self):
   b=p.prepare({'messages':[{'role':'assistant','content':'ok','reasoning_content':'old'}],'max_tokens':8192,'stream':True})
   self.assertNotIn('reasoning_content',b['messages'][0]);self.assertFalse(b['preserve_thinking']);self.assertEqual(b['thinking_budget'],1536)
+ def test_large_output_request_is_not_silently_reduced_to_8k(self):
+  b=p.prepare({'messages':[{'role':'user','content':'summarize'}],'max_tokens':24000})
+  self.assertEqual(b['max_tokens'],24000)
  def test_repeated_tool_is_recovered_with_different_action(self):
   c=call('broken');b={'messages':[{'role':'user','content':'fix'}, {'role':'assistant','tool_calls':[c]},{'role':'tool','content':'error'},{'role':'assistant','tool_calls':[c]},{'role':'tool','content':'error'}]}
   with patch.object(p.urllib.request,'urlopen',side_effect=[Reply(response([c])),Reply(response([call('different')]))]),patch.object(p,'event'):

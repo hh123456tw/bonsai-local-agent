@@ -14,13 +14,13 @@
       },
       "models": {
         "bonsai2-27b": {
-          "name": "Bonsai 27B Guarded 32K",
+          "name": "Bonsai DFlash2 144K",
           "compatibility": {
             "reasoningField": "reasoning_content"
           },
           "limit": {
-            "context": 32768,
-            "output": 8192
+            "context": 147456,
+            "output": 16384
           },
           "capabilities": {
             "tools": true,
@@ -54,7 +54,7 @@
   },
   "compaction": {
     "auto": true,
-    "buffer": 8192
+    "buffer": 24576
   },
   "plugins": [
     "-orca-opencode-status",

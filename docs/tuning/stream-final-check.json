@@ -1,0 +1,9 @@
+{
+  "status": 200,
+  "content_type": "text/event-stream; charset=utf-8",
+  "done": true,
+  "finish": [
+    "stop"
+  ],
+  "answer": "你好，Bonsai。"
+}

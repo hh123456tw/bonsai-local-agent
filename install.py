@@ -81,10 +81,10 @@ def shortcuts(root):
  script.write_text('''$root=$PSScriptRoot
 $ws=New-Object -ComObject WScript.Shell
 $desktop=$ws.SpecialFolders.Item('Desktop')
-foreach($entry in @(@('Bonsai OpenCode 修正版','start.ps1'),@('停止 Bonsai','stop.ps1'))) {
+foreach($entry in @(@('Bonsai OpenCode 修正版','start.ps1',''),@('Bonsai OpenCode DFlash 144K','start.ps1',' -Profile dflash144'),@('Bonsai OpenCode 基本版256K','start.ps1',' -Profile base256'),@('停止 Bonsai','stop.ps1',''))) {
  $s=$ws.CreateShortcut((Join-Path $desktop ($entry[0]+'.lnk')))
  $s.TargetPath="$env:WINDIR\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
- $s.Arguments='-NoProfile -ExecutionPolicy Bypass -File "'+(Join-Path $root $entry[1])+'"'
+ $s.Arguments='-NoProfile -ExecutionPolicy Bypass -File "'+(Join-Path $root $entry[1])+'"'+$entry[2]
  $s.WorkingDirectory=$root
  $s.Save()
 }
@@ -111,5 +111,7 @@ def main():
  opts=[v.replace('${ROOT}',root.as_posix()) for v in opts]
  (root/'engine-options.json').write_text(json.dumps(opts,indent=2),encoding='utf-8')
  shutil.copy2(HERE/'config/opencode.json',root/'opencode.json');(root/'config').mkdir(exist_ok=True)
+ shutil.copy2(HERE/'config/profiles.json',root/'profiles.json')
+ shutil.copytree(HERE/'profiles',root/'profiles',dirs_exist_ok=True)
  shortcuts(root);print('Installed. Start with the Bonsai desktop shortcut.')
 if __name__=='__main__':main()

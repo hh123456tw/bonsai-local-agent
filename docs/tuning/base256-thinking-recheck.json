@@ -1,0 +1,29 @@
+{
+  "answer": "5212ccc266f66e5d",
+  "expected": "5212ccc266f66e5d",
+  "correct": true,
+  "seconds": 322.72,
+  "usage": {
+    "completion_tokens": 152,
+    "completion_tokens_details": {
+      "reasoning_tokens": 137
+    },
+    "prompt_tokens": 245902,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 246054
+  },
+  "timings": {
+    "cache_n": 0,
+    "predicted_ms": 3584.0931,
+    "predicted_n": 152,
+    "predicted_per_second": 42.130602020354885,
+    "predicted_per_token_ms": 23.735715894039735,
+    "prompt_ms": 319003.9323,
+    "prompt_n": 245902,
+    "prompt_per_second": 770.843162424553,
+    "prompt_per_token_ms": 1.2972807553415588
+  },
+  "finish": "stop"
+}

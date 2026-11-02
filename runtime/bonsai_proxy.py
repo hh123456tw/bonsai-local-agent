@@ -21,7 +21,7 @@ def prepare(body):
     b['preserve_thinking']=False
     b['enable_thinking']=True
     b['thinking_budget']=1536
-    b['max_tokens']=min(max(int(b.get('max_tokens') or b.get('max_completion_tokens') or 8192),2048),8192)
+    b['max_tokens']=min(max(int(b.get('max_tokens') or b.get('max_completion_tokens') or 16384),2048),32768)
     b.pop('max_completion_tokens',None)
     b['stream']=False;b.pop('stream_options',None)
     b.setdefault('temperature',0.3)
@@ -40,6 +40,8 @@ def generate(body):
         req=urllib.request.Request(UPSTREAM+'/v1/chat/completions',data=json.dumps(b).encode(),headers={'Content-Type':'application/json'})
         with urllib.request.urlopen(req,timeout=240) as r:result=json.load(r)
         choice=result['choices'][0];msg=choice['message'];new=msg.get('tool_calls') or []
+        if choice.get('finish_reason')=='length':
+            event('output_truncated',limit=b['max_tokens'],tool_calls=len(new))
         repeated=bool(new) and any(history[-2:]==[signature(c)]*2 for c in new)
         empty=not new and not (msg.get('content') or '').strip()
         if not repeated and not empty:
@@ -65,7 +67,7 @@ class Handler(BaseHTTPRequestHandler):
             body=json.loads(self.rfile.read(int(self.headers['Content-Length'])))
             with LOCK:result=generate(body)
             if not body.get('stream'):return self.send_json(200,result)
-            self.send_response(200);self.send_header('Content-Type','text/event-stream');self.send_header('Cache-Control','no-cache');self.end_headers()
+            self.send_response(200);self.send_header('Content-Type','text/event-stream; charset=utf-8');self.send_header('Cache-Control','no-cache');self.end_headers()
             c=result['choices'][0];m=c['message'];delta={'role':'assistant'}
             if m.get('content') is not None:delta['content']=m['content']
             if m.get('reasoning_content'):delta['reasoning_content']=m['reasoning_content']

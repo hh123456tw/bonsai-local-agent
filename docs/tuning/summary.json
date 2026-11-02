@@ -1,0 +1,24 @@
+{
+  "default_profile": "dflash144",
+  "alternate_profile": "base256",
+  "dflash_enabled": true,
+  "default_context": 147456,
+  "alternate_context": 262144,
+  "kv": "rk2v4-e8",
+  "host_cache_mib": 4096,
+  "input_precision_warning": "Exact random middle-record lookup failed in both DFlash long tests. Base256 thinking recheck recovered its earlier failed lookup; cause not isolated.",
+  "agent": {
+    "profile": "dflash144",
+    "context": 147456,
+    "tests": 4,
+    "test_file_unchanged": true,
+    "tool_calls": 17,
+    "consecutive_identical_tools": 0,
+    "wall_seconds": 65.3,
+    "completed": true
+  },
+  "dflash_long_first_pass": false,
+  "base256_long_first_pass": false,
+  "base256_thinking_recheck_correct": true,
+  "source_ledger_commit": "9a5a9204bfa3ea4af2220c8ca1e59c0b5b4f3cf6"
+}

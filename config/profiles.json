@@ -1,0 +1,14 @@
+{
+  "dflash144": {
+    "context": 147456,
+    "spec": "dflash2",
+    "engine_options": "profiles/dflash144.engine.json",
+    "opencode_config": "profiles/dflash144.opencode.json"
+  },
+  "base256": {
+    "context": 262144,
+    "spec": "none",
+    "engine_options": "profiles/base256.engine.json",
+    "opencode_config": "profiles/base256.opencode.json"
+  }
+}
