@@ -2,6 +2,8 @@
 
 已在 Windows、i7-12700K、RTX 3080 12GB、32GB RAM、OpenCode CLI 2.2.5 驗證的本機程式 agent 設定。
 
+先看 [互動式專案與速度指南](docs/project-guide.zh-TW.html)：用瀏覽器開啟本機 HTML，可離線閱讀架構、請求流程、配置比較及加速取捨；含教學用等待時間估算器，不會修改服務設定。
+
 **預設 DFlash2 144K（147,456 token）；另提供基本版 256K（262,144 token）。兩個檔位的實體 KV 池都等於 context window，使用 rk2v4-e8。思考開啟，單輪預算 1,536 token。**
 
 較低精度 KV 有品質取捨。256K 無思考測試曾在隨機中段記錄查找中誤答；開思考復查答對，但需完整重讀約323秒。原誤答保留，見 [長文驗證紀錄](docs/tuning/base256-long.json) 與 [開思考復查](docs/tuning/base256-thinking-recheck.json)。容量可用不代表所有長文查找都正確。
