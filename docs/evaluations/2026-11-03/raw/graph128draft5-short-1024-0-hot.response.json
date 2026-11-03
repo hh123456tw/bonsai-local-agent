@@ -1,0 +1,50 @@
+{
+  "latency_s": 4.485000000000582,
+  "ttft_observed_s": 0.06300000000919681,
+  "usage": {
+    "completion_tokens": 1024,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 153,
+    "prompt_tokens_details": {
+      "cached_tokens": 144
+    },
+    "total_tokens": 1177
+  },
+  "timings": {
+    "cache_n": 144,
+    "draft_n": 1499,
+    "draft_n_accepted": 722,
+    "predicted_ms": 4425.0043000000005,
+    "predicted_n": 1024,
+    "predicted_per_second": 231.1862160224341,
+    "predicted_per_token_ms": 4.325517399804497,
+    "prompt_ms": 25.0793,
+    "prompt_n": 9,
+    "prompt_per_second": 358.8616907170455,
+    "prompt_per_token_ms": 2.786588888888889
+  },
+  "finish_reason": "length",
+  "text": "# Python Data Structures, Concurrency, Testing, Profiling, Databases, and API Design: A Comprehensive Technical Tutorial\n\nThis tutorial provides a deep dive into advanced Python engineering practices. It covers data structure tradeoffs, concurrency models, testing strategies, performance profiling, database transaction management, and robust API design. Each section includes concrete code examples, invariants, edge cases, and verification strategies.\n\n---\n\n## 1. Python Data Structures: Implementation Tradeoffs\n\n### 1.1 Lists vs. Dictionaries: The Core Tradeoff\n\nPython's built-in `list` and `dict` are the workhorses of the language, but their internal implementations dictate different performance characteristics.\n\n#### 1.1.1 List Implementation\n\nA Python list is a dynamic array of pointers to objects. It over-allocates memory to amortize the cost of resizing.\n\n```python\nimport sys\n\n# Internal structure: [PyObject* array, allocated_size, used_size]\n# When used_size == allocated_size, the list grows by ~1.125x (or similar heuristic)\n\nmy_list = [1, 2, 3]\nprint(sys.getsizeof(my_list))  # Size of the list object itself\nprint(len(my_list))            # Number of elements\n```\n\n**Invariants:**\n- `len(lst)` is O(1).\n- `lst[i]` is O(1) average case (direct pointer access).\n- `lst.append(x)` is O(1) amortized, O(n) worst-case (when resizing occurs).\n- `lst.insert(0, x)` is O(n) because all subsequent elements must be shifted.\n\n**Edge Case: Memory Fragmentation**\nFrequent `insert(0, x)` operations on large lists cause significant memory churn. If you need frequent prepends, consider `collections.deque`.\n\n#### 1.1.2 Dictionary Implementation\n\nA Python dictionary is a hash table. It stores key-value pairs in a sparse array of entries.\n\n```python\nd = {1: \"one\", 2: \"two\"}\n# Internal: A hash table with slots. Each slot contains a hash, key, and value.\n# Empty slots are marked with a special \"empty\" marker.\n# Deleted slots are marked with a \"dummy\" marker to maintain hash chain integrity.\n```\n\n**Invariants:**\n- `d[key]` is O(1) average case, O(n) worst case (hash collision).\n- `d[key] = value` is O(1) average case.\n- Iteration order is insertion order (guaranteed since Python 3.7).\n- Keys must be hashable (immutable).\n\n**Edge Case: Hash Collisions**\nIf many keys hash to the same bucket, performance degrades to O(n). Python uses a \"perturbation\" algorithm to mitigate this, but adversarial inputs can still degrade performance.\n\n**Verification:**\n```python\nimport time\n\n# Benchmark: List lookup vs Dict lookup\nimport random\n\ndata = {i: i for i in range(1_000_000)}\nlst = list(range(1_000_000))\n\n# Dict lookup\nstart = time.perf_counter()\nfor _ in range(100_000):\n    _ = data[random.randint(0, 999_999)]\ndict_time = time.perf_counter() - start\n\n# List lookup (indexing)\nstart = time.perf_counter()\nfor _ in range(100_000):\n    _ = lst[random.randint(0, 999_999)]\nlist_time = time.perf_counter() - start\n\nprint(f\"Dict: {dict_time:.4f}s, List: {list_time:.4f}s\")\n```\n\n### 1.2 Immutable Data Structures\n\nImmutability is a cornerstone of functional programming and safe concurrency. In Python, immutability is achieved by using types that do not support mutation.\n\n#### 1.2.1 Tuples vs. Lists\n\n```python\n# Mutable\nmy_list = [1, 2, 3]\nmy_list[0] = 10  # Allowed\n\n# Immutable\nmy_tuple = (1, 2, 3)\n# my_tuple[0] = 10  # TypeError: 'tuple' object does not support item assignment\n```\n\n**Tradeoffs:**\n- **Memory:** Tuples are slightly smaller than lists because they don't need to track capacity for resizing.\n- **Hashability:** Tuples of hashable elements are hashable. Lists are not.\n- **Performance:** Tuple creation is slightly faster than list creation. Tuple unpacking is optimized in the bytecode.\n\n#### 1.2.2 Frozen Sets",
+  "key": "graph128draft5-short-1024-0-hot",
+  "profile": "graph128draft5",
+  "case": "short",
+  "output_limit": 1024,
+  "rep": 0,
+  "cache": "hot",
+  "ok": true,
+  "gpu": {
+    "sample_count": 18,
+    "used_mib_max": 11754.0,
+    "free_mib_min": 338.0,
+    "temp_c_max": 82.0,
+    "power_w_max": 434.65,
+    "power_w_mean": 426.52777777777777,
+    "graphics_clock_min_mhz": 1920.0,
+    "hw_thermal_slowdown_observed": false
+  },
+  "prompt_sha256": "244213ceadbd4ddd90a2e06c7f91d5c663226315a2663b82e2f1d52c612d3976",
+  "actual_output_matches": true,
+  "cache_valid": true
+}

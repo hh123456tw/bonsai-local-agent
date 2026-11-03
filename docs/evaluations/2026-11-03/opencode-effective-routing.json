@@ -1,0 +1,13 @@
+{
+  "source_merged_mcp_servers": {},
+  "plugin_ids": [
+    "-orca-opencode-status",
+    "-superpowers"
+  ],
+  "build_steps": null,
+  "model": {
+    "providerID": "bonsai",
+    "model": "bonsai2-27b"
+  },
+  "has_bonsai": true
+}

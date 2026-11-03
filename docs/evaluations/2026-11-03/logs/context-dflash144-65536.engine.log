@@ -1,0 +1,49 @@
+2026-11-03 14:04:50.033  INFO  build unknown
+2026-11-03 14:04:50.033  INFO  engine init | constructing service
+2026-11-03 14:04:50.057  INFO  starting engine
+2026-11-03 14:04:50.133  INFO  engine | engine init | device ready, constructing model instance
+2026-11-03 14:04:50.134  INFO  engine | device profile nvidia-geforce-rtx-3080-sm86: 49 routed keys (calibration)
+2026-11-03 14:04:50.602  INFO  loading weights | 7.99 GiB
+2026-11-03 14:04:52.205  INFO  weights ready | 7.99 GiB | 1.6s | 4.99 GiB/s
+[ninfer] reuse host-backed: off
+[ninfer] reuse host-backed: off
+2026-11-03 14:04:52.288  INFO  pinning host KV | 4.00 GiB
+2026-11-03 14:04:52.755  INFO  host KV pinned | 4.00 GiB | 467 ms
+2026-11-03 14:04:52.755  INFO  engine | engine init | model instance ready
+2026-11-03 14:04:52.755  INFO  engine | engine init | constructing core (hybrid-generation)
+2026-11-03 14:04:52.756  INFO  engine | engine init | core ready (hybrid-generation)
+2026-11-03 14:04:52.756  INFO  engine finalized | 215 us
+2026-11-03 14:04:52.756  INFO  engine ready | bonsai2-27b | total 2.7s | weights 7.99 GiB | CUDA sync auto
+[spec] backend=dflash2 draft_tokens=3 adaptive=0 attention_window=0 ngram=0
+2026-11-03 14:04:52.756  INFO  capacity | KV 147,456 tokens, rk2v4-e8, explicit | pages 2,304/33,554,431 | runtime 2.19 GiB | free 515.8 MiB
+2026-11-03 14:04:52.756  INFO  context cache | 1 active + 1 cached device states | host 0 states, 0 B KV | private 1 | shared 0 | anchors 0
+2026-11-03 14:04:52.756  INFO  host cache budget | 4.00 GiB total | 114.8 MiB per state image | 864.0 KiB per host KV page group | 0 anchors per continuation | state capped at half
+2026-11-03 14:04:53.116  INFO  warmup complete | 360 ms
+2026-11-03 14:04:53.116  INFO  listening on http://127.0.0.1:8080 | model bonsai2-27b | auth disabled
+2026-11-03 14:04:53.116  INFO  api base http://127.0.0.1:8080/v1
+2026-11-03 14:04:53.600  INFO  req#1 started | openai-chat stream | 1 message | max output 16 | thinking off
+2026-11-03 14:04:53.642  INFO  req#1 done | openai-chat | stop token | prompt 19 | output 2 | cache 0 (0.0%) | TTFT 27.1 ms | total 42.8 ms | prefill 714.8 tok/s | decode 63.8 tok/s | dflash2 accepted 1/3 (33.3%)
+2026-11-03 14:04:53.657  INFO  req#2 started | openai-chat stream | 1 message | max output 2,048 | thinking template default, budget 1,536
+2026-11-03 14:04:58.123  INFO  throughput | 5.0s | prefill 2.00k tok/s (10,003 tok) | decode 0.2 tok/s (1 tok) | running 1 (prefill 1) | batch 1.00 | host 24.5% (1.2s)
+2026-11-03 14:05:03.123  INFO  throughput | 5.0s | prefill 2.00k tok/s (9,984 tok) | running 1 (prefill 1) | host 24.5% (1.2s)
+2026-11-03 14:05:08.130  INFO  throughput | 5.0s | prefill 1.79k tok/s (8,960 tok) | running 1 (prefill 1) | host 24.1% (1.2s)
+2026-11-03 14:05:13.129  INFO  throughput | 5.0s | prefill 1.59k tok/s (7,936 tok) | running 1 (prefill 1) | host 23.3% (1.2s)
+2026-11-03 14:05:18.130  INFO  throughput | 5.0s | prefill 1.54k tok/s (7,680 tok) | running 1 (prefill 1) | host 23.9% (1.2s)
+2026-11-03 14:05:23.130  INFO  throughput | 5.0s | prefill 1.38k tok/s (6,912 tok) | running 1 (prefill 1) | host 22.8% (1.1s)
+2026-11-03 14:05:28.117  INFO  throughput | 5.0s | prefill 1.28k tok/s (6,400 tok) | running 1 (prefill 1) | host 22.1% (1.1s)
+2026-11-03 14:05:33.131  INFO  throughput | 5.0s | prefill 1.28k tok/s (6,400 tok) | running 1 (prefill 1) | host 23.9% (1.2s)
+2026-11-03 14:05:38.133  INFO  throughput | 5.0s | prefill 243.1 tok/s (1,216 tok) | decode 117.0 tok/s (585 tok) | running 1 (decode-ready 1) | batch 1.00 | host 22.4% (1.1s)
+2026-11-03 14:05:43.124  INFO  throughput | 5.0s | decode 175.1 tok/s (874 tok) | running 1 (decode-ready 1) | batch 1.00 | host 21.1% (1.1s)
+2026-11-03 14:05:44.569  INFO  req#2 done | openai-chat | stop token | prompt 65,472 | output 1,723 | cache 0 (0.0%) | TTFT 40.5s | total 50.9s | prefill 1.62k tok/s | decode 165.7 tok/s | dflash2 accepted 1,194/1,514 (78.9%) | thinking 1,536/1,536, control 25
+2026-11-03 14:05:44.587  INFO  req#3 started | openai-chat stream | 1 message | max output 2,048 | thinking template default, budget 1,536
+2026-11-03 14:05:48.120  INFO  throughput | 5.0s | prefill 5.4 tok/s (27 tok) | decode 161.3 tok/s (806 tok) | running 1 (decode-ready 1) | batch 1.00 | host 23.6% (1.2s)
+2026-11-03 14:05:53.064  INFO  req#3 done | openai-chat | stop token | prompt 65,492 | output 1,307 | cache 65,465 (100.0%, shared prefix) | TTFT 126 ms | total 8.5s | prefill 247.1 tok/s | decode 156.4 tok/s | dflash2 accepted 899/1,224 (73.4%) | thinking 1,145/1,536
+2026-11-03 14:05:53.082  INFO  req#4 started | openai-chat stream | 1 message | max output 2,048 | thinking template default, budget 1,536
+2026-11-03 14:05:53.129  INFO  throughput | 5.0s | decode 152.3 tok/s (763 tok) | running 1 (prefill 1) | batch 1.00 | host 20.5% (1.0s)
+2026-11-03 14:05:58.127  INFO  throughput | 5.0s | prefill 5.4 tok/s (27 tok) | decode 135.2 tok/s (676 tok) | running 1 (decode-ready 1) | batch 1.00 | host 21.6% (1.1s)
+2026-11-03 14:06:02.269  INFO  req#4 done | openai-chat | stop token | prompt 65,492 | output 1,371 | cache 65,465 (100.0%, shared prefix) | TTFT 73.6 ms | total 9.2s | prefill 471.9 tok/s | decode 150.4 tok/s | dflash2 accepted 929/1,329 (69.9%) | thinking 1,209/1,536
+2026-11-03 14:06:02.324  INFO  req#5 started | openai-chat stream | 1 message | max output 2,048 | thinking template default, budget 1,536
+2026-11-03 14:06:03.123  INFO  throughput | 5.0s | prefill 5.4 tok/s (27 tok) | decode 162.9 tok/s (814 tok) | running 1 (decode-ready 1) | batch 1.00 | host 20.6% (1.0s)
+2026-11-03 14:06:08.118  INFO  throughput | 5.0s | decode 159.6 tok/s (797 tok) | running 1 (decode-ready 1) | batch 1.00 | host 20.4% (1.0s)
+2026-11-03 14:06:09.857  INFO  req#5 done | openai-chat | stop token | prompt 65,492 | output 1,230 | cache 65,465 (100.0%, shared prefix) | TTFT 69.2 ms | total 7.5s | prefill 508.2 tok/s | decode 164.7 tok/s | dflash2 accepted 863/1,101 (78.4%) | thinking 1,068/1,536
+2026-11-03 14:06:13.123  INFO  throughput | 5.0s | decode 62.3 tok/s (312 tok) | running 0 | batch 1.00 | host 7.4% (368 ms)

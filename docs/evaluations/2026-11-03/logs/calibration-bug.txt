@@ -1,0 +1,40 @@
+BASELINE
+{"tests": 4, "failures": 2, "errors": 0, "passed": false}
+test_endpoint_holiday (external_acceptance.Acceptance.test_endpoint_holiday) ... ok
+test_inclusive (external_acceptance.Acceptance.test_inclusive) ... FAIL
+test_reference (external_acceptance.Acceptance.test_reference) ... FAIL
+test_weekend (external_acceptance.Acceptance.test_weekend) ... ok
+
+======================================================================
+FAIL: test_inclusive (external_acceptance.Acceptance.test_inclusive)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\fixtures\bug\acceptance.py", line 5, in test_inclusive
+    def test_inclusive(self): self.assertEqual(business_days(date(2026,11,2),date(2026,11,2)),1)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_reference (external_acceptance.Acceptance.test_reference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\fixtures\bug\acceptance.py", line 12, in test_reference
+    self.assertEqual(business_days(start,end,holidays),want)
+AssertionError: 0 != 1
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=2)
+
+REFERENCE
+{"tests": 4, "failures": 0, "errors": 0, "passed": true}
+test_endpoint_holiday (external_acceptance.Acceptance.test_endpoint_holiday) ... ok
+test_inclusive (external_acceptance.Acceptance.test_inclusive) ... ok
+test_reference (external_acceptance.Acceptance.test_reference) ... ok
+test_weekend (external_acceptance.Acceptance.test_weekend) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK

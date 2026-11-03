@@ -1,0 +1,95 @@
+{
+  "key": "dflash128graph-bug-2",
+  "profile": "dflash128graph",
+  "task": "bug",
+  "rep": 2,
+  "prompt_sha256": "c6eac701b5c34784baebe00829228482f6770c2f6b23076dc5cf81844e75536e",
+  "input_manifest": {
+    "README.md": "53808c66395799032795152d127d8470e22355707c66ab76d7ab95a40860bf88",
+    "schedule.py": "5fc8d046adb1a3f3254fd9033a3f487f9ed69e2b5b6a1253b0b92a70e292c9c1",
+    "test_existing.py": "b9eb10df93c88e4b9752330fdd02199206e9ce75b96d9576e4850ab559d6f875"
+  },
+  "passed": true,
+  "cli_exit": 0,
+  "agent_latency_s": 9.76600000000326,
+  "tool_calls": 6,
+  "consecutive_repeat_count": 0,
+  "nonconsecutive_duplicate_count": 0,
+  "tool_errors": 0,
+  "permission_denials": 0,
+  "usage": {
+    "input_tokens": 3082,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 7492,
+    "output_tokens": 1241,
+    "output_tokens_details": {
+      "thinking_tokens": 320
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "bonsai2-27b": {
+      "inputTokens": 3082,
+      "outputTokens": 1241,
+      "cacheReadInputTokens": 7492,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.050180999999999996,
+      "contextWindow": 131072,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 320,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "bonsai2-27b",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "client_success": true,
+  "agent_ran_tests": true,
+  "acceptance_sha256": "d2842926ca7257e86afd0d0a25d80a519f3243386c4d52ad2bfed74292a821a9",
+  "guard_recoveries": 0,
+  "guard_stops": 0,
+  "acceptance": {
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "passed": true
+  },
+  "public_tests_passed": true,
+  "protected_files_changed": [],
+  "changed_files": [
+    "schedule.py"
+  ],
+  "gpu": {
+    "sample_count": 40,
+    "used_mib_max": 11371.0,
+    "free_mib_min": 721.0,
+    "temp_c_max": 82.0,
+    "power_w_max": 437.59,
+    "power_w_mean": 329.9265,
+    "graphics_clock_min_mhz": 660.0,
+    "hw_thermal_slowdown_observed": false
+  },
+  "evaluation_total_s": 10.01600000000326,
+  "guard_audit_window": "Windows file creation time plus measured evaluation duration; serial test jobs, 50ms boundary tolerance",
+  "engine_usage": {
+    "completed_requests": 5,
+    "input_tokens_total": 10574,
+    "cached_input_tokens": 7492,
+    "output_tokens": 1241
+  },
+  "audit_version": 1
+}

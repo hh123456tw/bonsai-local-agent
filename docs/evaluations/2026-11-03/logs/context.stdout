@@ -1,0 +1,72 @@
+{"phase": "context_start", "key": "dflash128graph-32768"}
+{"phase": "context_round", "key": "dflash128graph-32768", "rep": 0, "correct": 7, "of": 7, "seconds": 23.01600000000326, "cached": 0}
+{"phase": "context_round", "key": "dflash128graph-32768", "rep": 1, "correct": 7, "of": 7, "seconds": 7.202999999994063, "cached": 32702}
+{"phase": "context_round", "key": "dflash128graph-32768", "rep": 2, "correct": 7, "of": 7, "seconds": 9.10899999999674, "cached": 32702}
+{"phase": "context_round", "key": "dflash128graph-32768", "rep": 3, "correct": 7, "of": 7, "seconds": 8.672000000005937, "cached": 32702}
+{"phase": "context_start", "key": "dflash128graph-65536"}
+{"phase": "cooldown", "profile": "dflash128graph", "temperature": 88.0}
+{"phase": "context_round", "key": "dflash128graph-65536", "rep": 0, "correct": 7, "of": 7, "seconds": 50.437000000005355, "cached": 0}
+{"phase": "context_round", "key": "dflash128graph-65536", "rep": 1, "correct": 7, "of": 7, "seconds": 7.905999999988126, "cached": 65465}
+{"phase": "context_round", "key": "dflash128graph-65536", "rep": 2, "correct": 7, "of": 7, "seconds": 8.51600000000326, "cached": 65465}
+{"phase": "context_round", "key": "dflash128graph-65536", "rep": 3, "correct": 7, "of": 7, "seconds": 7.078000000008615, "cached": 65465}
+{"phase": "context_start", "key": "dflash128graph-98304"}
+{"phase": "cooldown", "profile": "dflash128graph", "temperature": 89.0}
+{"phase": "context_round", "key": "dflash128graph-98304", "rep": 0, "correct": 5, "of": 7, "seconds": 81.0, "cached": 0}
+{"phase": "context_round", "key": "dflash128graph-98304", "rep": 1, "correct": 5, "of": 7, "seconds": 11.890999999988708, "cached": 98256}
+{"phase": "context_round", "key": "dflash128graph-98304", "rep": 2, "correct": 6, "of": 7, "seconds": 11.718000000008033, "cached": 98256}
+{"phase": "context_round", "key": "dflash128graph-98304", "rep": 3, "correct": 5, "of": 7, "seconds": 11.468999999997322, "cached": 98256}
+{"phase": "context_start", "key": "dflash128graph-122880"}
+{"phase": "cooldown", "profile": "dflash128graph", "temperature": 89.0}
+{"phase": "context_round", "key": "dflash128graph-122880", "rep": 0, "correct": 5, "of": 7, "seconds": 111.98399999999674, "cached": 0}
+{"phase": "context_round", "key": "dflash128graph-122880", "rep": 1, "correct": 6, "of": 7, "seconds": 13.218999999997322, "cached": 122823}
+{"phase": "context_round", "key": "dflash128graph-122880", "rep": 2, "correct": 3, "of": 7, "seconds": 14.328000000008615, "cached": 122823}
+{"phase": "context_round", "key": "dflash128graph-122880", "rep": 3, "correct": 6, "of": 7, "seconds": 12.687999999994645, "cached": 122823}
+{"phase": "context_start", "key": "dflash144-32768"}
+{"phase": "cooldown", "profile": "dflash144", "temperature": 90.0}
+{"phase": "context_round", "key": "dflash144-32768", "rep": 0, "correct": 7, "of": 7, "seconds": 23.453000000008615, "cached": 0}
+{"phase": "context_round", "key": "dflash144-32768", "rep": 1, "correct": 7, "of": 7, "seconds": 7.75, "cached": 32702}
+{"phase": "context_round", "key": "dflash144-32768", "rep": 2, "correct": 7, "of": 7, "seconds": 9.85899999999674, "cached": 32702}
+{"phase": "context_round", "key": "dflash144-32768", "rep": 3, "correct": 7, "of": 7, "seconds": 9.375, "cached": 32702}
+{"phase": "context_start", "key": "dflash144-65536"}
+{"phase": "cooldown", "profile": "dflash144", "temperature": 88.0}
+{"phase": "context_round", "key": "dflash144-65536", "rep": 0, "correct": 7, "of": 7, "seconds": 50.92200000000594, "cached": 0}
+{"phase": "context_round", "key": "dflash144-65536", "rep": 1, "correct": 7, "of": 7, "seconds": 8.5, "cached": 65465}
+{"phase": "context_round", "key": "dflash144-65536", "rep": 2, "correct": 7, "of": 7, "seconds": 9.202999999994063, "cached": 65465}
+{"phase": "context_round", "key": "dflash144-65536", "rep": 3, "correct": 7, "of": 7, "seconds": 7.593000000008033, "cached": 65465}
+{"phase": "context_start", "key": "dflash144-98304"}
+{"phase": "cooldown", "profile": "dflash144", "temperature": 89.0}
+{"phase": "context_round", "key": "dflash144-98304", "rep": 0, "correct": 5, "of": 7, "seconds": 81.43799999999464, "cached": 0}
+{"phase": "context_round", "key": "dflash144-98304", "rep": 1, "correct": 5, "of": 7, "seconds": 12.577999999994063, "cached": 98256}
+{"phase": "context_round", "key": "dflash144-98304", "rep": 2, "correct": 6, "of": 7, "seconds": 12.360000000000582, "cached": 98256}
+{"phase": "context_round", "key": "dflash144-98304", "rep": 3, "correct": 5, "of": 7, "seconds": 12.15700000000652, "cached": 98256}
+{"phase": "context_start", "key": "dflash144-122880"}
+{"phase": "cooldown", "profile": "dflash144", "temperature": 89.0}
+{"phase": "context_round", "key": "dflash144-122880", "rep": 0, "correct": 5, "of": 7, "seconds": 112.89100000000326, "cached": 0}
+{"phase": "context_round", "key": "dflash144-122880", "rep": 1, "correct": 6, "of": 7, "seconds": 13.843999999997322, "cached": 122823}
+{"phase": "context_round", "key": "dflash144-122880", "rep": 2, "correct": 3, "of": 7, "seconds": 15.187000000005355, "cached": 122823}
+{"phase": "context_round", "key": "dflash144-122880", "rep": 3, "correct": 6, "of": 7, "seconds": 13.468999999997322, "cached": 122823}
+{"phase": "context_start", "key": "base256-32768"}
+{"phase": "cooldown", "profile": "base256", "temperature": 89.0}
+{"phase": "context_round", "key": "base256-32768", "rep": 0, "correct": 7, "of": 7, "seconds": 32.96800000000803, "cached": 0}
+{"phase": "context_round", "key": "base256-32768", "rep": 1, "correct": 7, "of": 7, "seconds": 39.64099999998871, "cached": 0}
+{"phase": "context_round", "key": "base256-32768", "rep": 2, "correct": 7, "of": 7, "seconds": 39.42200000000594, "cached": 0}
+{"phase": "context_round", "key": "base256-32768", "rep": 3, "correct": 7, "of": 7, "seconds": 35.937000000005355, "cached": 0}
+{"phase": "context_start", "key": "base256-65536"}
+{"phase": "cooldown", "profile": "base256", "temperature": 88.0}
+{"phase": "context_round", "key": "base256-65536", "rep": 0, "correct": 7, "of": 7, "seconds": 64.82800000000861, "cached": 0}
+{"phase": "context_round", "key": "base256-65536", "rep": 1, "correct": 7, "of": 7, "seconds": 65.98500000000058, "cached": 0}
+{"phase": "context_round", "key": "base256-65536", "rep": 2, "correct": 7, "of": 7, "seconds": 65.78100000000268, "cached": 0}
+{"phase": "context_round", "key": "base256-65536", "rep": 3, "correct": 7, "of": 7, "seconds": 63.57799999999406, "cached": 0}
+{"phase": "context_start", "key": "base256-98304"}
+{"phase": "cooldown", "profile": "base256", "temperature": 89.0}
+{"phase": "context_round", "key": "base256-98304", "rep": 0, "correct": 6, "of": 7, "seconds": 98.57799999999406, "cached": 0}
+{"phase": "context_round", "key": "base256-98304", "rep": 1, "correct": 6, "of": 7, "seconds": 99.14100000000326, "cached": 0}
+{"phase": "context_round", "key": "base256-98304", "rep": 2, "correct": 6, "of": 7, "seconds": 98.71899999999732, "cached": 0}
+{"phase": "context_round", "key": "base256-98304", "rep": 3, "correct": 4, "of": 7, "seconds": 93.21799999999348, "cached": 0}
+{"phase": "context_start", "key": "base256-122880"}
+{"phase": "cooldown", "profile": "base256", "temperature": 89.0}
+{"phase": "context_round", "key": "base256-122880", "rep": 0, "correct": 5, "of": 7, "seconds": 126.93799999999464, "cached": 0}
+{"phase": "context_round", "key": "base256-122880", "rep": 1, "correct": 4, "of": 7, "seconds": 127.10899999999674, "cached": 0}
+{"phase": "context_round", "key": "base256-122880", "rep": 2, "correct": 5, "of": 7, "seconds": 126.75, "cached": 0}
+{"phase": "context_round", "key": "base256-122880", "rep": 3, "correct": 5, "of": 7, "seconds": 129.20299999999406, "cached": 0}
+{"phase": "restored_original"}

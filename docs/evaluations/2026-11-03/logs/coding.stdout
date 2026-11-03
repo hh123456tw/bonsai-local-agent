@@ -1,0 +1,42 @@
+{"phase": "coding_start", "key": "dflash128graph-bug-0"}
+{"phase": "coding_done", "key": "dflash128graph-bug-0", "passed": true, "seconds": 11.014999999999418, "tools": 7, "errors": 0}
+{"phase": "coding_start", "key": "dflash128graph-feature-0"}
+{"phase": "coding_done", "key": "dflash128graph-feature-0", "passed": false, "seconds": 480.18700000000536, "tools": null, "errors": null}
+{"phase": "coding_start", "key": "dflash128graph-refactor-0"}
+{"phase": "coding_done", "key": "dflash128graph-refactor-0", "passed": false, "seconds": 66.82799999999406, "tools": 24, "errors": 5}
+{"phase": "cooldown", "profile": "dflash144", "temperature": 86.0}
+{"phase": "coding_start", "key": "dflash144-bug-0"}
+{"phase": "coding_done", "key": "dflash144-bug-0", "passed": true, "seconds": 11.235000000000582, "tools": 8, "errors": 1}
+{"phase": "coding_start", "key": "dflash144-feature-0"}
+{"phase": "coding_done", "key": "dflash144-feature-0", "passed": true, "seconds": 279.6719999999914, "tools": 52, "errors": 9}
+{"phase": "coding_start", "key": "dflash144-refactor-0"}
+{"phase": "coding_done", "key": "dflash144-refactor-0", "passed": true, "seconds": 84.85899999999674, "tools": 29, "errors": 6}
+{"phase": "cooldown", "profile": "dflash144", "temperature": 82.0}
+{"phase": "coding_start", "key": "dflash144-bug-1"}
+{"phase": "coding_done", "key": "dflash144-bug-1", "passed": true, "seconds": 9.765999999988708, "tools": 6, "errors": 0}
+{"phase": "coding_start", "key": "dflash144-feature-1"}
+{"phase": "coding_done", "key": "dflash144-feature-1", "passed": false, "seconds": 170.63999999999942, "tools": 53, "errors": 13}
+{"phase": "coding_start", "key": "dflash144-refactor-1"}
+{"phase": "coding_done", "key": "dflash144-refactor-1", "passed": true, "seconds": 214.54700000000594, "tools": 56, "errors": 22}
+{"phase": "cooldown", "profile": "dflash128graph", "temperature": 82.0}
+{"phase": "coding_start", "key": "dflash128graph-bug-1"}
+{"phase": "coding_done", "key": "dflash128graph-bug-1", "passed": true, "seconds": 11.219000000011874, "tools": 8, "errors": 1}
+{"phase": "coding_start", "key": "dflash128graph-feature-1"}
+{"phase": "coding_done", "key": "dflash128graph-feature-1", "passed": false, "seconds": 141.51600000000326, "tools": 53, "errors": 18}
+{"phase": "coding_start", "key": "dflash128graph-refactor-1"}
+{"phase": "coding_done", "key": "dflash128graph-refactor-1", "passed": true, "seconds": 110.32800000000861, "tools": 40, "errors": 11}
+{"phase": "cooldown", "profile": "dflash128graph", "temperature": 82.0}
+{"phase": "coding_start", "key": "dflash128graph-bug-2"}
+{"phase": "coding_done", "key": "dflash128graph-bug-2", "passed": true, "seconds": 9.76600000000326, "tools": 6, "errors": 0}
+{"phase": "coding_start", "key": "dflash128graph-feature-2"}
+{"phase": "coding_done", "key": "dflash128graph-feature-2", "passed": false, "seconds": 480.1710000000021, "tools": null, "errors": null}
+{"phase": "coding_start", "key": "dflash128graph-refactor-2"}
+{"phase": "coding_done", "key": "dflash128graph-refactor-2", "passed": true, "seconds": 119.42199999999139, "tools": 42, "errors": 15}
+{"phase": "cooldown", "profile": "dflash144", "temperature": 88.0}
+{"phase": "coding_start", "key": "dflash144-bug-2"}
+{"phase": "coding_done", "key": "dflash144-bug-2", "passed": true, "seconds": 16.047000000005937, "tools": 11, "errors": 4}
+{"phase": "coding_start", "key": "dflash144-feature-2"}
+{"phase": "coding_done", "key": "dflash144-feature-2", "passed": true, "seconds": 301.7960000000021, "tools": 60, "errors": 21}
+{"phase": "coding_start", "key": "dflash144-refactor-2"}
+{"phase": "coding_done", "key": "dflash144-refactor-2", "passed": true, "seconds": 144.64100000000326, "tools": 46, "errors": 12}
+{"phase": "restored_original"}

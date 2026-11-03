@@ -1,0 +1,48 @@
+{
+  "latency_s": 2.5469999999913853,
+  "ttft_observed_s": 0.030999999988125637,
+  "usage": {
+    "completion_tokens": 512,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 45,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 557
+  },
+  "timings": {
+    "cache_n": 0,
+    "draft_n": 502,
+    "draft_n_accepted": 343,
+    "predicted_ms": 2508.3539,
+    "predicted_n": 512,
+    "predicted_per_second": 203.71925986998883,
+    "predicted_per_token_ms": 4.908716046966732,
+    "prompt_ms": 40.1296,
+    "prompt_n": 45,
+    "prompt_per_second": 1121.366771659822,
+    "prompt_per_token_ms": 0.8917688888888889
+  },
+  "finish_reason": "length",
+  "text": "# Python Data Structures, Concurrency, Testing, Profiling, Database Transactions, and API Design\n\nThis comprehensive guide covers six critical areas of Python software engineering. Each section includes concrete, runnable examples with explanations.\n\n---\n\n## 1. Python Data Structures\n\n### 1.1 Built-in Collections\n\n```python\nfrom collections import defaultdict, deque, Counter, namedtuple, OrderedDict\nfrom typing import Any, List, Dict, Set, Tuple\n\n# --- List: Ordered, mutable, O(1) append, O(n) insert/delete ---\nnumbers: List[int] = [1, 2, 3, 4, 5]\nnumbers.append(6)          # O(1) amortized\nnumbers.insert(0, 0)       # O(n) - shifts all elements\ndel numbers[2]             # O(n)\nnumbers.pop()              # O(1) - removes last element\nnumbers.sort()             # O(n log n) - in-place\nnumbers.reverse()          # O(n)\n\n# --- Tuple: Immutable, hashable, O(1) access ---\npoint: Tuple[int, int] = (3, 4)\n# point[0] = 10  # TypeError: 'tuple' object does not support item assignment\npoint_hash = hash(point)  # Tuples are hashable (if all elements are)\n\n# --- Set: Unordered, unique, O(1) average lookup/insert/delete ---\nunique_numbers: set = {1, 2, 3, 2, 1, 4}\nprint(len(unique_numbers))  # 4\nif 3 in unique_numbers:    # O(1) average\n    print(\"3 is in the set\")\nunion = {1, 2} | {3, 4}    # {1, 2, 3, 4}\nintersection = {1, 2, 3} & {2, 3, 4}  # {2, 3}\nsymmetric_difference = {1, 2} ^ {2, 3}  # {1, 3}\n\n# --- Dict: Ordered (3.7+), O(1) average lookup/insert/delete ---\nuser: Dict[str, Any] = {\"name\": \"Alice\", \"age\": 30, \"scores\": [90, 85, 95]}\n",
+  "key": "dflash128graph-short-512-1-hot",
+  "profile": "dflash128graph",
+  "case": "short",
+  "output_limit": 512,
+  "rep": 1,
+  "cache": "hot",
+  "ok": true,
+  "gpu": {
+    "sample_count": 10,
+    "used_mib_max": 11532.0,
+    "free_mib_min": 560.0,
+    "temp_c_max": 62.0,
+    "power_w_max": 424.23,
+    "power_w_mean": 409.981
+  },
+  "prompt_sha256": "8f39bbf4c2d003fd4440edb9c132e21a765581bd063951b68e3086f86059e420",
+  "actual_output_matches": true,
+  "cache_valid": false
+}

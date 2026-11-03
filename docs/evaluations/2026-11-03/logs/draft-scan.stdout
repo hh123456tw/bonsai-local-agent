@@ -1,0 +1,34 @@
+{"phase": "benchmark", "key": "graph128draft2-short-512-0"}
+{"phase": "sample_done", "key": "graph128draft2-short-512-0-cold", "decode": 174.5923328819102, "prefill": 1593.3665961627983, "cache_n": 0, "ttft": 0.09400000001187436}
+{"phase": "sample_done", "key": "graph128draft2-short-512-0-hot", "decode": 174.25369291657034, "prefill": 482.34354651131633, "cache_n": 144, "ttft": 0.014999999999417923}
+{"phase": "benchmark", "key": "graph128draft2-short-512-1"}
+{"phase": "cooldown", "profile": "graph128draft2", "temperature": 81.0}
+{"phase": "sample_done", "key": "graph128draft2-short-512-1-cold", "decode": 174.33688696276008, "prefill": 1606.6956151911495, "cache_n": 0, "ttft": 0.125}
+{"phase": "sample_done", "key": "graph128draft2-short-512-1-hot", "decode": 174.29889463461274, "prefill": 437.2497959500953, "cache_n": 144, "ttft": 0.014999999999417923}
+{"phase": "benchmark", "key": "graph128draft2-short-512-2"}
+{"phase": "cooldown", "profile": "graph128draft2", "temperature": 80.0}
+{"phase": "sample_done", "key": "graph128draft2-short-512-2-cold", "decode": 174.3220841006831, "prefill": 1616.8456292858298, "cache_n": 0, "ttft": 0.125}
+{"phase": "sample_done", "key": "graph128draft2-short-512-2-hot", "decode": 174.45073111925882, "prefill": 440.64941932198747, "cache_n": 144, "ttft": 0.014999999999417923}
+{"phase": "benchmark", "key": "graph128draft4-short-512-0"}
+{"phase": "cooldown", "profile": "graph128draft4", "temperature": 80.0}
+{"phase": "sample_done", "key": "graph128draft4-short-512-0-cold", "decode": 203.27271457225095, "prefill": 1621.8038274570329, "cache_n": 0, "ttft": 0.10899999999674037}
+{"phase": "sample_done", "key": "graph128draft4-short-512-0-hot", "decode": 204.65016436091477, "prefill": 433.96708600745455, "cache_n": 144, "ttft": 0.030999999988125637}
+{"phase": "benchmark", "key": "graph128draft4-short-512-1"}
+{"phase": "sample_done", "key": "graph128draft4-short-512-1-cold", "decode": 202.8939667791504, "prefill": 1613.3488271059475, "cache_n": 0, "ttft": 0.125}
+{"phase": "sample_done", "key": "graph128draft4-short-512-1-hot", "decode": 203.0986575377463, "prefill": 439.20435690722053, "cache_n": 144, "ttft": 0.046000000002095476}
+{"phase": "benchmark", "key": "graph128draft4-short-512-2"}
+{"phase": "cooldown", "profile": "graph128draft4", "temperature": 80.0}
+{"phase": "sample_done", "key": "graph128draft4-short-512-2-cold", "decode": 203.25414257597933, "prefill": 1619.9681723900248, "cache_n": 0, "ttft": 0.125}
+{"phase": "sample_done", "key": "graph128draft4-short-512-2-hot", "decode": 204.1527302131658, "prefill": 428.8123802898772, "cache_n": 144, "ttft": 0.031000000002677552}
+{"phase": "benchmark", "key": "graph128draft5-short-512-0"}
+{"phase": "cooldown", "profile": "graph128draft5", "temperature": 80.0}
+{"phase": "sample_done", "key": "graph128draft5-short-512-0-cold", "decode": 220.87321946360743, "prefill": 1591.9789234476643, "cache_n": 0, "ttft": 0.09400000001187436}
+{"phase": "sample_done", "key": "graph128draft5-short-512-0-hot", "decode": 220.4145259642704, "prefill": 440.46826670842955, "cache_n": 144, "ttft": 0.01600000000325963}
+{"phase": "benchmark", "key": "graph128draft5-short-512-1"}
+{"phase": "sample_done", "key": "graph128draft5-short-512-1-cold", "decode": 220.72494018181345, "prefill": 1604.479959730699, "cache_n": 0, "ttft": 0.09299999999348074}
+{"phase": "sample_done", "key": "graph128draft5-short-512-1-hot", "decode": 220.1612088444488, "prefill": 432.7214331733867, "cache_n": 144, "ttft": 0.01600000000325963}
+{"phase": "benchmark", "key": "graph128draft5-short-512-2"}
+{"phase": "cooldown", "profile": "graph128draft5", "temperature": 80.0}
+{"phase": "sample_done", "key": "graph128draft5-short-512-2-cold", "decode": 219.78235611330857, "prefill": 1622.9048086775556, "cache_n": 0, "ttft": 0.125}
+{"phase": "sample_done", "key": "graph128draft5-short-512-2-hot", "decode": 221.88912317755648, "prefill": 438.641381427924, "cache_n": 144, "ttft": 0.03200000000651926}
+{"phase": "restored_original"}

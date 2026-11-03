@@ -1,0 +1,50 @@
+{
+  "latency_s": 1.3909999999887077,
+  "ttft_observed_s": 0.046999999991385266,
+  "usage": {
+    "completion_tokens": 256,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8113,
+    "prompt_tokens_details": {
+      "cached_tokens": 8104
+    },
+    "total_tokens": 8369
+  },
+  "timings": {
+    "cache_n": 8104,
+    "draft_n": 276,
+    "draft_n_accepted": 163,
+    "predicted_ms": 1342.6324,
+    "predicted_n": 256,
+    "predicted_per_second": 189.92540326004348,
+    "predicted_per_token_ms": 5.265225098039216,
+    "prompt_ms": 21.2525,
+    "prompt_n": 9,
+    "prompt_per_second": 423.4795906363957,
+    "prompt_per_token_ms": 2.361388888888889
+  },
+  "finish_reason": "length",
+  "text": "Based on the provided reference dataset, which consists of 283 records (indices 000000 to 000282) mapping unique integer identifiers to 20-character hexadecimal strings, here is a detailed technical explanation of how to index, validate, and query this data.\n\n### 1. Data Structure Analysis\n\nThe dataset follows a strict key-value format:\n*   **Key:** A zero-padded integer identifier (e.g., `record_000000`). The key space is sequential and contiguous.\n*   **Value:** A 20-character string consisting of lowercase hexadecimal digits (`0-9`, `a-f`).\n*   **Constraint:** The values appear to be cryptographic hashes or unique identifiers (likely SHA-1 truncated or similar, given the length of 20 hex chars = 80 bits).\n\n### 2. Indexing Strategy\n\nGiven the nature of the data (static, immutable, lookup-heavy), the indexing strategy should prioritize read performance and memory efficiency.\n\n#### A. Primary Index: Hash Map (In-Memory)\nFor real-time querying, the most efficient structure is a **Hash Map** (e.g., `HashMap<Integer, String>` in",
+  "key": "graph128chunk512-8192-256-0-hot",
+  "profile": "graph128chunk512",
+  "case": "8192",
+  "output_limit": 256,
+  "rep": 0,
+  "cache": "hot",
+  "ok": true,
+  "gpu": {
+    "sample_count": 6,
+    "used_mib_max": 11461.0,
+    "free_mib_min": 631.0,
+    "temp_c_max": 80.0,
+    "power_w_max": 429.84,
+    "power_w_mean": 424.895,
+    "graphics_clock_min_mhz": 1935.0,
+    "hw_thermal_slowdown_observed": false
+  },
+  "prompt_sha256": "41894d7f36f607df98a3b0e8bb0ec285f36e2eeb9a273819980ef4364dee5c22",
+  "actual_output_matches": true,
+  "cache_valid": true
+}

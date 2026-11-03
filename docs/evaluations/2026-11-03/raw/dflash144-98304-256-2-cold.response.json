@@ -1,0 +1,48 @@
+{
+  "latency_s": 73.25,
+  "ttft_observed_s": 71.26600000000326,
+  "usage": {
+    "completion_tokens": 256,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 98227,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 98483
+  },
+  "timings": {
+    "cache_n": 0,
+    "draft_n": 260,
+    "draft_n_accepted": 168,
+    "predicted_ms": 1969.1656,
+    "predicted_n": 256,
+    "predicted_per_second": 129.49647302390414,
+    "predicted_per_token_ms": 7.7222180392156865,
+    "prompt_ms": 71250.6353,
+    "prompt_n": 98227,
+    "prompt_per_second": 1378.6122690193054,
+    "prompt_per_token_ms": 0.7253671118938784
+  },
+  "finish_reason": "length",
+  "text": "# Technical Guide: Indexing, Validation, and Querying the Reference Dataset\n\n## 1. Data Structure Analysis\n\nThe provided dataset consists of 3,453 records (indices 000000 through 003452). Each record follows a strict schema:\n\n```\nrecord_XXXXXX: <24-character hexadecimal string>\n```\n\n### Key Characteristics:\n- **Identifier**: Zero-padded 6-digit integer (000000–003452)\n- **Value**: 24-character lowercase hexadecimal string (12 bytes / 96 bits)\n- **Total Records**: 3,453\n- **Data Type**: Binary-like opaque tokens (likely cryptographic hashes, UUIDs, or session tokens)\n\n---\n\n## 2. Indexing Strategy\n\n### 2.1 Primary Index: Record ID\nThe natural primary key is the **record ID** (integer 0–3452). This provides O(1) lookup by index.\n\n**Implementation Options:**\n| Method | Use Case |\n|--------|----------|\n| Array/List | Sequential access, small dataset |\n| Hash Map (ID → Value)",
+  "key": "dflash144-98304-256-2-cold",
+  "profile": "dflash144",
+  "case": "98304",
+  "output_limit": 256,
+  "rep": 2,
+  "cache": "cold",
+  "ok": true,
+  "gpu": {
+    "sample_count": 287,
+    "used_mib_max": 11541.0,
+    "free_mib_min": 551.0,
+    "temp_c_max": 90.0,
+    "power_w_max": 449.24,
+    "power_w_mean": 435.5940418118467
+  },
+  "prompt_sha256": "354c7bf348b3dd37bb788f505f5c2ec842c0ea80d8e39aaa790faf1a539a0066",
+  "actual_output_matches": true,
+  "cache_valid": true
+}

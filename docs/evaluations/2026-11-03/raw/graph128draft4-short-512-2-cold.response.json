@@ -1,0 +1,50 @@
+{
+  "latency_s": 2.6410000000032596,
+  "ttft_observed_s": 0.125,
+  "usage": {
+    "completion_tokens": 512,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 153,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 665
+  },
+  "timings": {
+    "cache_n": 0,
+    "draft_n": 707,
+    "draft_n_accepted": 334,
+    "predicted_ms": 2514.0939000000003,
+    "predicted_n": 512,
+    "predicted_per_second": 203.25414257597933,
+    "predicted_per_token_ms": 4.919948923679061,
+    "prompt_ms": 94.4463,
+    "prompt_n": 153,
+    "prompt_per_second": 1619.9681723900248,
+    "prompt_per_token_ms": 0.6172960784313725
+  },
+  "finish_reason": "length",
+  "text": "# Python Data Structures, Concurrency, Testing, Profiling, Databases, and API Design: A Comprehensive Technical Tutorial\n\nThis tutorial provides a deep dive into advanced Python engineering practices. It covers data structure tradeoffs, concurrency models, testing strategies, performance profiling, database transaction management, and API design. Each section includes concrete code examples, invariants, edge cases, and verification strategies.\n\n---\n\n## 1. Python Data Structures: Implementation Tradeoffs\n\n### 1.1 Lists vs. Dictionaries: The Core Tradeoff\n\nPython's built-in `list` and `dict` are the workhorses of the language, but their internal implementations dictate very different performance characteristics.\n\n#### 1.1.1 List Implementation: Dynamic Array\n\nA Python `list` is implemented as a dynamic array (similar to C's `std::vector` or Java's `ArrayList`). It maintains a contiguous block of memory for its elements.\n\n**Key Characteristics:**\n- **Indexing:** $O(1)$ average case. Accessing `lst[i]` involves a simple pointer arithmetic calculation.\n- **Appending:** $O(1)$ amortized. When the internal buffer is full, Python allocates a larger buffer (typically 1.125x or 1.25x the current size) and copies elements. This makes the *average* cost of appending constant, but individual appends can be $O(n)$.\n- **Insertion/Deletion at Index:** $O(n)$. Inserting at the beginning or middle requires shifting all subsequent elements.\n- **Membership Testing (`in`):** $O(n)$. Linear scan.\n\n**Code Example: Amortized Cost of Appending**\n\n```python\nimport time\n\ndef benchmark_list_append(n=1_000_000):\n    lst = []\n    start = time.perf_counter()\n    for i in range(n):\n        lst.append(i)\n    end = time.perf_counter()\n    return end - start\n\n# The cost is dominated by the occasional reallocation.\n# If you need frequent insertions at the front, use collections.deque.\n```\n\n**Invariant:** `len(lst) == number of elements`.\n**Edge Case:** Memory fragmentation. While the list itself is contiguous, the objects it points to are scattered in heap memory. This can lead to cache misses in tight loops.\n\n#### 1.2 Dictionary Implementation: Hash Table",
+  "key": "graph128draft4-short-512-2-cold",
+  "profile": "graph128draft4",
+  "case": "short",
+  "output_limit": 512,
+  "rep": 2,
+  "cache": "cold",
+  "ok": true,
+  "gpu": {
+    "sample_count": 11,
+    "used_mib_max": 11379.0,
+    "free_mib_min": 713.0,
+    "temp_c_max": 78.0,
+    "power_w_max": 428.51,
+    "power_w_mean": 346.17,
+    "graphics_clock_min_mhz": 1935.0,
+    "hw_thermal_slowdown_observed": false
+  },
+  "prompt_sha256": "244213ceadbd4ddd90a2e06c7f91d5c663226315a2663b82e2f1d52c612d3976",
+  "actual_output_matches": true,
+  "cache_valid": true
+}

@@ -1,0 +1,50 @@
+{
+  "latency_s": 3.063000000009197,
+  "ttft_observed_s": 0.125,
+  "usage": {
+    "completion_tokens": 512,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 153,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 665
+  },
+  "timings": {
+    "cache_n": 0,
+    "draft_n": 430,
+    "draft_n_accepted": 295,
+    "predicted_ms": 2931.1066,
+    "predicted_n": 512,
+    "predicted_per_second": 174.33688696276008,
+    "predicted_per_token_ms": 5.736020743639922,
+    "prompt_ms": 95.2265,
+    "prompt_n": 153,
+    "prompt_per_second": 1606.6956151911495,
+    "prompt_per_token_ms": 0.6223954248366013
+  },
+  "finish_reason": "length",
+  "text": "# Python Data Structures, Concurrency, Testing, Profiling, Databases, and API Design: A Comprehensive Technical Tutorial\n\nThis tutorial provides a deep dive into advanced Python engineering practices. It covers data structure tradeoffs, concurrency models, testing strategies, performance profiling, database operations, and API design. Each section includes concrete code examples, invariants, edge cases, and verification strategies.\n\n---\n\n## 1. Python Data Structures: Implementation Tradeoffs\n\n### 1.1 Lists vs. Dictionaries: The Core Tradeoff\n\nPython's built-in `list` and `dict` are the workhorses of the language, but their internal implementations dictate different performance characteristics.\n\n#### The List: Contiguous Memory and Indexing\n\nA Python list is implemented as a dynamic array of pointers. When you append an element, Python may need to allocate a new, larger block of memory and copy all existing pointers. This amortized cost is $O(1)$ for append, but $O(n)$ for insertion at an arbitrary index.\n\n```python\nimport time\n\ndef benchmark_list_insertion(n=100_000):\n    lst = []\n    start = time.perf_counter()\n    for i in range(n):\n        lst.append(i)\n    end = time.perf_counter()\n    return end - start\n\ndef benchmark_list_insert_mid(n=100_000):\n    lst = list(range(n))\n    start = time.perf_counter()\n    for i in range(1000):\n        lst.insert(n // 2, i)\n    end = time.perf_counter()\n    return end - start\n\n# Append is fast (amortized O(1))\nprint(f\"Append: {benchmark_list_insertion():.4f}s\")\n\n# Insert in middle is slow (O(n) due to shifting)\nprint(f\"Mid-Insert: {benchmark_list_insert_mid():.4f}s\")\n```\n\n**Invariant:** `len(lst) == number of elements`.\n**Edge Case:** Memory fragmentation. Repeatedly appending and deleting from the end can leave the internal array larger than necessary. Python does not automatically shrink the list's internal buffer aggressively.\n\n#### The Dictionary: Hash Table Implementation\n\nA dictionary is a hash table. It maps keys to values using a hash function. The average case for lookup, insertion, and deletion is $O(1)$.\n\n```python\ndef benchmark",
+  "key": "graph128draft2-short-512-1-cold",
+  "profile": "graph128draft2",
+  "case": "short",
+  "output_limit": 512,
+  "rep": 1,
+  "cache": "cold",
+  "ok": true,
+  "gpu": {
+    "sample_count": 12,
+    "used_mib_max": 11375.0,
+    "free_mib_min": 717.0,
+    "temp_c_max": 79.0,
+    "power_w_max": 430.14,
+    "power_w_mean": 348.6408333333333,
+    "graphics_clock_min_mhz": 1935.0,
+    "hw_thermal_slowdown_observed": false
+  },
+  "prompt_sha256": "244213ceadbd4ddd90a2e06c7f91d5c663226315a2663b82e2f1d52c612d3976",
+  "actual_output_matches": true,
+  "cache_valid": true
+}

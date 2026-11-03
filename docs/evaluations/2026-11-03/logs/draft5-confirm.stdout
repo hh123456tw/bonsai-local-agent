@@ -1,0 +1,36 @@
+{"phase": "benchmark", "key": "graph128draft5-short-256-0"}
+{"phase": "sample_done", "key": "graph128draft5-short-256-0-cold", "decode": 206.78090541330516, "prefill": 1556.8288312489126, "cache_n": 0, "ttft": 0.11000000000058208}
+{"phase": "sample_done", "key": "graph128draft5-short-256-0-hot", "decode": 209.09711864170512, "prefill": 410.95139814797903, "cache_n": 144, "ttft": 0.014999999999417923}
+{"phase": "benchmark", "key": "graph128draft5-short-256-1"}
+{"phase": "cooldown", "profile": "graph128draft5", "temperature": 84.0}
+{"phase": "sample_done", "key": "graph128draft5-short-256-1-cold", "decode": 209.70013620640614, "prefill": 1497.0059880239519, "cache_n": 0, "ttft": 0.11000000000058208}
+{"phase": "sample_done", "key": "graph128draft5-short-256-1-hot", "decode": 209.86821757359093, "prefill": 334.5675157246732, "cache_n": 144, "ttft": 0.046000000002095476}
+{"phase": "benchmark", "key": "graph128draft5-short-256-2"}
+{"phase": "cooldown", "profile": "graph128draft5", "temperature": 81.0}
+{"phase": "sample_done", "key": "graph128draft5-short-256-2-cold", "decode": 207.47274520044348, "prefill": 1587.3065275646672, "cache_n": 0, "ttft": 0.09399999999732245}
+{"phase": "sample_done", "key": "graph128draft5-short-256-2-hot", "decode": 209.19123959591474, "prefill": 442.03887977524784, "cache_n": 144, "ttft": 0.01600000000325963}
+{"phase": "benchmark", "key": "graph128draft5-short-1024-0"}
+{"phase": "cooldown", "profile": "graph128draft5", "temperature": 80.0}
+{"phase": "sample_done", "key": "graph128draft5-short-1024-0-cold", "decode": 220.74981829678936, "prefill": 1482.2737498038166, "cache_n": 0, "ttft": 0.11000000000058208}
+{"phase": "sample_done", "key": "graph128draft5-short-1024-0-hot", "decode": 231.1862160224341, "prefill": 358.8616907170455, "cache_n": 144, "ttft": 0.06300000000919681}
+{"phase": "benchmark", "key": "graph128draft5-short-1024-1"}
+{"phase": "cooldown", "profile": "graph128draft5", "temperature": 82.0}
+{"phase": "sample_done", "key": "graph128draft5-short-1024-1-cold", "decode": 232.32025804035888, "prefill": 1600.4234322911054, "cache_n": 0, "ttft": 0.11000000000058208}
+{"phase": "sample_done", "key": "graph128draft5-short-1024-1-hot", "decode": 234.25030765102724, "prefill": 465.6866549727573, "cache_n": 144, "ttft": 0.031000000002677552}
+{"phase": "benchmark", "key": "graph128draft5-short-1024-2"}
+{"phase": "cooldown", "profile": "graph128draft5", "temperature": 82.0}
+{"phase": "sample_done", "key": "graph128draft5-short-1024-2-cold", "decode": 233.47229004570693, "prefill": 1618.1246886696372, "cache_n": 0, "ttft": 0.10899999999674037}
+{"phase": "sample_done", "key": "graph128draft5-short-1024-2-hot", "decode": 233.99889052960057, "prefill": 417.5152277081661, "cache_n": 144, "ttft": 0.031000000002677552}
+{"phase": "benchmark", "key": "graph128draft5-32768-256-0"}
+{"phase": "cooldown", "profile": "graph128draft5", "temperature": 82.0}
+{"phase": "sample_done", "key": "graph128draft5-32768-256-0-cold", "decode": 169.295875879434, "prefill": 1920.1710846583458, "cache_n": 0, "ttft": 17.047000000005937}
+{"phase": "sample_done", "key": "graph128draft5-32768-256-0-hot", "decode": 171.90442599291998, "prefill": 344.62556432436156, "cache_n": 32671, "ttft": 0.046999999991385266}
+{"phase": "benchmark", "key": "graph128draft5-32768-256-1"}
+{"phase": "cooldown", "profile": "graph128draft5", "temperature": 85.0}
+{"phase": "sample_done", "key": "graph128draft5-32768-256-1-cold", "decode": 161.90850379018283, "prefill": 1908.0035758135557, "cache_n": 0, "ttft": 17.14100000000326}
+{"phase": "sample_done", "key": "graph128draft5-32768-256-1-hot", "decode": 167.7298215926953, "prefill": 264.931073765642, "cache_n": 32671, "ttft": 0.04700000000593718}
+{"phase": "benchmark", "key": "graph128draft5-32768-256-2"}
+{"phase": "cooldown", "profile": "graph128draft5", "temperature": 85.0}
+{"phase": "sample_done", "key": "graph128draft5-32768-256-2-cold", "decode": 161.1383775501254, "prefill": 1843.4542799731294, "cache_n": 0, "ttft": 17.75}
+{"phase": "sample_done", "key": "graph128draft5-32768-256-2-hot", "decode": 164.01813821917855, "prefill": 365.2271306944997, "cache_n": 32671, "ttft": 0.046999999991385266}
+{"phase": "restored_original"}

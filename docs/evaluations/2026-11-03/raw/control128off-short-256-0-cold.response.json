@@ -1,0 +1,48 @@
+{
+  "latency_s": 1.5,
+  "ttft_observed_s": 0.09399999999732245,
+  "usage": {
+    "completion_tokens": 256,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 153,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 409
+  },
+  "timings": {
+    "cache_n": 0,
+    "draft_n": 271,
+    "draft_n_accepted": 164,
+    "predicted_ms": 1397.0612,
+    "predicted_n": 256,
+    "predicted_per_second": 182.52600530313202,
+    "predicted_per_token_ms": 5.47867137254902,
+    "prompt_ms": 98.02189999999999,
+    "prompt_n": 153,
+    "prompt_per_second": 1560.8756818629308,
+    "prompt_per_token_ms": 0.6406660130718953
+  },
+  "finish_reason": "length",
+  "text": "# Python Data Structures, Concurrency, Testing, Profiling, Databases, and API Design: A Comprehensive Technical Tutorial\n\nThis tutorial provides a deep dive into advanced Python engineering practices. It covers data structure tradeoffs, concurrency models, testing strategies, performance profiling, database operations, and API design. Each section includes concrete code examples, invariants, edge cases, and verification strategies.\n\n---\n\n## 1. Python Data Structures: Implementation Tradeoffs\n\n### 1.1 Lists vs. Dictionaries: The Core Tradeoff\n\nPython's `list` and `dict` are the two most fundamental data structures. Understanding their internal implementations is critical for performance-critical code.\n\n#### 1.1.1 List Implementation\n\nA Python list is a dynamic array of pointers to objects. It over-allocates memory to amortize the cost of resizing.\n\n```python\nimport sys\n\n# Internal structure: array of PyObject* pointers\n# Over-allocation strategy: if new_size > old_size * 1.125,\n# allocate new_size * 1.125 (rounded up to multiple of 8)\n\nmy_list = [1, 2, 3, 4, 5]\nprint(sys.getsizeof",
+  "key": "control128off-short-256-0-cold",
+  "profile": "control128off",
+  "case": "short",
+  "output_limit": 256,
+  "rep": 0,
+  "cache": "cold",
+  "ok": true,
+  "gpu": {
+    "sample_count": 7,
+    "used_mib_max": 11328.0,
+    "free_mib_min": 764.0,
+    "temp_c_max": 85.0,
+    "power_w_max": 428.56,
+    "power_w_mean": 281.7
+  },
+  "prompt_sha256": "244213ceadbd4ddd90a2e06c7f91d5c663226315a2663b82e2f1d52c612d3976",
+  "actual_output_matches": true,
+  "cache_valid": true
+}

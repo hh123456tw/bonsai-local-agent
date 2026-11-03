@@ -1,0 +1,1 @@
+Catalog library. Preserve all public signatures and behavior, Decimal ROUND_HALF_UP to cents, quantity int>=0 (bool invalid), discount 0..100, price>=0. Consolidate duplicated money logic in catalog/money.py. Preserve existing tests.

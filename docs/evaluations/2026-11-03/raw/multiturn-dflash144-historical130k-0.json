@@ -1,0 +1,47 @@
+{
+  "latency_s": 109.9210000000021,
+  "ttft_observed_s": 108.01500000001397,
+  "usage": {
+    "completion_tokens": 228,
+    "completion_tokens_details": {
+      "reasoning_tokens": 168
+    },
+    "prompt_tokens": 130427,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 130655
+  },
+  "timings": {
+    "cache_n": 0,
+    "draft_n": 225,
+    "draft_n_accepted": 153,
+    "predicted_ms": 1900.4474,
+    "predicted_n": 228,
+    "predicted_per_second": 119.44555792493915,
+    "predicted_per_token_ms": 8.372014977973569,
+    "prompt_ms": 107974.4867,
+    "prompt_n": 130427,
+    "prompt_per_second": 1207.9427648716944,
+    "prompt_per_token_ms": 0.8278537933096675
+  },
+  "finish_reason": "stop",
+  "text": "{\n  \"SECRET_ALPHA\": \"VIOLET-582731\",\n  \"SECRET_BETA\": \"COPPER-294865\",\n  \"SECRET_GAMMA\": \"ORBIT-716943\"\n}",
+  "gpu": {
+    "sample_count": 426,
+    "used_mib_max": 11797.0,
+    "free_mib_min": 295.0,
+    "temp_c_max": 90.0,
+    "power_w_max": 447.84,
+    "power_w_mean": 432.93779342723,
+    "graphics_clock_min_mhz": 1800.0,
+    "hw_thermal_slowdown_observed": false
+  },
+  "expected": [
+    "VIOLET-582731",
+    "COPPER-294865",
+    "ORBIT-716943"
+  ],
+  "correct": true,
+  "step": 0
+}

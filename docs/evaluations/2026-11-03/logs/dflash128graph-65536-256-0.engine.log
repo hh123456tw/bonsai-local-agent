@@ -1,0 +1,38 @@
+2026-11-03 12:27:38.703  INFO  build unknown
+2026-11-03 12:27:38.704  INFO  engine init | constructing service
+2026-11-03 12:27:38.727  INFO  starting engine
+2026-11-03 12:27:38.794  INFO  engine | engine init | device ready, constructing model instance
+2026-11-03 12:27:38.795  INFO  engine | device profile nvidia-geforce-rtx-3080-sm86: 49 routed keys (calibration)
+2026-11-03 12:27:39.267  INFO  loading weights | 7.99 GiB
+2026-11-03 12:27:40.863  INFO  weights ready | 7.99 GiB | 1.6s | 5.01 GiB/s
+[ninfer] reuse host-backed: off
+[ninfer] reuse host-backed: off
+2026-11-03 12:27:41.146  INFO  CUDA graphs ready | 214 ms
+2026-11-03 12:27:41.146  INFO  pinning host KV | 4.00 GiB
+2026-11-03 12:27:41.643  INFO  host KV pinned | 4.00 GiB | 498 ms
+2026-11-03 12:27:41.644  INFO  engine | engine init | model instance ready
+2026-11-03 12:27:41.644  INFO  engine | engine init | constructing core (hybrid-generation)
+2026-11-03 12:27:41.644  INFO  engine | engine init | core ready (hybrid-generation)
+2026-11-03 12:27:41.644  INFO  engine finalized | 312 us
+2026-11-03 12:27:41.644  INFO  engine ready | bonsai2-27b | total 2.9s | weights 7.99 GiB | CUDA sync auto
+[spec] backend=dflash2 draft_tokens=3 adaptive=0 attention_window=0 ngram=0
+2026-11-03 12:27:41.644  INFO  capacity | KV 131,072 tokens, rk2v4-e8, explicit | pages 2,048/33,554,431 | runtime 2.45 GiB | free 570.5 MiB
+2026-11-03 12:27:41.644  INFO  context cache | 1 active + 1 cached device states | host 0 states, 0 B KV | private 1 | shared 0 | anchors 0
+2026-11-03 12:27:41.644  INFO  host cache budget | 4.00 GiB total | 114.8 MiB per state image | 864.0 KiB per host KV page group | 0 anchors per continuation | state capped at half
+2026-11-03 12:27:41.880  INFO  listening on http://127.0.0.1:8080 | model bonsai2-27b | auth disabled
+2026-11-03 12:27:41.880  INFO  api base http://127.0.0.1:8080/v1
+2026-11-03 12:27:42.298  INFO  req#1 started | openai-chat stream | 1 message | max output 32 | thinking off
+2026-11-03 12:27:42.422  INFO  req#1 done | openai-chat | stop token | prompt 23 | output 25 | cache 0 (0.0%) | TTFT 25.8 ms | total 124 ms | prefill 914.4 tok/s | decode 243.7 tok/s | dflash2 accepted 20/21 (95.2%)
+2026-11-03 12:27:42.452  INFO  req#2 started | openai-chat stream | 1 message | max output 256 | thinking off
+2026-11-03 12:27:46.890  INFO  throughput | 5.0s | prefill 1.95k tok/s (9,751 tok) | decode 4.8 tok/s (24 tok) | running 1 (prefill 1) | batch 1.00 | host 24.6% (1.2s)
+2026-11-03 12:27:51.881  INFO  throughput | 5.0s | prefill 1.90k tok/s (9,472 tok) | running 1 (prefill 1) | host 24.7% (1.2s)
+2026-11-03 12:27:56.890  INFO  throughput | 5.0s | prefill 1.79k tok/s (8,960 tok) | running 1 (prefill 1) | host 24.0% (1.2s)
+2026-11-03 12:28:01.894  INFO  throughput | 5.0s | prefill 1.59k tok/s (7,936 tok) | running 1 (prefill 1) | host 23.5% (1.2s)
+2026-11-03 12:28:06.894  INFO  throughput | 5.0s | prefill 1.48k tok/s (7,424 tok) | running 1 (prefill 1) | host 22.9% (1.1s)
+2026-11-03 12:28:11.884  INFO  throughput | 5.0s | prefill 1.39k tok/s (6,912 tok) | running 1 (prefill 1) | host 23.0% (1.1s)
+2026-11-03 12:28:16.883  INFO  throughput | 5.0s | prefill 1.28k tok/s (6,400 tok) | running 1 (prefill 1) | host 21.7% (1.1s)
+2026-11-03 12:28:21.883  INFO  throughput | 5.0s | prefill 1.28k tok/s (6,400 tok) | running 1 (prefill 1) | host 23.6% (1.2s)
+2026-11-03 12:28:25.755  INFO  req#2 done | openai-chat | output limit | prompt 65,463 | output 256 | cache 0 (0.0%) | TTFT 41.4s | total 43.3s | prefill 1.58k tok/s | decode 135.9 tok/s | dflash2 accepted 158/287 (55.1%)
+2026-11-03 12:28:25.772  INFO  req#3 started | openai-chat stream | 1 message | max output 256 | thinking off
+2026-11-03 12:28:26.893  INFO  throughput | 5.0s | prefill 447.0 tok/s (2,240 tok) | decode 81.6 tok/s (409 tok) | running 1 (decode-ready 1) | batch 1.00 | host 11.9% (595 ms)
+2026-11-03 12:28:27.703  INFO  req#3 done | openai-chat | output limit | prompt 65,463 | output 256 | cache 65,454 (100.0%, shared prefix) | TTFT 68.6 ms | total 1.9s | prefill 176.8 tok/s | decode 136.3 tok/s | dflash2 accepted 158/287 (55.1%)

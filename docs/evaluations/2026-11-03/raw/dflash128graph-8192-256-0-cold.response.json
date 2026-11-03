@@ -1,0 +1,48 @@
+{
+  "latency_s": 5.875,
+  "ttft_observed_s": 4.139999999999418,
+  "usage": {
+    "completion_tokens": 256,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8113,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8369
+  },
+  "timings": {
+    "cache_n": 0,
+    "draft_n": 283,
+    "draft_n_accepted": 159,
+    "predicted_ms": 1735.8693999999998,
+    "predicted_n": 256,
+    "predicted_per_second": 146.90045230361227,
+    "predicted_per_token_ms": 6.807330980392156,
+    "prompt_ms": 4111.910800000001,
+    "prompt_n": 8113,
+    "prompt_per_second": 1973.0486371445604,
+    "prompt_per_token_ms": 0.5068298779736227
+  },
+  "finish_reason": "length",
+  "text": "Based on the provided reference dataset, which consists of 283 records (indices 000000 to 000282) mapping unique integer indices to 20-character hexadecimal strings, here is a detailed technical explanation of how to index, validate, and query this data.\n\n### 1. Data Structure Analysis\n\nThe dataset is a flat, key-value collection.\n*   **Key:** An integer identifier ranging from `0` to `282` (formatted as `record_XXXXXX` in the source, but logically an integer).\n*   **Value:** A 20-character string consisting of lowercase hexadecimal digits (`0-9`, `a-f`).\n*   **Total Size:** 283 records.\n*   **Data Type:** The values appear to be cryptographic hashes (e.g., SHA-1 truncated, or a custom 80-bit hash) or opaque identifiers. They do not follow a standard UUID format (which is 32 hex chars) or SHA-256 (64 hex chars).\n\n### 2. Indexing Strategy\n\nGiven the small size (283 records), in-memory indexing is highly efficient. However, for a robust system",
+  "key": "dflash128graph-8192-256-0-cold",
+  "profile": "dflash128graph",
+  "case": "8192",
+  "output_limit": 256,
+  "rep": 0,
+  "cache": "cold",
+  "ok": true,
+  "gpu": {
+    "sample_count": 24,
+    "used_mib_max": 11410.0,
+    "free_mib_min": 682.0,
+    "temp_c_max": 73.0,
+    "power_w_max": 428.88,
+    "power_w_mean": 370.115
+  },
+  "prompt_sha256": "41894d7f36f607df98a3b0e8bb0ec285f36e2eeb9a273819980ef4364dee5c22",
+  "actual_output_matches": true,
+  "cache_valid": true
+}

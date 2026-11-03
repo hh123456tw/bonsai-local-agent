@@ -1,0 +1,53 @@
+{
+  "latency_s": 14.328000000008615,
+  "ttft_observed_s": 0.125,
+  "usage": {
+    "completion_tokens": 1752,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1561
+    },
+    "prompt_tokens": 122850,
+    "prompt_tokens_details": {
+      "cached_tokens": 122823
+    },
+    "total_tokens": 124602
+  },
+  "timings": {
+    "cache_n": 122823,
+    "draft_n": 1818,
+    "draft_n_accepted": 1120,
+    "predicted_ms": 14191.1875,
+    "predicted_n": 1752,
+    "predicted_per_second": 123.38643260121819,
+    "predicted_per_token_ms": 8.104618789263277,
+    "prompt_ms": 79.3009,
+    "prompt_n": 27,
+    "prompt_per_second": 340.4753287793707,
+    "prompt_per_token_ms": 2.93707037037037
+  },
+  "finish_reason": "stop",
+  "text": "{\n  \"AT_START\": \"064a03649aa7df91\",\n  \"EARLY\": \"6c8e771c9ca40b6e\",\n  \"MIDDLE\": \"01e77f539143e4d6\",\n  \"LATE\": \"9df58f52f476ed41\",\n  \"AT_END\": \"b0d6f8de11a1795d\",\n  \"RANDOM_SPOT\": \"87154acca34f18be\",\n  \"LINKED\": {\n    \"FINAL_ALIAS\": \"RIVER\",\n    \"ALIAS_RIVER\": \"target_C\",\n    \"TARGET_target_C\": \"e968c4fedeadf0cf\"\n  }\n}",
+  "gpu": {
+    "sample_count": 56,
+    "used_mib_max": 11380.0,
+    "free_mib_min": 712.0,
+    "temp_c_max": 90.0,
+    "power_w_max": 447.94,
+    "power_w_mean": 443.3726785714286,
+    "graphics_clock_min_mhz": 1920.0,
+    "hw_thermal_slowdown_observed": false
+  },
+  "correct_by_key": {
+    "AT_START": true,
+    "EARLY": false,
+    "MIDDLE": true,
+    "LATE": false,
+    "AT_END": true,
+    "RANDOM_SPOT": false,
+    "LINKED": false
+  },
+  "json_format_valid": true,
+  "cache_hit_fraction": 0.9997802197802198,
+  "cache": "shared_prefix_hot",
+  "rep": 2
+}

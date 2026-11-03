@@ -1,0 +1,46 @@
+{
+  "latency_s": 6.577999999994063,
+  "ttft_observed_s": 3.4839999999967404,
+  "usage": {
+    "completion_tokens": 256,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8113,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8369
+  },
+  "timings": {
+    "cache_n": 0,
+    "predicted_ms": 3095.5273,
+    "predicted_n": 256,
+    "predicted_per_second": 82.37691846555512,
+    "predicted_per_token_ms": 12.13932274509804,
+    "prompt_ms": 3478.9370000000004,
+    "prompt_n": 8113,
+    "prompt_per_second": 2332.0341817055037,
+    "prompt_per_token_ms": 0.42881018119068165
+  },
+  "finish_reason": "length",
+  "text": "Based on the provided reference dataset, which consists of 283 records (indices 000000 to 000282) mapping unique integer identifiers to 20-character hexadecimal strings, here is a detailed technical explanation of how to index, validate, and query this data.\n\n### 1. Data Structure Analysis\n\nThe dataset is a flat, key-value collection.\n*   **Key (ID):** A zero-padded integer string (e.g., `record_000000`). The numeric part (0–282) is the primary identifier.\n*   **Value (Hash):** A 20-character string consisting of lowercase hexadecimal characters (`0-9`, `a-f`).\n*   **Data Type:** The values appear to be truncated hashes (likely SHA-1 or similar, as full SHA-1 is 40 hex chars, but this is exactly half, or potentially a custom 80-bit identifier).\n\n### 2. Indexing Strategy\n\nTo support efficient retrieval, the data should be stored in a structure that allows for O(1) or O(log n) access.\n\n#### A. In-Memory Indexing (Recommended for Small Datasets)\n",
+  "key": "base256-8192-256-2-cold",
+  "profile": "base256",
+  "case": "8192",
+  "output_limit": 256,
+  "rep": 2,
+  "cache": "cold",
+  "ok": true,
+  "gpu": {
+    "sample_count": 26,
+    "used_mib_max": 11551.0,
+    "free_mib_min": 541.0,
+    "temp_c_max": 86.0,
+    "power_w_max": 448.48,
+    "power_w_mean": 409.97076923076924
+  },
+  "prompt_sha256": "41894d7f36f607df98a3b0e8bb0ec285f36e2eeb9a273819980ef4364dee5c22",
+  "actual_output_matches": true,
+  "cache_valid": true
+}

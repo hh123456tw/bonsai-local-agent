@@ -1,0 +1,13 @@
+{
+  "time": "2026-11-03T17:22:27.903266",
+  "stable_hashes_match": true,
+  "original_engine_options_match": true,
+  "slots": [
+    {
+      "id": 0,
+      "is_processing": false,
+      "n_ctx": 147456,
+      "speculative": true
+    }
+  ]
+}

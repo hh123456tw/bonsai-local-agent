@@ -1,0 +1,19 @@
+{
+  "model": "bonsai2-27b",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Write a detailed technical tutorial on Python data structures, concurrency, testing, profiling, database transactions and API design. Continue giving concrete examples until the output budget is exhausted."
+    }
+  ],
+  "temperature": 0,
+  "seed": 42,
+  "max_tokens": 1024,
+  "enable_thinking": false,
+  "thinking_budget": 1536,
+  "ignore_eos": true,
+  "stream": true,
+  "stream_options": {
+    "include_usage": true
+  }
+}

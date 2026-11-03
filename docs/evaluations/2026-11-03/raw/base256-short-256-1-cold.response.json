@@ -1,0 +1,46 @@
+{
+  "latency_s": 3.125,
+  "ttft_observed_s": 0.125,
+  "usage": {
+    "completion_tokens": 256,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 153,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 409
+  },
+  "timings": {
+    "cache_n": 0,
+    "predicted_ms": 3001.9784999999997,
+    "predicted_n": 256,
+    "predicted_per_second": 84.94397944555567,
+    "predicted_per_token_ms": 11.772464705882351,
+    "prompt_ms": 104.349,
+    "prompt_n": 153,
+    "prompt_per_second": 1466.2335048730702,
+    "prompt_per_token_ms": 0.6820196078431373
+  },
+  "finish_reason": "length",
+  "text": "# Python Data Structures, Concurrency, Testing, Profiling, Databases, and API Design: A Comprehensive Technical Tutorial\n\nThis tutorial provides a deep dive into advanced Python engineering practices. It covers data structure tradeoffs, concurrency models, testing strategies, performance profiling, database operations, and API design. Each section includes concrete code examples, invariants, edge cases, and verification strategies.\n\n---\n\n## 1. Python Data Structures: Implementation Tradeoffs\n\n### 1.1 Lists vs. Dictionaries: The Core Tradeoff\n\nPython's built-in `list` and `dict` are the workhorses of the language, but their internal implementations dictate different performance characteristics.\n\n#### The List: Contiguous Array of Pointers\n\nA Python list is implemented as a dynamic array of pointers to objects. When you append an element, Python may need to allocate a new, larger block of memory and copy all existing pointers.\n\n```python\nimport sys\n\n# Internal structure: [PyObject* item0, PyObject* item1, ...]\nmy_list = [1, 2, 3]\n\n# Amortized O(1) append\nmy_list.append(4)\n\n# O(1) index access\nval = my_list[0",
+  "key": "base256-short-256-1-cold",
+  "profile": "base256",
+  "case": "short",
+  "output_limit": 256,
+  "rep": 1,
+  "cache": "cold",
+  "ok": true,
+  "gpu": {
+    "sample_count": 13,
+    "used_mib_max": 11551.0,
+    "free_mib_min": 541.0,
+    "temp_c_max": 84.0,
+    "power_w_max": 429.65,
+    "power_w_mean": 375.1046153846154
+  },
+  "prompt_sha256": "244213ceadbd4ddd90a2e06c7f91d5c663226315a2663b82e2f1d52c612d3976",
+  "actual_output_matches": true,
+  "cache_valid": true
+}

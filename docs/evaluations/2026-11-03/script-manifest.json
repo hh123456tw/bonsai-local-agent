@@ -1,0 +1,19 @@
+{
+  "accept.py": "e78999d0d039c9f7beb75b7d7b369d9f623e2c460d574101e42f732bc8171d81",
+  "audit_coding.py": "d604a7f9999d65fb0bfbd32ea7a2a13c6be67d2f2c4c92dc7e0c366d8f433e8c",
+  "calibrate.py": "159af08ed4ee0bbb5f3a9eeafd8e3c6374e747afd258cbc06d1e896d1bd001ec",
+  "check_opencode_config.py": "e28e16539bd2cdd73931bdb76e70cbb53987a39a93506b7782eb5f6be3b1e008",
+  "coding.py": "4bec0b8952b83831fd1d45b0d06bdb7b815f295331f20bd274bcdfef8f8214bf",
+  "compat.py": "7c08f12c934f9ba48180092d6979ef1217ec7ecbff77899635ce644720ea2232",
+  "context.py": "77c8d3b4b16dbbc8dbea0fa5eee5b70a533ff15c8c3c86bff6eb733a50ecee87",
+  "enhance_report.py": "e73f5bdc378b1902639cc75fd62a52b2376aeff02e50cf8eef633ca234cc13de",
+  "finalize.py": "50c2c6634b40ed7e905adb4f68b060878aab91dd9ce293378a4f2053d777ec0f",
+  "fixtures.py": "3f795799b6aa6a6df30946015414c6705dc9f3ad9e80f3136c2f7a4e2918ae2a",
+  "lab.py": "7bf8566984787933e9c5f074d031a49d3162b967535e71cc912bf82ab5aed51e",
+  "multiturn.py": "6122765417876ae0292a7b690b488975b02721a5d09588dda05268eac10abbd6",
+  "preserve_pilot.py": "c1534d43b22f67f2c8f4c1c0fd43e3151e2e3c3ba6b1ee8d02811e2b62bdd949",
+  "report.py": "312cafa21e19f92be60d83ebea642c6ac5623752df1144e03502a926da749464",
+  "run_remaining.py": "5848f76e196bd8df496ce7847477f9bba448c4492f9c73069e7f7550aef24935",
+  "run_supplements.py": "a5786c78ac9e59c81c8d3e8e25abec6e583557f00d7413e23771e29414814674",
+  "validate_artifacts.py": "a8ad942c2650dc1021c85b8420bbe8c95855a7d53e40a09caaaa7d34c983faf4"
+}

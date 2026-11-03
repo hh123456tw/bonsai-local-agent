@@ -1,0 +1,19 @@
+{
+  "model": "bonsai2-27b",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Write a detailed technical tutorial on Python data structures, concurrency, testing, profiling, database transactions and API design. Continue giving concrete examples until the output budget is exhausted. Cover each of the following topics thoroughly: list and dictionary implementation tradeoffs; immutable data; thread and process synchronization; cancellation and timeouts; test fixtures and dependency injection; transaction isolation; idempotency and retry safety; pagination and validation; query plans and database indexing; memory profiling and practical performance investigation. Include Python examples, explain invariants and edge cases, and discuss how to verify correctness. This is an educational writing task, not a request to execute any tools. Start the tutorial directly and continue until the available output budget is used."
+    }
+  ],
+  "temperature": 0,
+  "seed": 42,
+  "max_tokens": 1024,
+  "enable_thinking": false,
+  "thinking_budget": 1536,
+  "ignore_eos": true,
+  "stream": true,
+  "stream_options": {
+    "include_usage": true
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "latency_s": 98.57799999999406,
+  "ttft_observed_s": 70.14099999998871,
+  "usage": {
+    "completion_tokens": 1722,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1561
+    },
+    "prompt_tokens": 98263,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 99985
+  },
+  "timings": {
+    "cache_n": 0,
+    "predicted_ms": 28434.5095,
+    "predicted_n": 1722,
+    "predicted_per_second": 60.525046159139826,
+    "predicted_per_token_ms": 16.522085705984892,
+    "prompt_ms": 70098.93049999999,
+    "prompt_n": 98263,
+    "prompt_per_second": 1401.776022816782,
+    "prompt_per_token_ms": 0.7133807282496971
+  },
+  "finish_reason": "stop",
+  "text": "{\n  \"AT_START\": \"794171cf8885d4be\",\n  \"EARLY\": \"012ecfb99af27af5\",\n  \"MIDDLE\": \"9d2e6a25ab94a673\",\n  \"LATE\": \"e0086651be6aed3c\",\n  \"AT_END\": \"865422e9b5c9d361\",\n  \"RANDOM_SPOT\": \"17e6fa8a353286a3\",\n  \"LINKED\": \"3dc091e3100693d7\"\n}",
+  "gpu": {
+    "sample_count": 384,
+    "used_mib_max": 11625.0,
+    "free_mib_min": 467.0,
+    "temp_c_max": 91.0,
+    "power_w_max": 448.78,
+    "power_w_mean": 435.635390625,
+    "graphics_clock_min_mhz": 1905.0,
+    "hw_thermal_slowdown_observed": false
+  },
+  "correct_by_key": {
+    "AT_START": true,
+    "EARLY": true,
+    "MIDDLE": false,
+    "LATE": true,
+    "AT_END": true,
+    "RANDOM_SPOT": true,
+    "LINKED": true
+  },
+  "json_format_valid": true,
+  "cache_hit_fraction": 0.0,
+  "cache": "cold",
+  "rep": 0
+}

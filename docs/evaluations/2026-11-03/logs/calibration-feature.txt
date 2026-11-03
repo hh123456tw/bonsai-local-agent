@@ -1,0 +1,104 @@
+BASELINE
+{"tests": 9, "failures": 2, "errors": 6, "passed": false}
+test_authored_tests (external_acceptance.Acceptance.test_authored_tests) ... FAIL
+test_bounds (external_acceptance.Acceptance.test_bounds) ... ERROR
+test_defaults (external_acceptance.Acceptance.test_defaults) ... ERROR
+test_invalid (external_acceptance.Acceptance.test_invalid) ... FAIL
+test_legacy (external_acceptance.Acceptance.test_legacy) ... ok
+test_parse (external_acceptance.Acceptance.test_parse) ... ERROR
+test_pending (external_acceptance.Acceptance.test_pending) ... ERROR
+test_report (external_acceptance.Acceptance.test_report) ... ERROR
+test_sum (external_acceptance.Acceptance.test_sum) ... ERROR
+
+======================================================================
+ERROR: test_bounds (external_acceptance.Acceptance.test_bounds)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\fixtures\feature\acceptance.py", line 15, in test_bounds
+    f=importlib.import_module('ledger.summary').totals_by_currency
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'ledger.summary' has no attribute 'totals_by_currency'
+
+======================================================================
+ERROR: test_defaults (external_acceptance.Acceptance.test_defaults)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\fixtures\feature\acceptance.py", line 9, in test_defaults
+    self.assertEqual(Entry('a',Decimal('1'),date(2026,1,1)).currency,'USD')
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Entry' object has no attribute 'currency'
+
+======================================================================
+ERROR: test_parse (external_acceptance.Acceptance.test_parse)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\fixtures\feature\acceptance.py", line 10, in test_parse
+    def test_parse(self): self.assertEqual(parse_csv(DATA)[0].currency,'USD')
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Entry' object has no attribute 'currency'
+
+======================================================================
+ERROR: test_pending (external_acceptance.Acceptance.test_pending)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\fixtures\feature\acceptance.py", line 19, in test_pending
+    f=importlib.import_module('ledger.summary').totals_by_currency
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'ledger.summary' has no attribute 'totals_by_currency'
+
+======================================================================
+ERROR: test_report (external_acceptance.Acceptance.test_report)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\fixtures\feature\acceptance.py", line 24, in test_report
+    def test_report(self): self.assertEqual(json.loads(render_report(DATA,by_currency=True)),{'totals':{'EUR':'2.20','USD':'1.00'}})
+                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: render_report() got an unexpected keyword argument 'by_currency'
+
+======================================================================
+ERROR: test_sum (external_acceptance.Acceptance.test_sum)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\fixtures\feature\acceptance.py", line 12, in test_sum
+    f=importlib.import_module('ledger.summary').totals_by_currency
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'ledger.summary' has no attribute 'totals_by_currency'
+
+======================================================================
+FAIL: test_authored_tests (external_acceptance.Acceptance.test_authored_tests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\fixtures\feature\acceptance.py", line 28, in test_authored_tests
+    p=pathlib.Path('test_currency.py');self.assertTrue(p.is_file())
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_invalid (external_acceptance.Acceptance.test_invalid)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\fixtures\feature\acceptance.py", line 23, in test_invalid
+    with self.assertRaises(ValueError): parse_csv(DATA.replace(',usd',','+value))
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.002s
+
+FAILED (failures=2, errors=6)
+
+REFERENCE
+{"tests": 9, "failures": 0, "errors": 0, "passed": true}
+test_authored_tests (external_acceptance.Acceptance.test_authored_tests) ... ok
+test_bounds (external_acceptance.Acceptance.test_bounds) ... ok
+test_defaults (external_acceptance.Acceptance.test_defaults) ... ok
+test_invalid (external_acceptance.Acceptance.test_invalid) ... ok
+test_legacy (external_acceptance.Acceptance.test_legacy) ... ok
+test_parse (external_acceptance.Acceptance.test_parse) ... ok
+test_pending (external_acceptance.Acceptance.test_pending) ... ok
+test_report (external_acceptance.Acceptance.test_report) ... ok
+test_sum (external_acceptance.Acceptance.test_sum) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.009s
+
+OK

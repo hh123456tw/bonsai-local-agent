@@ -1,0 +1,30 @@
+{
+  "key": "dflash128graph-feature-2",
+  "profile": "dflash128graph",
+  "task": "feature",
+  "rep": 2,
+  "prompt_sha256": "71c47b5376920508a05953539879138372e3e3d80016cce50ec2ff8691c3e398",
+  "input_manifest": {
+    "README.md": "acde69ec95036e39fed94c4d6cd56d7f68324eb215384f3a09cea3faea569c6b",
+    "ledger/__init__.py": "ec0ca500ebce758808319e1997f40d53fbbc0209c756126caa4401be97928084",
+    "ledger/models.py": "aadaacd4f740d3438f56a56e0d03d382048c879d0c2fe034605b90338a201467",
+    "ledger/parser.py": "5d581d94e997d2cb29fa65d43d918586dae84116878f637cd0c77ac9191c6060",
+    "ledger/summary.py": "0c4361190e25bb0ca4b02ed661112dd01f3e26801bf5c35c6a70d30e7b84850a",
+    "ledger/cli.py": "4885e1e823aaaf8df75f159309c02852eeade02b41155c060afb535fb0b1ce64",
+    "test_existing.py": "b0f93bbc383ad23ff76100aa5601a3ff01ac17a592f4562b585b9a9ea06ab32e"
+  },
+  "passed": false,
+  "error": "Supervised timeout during agent; no completed/unowned CLI PID terminated",
+  "agent_latency_s": 480.1710000000021,
+  "gpu": {
+    "sample_count": 1881,
+    "used_mib_max": 11379.0,
+    "free_mib_min": 713.0,
+    "temp_c_max": 91.0,
+    "power_w_max": 449.36,
+    "power_w_mean": 434.27713450292396,
+    "graphics_clock_min_mhz": 1875.0,
+    "hw_thermal_slowdown_observed": false
+  },
+  "evaluation_total_s": 482.2179999999935
+}

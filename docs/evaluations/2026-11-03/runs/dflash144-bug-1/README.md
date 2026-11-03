@@ -1,0 +1,1 @@
+business_days(start, end, holidays=()) counts both endpoint dates when weekdays and not holidays. Reversed ranges must raise ValueError. Run python -m unittest discover. Do not edit test_existing.py.

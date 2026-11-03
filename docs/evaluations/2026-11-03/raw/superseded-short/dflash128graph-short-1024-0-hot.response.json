@@ -1,0 +1,48 @@
+{
+  "latency_s": 5.062000000005355,
+  "ttft_observed_s": 0.04700000000593718,
+  "usage": {
+    "completion_tokens": 1024,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 45,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1069
+  },
+  "timings": {
+    "cache_n": 0,
+    "draft_n": 1020,
+    "draft_n_accepted": 683,
+    "predicted_ms": 5017.804800000001,
+    "predicted_n": 1024,
+    "predicted_per_second": 203.87401279539608,
+    "predicted_per_token_ms": 4.904990029325514,
+    "prompt_ms": 41.5216,
+    "prompt_n": 45,
+    "prompt_per_second": 1083.773264999422,
+    "prompt_per_token_ms": 0.9227022222222222
+  },
+  "finish_reason": "length",
+  "text": "# Python Data Structures, Concurrency, Testing, Profiling, Database Transactions, and API Design\n\nThis comprehensive guide covers six critical areas of Python software engineering. Each section includes concrete, runnable examples with explanations.\n\n---\n\n## 1. Python Data Structures\n\n### 1.1 Built-in Collections\n\n```python\nfrom collections import defaultdict, deque, Counter, namedtuple, OrderedDict\nfrom typing import Any, List, Dict, Set, Tuple\n\n# --- List: Ordered, mutable, O(1) append, O(n) insert/delete ---\nnumbers: List[int] = [1, 2, 3, 4, 5]\nnumbers.append(6)          # O(1) amortized\nnumbers.insert(0, 0)       # O(n) - shifts all elements\ndel numbers[2]             # O(n)\nnumbers.pop()              # O(1) - removes last element\nnumbers.sort()             # O(n log n) - in-place\nnumbers.reverse()          # O(n)\n\n# --- Tuple: Immutable, hashable, O(1) access ---\npoint: Tuple[int, int] = (3, 4)\n# point[0] = 10  # TypeError: 'tuple' object does not support item assignment\npoint_hash = hash(point)  # Tuples are hashable (if all elements are)\n\n# --- Set: Unordered, unique, O(1) average lookup/insert/delete ---\nunique_numbers: set = {1, 2, 3, 2, 1, 4}\nprint(len(unique_numbers))  # 4\nif 3 in unique_numbers:    # O(1) average\n    print(\"3 is in the set\")\nunion = {1, 2} | {3, 4}    # {1, 2, 3, 4}\nintersection = {1, 2, 3} & {2, 3, 4}  # {2, 3}\nsymmetric_difference = {1, 2} ^ {2, 3}  # {1, 3}\n\n# --- Dict: Ordered (3.7+), O(1) average lookup/insert/delete ---\nuser: Dict[str, Any] = {\"name\": \"Alice\", \"age\": 30, \"scores\": [90, 85, 95]}\nuser[\"email\"] = \"alice@example.com\"\nif \"name\" in user:\n    print(user[\"name\"])\nuser.pop(\"age\", None)  # Safe pop with default\nuser.setdefault(\"role\", \"user\")  # Sets only if key doesn't exist\n\n# --- defaultdict: Dict with a default factory ---\nword_count: Dict[str, int] = defaultdict(int)\nfor word in \"the quick brown fox jumps over the lazy dog the end\".split():\n    word_count[word] += 1\nprint(word_count[\"the\"])  # 3\nprint(word_count[\"zebra\"])  # 0 (auto-created)\n\n# --- deque: Double-ended queue, O(1) append/pop on both ends ---\nqueue: deque = deque([1, 2, 3])\nqueue.append(4)       # O(1)\nqueue.appendleft(0)   # O(1)\nqueue.popleft()       # O(1) - removes from left\nqueue.pop()           # O(1) - removes from right\n# Use deque for queues, stacks, sliding windows, BFS\nfrom collections import deque as dq\nbfs_queue = dq([1])\nbfs_queue.append(2)\nbfs_queue.append(3)\n\n# --- Counter: Dict subclass for counting ---\nscores = [90, 85, 90, 95, 85, 90]\nscore_counts = Counter(scores)\nprint(score_counts)  # Counter({90: 3, 85: 2, 95: 1})\nprint(score_counts.most_common(2))  # [(90, 3), (85, 2)]\nscore_counts.update([90, 90])\nprint(score_counts[90])  # 5\n\n# --- namedtuple: Lightweight immutable object ---\nPoint = namedtuple(\"Point\", [\"x\", \"y\"])\np = Point(3, 4)\nprint(p.x, p.y)  # 3 4\np = p._replace(x=10)  # p = Point(x=10, y=4)\n# p.x = 5  # AttributeError: 'Point' object has no attribute 'x' (immutable)\n\n# --- OrderedDict: Dict that remembers insertion order (explicit) ---\nordered = OrderedDict()\nordered[\"a\"] =",
+  "key": "dflash128graph-short-1024-0-hot",
+  "profile": "dflash128graph",
+  "case": "short",
+  "output_limit": 1024,
+  "rep": 0,
+  "cache": "hot",
+  "ok": true,
+  "gpu": {
+    "sample_count": 21,
+    "used_mib_max": 11504.0,
+    "free_mib_min": 588.0,
+    "temp_c_max": 68.0,
+    "power_w_max": 427.27,
+    "power_w_mean": 411.67285714285714
+  },
+  "prompt_sha256": "8f39bbf4c2d003fd4440edb9c132e21a765581bd063951b68e3086f86059e420",
+  "actual_output_matches": true,
+  "cache_valid": false
+}

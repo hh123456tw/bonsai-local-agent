@@ -1,0 +1,76 @@
+{
+  "first": {
+    "id": "msg_2a3ab8f0b253be3d",
+    "type": "message",
+    "role": "assistant",
+    "model": "bonsai2-27b",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "The user is asking to use the lookup function with the key \"answer\" and report its exact value.\n",
+        "signature": "msg_2a3ab8f0b253be3d"
+      },
+      {
+        "type": "tool_use",
+        "id": "toolu_d18732135c0c1ef1",
+        "name": "lookup",
+        "input": {
+          "key": "answer"
+        }
+      }
+    ],
+    "stop_reason": "tool_use",
+    "stop_sequence": null,
+    "usage": {
+      "cache_creation": null,
+      "cache_creation_input_tokens": null,
+      "cache_read_input_tokens": 316,
+      "inference_geo": null,
+      "input_tokens": 7,
+      "output_tokens": 49,
+      "output_tokens_details": {
+        "thinking_tokens": 24
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": null
+    }
+  },
+  "second": {
+    "id": "msg_5942ff95abf3af11",
+    "type": "message",
+    "role": "assistant",
+    "model": "bonsai2-27b",
+    "content": [
+      {
+        "type": "thinking",
+        "thinking": "The user asked me to use lookup with key \"answer\" and report its exact value. The result is \"TEAL-573921\".\n",
+        "signature": "msg_5942ff95abf3af11"
+      },
+      {
+        "type": "text",
+        "text": "The exact value is: **TEAL-573921**"
+      }
+    ],
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "usage": {
+      "cache_creation": null,
+      "cache_creation_input_tokens": null,
+      "cache_read_input_tokens": 316,
+      "inference_geo": null,
+      "input_tokens": 62,
+      "output_tokens": 52,
+      "output_tokens_details": {
+        "thinking_tokens": 35
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": null
+    }
+  }
+}

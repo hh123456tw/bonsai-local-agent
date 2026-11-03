@@ -1,0 +1,48 @@
+{
+  "latency_s": 1.3289999999979045,
+  "ttft_observed_s": 0.0629999999946449,
+  "usage": {
+    "completion_tokens": 256,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 45,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 301
+  },
+  "timings": {
+    "cache_n": 0,
+    "draft_n": 253,
+    "draft_n_accepted": 170,
+    "predicted_ms": 1270.4370000000001,
+    "predicted_n": 256,
+    "predicted_per_second": 200.71833550187847,
+    "predicted_per_token_ms": 4.982105882352942,
+    "prompt_ms": 41.7977,
+    "prompt_n": 45,
+    "prompt_per_second": 1076.6142634642576,
+    "prompt_per_token_ms": 0.9288377777777778
+  },
+  "finish_reason": "length",
+  "text": "# Python Data Structures, Concurrency, Testing, Profiling, Database Transactions, and API Design\n\nThis comprehensive guide covers six critical areas of Python software engineering. Each section includes concrete, runnable examples with explanations.\n\n---\n\n## 1. Python Data Structures\n\n### 1.1 Built-in Collections\n\n```python\nfrom collections import defaultdict, deque, Counter, namedtuple, OrderedDict\nfrom typing import Any, List, Dict, Set, Tuple\n\n# --- List: Ordered, mutable, O(1) append, O(n) insert/delete ---\nnumbers: List[int] = [1, 2, 3, 4, 5]\nnumbers.append(6)          # O(1) amortized\nnumbers.insert(0, 0)       # O(n) - shifts all elements\ndel numbers[2]             # O(n)\nnumbers.pop()              # O(1) - removes last element\nnumbers.sort()             # O(n log n) - in-place\nnumbers.reverse()          # O(n)\n\n# --- Tuple: Immutable, hashable, O(1) access ---\npoint: Tuple[int, int] = (3, 4)\n# point[0] = 10  #",
+  "key": "dflash128graph-short-256-2-cold",
+  "profile": "dflash128graph",
+  "case": "short",
+  "output_limit": 256,
+  "rep": 2,
+  "cache": "cold",
+  "ok": true,
+  "gpu": {
+    "sample_count": 6,
+    "used_mib_max": 11470.0,
+    "free_mib_min": 622.0,
+    "temp_c_max": 56.0,
+    "power_w_max": 375.11,
+    "power_w_mean": 234.80166666666668
+  },
+  "prompt_sha256": "8f39bbf4c2d003fd4440edb9c132e21a765581bd063951b68e3086f86059e420",
+  "actual_output_matches": true,
+  "cache_valid": true
+}

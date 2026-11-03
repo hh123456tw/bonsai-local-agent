@@ -1,0 +1,109 @@
+{
+  "base256": {
+    "--device-snapshot-slots": {
+      "reference": "1",
+      "value": null
+    },
+    "--device-state-slots": {
+      "reference": null,
+      "value": "0"
+    },
+    "--draft-tokens": {
+      "reference": "3",
+      "value": null
+    },
+    "--kv-capacity": {
+      "reference": "131072",
+      "value": "262144"
+    },
+    "--max-context": {
+      "reference": "131072",
+      "value": "262144"
+    },
+    "--max-long-anchors-per-continuation": {
+      "reference": null,
+      "value": "1"
+    },
+    "--max-private-continuations": {
+      "reference": null,
+      "value": "1"
+    },
+    "--max-shared-prefixes": {
+      "reference": null,
+      "value": "0"
+    },
+    "--no-cuda-graph": {
+      "reference": null,
+      "value": true
+    },
+    "--spec": {
+      "reference": "dflash2",
+      "value": null
+    },
+    "--use-alt-prefix-caching": {
+      "reference": true,
+      "value": null
+    }
+  },
+  "control128off": {
+    "--no-cuda-graph": {
+      "reference": null,
+      "value": true
+    }
+  },
+  "dflash128graph": {},
+  "dflash144": {
+    "--kv-capacity": {
+      "reference": "131072",
+      "value": "147456"
+    },
+    "--max-context": {
+      "reference": "131072",
+      "value": "147456"
+    },
+    "--no-cuda-graph": {
+      "reference": null,
+      "value": true
+    }
+  },
+  "graph128chunk128": {
+    "--prefill-chunk": {
+      "reference": "256",
+      "value": "128"
+    }
+  },
+  "graph128chunk512": {
+    "--prefill-chunk": {
+      "reference": "256",
+      "value": "512"
+    }
+  },
+  "graph128draft2": {
+    "--draft-tokens": {
+      "reference": "3",
+      "value": "2"
+    }
+  },
+  "graph128draft4": {
+    "--draft-tokens": {
+      "reference": "3",
+      "value": "4"
+    }
+  },
+  "graph128draft5": {
+    "--draft-tokens": {
+      "reference": "3",
+      "value": "5"
+    }
+  },
+  "graph128draft5chunk512": {
+    "--draft-tokens": {
+      "reference": "3",
+      "value": "5"
+    },
+    "--prefill-chunk": {
+      "reference": "256",
+      "value": "512"
+    }
+  }
+}

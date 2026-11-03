@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\scripts\accept.py", line 4, in <module>
+    spec=importlib.util.spec_from_file_location('external_acceptance',acceptance);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+                                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\fixtures\feature\acceptance.py", line 4, in <module>
+    from ledger import parse_csv,total,render_report
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\runs\dflash128graph-feature-2\ledger\__init__.py", line 1, in <module>
+    from .parser import parse_csv
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\runs\dflash128graph-feature-2\ledger\parser.py", line 4, in <module>
+    from .models import Entry, normalize_currency
+ImportError: cannot import name 'normalize_currency' from 'ledger.models' (C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\runs\dflash128graph-feature-2\ledger\models.py)

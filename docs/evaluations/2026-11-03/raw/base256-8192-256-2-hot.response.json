@@ -1,0 +1,46 @@
+{
+  "latency_s": 3.1410000000032596,
+  "ttft_observed_s": 0.031000000002677552,
+  "usage": {
+    "completion_tokens": 256,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8113,
+    "prompt_tokens_details": {
+      "cached_tokens": 8106
+    },
+    "total_tokens": 8369
+  },
+  "timings": {
+    "cache_n": 8106,
+    "predicted_ms": 3106.7821000000004,
+    "predicted_n": 256,
+    "predicted_per_second": 82.07849530226146,
+    "predicted_per_token_ms": 12.183459215686275,
+    "prompt_ms": 29.291500000000003,
+    "prompt_n": 7,
+    "prompt_per_second": 238.9771776795316,
+    "prompt_per_token_ms": 4.184500000000001
+  },
+  "finish_reason": "length",
+  "text": "Based on the provided reference dataset, which consists of 283 records (indices 000000 to 000282) mapping unique integer identifiers to 20-character hexadecimal strings, here is a detailed technical explanation of how to index, validate, and query this data.\n\n### 1. Data Structure Analysis\n\nThe dataset is a flat, key-value collection.\n*   **Key (ID):** A zero-padded integer string (e.g., `record_000000`). The numeric part (0–282) is the primary identifier.\n*   **Value (Hash):** A 20-character string consisting of lowercase hexadecimal characters (`0-9`, `a-f`).\n*   **Data Type:** The values appear to be truncated hashes (likely SHA-1 or similar, as full SHA-1 is 40 hex chars, but this is exactly half, or potentially a custom 80-bit identifier).\n\n### 2. Indexing Strategy\n\nTo support efficient retrieval, the data should be stored in a structure that allows for O(1) or O(log n) access.\n\n#### A. In-Memory Indexing (Recommended for Small Datasets)\n",
+  "key": "base256-8192-256-2-hot",
+  "profile": "base256",
+  "case": "8192",
+  "output_limit": 256,
+  "rep": 2,
+  "cache": "hot",
+  "ok": true,
+  "gpu": {
+    "sample_count": 14,
+    "used_mib_max": 11551.0,
+    "free_mib_min": 541.0,
+    "temp_c_max": 85.0,
+    "power_w_max": 425.81,
+    "power_w_mean": 424.2707142857143
+  },
+  "prompt_sha256": "41894d7f36f607df98a3b0e8bb0ec285f36e2eeb9a273819980ef4364dee5c22",
+  "actual_output_matches": true,
+  "cache_valid": true
+}

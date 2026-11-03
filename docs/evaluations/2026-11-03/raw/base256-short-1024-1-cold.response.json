@@ -1,0 +1,46 @@
+{
+  "latency_s": 12.172000000005937,
+  "ttft_observed_s": 0.125,
+  "usage": {
+    "completion_tokens": 1024,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 153,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1177
+  },
+  "timings": {
+    "cache_n": 0,
+    "predicted_ms": 12036.7692,
+    "predicted_n": 1024,
+    "predicted_per_second": 84.98958341745059,
+    "predicted_per_token_ms": 11.766147800586511,
+    "prompt_ms": 103.8824,
+    "prompt_n": 153,
+    "prompt_per_second": 1472.8192648610352,
+    "prompt_per_token_ms": 0.6789699346405229
+  },
+  "finish_reason": "length",
+  "text": "# Python Data Structures, Concurrency, Testing, Profiling, Databases, and API Design: A Comprehensive Technical Tutorial\n\nThis tutorial provides a deep dive into advanced Python engineering practices. It covers data structure tradeoffs, concurrency models, testing strategies, performance profiling, database operations, and API design. Each section includes concrete code examples, invariants, edge cases, and verification strategies.\n\n---\n\n## 1. Python Data Structures: Implementation Tradeoffs\n\n### 1.1 Lists vs. Dictionaries: The Core Tradeoff\n\nPython's built-in `list` and `dict` are the workhorses of the language, but their internal implementations dictate different performance characteristics.\n\n#### The List: Contiguous Array of Pointers\n\nA Python list is implemented as a dynamic array of pointers to objects. When you append an element, Python may need to allocate a new, larger block of memory and copy all existing pointers.\n\n```python\nimport sys\n\n# Internal structure: [PyObject* item0, PyObject* item1, ...]\nmy_list = [1, 2, 3]\n\n# Amortized O(1) append\nmy_list.append(4)\n\n# O(1) index access\nval = my_list[0]\n\n# O(n) search\nif 4 in my_list:\n    pass\n```\n\n**Invariants:**\n- `len(my_list)` is always equal to the number of elements.\n- `my_list[i]` is valid for `0 <= i < len(my_list)`.\n- The list maintains insertion order.\n\n**Edge Cases:**\n- **Memory Fragmentation:** Frequent `pop(0)` operations are O(n) because all elements must be shifted.\n- **Resizing:** When the list grows, it over-allocates (typically by 1.125x) to reduce the frequency of reallocations. This means `sys.getsizeof(my_list)` may be larger than `len(my_list) * 8`.\n\n**Verification:**\n```python\nimport sys\n\nl = [1, 2, 3]\nprint(sys.getsizeof(l))  # Size of the list object itself\nprint(len(l))             # Number of elements\n```\n\n#### The Dictionary: Hash Table\n\nA Python dictionary is a hash table. It maps keys to values using a hash function.\n\n```python\nmy_dict = {1: \"one\", 2: \"two\"}\n\n# O(1) average lookup\nval = my_dict[1]\n\n# O(1) average insertion\nmy_dict[3] = \"three\"\n```\n\n**Invariants:**\n- Keys must be **hashable** (immutable).\n- `len(my_dict)` equals the number of key-value pairs.\n- Keys are unique.\n\n**Edge Cases:**\n- **Hash Collisions:** If two keys hash to the same value, Python uses a secondary comparison (equality). This degrades performance to O(n) in the worst case.\n- **Mutable Keys:** You cannot use a list as a key.\n  ```python\n  # TypeError: unhashable type: 'list'\n  d = {[1, 2]: \"value\"}\n  ```\n- **Ordering:** Since Python 3.7, dictionaries maintain insertion order. This is an implementation detail that has become a language guarantee.\n\n**Tradeoff Summary:**\n| Operation | List | Dict |\n| :--- | :--- | :--- |\n| Index/Key Access | O(1) | O(1) |\n| Search by Value | O(n) | O(n) |\n| Insertion | O(1) amortized | O(1) average |\n| Deletion | O(n) (if not at end) | O(1) average |\n| Memory Overhead | Low | High (hash table overhead) |\n\n**When to Use What:**\n- Use a **list** when you need ordered, index-based access and don't need fast lookups by value.\n- Use a **dict** when you need fast lookups by key and don't care about order (or rely on insertion order).\n\n---\n\n### 1.2 Immutable Data Structures\n\nImmutability is a cornerstone of functional programming and safe concurrency. In Python, immutability is achieved by using types that do not support mutation.\n\n#### Tuples vs. Lists\n\n```python\n# Mutable\nmy_list = [1, 2, 3]\nmy_list[0] = 10  # Allowed\n\n# Immutable\nmy_tuple = (1, 2, 3)\n# my_tuple[0] = 10  # TypeError: 'tuple' object does not support item assignment\n```\n\n**Invariants:**\n- The contents of a tuple never change after creation.\n- Tuples are hashable (if all elements are",
+  "key": "base256-short-1024-1-cold",
+  "profile": "base256",
+  "case": "short",
+  "output_limit": 1024,
+  "rep": 1,
+  "cache": "cold",
+  "ok": true,
+  "gpu": {
+    "sample_count": 49,
+    "used_mib_max": 11554.0,
+    "free_mib_min": 538.0,
+    "temp_c_max": 86.0,
+    "power_w_max": 432.97,
+    "power_w_mean": 412.1024489795918
+  },
+  "prompt_sha256": "244213ceadbd4ddd90a2e06c7f91d5c663226315a2663b82e2f1d52c612d3976",
+  "actual_output_matches": true,
+  "cache_valid": true
+}

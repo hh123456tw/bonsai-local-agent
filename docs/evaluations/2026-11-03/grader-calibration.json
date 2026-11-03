@@ -1,0 +1,35 @@
+[
+  {
+    "task": "bug",
+    "baseline_rejected": true,
+    "reference_passed": true,
+    "acceptance": {
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "passed": true
+    }
+  },
+  {
+    "task": "feature",
+    "baseline_rejected": true,
+    "reference_passed": true,
+    "acceptance": {
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "passed": true
+    }
+  },
+  {
+    "task": "refactor",
+    "baseline_rejected": true,
+    "reference_passed": true,
+    "acceptance": {
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "passed": true
+    }
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "latency_s": 6.0310000000026776,
+  "ttft_observed_s": 0.031000000002677552,
+  "usage": {
+    "completion_tokens": 512,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 153,
+    "prompt_tokens_details": {
+      "cached_tokens": 146
+    },
+    "total_tokens": 665
+  },
+  "timings": {
+    "cache_n": 146,
+    "predicted_ms": 6005.9068,
+    "predicted_n": 512,
+    "predicted_per_second": 85.08290538241452,
+    "predicted_per_token_ms": 11.753242270058708,
+    "prompt_ms": 28.2756,
+    "prompt_n": 7,
+    "prompt_per_second": 247.5632700986009,
+    "prompt_per_token_ms": 4.039371428571429
+  },
+  "finish_reason": "length",
+  "text": "# Python Data Structures, Concurrency, Testing, Profiling, Databases, and API Design: A Comprehensive Technical Tutorial\n\nThis tutorial provides a deep dive into advanced Python engineering practices. It covers data structure tradeoffs, concurrency models, testing strategies, performance profiling, database operations, and API design. Each section includes concrete code examples, invariants, edge cases, and verification strategies.\n\n---\n\n## 1. Python Data Structures: Implementation Tradeoffs\n\n### 1.1 Lists vs. Dictionaries: The Core Tradeoff\n\nPython's built-in `list` and `dict` are the workhorses of the language, but their internal implementations dictate different performance characteristics.\n\n#### The List: Contiguous Array of Pointers\n\nA Python list is implemented as a dynamic array of pointers to objects. When you append an element, Python may need to allocate a new, larger block of memory and copy all existing pointers.\n\n```python\nimport sys\n\n# Internal structure: [PyObject* item0, PyObject* item1, ...]\nmy_list = [1, 2, 3]\n\n# Amortized O(1) append\nmy_list.append(4)\n\n# O(1) index access\nval = my_list[0]\n\n# O(n) search\nif 4 in my_list:\n    pass\n```\n\n**Invariants:**\n- `len(my_list)` is always equal to the number of elements.\n- `my_list[i]` is valid for `0 <= i < len(my_list)`.\n- The list maintains insertion order.\n\n**Edge Cases:**\n- **Memory Fragmentation:** Frequent `pop(0)` operations are O(n) because all elements must be shifted.\n- **Resizing:** When the list grows, it over-allocates (typically by 1.125x) to reduce the frequency of reallocations. This means `sys.getsizeof(my_list)` may be larger than `len(my_list) * 8`.\n\n**Verification:**\n```python\nimport sys\n\nl = [1, 2, 3]\nprint(sys.getsizeof(l))  # Size of the list object itself\nprint(len(l))             # Number of elements\n```\n\n#### The Dictionary: Hash Table\n\nA Python dictionary is a hash table. It maps keys to values using a hash function.\n\n```python\nmy_dict = {1: \"one\", 2: \"two\"}\n\n# O(",
+  "key": "base256-short-512-1-hot",
+  "profile": "base256",
+  "case": "short",
+  "output_limit": 512,
+  "rep": 1,
+  "cache": "hot",
+  "ok": true,
+  "gpu": {
+    "sample_count": 24,
+    "used_mib_max": 11551.0,
+    "free_mib_min": 541.0,
+    "temp_c_max": 85.0,
+    "power_w_max": 430.08,
+    "power_w_mean": 427.27125
+  },
+  "prompt_sha256": "244213ceadbd4ddd90a2e06c7f91d5c663226315a2663b82e2f1d52c612d3976",
+  "actual_output_matches": true,
+  "cache_valid": true
+}

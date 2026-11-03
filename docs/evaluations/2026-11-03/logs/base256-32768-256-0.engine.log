@@ -1,0 +1,33 @@
+2026-11-03 12:46:58.337  INFO  build unknown
+2026-11-03 12:46:58.337  INFO  engine init | constructing service
+2026-11-03 12:46:58.355  INFO  starting engine
+2026-11-03 12:46:58.419  INFO  engine | engine init | device ready, constructing model instance
+2026-11-03 12:46:58.420  INFO  engine | device profile nvidia-geforce-rtx-3080-sm86: 49 routed keys (calibration)
+2026-11-03 12:46:58.904  INFO  loading weights | 6.70 GiB
+2026-11-03 12:47:00.240  INFO  weights ready | 6.70 GiB | 1.3s | 5.01 GiB/s
+[ninfer] reuse host-backed: off
+2026-11-03 12:47:00.255  INFO  pinning host state | 224.5 MiB
+2026-11-03 12:47:00.278  INFO  host state pinned | 224.5 MiB | 22.9 ms
+2026-11-03 12:47:00.278  INFO  pinning host KV | 3.78 GiB
+2026-11-03 12:47:00.278  INFO  host KV pinned | 3.78 GiB | 8 us
+2026-11-03 12:47:00.344  INFO  engine | engine init | model instance ready
+2026-11-03 12:47:00.344  INFO  engine | engine init | constructing core (generation)
+2026-11-03 12:47:00.345  INFO  engine | engine init | core ready (generation)
+2026-11-03 12:47:00.345  INFO  engine finalized | 234 us
+2026-11-03 12:47:00.345  INFO  engine ready | bonsai2-27b | total 2.0s | weights 6.70 GiB | CUDA sync auto
+[spec] backend=none draft_tokens=0 adaptive=0 attention_window=0 ngram=0
+2026-11-03 12:47:00.345  INFO  capacity | KV 262,144 tokens, rk2v4-e8, explicit | pages 4,096/4,096 | runtime 3.49 GiB | free 519.8 MiB
+2026-11-03 12:47:00.345  INFO  context cache | 1 active + 0 cached device states | host 3 states, 0 B KV | private 1 | shared 0 | anchors 1
+2026-11-03 12:47:00.345  INFO  host cache budget | 4.00 GiB total | 74.8 MiB per state image | 864.0 KiB per host KV page group | 1 anchors per continuation | state capped at half
+2026-11-03 12:47:00.560  INFO  listening on http://127.0.0.1:8080 | model bonsai2-27b | auth disabled
+2026-11-03 12:47:00.560  INFO  api base http://127.0.0.1:8080/v1
+2026-11-03 12:47:00.891  INFO  req#1 started | openai-chat stream | 1 message | max output 32 | thinking off
+2026-11-03 12:47:01.323  INFO  req#1 done | openai-chat | stop token | prompt 23 | output 25 | cache 0 (0.0%) | TTFT 153 ms | total 432 ms | prefill 154.5 tok/s | decode 86.0 tok/s
+2026-11-03 12:47:01.351  INFO  req#2 started | openai-chat stream | 1 message | max output 256 | thinking off
+2026-11-03 12:47:05.575  INFO  throughput | 5.0s | prefill 1.94k tok/s (9,751 tok) | decode 4.8 tok/s (24 tok) | running 1 (prefill 1) | batch 1.00 | host 25.4% (1.3s)
+2026-11-03 12:47:10.572  INFO  throughput | 5.0s | prefill 2.00k tok/s (9,984 tok) | running 1 (prefill 1) | host 23.9% (1.2s)
+2026-11-03 12:47:15.572  INFO  throughput | 5.0s | prefill 1.84k tok/s (9,216 tok) | running 1 (prefill 1) | host 25.8% (1.3s)
+2026-11-03 12:47:20.568  INFO  throughput | 5.0s | prefill 751.0 tok/s (3,752 tok) | decode 40.6 tok/s (203 tok) | running 1 (decode-ready 1) | batch 1.00 | host 25.5% (1.3s)
+2026-11-03 12:47:21.260  INFO  req#2 done | openai-chat | output limit | prompt 32,680 | output 256 | cache 0 (0.0%) | TTFT 16.5s | total 19.9s | prefill 1.98k tok/s | decode 74.7 tok/s
+2026-11-03 12:47:21.286  INFO  req#3 started | openai-chat stream | 1 message | max output 256 | thinking off
+2026-11-03 12:47:24.742  INFO  req#3 done | openai-chat | output limit | prompt 32,680 | output 256 | cache 32,673 (100.0%, turn closure) | TTFT 43.5 ms | total 3.5s | prefill 217.1 tok/s | decode 74.7 tok/s

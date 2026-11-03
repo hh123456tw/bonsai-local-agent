@@ -1,0 +1,7 @@
+{"phase": "benchmark", "key": "graph128draft5chunk512-short-512-0"}
+{"phase": "sample_done", "key": "graph128draft5chunk512-short-512-0-cold", "decode": 215.36938293679378, "prefill": 1488.1299750227595, "cache_n": 0, "ttft": 0.10899999999674037}
+{"phase": "sample_done", "key": "graph128draft5chunk512-short-512-0-hot", "decode": 214.60571198090773, "prefill": 460.28506988661644, "cache_n": 144, "ttft": 0.01600000000325963}
+{"phase": "benchmark", "key": "graph128draft5chunk512-short-512-1"}
+{"phase": "cooldown", "profile": "graph128draft5chunk512", "temperature": 83.0}
+{"phase": "group_stopped", "profile": "graph128draft5chunk512", "error": "Startup failure; group stopped: ['2026-11-03 14:41:11.963  ERROR startup failed | finalizing target | 33.7 ms', '2026-11-03 14:41:12.007  ERROR engine init | FAILED while constructing the service: requested Engine runtime reservation requires 2714174464 bytes, but only 2674962432 bytes are available for runtime capacity', '2026-11-03 14:41:12.007  FATAL server failed during startup | requested Engine runtime reservation requires 2714174464 bytes, but only 2674962432 bytes are available for runtime capacity']"}
+{"phase": "restored_original"}

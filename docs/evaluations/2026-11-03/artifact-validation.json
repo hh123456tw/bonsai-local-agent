@@ -1,0 +1,12 @@
+{
+  "native_samples": 218,
+  "formal_coding_runs": 18,
+  "context_queries": 48,
+  "markdown_tables": 12,
+  "native_fixed_output_and_cache_verified": true,
+  "coverage_verified": true,
+  "protected_files_unchanged": true,
+  "context_grades_recomputed": true,
+  "report_local_links_valid": true,
+  "report_table_columns_valid": true
+}

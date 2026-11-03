@@ -1,0 +1,17 @@
+{
+  "benchmark_valid_rows": 218,
+  "benchmark_errors": [
+    {
+      "key": "graph128draft5chunk512-short-512-1",
+      "profile": "graph128draft5chunk512",
+      "ok": false,
+      "error": "Startup failure; group stopped: ['2026-11-03 14:41:11.963  ERROR startup failed | finalizing target | 33.7 ms', '2026-11-03 14:41:12.007  ERROR engine init | FAILED while constructing the service: requested Engine runtime reservation requires 2714174464 bytes, but only 2674962432 bytes are available for runtime capacity', '2026-11-03 14:41:12.007  FATAL server failed during startup | requested Engine runtime reservation requires 2714174464 bytes, but only 2674962432 bytes are available for runtime capacity']"
+    }
+  ],
+  "coding_runs": 18,
+  "coding_passes": 14,
+  "context_cells": 12,
+  "speed_candidate": "graph128draft5",
+  "daily_candidate": "dflash144",
+  "stable_profiles_unchanged": true
+}

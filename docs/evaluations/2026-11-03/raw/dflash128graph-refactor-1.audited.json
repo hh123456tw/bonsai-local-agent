@@ -1,0 +1,106 @@
+{
+  "key": "dflash128graph-refactor-1",
+  "profile": "dflash128graph",
+  "task": "refactor",
+  "rep": 1,
+  "prompt_sha256": "014722044a73a26517b467f6bf498355f611381ab04cd1d1b4f95f370ebb51fe",
+  "input_manifest": {
+    "README.md": "e3a24d26b02d3650ec3a443d1192705a0eb3d77baf009f05817647f706e53a1f",
+    "catalog/__init__.py": "b4b4800ac54581bbd0b83346d3c67aab4a30a48dea268353aee5c82a60c6e9c6",
+    "catalog/models.py": "44ba708caaa57992225c89e6dbf2cf0991a9b8524966a36521906ac616b3798f",
+    "catalog/pricing.py": "c979b0a0b7d57a40e9af519f1a1e2be4c51519df1ae80b93f61c5955a3073b05",
+    "catalog/orders.py": "4d6db6eb5f92b8afc335918cc5ca79e9ee5ac615102d0fa2803df5c5f8514975",
+    "catalog/inventory.py": "b1c6b3561e635e838edcf199398594c61753bd5f40a3b53c0a13dcbb23fcfc13",
+    "catalog/shipping.py": "28d8e2f0329b4c59fabc51e8d8d166bdeb7ff6d326f7117f05bf70a44a4c76e3",
+    "catalog/reporting.py": "f79c3c3d4ccd0628bbe3283be344bfae3615dfd89b2bb496ff147aab90e8ae40",
+    "catalog/api.py": "9f91df4a7e6f8b692f959b6ee8bd40407dd12b98bf619e6376eaebb3622671c9",
+    "test_existing.py": "d94b002a15b05f5f834afc0ed84b7349c169c55289ed5f495720429bf4bf548a"
+  },
+  "passed": true,
+  "cli_exit": 0,
+  "agent_latency_s": 110.32800000000861,
+  "tool_calls": 40,
+  "consecutive_repeat_count": 0,
+  "nonconsecutive_duplicate_count": 4,
+  "tool_errors": 11,
+  "permission_denials": 9,
+  "usage": {
+    "input_tokens": 17505,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 323347,
+    "output_tokens": 20213,
+    "output_tokens_details": {
+      "thinking_tokens": 10189
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "bonsai2-27b": {
+      "inputTokens": 17505,
+      "outputTokens": 20213,
+      "cacheReadInputTokens": 323347,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.7545235,
+      "contextWindow": 131072,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 10189,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "bonsai2-27b",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "client_success": true,
+  "agent_ran_tests": true,
+  "acceptance_sha256": "70a1b21852f7f9366912fd0661b7c30caefa5843a97bb59349730ca9acc6d3d6",
+  "guard_recoveries": 0,
+  "guard_stops": 0,
+  "acceptance": {
+    "tests": 10,
+    "failures": 0,
+    "errors": 0,
+    "passed": true
+  },
+  "public_tests_passed": true,
+  "protected_files_changed": [],
+  "changed_files": [
+    "test_money.py",
+    "catalog\\inventory.py",
+    "catalog\\money.py",
+    "catalog\\orders.py",
+    "catalog\\pricing.py"
+  ],
+  "gpu": {
+    "sample_count": 434,
+    "used_mib_max": 11373.0,
+    "free_mib_min": 719.0,
+    "temp_c_max": 88.0,
+    "power_w_max": 446.22,
+    "power_w_mean": 423.49569124423965,
+    "graphics_clock_min_mhz": 1890.0,
+    "hw_thermal_slowdown_observed": false
+  },
+  "evaluation_total_s": 110.65600000000268,
+  "guard_audit_window": "Windows file creation time plus measured evaluation duration; serial test jobs, 50ms boundary tolerance",
+  "engine_usage": {
+    "completed_requests": 41,
+    "input_tokens_total": 340852,
+    "cached_input_tokens": 323347,
+    "output_tokens": 20213
+  },
+  "audit_version": 1
+}

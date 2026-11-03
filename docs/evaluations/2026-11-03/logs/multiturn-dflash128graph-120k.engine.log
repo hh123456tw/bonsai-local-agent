@@ -1,0 +1,12 @@
+2026-11-03 17:14:57.079  INFO  build unknown
+2026-11-03 17:14:57.079  INFO  engine init | constructing service
+2026-11-03 17:14:57.116  INFO  starting engine
+2026-11-03 17:14:57.189  INFO  engine | engine init | device ready, constructing model instance
+2026-11-03 17:14:57.194  INFO  engine | device profile nvidia-geforce-rtx-3080-sm86: 49 routed keys (calibration)
+2026-11-03 17:14:57.777  INFO  loading weights | 7.99 GiB
+2026-11-03 17:14:59.402  INFO  weights ready | 7.99 GiB | 1.6s | 4.92 GiB/s
+[ninfer] reuse host-backed: off
+[ninfer] reuse host-backed: off
+2026-11-03 17:14:59.426  ERROR startup failed | finalizing target | 22.1 ms
+2026-11-03 17:14:59.470  ERROR engine init | FAILED while constructing the service: requested Engine runtime reservation requires 2625894400 bytes, but only 2583916544 bytes are available for runtime capacity
+2026-11-03 17:14:59.470  FATAL server failed during startup | requested Engine runtime reservation requires 2625894400 bytes, but only 2583916544 bytes are available for runtime capacity

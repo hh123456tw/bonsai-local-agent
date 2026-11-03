@@ -1,0 +1,41 @@
+{
+  "finished_at": "2026-11-03T17:26:41.320490+08:00",
+  "stable_profile_hashes_match": true,
+  "original_options_unchanged": true,
+  "actual_running_options_match": true,
+  "model_sha256": "cdc4810b0ff17c40d0f62cf214b6e0bcd08346e9eb05ca53371507037793c14a",
+  "engine_sha256": "cd6be5e8ca872a1044aaab4c219be38d2787ee852429e2dd9b073e635dcf5d3f",
+  "guard_config_unchanged": true,
+  "bridge_health": {
+    "status": "ok",
+    "service": "bonsai-guard",
+    "max_tool_calls": null
+  },
+  "opencode_steps": {
+    "base256.opencode.json": null,
+    "dflash128graph.opencode.json": null,
+    "dflash144.opencode.json": null
+  },
+  "original_repo_clean": true,
+  "original_repo_commit": "e0ed5de21701b5eb1afbb7cd90257a61196fdbc9",
+  "fixtures_and_graders_intact": true,
+  "formal_coding_runs": 18,
+  "context_cells": 12,
+  "multiturn_cells": 4,
+  "multiturn_failed_cells": [
+    "dflash128graph-120k"
+  ],
+  "slots": [
+    {
+      "id": 0,
+      "is_processing": false,
+      "n_ctx": 147456,
+      "speculative": true
+    }
+  ],
+  "engine_pid": 36536,
+  "engine_log": "C:\\AI\\bonsai\\engine.log",
+  "engine_log_bytes": 298924,
+  "no_new_harness_installed": true,
+  "no_publishing": true
+}

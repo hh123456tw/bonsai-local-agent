@@ -1,0 +1,53 @@
+{
+  "latency_s": 15.187000000005355,
+  "ttft_observed_s": 0.10899999999674037,
+  "usage": {
+    "completion_tokens": 1752,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1561
+    },
+    "prompt_tokens": 122850,
+    "prompt_tokens_details": {
+      "cached_tokens": 122823
+    },
+    "total_tokens": 124602
+  },
+  "timings": {
+    "cache_n": 122823,
+    "draft_n": 1818,
+    "draft_n_accepted": 1120,
+    "predicted_ms": 15078.5068,
+    "predicted_n": 1752,
+    "predicted_per_second": 116.12555694175235,
+    "predicted_per_token_ms": 8.61136881781839,
+    "prompt_ms": 77.5038,
+    "prompt_n": 27,
+    "prompt_per_second": 348.3700154056962,
+    "prompt_per_token_ms": 2.870511111111111
+  },
+  "finish_reason": "stop",
+  "text": "{\n  \"AT_START\": \"064a03649aa7df91\",\n  \"EARLY\": \"6c8e771c9ca40b6e\",\n  \"MIDDLE\": \"01e77f539143e4d6\",\n  \"LATE\": \"9df58f52f476ed41\",\n  \"AT_END\": \"b0d6f8de11a1795d\",\n  \"RANDOM_SPOT\": \"87154acca34f18be\",\n  \"LINKED\": {\n    \"FINAL_ALIAS\": \"RIVER\",\n    \"ALIAS_RIVER\": \"target_C\",\n    \"TARGET_target_C\": \"e968c4fedeadf0cf\"\n  }\n}",
+  "gpu": {
+    "sample_count": 61,
+    "used_mib_max": 11539.0,
+    "free_mib_min": 553.0,
+    "temp_c_max": 89.0,
+    "power_w_max": 434.9,
+    "power_w_mean": 433.15868852459016,
+    "graphics_clock_min_mhz": 1920.0,
+    "hw_thermal_slowdown_observed": false
+  },
+  "correct_by_key": {
+    "AT_START": true,
+    "EARLY": false,
+    "MIDDLE": true,
+    "LATE": false,
+    "AT_END": true,
+    "RANDOM_SPOT": false,
+    "LINKED": false
+  },
+  "json_format_valid": true,
+  "cache_hit_fraction": 0.9997802197802198,
+  "cache": "shared_prefix_hot",
+  "rep": 2
+}

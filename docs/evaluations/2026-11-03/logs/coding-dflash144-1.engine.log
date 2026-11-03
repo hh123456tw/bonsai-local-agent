@@ -1,0 +1,315 @@
+2026-11-03 13:26:31.349  INFO  build unknown
+2026-11-03 13:26:31.349  INFO  engine init | constructing service
+2026-11-03 13:26:31.379  INFO  starting engine
+2026-11-03 13:26:31.467  INFO  engine | engine init | device ready, constructing model instance
+2026-11-03 13:26:31.467  INFO  engine | device profile nvidia-geforce-rtx-3080-sm86: 49 routed keys (calibration)
+2026-11-03 13:26:31.931  INFO  loading weights | 7.99 GiB
+2026-11-03 13:26:33.538  INFO  weights ready | 7.99 GiB | 1.6s | 4.97 GiB/s
+[ninfer] reuse host-backed: off
+[ninfer] reuse host-backed: off
+2026-11-03 13:26:33.612  INFO  pinning host KV | 4.00 GiB
+2026-11-03 13:26:34.062  INFO  host KV pinned | 4.00 GiB | 451 ms
+2026-11-03 13:26:34.063  INFO  engine | engine init | model instance ready
+2026-11-03 13:26:34.063  INFO  engine | engine init | constructing core (hybrid-generation)
+2026-11-03 13:26:34.063  INFO  engine | engine init | core ready (hybrid-generation)
+2026-11-03 13:26:34.063  INFO  engine finalized | 269 us
+2026-11-03 13:26:34.063  INFO  engine ready | bonsai2-27b | total 2.7s | weights 7.99 GiB | CUDA sync auto
+[spec] backend=dflash2 draft_tokens=3 adaptive=0 attention_window=0 ngram=0
+2026-11-03 13:26:34.063  INFO  capacity | KV 147,456 tokens, rk2v4-e8, explicit | pages 2,304/33,554,431 | runtime 2.19 GiB | free 501.4 MiB
+2026-11-03 13:26:34.063  INFO  context cache | 1 active + 1 cached device states | host 0 states, 0 B KV | private 1 | shared 0 | anchors 0
+2026-11-03 13:26:34.063  INFO  host cache budget | 4.00 GiB total | 114.8 MiB per state image | 864.0 KiB per host KV page group | 0 anchors per continuation | state capped at half
+2026-11-03 13:26:34.381  INFO  warmup complete | 318 ms
+2026-11-03 13:26:34.381  INFO  listening on http://127.0.0.1:8080 | model bonsai2-27b | auth disabled
+2026-11-03 13:26:34.381  INFO  api base http://127.0.0.1:8080/v1
+2026-11-03 13:26:34.839  INFO  req#1 started | anthropic non-stream | 2 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:26:35.792  INFO  req#1 done | anthropic | tool calls 1 | prompt 1,362 | output 47 | cache 0 (0.0%) | TTFT 753 ms | total 955 ms | prefill 1.81k tok/s | decode 229.3 tok/s | dflash2 accepted 35/39 (89.7%) | thinking 19/1,536
+2026-11-03 13:26:37.360  INFO  req#2 started | anthropic non-stream | 4 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:26:38.856  INFO  req#2 done | anthropic | tool calls 3 | prompt 1,577 | output 326 | cache 1,292 (81.9%, shared prefix) | TTFT 206 ms | total 1.5s | prefill 1.41k tok/s | decode 252.4 tok/s | dflash2 accepted 242/249 (97.2%) | thinking 16/1,536
+2026-11-03 13:26:38.921  INFO  req#3 started | anthropic non-stream | 8 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:26:39.382  INFO  throughput | 5.0s | prefill 467.7 tok/s (2,339 tok) | decode 78.4 tok/s (392 tok) | running 1 (decode-ready 1) | batch 1.00 | host 21.1% (1.1s)
+2026-11-03 13:26:41.588  INFO  req#3 done | anthropic | tool calls 1 | prompt 2,264 | output 475 | cache 1,572 (69.4%, shared prefix) | TTFT 354 ms | total 2.7s | prefill 1.99k tok/s | decode 205.1 tok/s | dflash2 accepted 326/447 (72.9%) | thinking 291/1,536
+2026-11-03 13:26:41.642  INFO  req#4 started | anthropic non-stream | 10 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:26:43.061  INFO  req#4 done | anthropic | tool calls 1 | prompt 2,579 | output 235 | cache 2,000 (77.5%, shared prefix) | TTFT 293 ms | total 1.4s | prefill 2.03k tok/s | decode 207.7 tok/s | dflash2 accepted 163/216 (75.5%) | thinking 205/1,536
+2026-11-03 13:26:43.253  INFO  req#5 started | anthropic non-stream | 12 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:26:44.248  INFO  req#5 done | anthropic | stop token | prompt 2,645 | output 167 | cache 2,574 (97.3%, shared prefix) | TTFT 90.4 ms | total 1.0s | prefill 868.6 tok/s | decode 182.8 tok/s | dflash2 accepted 108/174 (62.1%) | thinking 15/1,536
+2026-11-03 13:26:44.393  INFO  throughput | 5.0s | prefill 129.7 tok/s (650 tok) | decode 170.2 tok/s (853 tok) | running 0 | batch 1.00 | host 26.9% (1.3s)
+2026-11-03 13:26:44.859  INFO  req#6 started | anthropic non-stream | 2 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:26:45.410  INFO  req#6 done | anthropic | tool calls 1 | prompt 1,499 | output 62 | cache 1,004 (67.0%, shared prefix) | TTFT 259 ms | total 553 ms | prefill 1.94k tok/s | decode 208.4 tok/s | dflash2 accepted 44/54 (81.5%) | thinking 19/1,536
+2026-11-03 13:26:47.064  INFO  req#7 started | anthropic non-stream | 4 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:26:49.392  INFO  throughput | 5.0s | prefill 194.2 tok/s (971 tok) | decode 112.6 tok/s (563 tok) | running 1 (decode-ready 1) | batch 1.00 | host 16.1% (806 ms)
+2026-11-03 13:26:50.326  INFO  req#7 done | anthropic | tool calls 7 | prompt 1,767 | output 741 | cache 1,291 (73.1%, shared prefix) | TTFT 293 ms | total 3.3s | prefill 1.65k tok/s | decode 249.7 tok/s | dflash2 accepted 552/567 (97.4%) | thinking 15/1,536
+2026-11-03 13:26:50.462  INFO  req#8 started | anthropic non-stream | 12 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:26:54.390  INFO  throughput | 5.0s | prefill 242.1 tok/s (1,210 tok) | decode 180.9 tok/s (904 tok) | running 1 (decode-ready 1) | batch 1.00 | host 26.3% (1.3s)
+2026-11-03 13:26:59.397  INFO  throughput | 5.0s | decode 164.2 tok/s (822 tok) | running 1 (decode-ready 1) | batch 1.00 | host 26.4% (1.3s)
+2026-11-03 13:27:00.317  INFO  req#8 done | anthropic | tool calls 1 | prompt 2,972 | output 1,673 | cache 1,762 (59.3%, shared prefix) | TTFT 575 ms | total 9.9s | prefill 2.14k tok/s | decode 180.3 tok/s | dflash2 accepted 1,058/1,763 (60.0%) | thinking 1,536/1,536, control 25
+2026-11-03 13:27:00.440  INFO  req#9 started | anthropic non-stream | 14 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:27:04.391  INFO  throughput | 5.0s | prefill 81.3 tok/s (406 tok) | decode 171.0 tok/s (854 tok) | running 1 (decode-ready 1) | batch 1.00 | host 26.6% (1.3s)
+2026-11-03 13:27:09.397  INFO  throughput | 5.0s | decode 168.2 tok/s (842 tok) | running 1 (decode-ready 1) | batch 1.00 | host 25.6% (1.3s)
+2026-11-03 13:27:09.832  INFO  req#9 done | anthropic | tool calls 1 | prompt 3,084 | output 1,613 | cache 2,678 (86.8%, shared prefix) | TTFT 218 ms | total 9.4s | prefill 1.94k tok/s | decode 176.0 tok/s | dflash2 accepted 1,005/1,746 (57.6%) | thinking 1,536/1,536, control 25
+2026-11-03 13:27:10.068  INFO  req#10 started | anthropic non-stream | 16 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:27:14.392  INFO  throughput | 5.0s | prefill 26.2 tok/s (131 tok) | decode 168.9 tok/s (844 tok) | running 1 (decode-ready 1) | batch 1.00 | host 25.0% (1.3s)
+2026-11-03 13:27:19.383  INFO  throughput | 5.0s | decode 180.0 tok/s (898 tok) | running 1 (decode-ready 1) | batch 1.00 | host 26.0% (1.3s)
+2026-11-03 13:27:20.026  INFO  req#10 done | anthropic | tool calls 1 | prompt 3,210 | output 1,800 | cache 3,079 (95.9%, shared prefix) | TTFT 94.8 ms | total 10.0s | prefill 1.53k tok/s | decode 182.6 tok/s | dflash2 accepted 1,149/1,872 (61.4%) | thinking 1,536/1,536, control 25
+2026-11-03 13:27:20.068  INFO  req#11 started | anthropic non-stream | 18 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:27:21.838  INFO  req#11 done | anthropic | tool calls 1 | prompt 3,580 | output 368 | cache 3,205 (89.5%, shared prefix) | TTFT 206 ms | total 1.8s | prefill 1.93k tok/s | decode 234.0 tok/s | dflash2 accepted 268/300 (89.3%) | thinking 17/1,536
+2026-11-03 13:27:21.883  INFO  req#12 started | anthropic non-stream | 20 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:27:22.751  INFO  req#12 done | anthropic | tool calls 1 | prompt 4,062 | output 132 | cache 3,575 (88.0%, shared prefix) | TTFT 252 ms | total 878 ms | prefill 2.02k tok/s | decode 210.4 tok/s | dflash2 accepted 94/117 (80.3%) | thinking 100/1,536
+2026-11-03 13:27:22.860  INFO  req#13 started | anthropic non-stream | 22 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:27:24.386  INFO  throughput | 5.0s | prefill 245.2 tok/s (1,227 tok) | decode 194.3 tok/s (972 tok) | running 1 (decode-ready 1) | batch 1.00 | host 24.9% (1.2s)
+2026-11-03 13:27:24.593  INFO  req#13 done | anthropic | tool calls 1 | prompt 4,422 | output 374 | cache 4,057 (91.7%, shared prefix) | TTFT 210 ms | total 1.7s | prefill 1.84k tok/s | decode 243.9 tok/s | dflash2 accepted 276/291 (94.8%) | thinking 23/1,536
+2026-11-03 13:27:24.617  INFO  req#14 started | anthropic non-stream | 24 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:27:29.302  INFO  req#14 done | anthropic | tool calls 1 | prompt 4,904 | output 876 | cache 4,417 (90.1%, shared prefix) | TTFT 254 ms | total 4.7s | prefill 2.02k tok/s | decode 197.4 tok/s | dflash2 accepted 597/840 (71.1%) | thinking 834/1,536
+2026-11-03 13:27:29.395  INFO  throughput | 5.0s | prefill 97.2 tok/s (487 tok) | decode 185.9 tok/s (931 tok) | running 0 | batch 1.00 | host 25.0% (1.3s)
+2026-11-03 13:27:29.431  INFO  req#15 started | anthropic non-stream | 26 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:27:30.932  INFO  req#15 done | anthropic | tool calls 1 | prompt 5,276 | output 278 | cache 4,899 (92.9%, shared prefix) | TTFT 214 ms | total 1.5s | prefill 1.88k tok/s | decode 213.9 tok/s | dflash2 accepted 197/243 (81.1%) | thinking 61/1,536
+2026-11-03 13:27:30.990  INFO  req#16 started | anthropic non-stream | 28 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:27:33.867  INFO  req#16 done | anthropic | tool calls 1 | prompt 5,704 | output 558 | cache 5,271 (92.4%, shared prefix) | TTFT 236 ms | total 2.9s | prefill 1.97k tok/s | decode 210.3 tok/s | dflash2 accepted 390/501 (77.8%) | thinking 207/1,536
+2026-11-03 13:27:33.894  INFO  req#17 started | anthropic non-stream | 30 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:27:34.387  INFO  throughput | 5.0s | prefill 259.8 tok/s (1,297 tok) | decode 174.5 tok/s (871 tok) | running 1 (decode-ready 1) | batch 1.00 | host 25.3% (1.3s)
+2026-11-03 13:27:36.527  INFO  req#17 done | anthropic | tool calls 1 | prompt 6,186 | output 503 | cache 5,699 (92.1%, shared prefix) | TTFT 264 ms | total 2.6s | prefill 1.96k tok/s | decode 211.2 tok/s | dflash2 accepted 353/447 (79.0%) | thinking 156/1,536
+2026-11-03 13:27:36.555  INFO  req#18 started | anthropic non-stream | 32 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:27:37.846  INFO  req#18 done | anthropic | tool calls 1 | prompt 6,664 | output 215 | cache 6,181 (92.8%, shared prefix) | TTFT 263 ms | total 1.3s | prefill 1.96k tok/s | decode 206.1 tok/s | dflash2 accepted 151/195 (77.4%) | thinking 169/1,536
+2026-11-03 13:27:38.003  INFO  req#19 started | anthropic non-stream | 34 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:27:39.385  INFO  throughput | 5.0s | prefill 129.5 tok/s (647 tok) | decode 177.3 tok/s (886 tok) | running 1 (decode-ready 1) | batch 1.00 | host 24.6% (1.2s)
+2026-11-03 13:27:40.284  INFO  req#19 done | anthropic | tool calls 1 | prompt 6,823 | output 412 | cache 6,659 (97.6%, shared prefix) | TTFT 128 ms | total 2.3s | prefill 1.51k tok/s | decode 189.9 tok/s | dflash2 accepted 277/405 (68.4%) | thinking 187/1,536
+2026-11-03 13:27:40.329  INFO  req#20 started | anthropic non-stream | 36 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:27:44.388  INFO  throughput | 5.0s | prefill 51.2 tok/s (256 tok) | decode 183.1 tok/s (916 tok) | running 1 (decode-ready 1) | batch 1.00 | host 24.7% (1.2s)
+2026-11-03 13:27:47.523  INFO  req#20 done | anthropic | tool calls 1 | prompt 7,074 | output 1,267 | cache 6,818 (96.4%, shared prefix) | TTFT 152 ms | total 7.2s | prefill 1.91k tok/s | decode 179.7 tok/s | dflash2 accepted 829/1,317 (62.9%) | thinking 1,161/1,536
+2026-11-03 13:27:47.566  INFO  req#21 started | anthropic non-stream | 38 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:27:49.391  INFO  throughput | 5.0s | prefill 44.0 tok/s (220 tok) | decode 179.7 tok/s (899 tok) | running 1 (decode-ready 1) | batch 1.00 | host 25.0% (1.2s)
+2026-11-03 13:27:50.241  INFO  req#21 done | anthropic | tool calls 1 | prompt 7,289 | output 556 | cache 7,069 (97.0%, shared prefix) | TTFT 150 ms | total 2.7s | prefill 1.69k tok/s | decode 219.0 tok/s | dflash2 accepted 399/474 (84.2%) | thinking 192/1,536
+2026-11-03 13:27:50.297  INFO  req#22 started | anthropic non-stream | 40 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:27:52.099  INFO  req#22 done | anthropic | tool calls 1 | prompt 7,771 | output 268 | cache 7,284 (93.7%, shared prefix) | TTFT 273 ms | total 1.8s | prefill 1.93k tok/s | decode 173.0 tok/s | dflash2 accepted 173/288 (60.1%) | thinking 232/1,536
+2026-11-03 13:27:52.237  INFO  req#23 started | anthropic non-stream | 42 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:27:54.364  INFO  req#23 done | anthropic | tool calls 1 | prompt 7,927 | output 422 | cache 7,766 (98.0%, shared prefix) | TTFT 129 ms | total 2.1s | prefill 1.48k tok/s | decode 209.3 tok/s | dflash2 accepted 298/375 (79.5%) | thinking 136/1,536
+2026-11-03 13:27:54.384  INFO  throughput | 5.0s | prefill 129.8 tok/s (648 tok) | decode 179.8 tok/s (898 tok) | running 0 | batch 1.00 | host 24.5% (1.2s)
+2026-11-03 13:27:54.414  INFO  req#24 started | anthropic non-stream | 44 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:27:56.125  INFO  req#24 done | anthropic | tool calls 1 | prompt 8,256 | output 320 | cache 7,922 (96.0%, shared prefix) | TTFT 237 ms | total 1.7s | prefill 1.55k tok/s | decode 214.0 tok/s | dflash2 accepted 226/279 (81.0%) | thinking 31/1,536
+2026-11-03 13:27:56.175  INFO  req#25 started | anthropic non-stream | 46 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:27:57.467  INFO  req#25 done | anthropic | tool calls 1 | prompt 8,589 | output 238 | cache 8,251 (96.1%, shared prefix) | TTFT 232 ms | total 1.3s | prefill 1.62k tok/s | decode 220.0 tok/s | dflash2 accepted 172/201 (85.6%) | thinking 14/1,536
+2026-11-03 13:27:57.515  INFO  req#26 started | anthropic non-stream | 48 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:27:58.186  INFO  req#26 done | anthropic | tool calls 1 | prompt 8,856 | output 96 | cache 8,584 (96.9%, shared prefix) | TTFT 231 ms | total 693 ms | prefill 1.31k tok/s | decode 207.2 tok/s | dflash2 accepted 69/84 (82.1%) | thinking 19/1,536
+2026-11-03 13:27:58.393  INFO  req#27 started | anthropic non-stream | 50 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:27:59.391  INFO  throughput | 5.0s | prefill 316.0 tok/s (1,582 tok) | decode 149.6 tok/s (749 tok) | running 1 (decode-ready 1) | batch 1.00 | host 24.4% (1.2s)
+2026-11-03 13:28:04.396  INFO  throughput | 5.0s | decode 159.4 tok/s (798 tok) | running 1 (decode-ready 1) | batch 1.00 | host 24.8% (1.2s)
+2026-11-03 13:28:08.261  INFO  req#27 done | anthropic | tool calls 1 | prompt 9,489 | output 1,576 | cache 8,851 (93.3%, shared prefix) | TTFT 361 ms | total 9.9s | prefill 1.90k tok/s | decode 165.6 tok/s | dflash2 accepted 987/1,764 (56.0%) | thinking 1,319/1,536
+2026-11-03 13:28:08.330  INFO  req#28 started | anthropic non-stream | 52 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:28:09.391  INFO  throughput | 5.0s | prefill 61.1 tok/s (305 tok) | decode 157.8 tok/s (788 tok) | running 1 (decode-ready 1) | batch 1.00 | host 26.0% (1.3s)
+2026-11-03 13:28:14.395  INFO  throughput | 5.0s | decode 170.8 tok/s (855 tok) | running 1 (decode-ready 1) | batch 1.00 | host 25.5% (1.3s)
+2026-11-03 13:28:17.984  INFO  req#28 done | anthropic | tool calls 1 | prompt 9,789 | output 1,783 | cache 9,484 (96.9%, shared prefix) | TTFT 215 ms | total 9.7s | prefill 1.61k tok/s | decode 188.7 tok/s | dflash2 accepted 1,200/1,746 (68.7%) | thinking 415/1,536
+2026-11-03 13:28:18.042  INFO  req#29 started | anthropic non-stream | 54 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:28:19.208  INFO  req#29 done | anthropic | tool calls 1 | prompt 11,200 | output 81 | cache 9,784 (87.4%, shared prefix) | TTFT 764 ms | total 1.2s | prefill 1.92k tok/s | decode 188.3 tok/s | dflash2 accepted 56/78 (71.8%) | thinking 20/1,536
+2026-11-03 13:28:19.392  INFO  throughput | 5.0s | prefill 283.4 tok/s (1,416 tok) | decode 179.7 tok/s (898 tok) | running 0 | batch 1.00 | host 25.2% (1.3s)
+2026-11-03 13:28:19.467  INFO  req#30 started | anthropic non-stream | 56 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:28:20.162  INFO  req#30 done | anthropic | tool calls 1 | prompt 11,839 | output 64 | cache 11,195 (94.6%, shared prefix) | TTFT 373 ms | total 721 ms | prefill 1.87k tok/s | decode 182.5 tok/s | dflash2 accepted 44/63 (69.8%) | thinking 14/1,536
+2026-11-03 13:28:20.391  INFO  req#31 started | anthropic non-stream | 58 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:28:24.396  INFO  throughput | 5.0s | prefill 431.6 tok/s (2,160 tok) | decode 137.5 tok/s (688 tok) | running 1 (decode-ready 1) | batch 1.00 | host 24.0% (1.2s)
+2026-11-03 13:28:29.101  INFO  req#31 done | anthropic | tool calls 1 | prompt 13,350 | output 1,728 | cache 11,834 (88.6%, shared prefix) | TTFT 797 ms | total 8.7s | prefill 1.97k tok/s | decode 217.9 tok/s | dflash2 accepted 1,249/1,440 (86.7%) | thinking 313/1,536
+2026-11-03 13:28:29.165  INFO  req#32 started | anthropic non-stream | 60 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:28:29.386  INFO  throughput | 5.0s | prefill 51.3 tok/s (256 tok) | decode 220.8 tok/s (1,102 tok) | running 1 (prefill 1) | batch 1.00 | host 24.9% (1.2s)
+2026-11-03 13:28:34.395  INFO  throughput | 5.0s | prefill 239.2 tok/s (1,198 tok) | decode 159.1 tok/s (797 tok) | running 1 (decode-ready 1) | batch 1.00 | host 26.0% (1.3s)
+2026-11-03 13:28:38.470  INFO  req#32 done | anthropic | tool calls 1 | prompt 14,799 | output 1,755 | cache 13,345 (90.2%, shared prefix) | TTFT 794 ms | total 9.3s | prefill 1.90k tok/s | decode 205.8 tok/s | dflash2 accepted 1,243/1,539 (80.8%) | thinking 307/1,536
+2026-11-03 13:28:38.535  INFO  req#33 started | anthropic non-stream | 62 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:28:39.386  INFO  throughput | 5.0s | prefill 296.4 tok/s (1,479 tok) | decode 193.2 tok/s (964 tok) | running 1 (decode-ready 1) | batch 1.00 | host 23.8% (1.2s)
+2026-11-03 13:28:40.763  INFO  req#33 done | anthropic | tool calls 1 | prompt 16,273 | output 197 | cache 14,794 (90.9%, shared prefix) | TTFT 826 ms | total 2.3s | prefill 1.86k tok/s | decode 137.5 tok/s | dflash2 accepted 113/255 (44.3%) | thinking 169/1,536
+2026-11-03 13:28:40.846  INFO  req#34 started | anthropic non-stream | 64 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:28:44.395  INFO  throughput | 5.0s | prefill 319.8 tok/s (1,602 tok) | decode 149.7 tok/s (750 tok) | running 1 (decode-ready 1) | batch 1.00 | host 24.8% (1.2s)
+2026-11-03 13:28:47.543  INFO  req#34 done | anthropic | tool calls 1 | prompt 17,870 | output 1,300 | cache 16,268 (91.0%, shared prefix) | TTFT 916 ms | total 6.7s | prefill 1.82k tok/s | decode 223.9 tok/s | dflash2 accepted 954/1,035 (92.2%) | thinking 120/1,536
+2026-11-03 13:28:47.606  INFO  req#35 started | anthropic non-stream | 66 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:28:48.836  INFO  req#35 done | anthropic | tool calls 1 | prompt 19,093 | output 87 | cache 17,865 (93.6%, shared prefix) | TTFT 724 ms | total 1.3s | prefill 1.78k tok/s | decode 161.6 tok/s | dflash2 accepted 57/93 (61.3%) | thinking 35/1,536
+2026-11-03 13:28:49.059  INFO  req#36 started | anthropic non-stream | 68 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:28:49.396  INFO  throughput | 5.0s | prefill 348.0 tok/s (1,740 tok) | decode 164.8 tok/s (824 tok) | running 1 (prefill 1) | batch 1.00 | host 22.7% (1.1s)
+2026-11-03 13:28:54.393  INFO  throughput | 5.0s | prefill 46.4 tok/s (232 tok) | decode 153.9 tok/s (769 tok) | running 1 (decode-ready 1) | batch 1.00 | host 23.8% (1.2s)
+2026-11-03 13:28:59.391  INFO  throughput | 5.0s | decode 148.3 tok/s (741 tok) | running 1 (decode-ready 1) | batch 1.00 | host 23.5% (1.2s)
+2026-11-03 13:29:00.961  INFO  req#36 done | anthropic | tool calls 1 | prompt 19,832 | output 1,859 | cache 19,088 (96.2%, shared prefix) | TTFT 462 ms | total 11.9s | prefill 1.75k tok/s | decode 162.2 tok/s | dflash2 accepted 1,160/2,016 (57.5%) | thinking 1,536/1,536, control 25
+2026-11-03 13:29:01.041  INFO  req#37 started | anthropic non-stream | 70 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:04.388  INFO  throughput | 5.0s | prefill 69.2 tok/s (346 tok) | decode 167.7 tok/s (838 tok) | running 1 (decode-ready 1) | batch 1.00 | host 23.6% (1.2s)
+2026-11-03 13:29:09.393  INFO  throughput | 5.0s | decode 149.8 tok/s (750 tok) | running 1 (decode-ready 1) | batch 1.00 | host 22.9% (1.1s)
+2026-11-03 13:29:11.953  INFO  req#37 done | anthropic | tool calls 1 | prompt 20,173 | output 1,613 | cache 19,827 (98.3%, shared prefix) | TTFT 279 ms | total 10.9s | prefill 1.42k tok/s | decode 151.4 tok/s | dflash2 accepted 963/1,872 (51.4%) | thinking 1,536/1,536, control 25
+2026-11-03 13:29:12.221  INFO  req#38 started | anthropic non-stream | 72 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:14.386  INFO  throughput | 5.0s | prefill 136.6 tok/s (682 tok) | decode 137.0 tok/s (684 tok) | running 1 (decode-ready 1) | batch 1.00 | host 23.0% (1.1s)
+2026-11-03 13:29:17.123  INFO  req#38 done | anthropic | tool calls 1 | prompt 20,850 | output 845 | cache 20,168 (96.7%, shared prefix) | TTFT 449 ms | total 4.9s | prefill 1.67k tok/s | decode 188.4 tok/s | dflash2 accepted 581/789 (73.6%) | thinking 528/1,536
+2026-11-03 13:29:17.192  INFO  req#39 started | anthropic non-stream | 74 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:19.390  INFO  throughput | 5.0s | prefill 72.9 tok/s (365 tok) | decode 184.3 tok/s (922 tok) | running 1 (decode-ready 1) | batch 1.00 | host 23.0% (1.2s)
+2026-11-03 13:29:20.016  INFO  req#39 done | anthropic | tool calls 1 | prompt 21,210 | output 521 | cache 20,845 (98.3%, shared prefix) | TTFT 285 ms | total 2.9s | prefill 1.48k tok/s | decode 202.4 tok/s | dflash2 accepted 371/453 (81.9%) | thinking 469/1,536
+2026-11-03 13:29:20.249  INFO  req#40 started | anthropic non-stream | 76 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:21.793  INFO  req#40 done | anthropic | tool calls 1 | prompt 21,751 | output 203 | cache 21,205 (97.5%, shared prefix) | TTFT 378 ms | total 1.6s | prefill 1.61k tok/s | decode 168.4 tok/s | dflash2 accepted 132/210 (62.9%) | thinking 79/1,536
+2026-11-03 13:29:21.866  INFO  req#41 started | anthropic non-stream | 78 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:22.433  INFO  req#41 done | anthropic | tool calls 2 | prompt 21,907 | output 76 | cache 21,746 (99.3%, shared prefix) | TTFT 174 ms | total 606 ms | prefill 1.23k tok/s | decode 174.8 tok/s | dflash2 accepted 50/75 (66.7%) | thinking 21/1,536
+2026-11-03 13:29:22.544  INFO  req#42 started | anthropic non-stream | 81 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:23.191  INFO  req#42 done | anthropic | tool calls 1 | prompt 22,022 | output 106 | cache 21,902 (99.5%, shared prefix) | TTFT 152 ms | total 686 ms | prefill 1.08k tok/s | decode 197.7 tok/s | dflash2 accepted 74/93 (79.6%) | thinking 28/1,536
+2026-11-03 13:29:23.425  INFO  req#43 started | anthropic non-stream | 83 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:24.396  INFO  throughput | 5.0s | prefill 189.2 tok/s (947 tok) | decode 131.8 tok/s (660 tok) | running 1 (decode-ready 1) | batch 1.00 | host 21.1% (1.1s)
+2026-11-03 13:29:26.080  INFO  req#43 done | anthropic | tool calls 1 | prompt 22,137 | output 480 | cache 22,017 (99.5%, shared prefix) | TTFT 153 ms | total 2.7s | prefill 1.09k tok/s | decode 188.9 tok/s | dflash2 accepted 332/444 (74.8%) | thinking 29/1,536
+2026-11-03 13:29:26.136  INFO  req#44 started | anthropic non-stream | 85 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:26.836  INFO  req#44 done | anthropic | tool calls 1 | prompt 22,625 | output 72 | cache 22,132 (97.8%, shared prefix) | TTFT 341 ms | total 740 ms | prefill 1.65k tok/s | decode 179.3 tok/s | dflash2 accepted 50/69 (72.5%) | thinking 23/1,536
+2026-11-03 13:29:27.062  INFO  req#45 started | anthropic non-stream | 87 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:28.648  INFO  req#45 done | anthropic | tool calls 1 | prompt 22,707 | output 298 | cache 22,620 (99.6%, shared prefix) | TTFT 153 ms | total 1.6s | prefill 804.8 tok/s | decode 202.2 tok/s | dflash2 accepted 214/252 (84.9%) | thinking 32/1,536
+2026-11-03 13:29:28.850  INFO  req#46 started | anthropic non-stream | 89 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:29.387  INFO  throughput | 5.0s | prefill 182.3 tok/s (910 tok) | decode 149.1 tok/s (744 tok) | running 1 (decode-ready 1) | batch 1.00 | host 21.7% (1.1s)
+2026-11-03 13:29:29.709  INFO  req#46 done | anthropic | tool calls 1 | prompt 23,032 | output 105 | cache 22,702 (98.6%, shared prefix) | TTFT 296 ms | total 901 ms | prefill 1.32k tok/s | decode 172.7 tok/s | dflash2 accepted 71/105 (67.6%) | thinking 27/1,536
+2026-11-03 13:29:29.777  INFO  req#47 started | anthropic non-stream | 91 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:30.581  INFO  req#47 done | anthropic | tool calls 4 | prompt 23,144 | output 141 | cache 23,027 (99.5%, shared prefix) | TTFT 155 ms | total 846 ms | prefill 1.07k tok/s | decode 203.5 tok/s | dflash2 accepted 100/120 (83.3%) | thinking 28/1,536
+2026-11-03 13:29:30.690  INFO  req#48 started | anthropic non-stream | 96 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:31.817  INFO  req#48 done | anthropic | tool calls 1 | prompt 23,909 | output 103 | cache 23,139 (96.8%, shared prefix) | TTFT 603 ms | total 1.2s | prefill 1.39k tok/s | decode 180.1 tok/s | dflash2 accepted 69/99 (69.7%) | thinking 32/1,536
+2026-11-03 13:29:32.093  INFO  req#49 started | anthropic non-stream | 98 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:34.384  INFO  throughput | 5.0s | prefill 226.6 tok/s (1,132 tok) | decode 135.9 tok/s (679 tok) | running 1 (decode-ready 1) | batch 1.00 | host 22.5% (1.1s)
+2026-11-03 13:29:35.126  INFO  req#49 done | anthropic | stop token | prompt 24,013 | output 487 | cache 23,768 (99.0%, shared prefix) | TTFT 210 ms | total 3.1s | prefill 1.51k tok/s | decode 169.8 tok/s | dflash2 accepted 322/498 (64.7%) | thinking 17/1,536
+2026-11-03 13:29:35.781  INFO  req#50 started | anthropic non-stream | 2 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:36.765  INFO  req#50 done | anthropic | tool calls 1 | prompt 1,532 | output 62 | cache 0 (0.0%) | TTFT 703 ms | total 987 ms | prefill 2.19k tok/s | decode 216.1 tok/s | dflash2 accepted 44/54 (81.5%) | thinking 19/1,536
+2026-11-03 13:29:38.291  INFO  req#51 started | anthropic non-stream | 4 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:39.397  INFO  throughput | 5.0s | prefill 668.5 tok/s (3,351 tok) | decode 41.9 tok/s (210 tok) | running 1 (decode-ready 1) | batch 1.00 | host 15.7% (788 ms)
+2026-11-03 13:29:39.513  INFO  req#51 done | anthropic | tool calls 1 | prompt 1,819 | output 67 | cache 0 (0.0%) | TTFT 893 ms | total 1.2s | prefill 2.04k tok/s | decode 200.7 tok/s | dflash2 accepted 47/63 (74.6%) | thinking 17/1,536
+2026-11-03 13:29:39.532  INFO  req#52 started | anthropic non-stream | 6 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:40.070  INFO  req#52 done | anthropic | tool calls 1 | prompt 1,903 | output 77 | cache 1,814 (95.3%, shared prefix) | TTFT 86.1 ms | total 542 ms | prefill 1.10k tok/s | decode 167.8 tok/s | dflash2 accepted 47/87 (54.0%) | thinking 36/1,536
+2026-11-03 13:29:40.211  INFO  req#53 started | anthropic non-stream | 8 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:40.646  INFO  req#53 done | anthropic | tool calls 1 | prompt 1,997 | output 66 | cache 1,898 (95.0%, shared prefix) | TTFT 87.8 ms | total 440 ms | prefill 1.20k tok/s | decode 186.3 tok/s | dflash2 accepted 43/66 (65.2%) | thinking 26/1,536
+2026-11-03 13:29:40.759  INFO  req#54 started | anthropic non-stream | 10 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:41.235  INFO  req#54 done | anthropic | tool calls 1 | prompt 2,249 | output 70 | cache 1,992 (88.6%, shared prefix) | TTFT 145 ms | total 481 ms | prefill 1.85k tok/s | decode 207.1 tok/s | dflash2 accepted 48/63 (76.2%) | thinking 30/1,536
+2026-11-03 13:29:41.355  INFO  req#55 started | anthropic non-stream | 12 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:41.795  INFO  req#55 done | anthropic | tool calls 1 | prompt 2,545 | output 67 | cache 2,244 (88.2%, shared prefix) | TTFT 174 ms | total 446 ms | prefill 1.80k tok/s | decode 245.7 tok/s | dflash2 accepted 49/51 (96.1%) | thinking 26/1,536
+2026-11-03 13:29:41.935  INFO  req#56 started | anthropic non-stream | 14 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:42.262  INFO  req#56 done | anthropic | tool calls 1 | prompt 2,710 | output 53 | cache 2,540 (93.7%, shared prefix) | TTFT 110 ms | total 334 ms | prefill 1.70k tok/s | decode 233.8 tok/s | dflash2 accepted 40/42 (95.2%) | thinking 15/1,536
+2026-11-03 13:29:42.389  INFO  req#57 started | anthropic non-stream | 16 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:44.393  INFO  throughput | 5.0s | prefill 241.6 tok/s (1,207 tok) | decode 143.7 tok/s (718 tok) | running 1 (decode-ready 1) | batch 1.00 | host 23.3% (1.2s)
+2026-11-03 13:29:49.390  INFO  throughput | 5.0s | decode 204.1 tok/s (1,020 tok) | running 1 (decode-ready 1) | batch 1.00 | host 25.5% (1.3s)
+2026-11-03 13:29:51.410  INFO  req#57 done | anthropic | tool calls 1 | prompt 2,996 | output 1,798 | cache 2,705 (90.3%, shared prefix) | TTFT 162 ms | total 9.0s | prefill 1.89k tok/s | decode 203.1 tok/s | dflash2 accepted 1,213/1,679 (72.2%) | thinking 1,536/1,536, control 25
+2026-11-03 13:29:51.459  INFO  req#58 started | anthropic non-stream | 18 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:52.434  INFO  req#58 done | anthropic | tool calls 1 | prompt 3,270 | output 183 | cache 2,991 (91.5%, shared prefix) | TTFT 163 ms | total 983 ms | prefill 1.82k tok/s | decode 222.9 tok/s | dflash2 accepted 131/156 (84.0%) | thinking 38/1,536
+2026-11-03 13:29:52.457  INFO  req#59 started | anthropic non-stream | 20 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:53.620  INFO  req#59 done | anthropic | tool calls 1 | prompt 3,441 | output 221 | cache 3,265 (94.9%, shared prefix) | TTFT 114 ms | total 1.2s | prefill 1.71k tok/s | decode 208.7 tok/s | dflash2 accepted 155/201 (77.1%) | thinking 60/1,536
+2026-11-03 13:29:53.665  INFO  req#60 started | anthropic non-stream | 22 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:54.397  INFO  throughput | 5.0s | prefill 129.2 tok/s (647 tok) | decode 187.9 tok/s (941 tok) | running 1 (decode-ready 1) | batch 1.00 | host 25.8% (1.3s)
+2026-11-03 13:29:54.618  INFO  req#60 done | anthropic | tool calls 1 | prompt 3,628 | output 180 | cache 3,436 (94.7%, shared prefix) | TTFT 115 ms | total 963 ms | prefill 1.85k tok/s | decode 212.0 tok/s | dflash2 accepted 126/159 (79.2%) | thinking 27/1,536
+2026-11-03 13:29:54.658  INFO  req#61 started | anthropic non-stream | 24 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:55.195  INFO  req#61 done | anthropic | tool calls 1 | prompt 3,807 | output 83 | cache 3,623 (95.2%, shared prefix) | TTFT 117 ms | total 548 ms | prefill 1.75k tok/s | decode 191.7 tok/s | dflash2 accepted 56/81 (69.1%) | thinking 44/1,536
+2026-11-03 13:29:55.221  INFO  req#62 started | anthropic non-stream | 26 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:55.532  INFO  req#62 done | anthropic | tool calls 1 | prompt 3,890 | output 45 | cache 3,802 (97.7%, shared prefix) | TTFT 95.9 ms | total 321 ms | prefill 1.05k tok/s | decode 196.8 tok/s | dflash2 accepted 32/42 (76.2%) | thinking 16/1,536
+2026-11-03 13:29:55.709  INFO  req#63 started | anthropic non-stream | 28 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:56.694  INFO  req#63 done | anthropic | tool calls 1 | prompt 3,945 | output 185 | cache 3,885 (98.5%, shared prefix) | TTFT 80.4 ms | total 998 ms | prefill 887.1 tok/s | decode 201.5 tok/s | dflash2 accepted 128/174 (73.6%) | thinking 45/1,536
+2026-11-03 13:29:56.721  INFO  req#64 started | anthropic non-stream | 30 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:57.647  INFO  req#64 done | anthropic | tool calls 1 | prompt 4,111 | output 181 | cache 3,940 (95.8%, shared prefix) | TTFT 118 ms | total 940 ms | prefill 1.64k tok/s | decode 220.3 tok/s | dflash2 accepted 128/156 (82.1%) | thinking 33/1,536
+2026-11-03 13:29:57.674  INFO  req#65 started | anthropic non-stream | 32 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:58.661  INFO  req#65 done | anthropic | tool calls 1 | prompt 4,285 | output 196 | cache 4,106 (95.8%, shared prefix) | TTFT 120 ms | total 1.0s | prefill 1.70k tok/s | decode 222.6 tok/s | dflash2 accepted 140/165 (84.8%) | thinking 36/1,536
+2026-11-03 13:29:58.721  INFO  req#66 started | anthropic non-stream | 34 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:29:59.387  INFO  throughput | 5.0s | prefill 178.6 tok/s (891 tok) | decode 162.7 tok/s (812 tok) | running 1 (decode-ready 1) | batch 1.00 | host 24.7% (1.2s)
+2026-11-03 13:30:00.261  INFO  req#66 done | anthropic | tool calls 1 | prompt 4,489 | output 269 | cache 4,280 (95.3%, shared prefix) | TTFT 143 ms | total 1.6s | prefill 1.64k tok/s | decode 190.7 tok/s | dflash2 accepted 180/267 (67.4%) | thinking 129/1,536
+2026-11-03 13:30:00.289  INFO  req#67 started | anthropic non-stream | 36 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:30:01.269  INFO  req#67 done | anthropic | tool calls 1 | prompt 4,655 | output 193 | cache 4,484 (96.3%, shared prefix) | TTFT 122 ms | total 995 ms | prefill 1.62k tok/s | decode 220.8 tok/s | dflash2 accepted 139/165 (84.2%) | thinking 37/1,536
+2026-11-03 13:30:01.299  INFO  req#68 started | anthropic non-stream | 38 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:30:04.310  INFO  req#68 done | anthropic | tool calls 1 | prompt 4,837 | output 455 | cache 4,650 (96.1%, shared prefix) | TTFT 124 ms | total 3.0s | prefill 1.80k tok/s | decode 156.7 tok/s | dflash2 accepted 273/549 (49.7%) | thinking 425/1,536
+2026-11-03 13:30:04.340  INFO  req#69 started | anthropic non-stream | 40 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:30:04.389  INFO  throughput | 5.0s | prefill 71.6 tok/s (358 tok) | decode 167.7 tok/s (839 tok) | running 1 (prefill 1) | batch 1.00 | host 24.8% (1.2s)
+2026-11-03 13:30:04.768  INFO  req#69 done | anthropic | tool calls 1 | prompt 4,893 | output 68 | cache 4,832 (98.8%, shared prefix) | TTFT 90.0 ms | total 445 ms | prefill 844.9 tok/s | decode 190.4 tok/s | dflash2 accepted 47/66 (71.2%) | thinking 22/1,536
+2026-11-03 13:30:04.816  INFO  req#70 started | anthropic non-stream | 42 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:30:05.288  INFO  req#70 done | anthropic | tool calls 1 | prompt 4,965 | output 67 | cache 4,888 (98.4%, shared prefix) | TTFT 103 ms | total 489 ms | prefill 907.5 tok/s | decode 172.5 tok/s | dflash2 accepted 43/72 (59.7%) | thinking 41/1,536
+2026-11-03 13:30:05.377  INFO  req#71 started | anthropic non-stream | 44 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:30:06.554  INFO  req#71 done | anthropic | tool calls 1 | prompt 5,080 | output 174 | cache 4,960 (97.6%, shared prefix) | TTFT 106 ms | total 1.2s | prefill 1.37k tok/s | decode 159.7 tok/s | dflash2 accepted 106/204 (52.0%) | thinking 145/1,536
+2026-11-03 13:30:06.759  INFO  req#72 started | anthropic non-stream | 46 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:30:07.518  INFO  req#72 done | anthropic | tool calls 1 | prompt 5,133 | output 106 | cache 5,075 (98.9%, shared prefix) | TTFT 92.1 ms | total 777 ms | prefill 809.8 tok/s | decode 154.0 tok/s | dflash2 accepted 64/129 (49.6%) | thinking 73/1,536
+2026-11-03 13:30:07.710  INFO  req#73 started | anthropic non-stream | 48 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:30:09.396  INFO  throughput | 5.0s | prefill 87.1 tok/s (436 tok) | decode 145.4 tok/s (728 tok) | running 1 (decode-ready 1) | batch 1.00 | host 25.3% (1.3s)
+2026-11-03 13:30:14.396  INFO  throughput | 5.0s | decode 197.8 tok/s (989 tok) | running 1 (decode-ready 1) | batch 1.00 | host 26.4% (1.3s)
+2026-11-03 13:30:16.842  INFO  req#73 done | anthropic | tool calls 1 | prompt 5,248 | output 1,793 | cache 5,128 (97.7%, shared prefix) | TTFT 114 ms | total 9.2s | prefill 1.31k tok/s | decode 198.7 tok/s | dflash2 accepted 1,203/1,693 (71.1%) | thinking 1,536/1,536, control 25
+2026-11-03 13:30:16.895  INFO  req#74 started | anthropic non-stream | 50 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:30:18.037  INFO  req#74 done | anthropic | tool calls 1 | prompt 5,517 | output 202 | cache 5,243 (95.0%, shared prefix) | TTFT 172 ms | total 1.2s | prefill 1.82k tok/s | decode 203.7 tok/s | dflash2 accepted 140/186 (75.3%) | thinking 63/1,536
+2026-11-03 13:30:18.199  INFO  req#75 started | anthropic non-stream | 52 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:30:19.383  INFO  throughput | 5.0s | prefill 90.0 tok/s (449 tok) | decode 180.7 tok/s (901 tok) | running 1 (decode-ready 1) | batch 1.00 | host 25.3% (1.3s)
+2026-11-03 13:30:24.395  INFO  throughput | 5.0s | decode 192.1 tok/s (963 tok) | running 1 (decode-ready 1) | batch 1.00 | host 26.1% (1.3s)
+2026-11-03 13:30:26.620  INFO  req#75 done | anthropic | tool calls 1 | prompt 5,687 | output 1,598 | cache 5,512 (96.9%, shared prefix) | TTFT 131 ms | total 8.4s | prefill 1.62k tok/s | decode 192.5 tok/s | dflash2 accepted 1,054/1,555 (67.8%) | thinking 1,536/1,536, control 25
+2026-11-03 13:30:26.769  INFO  req#76 started | anthropic non-stream | 54 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:30:29.387  INFO  throughput | 5.0s | prefill 14.2 tok/s (71 tok) | decode 179.3 tok/s (895 tok) | running 1 (decode-ready 1) | batch 1.00 | host 25.6% (1.3s)
+2026-11-03 13:30:34.388  INFO  throughput | 5.0s | decode 193.0 tok/s (965 tok) | running 1 (decode-ready 1) | batch 1.00 | host 26.2% (1.3s)
+2026-11-03 13:30:36.004  INFO  req#76 done | anthropic | tool calls 1 | prompt 5,753 | output 1,793 | cache 5,682 (98.8%, shared prefix) | TTFT 109 ms | total 9.3s | prefill 827.7 tok/s | decode 196.3 tok/s | dflash2 accepted 1,199/1,705 (70.3%) | thinking 1,536/1,536, control 25
+2026-11-03 13:30:36.058  INFO  req#77 started | anthropic non-stream | 56 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:30:36.917  INFO  req#77 done | anthropic | tool calls 1 | prompt 6,022 | output 158 | cache 5,748 (95.5%, shared prefix) | TTFT 176 ms | total 882 ms | prefill 1.80k tok/s | decode 223.5 tok/s | dflash2 accepted 113/132 (85.6%) | thinking 19/1,536
+2026-11-03 13:30:37.058  INFO  req#78 started | anthropic non-stream | 58 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:30:39.389  INFO  throughput | 5.0s | prefill 89.8 tok/s (449 tok) | decode 183.5 tok/s (918 tok) | running 1 (decode-ready 1) | batch 1.00 | host 26.2% (1.3s)
+2026-11-03 13:30:44.387  INFO  throughput | 5.0s | decode 196.9 tok/s (984 tok) | running 1 (decode-ready 1) | batch 1.00 | host 26.7% (1.3s)
+2026-11-03 13:30:46.266  INFO  req#78 done | anthropic | tool calls 1 | prompt 6,192 | output 1,793 | cache 6,017 (97.2%, shared prefix) | TTFT 133 ms | total 9.2s | prefill 1.62k tok/s | decode 197.3 tok/s | dflash2 accepted 1,202/1,697 (70.8%) | thinking 1,536/1,536, control 25
+2026-11-03 13:30:46.327  INFO  req#79 started | anthropic non-stream | 60 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:30:47.241  INFO  req#79 done | anthropic | tool calls 1 | prompt 6,461 | output 164 | cache 6,187 (95.8%, shared prefix) | TTFT 179 ms | total 938 ms | prefill 1.78k tok/s | decode 215.9 tok/s | dflash2 accepted 118/141 (83.7%) | thinking 21/1,536
+2026-11-03 13:30:47.392  INFO  req#80 started | anthropic non-stream | 62 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:30:49.387  INFO  throughput | 5.0s | prefill 90.6 tok/s (453 tok) | decode 171.8 tok/s (859 tok) | running 1 (decode-ready 1) | batch 1.00 | host 26.6% (1.3s)
+2026-11-03 13:30:50.481  INFO  req#80 done | anthropic | tool calls 1 | prompt 6,635 | output 511 | cache 6,456 (97.3%, shared prefix) | TTFT 134 ms | total 3.1s | prefill 1.65k tok/s | decode 171.6 tok/s | dflash2 accepted 326/558 (58.4%) | thinking 204/1,536
+2026-11-03 13:30:50.557  INFO  req#81 started | anthropic non-stream | 64 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:30:52.970  INFO  req#81 done | anthropic | tool calls 1 | prompt 7,155 | output 433 | cache 6,630 (92.7%, shared prefix) | TTFT 293 ms | total 2.4s | prefill 1.97k tok/s | decode 202.0 tok/s | dflash2 accepted 298/402 (74.1%) | thinking 155/1,536
+2026-11-03 13:30:53.131  INFO  req#82 started | anthropic non-stream | 66 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:30:54.388  INFO  throughput | 5.0s | prefill 165.2 tok/s (826 tok) | decode 173.0 tok/s (865 tok) | running 1 (decode-ready 1) | batch 1.00 | host 25.8% (1.3s)
+2026-11-03 13:30:55.119  INFO  req#82 done | anthropic | tool calls 1 | prompt 7,451 | output 401 | cache 7,150 (96.0%, shared prefix) | TTFT 204 ms | total 2.0s | prefill 1.70k tok/s | decode 222.1 tok/s | dflash2 accepted 290/336 (86.3%) | thinking 127/1,536
+2026-11-03 13:30:55.282  INFO  req#83 started | anthropic non-stream | 68 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:30:59.393  INFO  throughput | 5.0s | prefill 59.3 tok/s (297 tok) | decode 189.4 tok/s (948 tok) | running 1 (decode-ready 1) | batch 1.00 | host 26.2% (1.3s)
+2026-11-03 13:31:04.387  INFO  throughput | 5.0s | decode 202.7 tok/s (1,012 tok) | running 1 (decode-ready 1) | batch 1.00 | host 27.1% (1.4s)
+2026-11-03 13:31:04.438  INFO  req#83 done | anthropic | tool calls 1 | prompt 7,743 | output 1,788 | cache 7,446 (96.2%, shared prefix) | TTFT 206 ms | total 9.2s | prefill 1.67k tok/s | decode 199.9 tok/s | dflash2 accepted 1,209/1,660 (72.8%) | thinking 1,536/1,536, control 25
+2026-11-03 13:31:04.491  INFO  req#84 started | anthropic non-stream | 70 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:31:05.454  INFO  req#84 done | anthropic | tool calls 1 | prompt 8,007 | output 185 | cache 7,738 (96.6%, shared prefix) | TTFT 179 ms | total 989 ms | prefill 1.79k tok/s | decode 228.4 tok/s | dflash2 accepted 134/150 (89.3%) | thinking 25/1,536
+2026-11-03 13:31:05.612  INFO  req#85 started | anthropic non-stream | 72 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:31:09.391  INFO  throughput | 5.0s | prefill 95.9 tok/s (480 tok) | decode 179.7 tok/s (899 tok) | running 1 (decode-ready 1) | batch 1.00 | host 24.6% (1.2s)
+2026-11-03 13:31:14.384  INFO  throughput | 5.0s | decode 163.0 tok/s (814 tok) | running 1 (decode-ready 1) | batch 1.00 | host 24.5% (1.2s)
+2026-11-03 13:31:16.442  INFO  req#85 done | anthropic | tool calls 1 | prompt 8,213 | output 2,007 | cache 8,002 (97.4%, shared prefix) | TTFT 162 ms | total 10.9s | prefill 1.59k tok/s | decode 187.9 tok/s | dflash2 accepted 1,320/1,980 (66.7%) | thinking 1,536/1,536, control 25
+2026-11-03 13:31:16.605  INFO  req#86 started | anthropic non-stream | 74 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:31:19.388  INFO  throughput | 5.0s | prefill 93.7 tok/s (469 tok) | decode 191.4 tok/s (958 tok) | running 1 (decode-ready 1) | batch 1.00 | host 24.6% (1.2s)
+2026-11-03 13:31:24.388  INFO  throughput | 5.0s | decode 187.0 tok/s (935 tok) | running 1 (decode-ready 1) | batch 1.00 | host 24.7% (1.2s)
+2026-11-03 13:31:25.178  INFO  req#86 done | anthropic | tool calls 1 | prompt 8,677 | output 1,591 | cache 8,208 (94.6%, shared prefix) | TTFT 282 ms | total 8.6s | prefill 1.87k tok/s | decode 191.7 tok/s | dflash2 accepted 1,053/1,534 (68.6%) | thinking 1,536/1,536, control 25
+2026-11-03 13:31:25.310  INFO  req#87 started | anthropic non-stream | 76 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:31:29.387  INFO  throughput | 5.0s | prefill 69.6 tok/s (348 tok) | decode 181.7 tok/s (908 tok) | running 1 (decode-ready 1) | batch 1.00 | host 25.3% (1.3s)
+2026-11-03 13:31:34.392  INFO  throughput | 5.0s | decode 189.8 tok/s (950 tok) | running 1 (decode-ready 1) | batch 1.00 | host 24.6% (1.2s)
+2026-11-03 13:31:35.022  INFO  req#87 done | anthropic | tool calls 1 | prompt 9,020 | output 1,819 | cache 8,672 (96.1%, shared prefix) | TTFT 241 ms | total 9.7s | prefill 1.66k tok/s | decode 191.7 tok/s | dflash2 accepted 1,211/1,743 (69.5%) | thinking 1,536/1,536, control 25
+2026-11-03 13:31:35.083  INFO  req#88 started | anthropic non-stream | 78 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:31:36.321  INFO  req#88 done | anthropic | tool calls 1 | prompt 9,315 | output 248 | cache 9,015 (96.8%, shared prefix) | TTFT 215 ms | total 1.3s | prefill 1.64k tok/s | decode 235.4 tok/s | dflash2 accepted 183/195 (93.8%) | thinking 27/1,536
+2026-11-03 13:31:36.494  INFO  req#89 started | anthropic non-stream | 80 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:31:39.390  INFO  throughput | 5.0s | prefill 118.0 tok/s (590 tok) | decode 181.9 tok/s (909 tok) | running 1 (decode-ready 1) | batch 1.00 | host 23.9% (1.2s)
+2026-11-03 13:31:44.396  INFO  throughput | 5.0s | decode 181.8 tok/s (910 tok) | running 1 (decode-ready 1) | batch 1.00 | host 25.3% (1.3s)
+2026-11-03 13:31:46.248  INFO  req#89 done | anthropic | tool calls 1 | prompt 9,600 | output 1,802 | cache 9,310 (97.0%, shared prefix) | TTFT 209 ms | total 9.8s | prefill 1.64k tok/s | decode 188.4 tok/s | dflash2 accepted 1,188/1,761 (67.5%) | thinking 1,536/1,536, control 25
+2026-11-03 13:31:46.433  INFO  req#90 started | anthropic non-stream | 82 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:31:49.393  INFO  throughput | 5.0s | prefill 53.0 tok/s (265 tok) | decode 178.5 tok/s (892 tok) | running 1 (decode-ready 1) | batch 1.00 | host 24.4% (1.2s)
+2026-11-03 13:31:54.386  INFO  throughput | 5.0s | decode 168.6 tok/s (842 tok) | running 1 (decode-ready 1) | batch 1.00 | host 25.4% (1.3s)
+2026-11-03 13:31:56.185  INFO  req#90 done | anthropic | tool calls 1 | prompt 9,860 | output 1,727 | cache 9,595 (97.3%, shared prefix) | TTFT 192 ms | total 9.8s | prefill 1.67k tok/s | decode 180.3 tok/s | dflash2 accepted 1,115/1,762 (63.3%) | thinking 1,536/1,536, control 25
+2026-11-03 13:31:56.351  INFO  req#91 started | anthropic non-stream | 84 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:31:57.570  INFO  req#91 done | anthropic | tool calls 1 | prompt 10,045 | output 245 | cache 9,855 (98.1%, shared prefix) | TTFT 149 ms | total 1.3s | prefill 1.65k tok/s | decode 222.3 tok/s | dflash2 accepted 178/201 (88.6%) | thinking 45/1,536
+2026-11-03 13:31:57.731  INFO  req#92 started | anthropic non-stream | 86 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:31:59.384  INFO  throughput | 5.0s | prefill 82.8 tok/s (414 tok) | decode 181.1 tok/s (905 tok) | running 1 (decode-ready 1) | batch 1.00 | host 24.4% (1.2s)
+2026-11-03 13:32:01.871  INFO  req#92 done | anthropic | tool calls 1 | prompt 10,264 | output 739 | cache 10,040 (97.8%, shared prefix) | TTFT 172 ms | total 4.2s | prefill 1.63k tok/s | decode 184.8 tok/s | dflash2 accepted 493/738 (66.8%) | thinking 577/1,536
+2026-11-03 13:32:02.043  INFO  req#93 started | anthropic non-stream | 88 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:32:04.392  INFO  throughput | 5.0s | prefill 37.1 tok/s (186 tok) | decode 162.9 tok/s (816 tok) | running 1 (decode-ready 1) | batch 1.00 | host 24.3% (1.2s)
+2026-11-03 13:32:06.780  INFO  req#93 done | anthropic | tool calls 1 | prompt 10,445 | output 754 | cache 10,259 (98.2%, shared prefix) | TTFT 151 ms | total 4.8s | prefill 1.61k tok/s | decode 163.3 tok/s | dflash2 accepted 471/852 (55.3%) | thinking 675/1,536
+2026-11-03 13:32:07.014  INFO  req#94 started | anthropic non-stream | 90 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:32:07.586  INFO  req#94 done | anthropic | tool calls 1 | prompt 11,085 | output 45 | cache 10,440 (94.2%, shared prefix) | TTFT 378 ms | total 608 ms | prefill 1.90k tok/s | decode 194.3 tok/s | dflash2 accepted 32/42 (76.2%) | thinking 12/1,536
+2026-11-03 13:32:07.805  INFO  req#95 started | anthropic non-stream | 92 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:32:09.383  INFO  throughput | 5.0s | prefill 153.3 tok/s (765 tok) | decode 128.9 tok/s (643 tok) | running 1 (decode-ready 1) | batch 1.00 | host 24.8% (1.2s)
+2026-11-03 13:32:14.397  INFO  throughput | 5.0s | decode 182.1 tok/s (913 tok) | running 1 (decode-ready 1) | batch 1.00 | host 29.7% (1.5s)
+2026-11-03 13:32:19.397  INFO  throughput | 5.0s | decode 185.6 tok/s (928 tok) | running 1 (decode-ready 1) | batch 1.00 | host 28.8% (1.4s)
+2026-11-03 13:32:21.038  INFO  req#95 done | anthropic | tool calls 1 | prompt 11,200 | output 2,399 | cache 11,080 (98.9%, shared prefix) | TTFT 137 ms | total 13.3s | prefill 1.21k tok/s | decode 183.1 tok/s | dflash2 accepted 1,576/2,396 (65.8%) | thinking 1,536/1,536, control 25
+2026-11-03 13:32:21.118  INFO  req#96 started | anthropic non-stream | 94 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:32:24.386  INFO  throughput | 5.0s | prefill 176.4 tok/s (880 tok) | decode 197.8 tok/s (987 tok) | running 1 (decode-ready 1) | batch 1.00 | host 27.6% (1.4s)
+2026-11-03 13:32:24.517  INFO  req#96 done | anthropic | tool calls 1 | prompt 12,075 | output 686 | cache 11,195 (92.7%, shared prefix) | TTFT 512 ms | total 3.4s | prefill 1.87k tok/s | decode 235.5 tok/s | dflash2 accepted 507/534 (94.9%) | thinking 28/1,536
+2026-11-03 13:32:24.709  INFO  req#97 started | anthropic non-stream | 96 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:32:29.389  INFO  throughput | 5.0s | prefill 140.9 tok/s (705 tok) | decode 158.1 tok/s (791 tok) | running 1 (decode-ready 1) | batch 1.00 | host 27.3% (1.4s)
+2026-11-03 13:32:34.392  INFO  throughput | 5.0s | decode 179.9 tok/s (900 tok) | running 1 (decode-ready 1) | batch 1.00 | host 29.3% (1.5s)
+2026-11-03 13:32:34.869  INFO  req#97 done | anthropic | tool calls 1 | prompt 12,775 | output 1,765 | cache 12,070 (94.5%, shared prefix) | TTFT 412 ms | total 10.2s | prefill 1.89k tok/s | decode 180.9 tok/s | dflash2 accepted 1,150/1,771 (64.9%) | thinking 1,536/1,536, control 25
+2026-11-03 13:32:35.034  INFO  req#98 started | anthropic non-stream | 98 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:32:39.389  INFO  throughput | 5.0s | prefill 45.6 tok/s (228 tok) | decode 151.3 tok/s (756 tok) | running 1 (decode-ready 1) | batch 1.00 | host 24.1% (1.2s)
+2026-11-03 13:32:40.605  INFO  req#98 done | anthropic | tool calls 1 | prompt 12,998 | output 909 | cache 12,770 (98.2%, shared prefix) | TTFT 191 ms | total 5.6s | prefill 1.52k tok/s | decode 168.0 tok/s | dflash2 accepted 594/948 (62.7%) | thinking 514/1,536
+2026-11-03 13:32:40.664  INFO  req#99 started | anthropic non-stream | 100 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:32:42.664  INFO  req#99 done | anthropic | tool calls 1 | prompt 13,430 | output 394 | cache 12,993 (96.7%, shared prefix) | TTFT 288 ms | total 2.0s | prefill 1.78k tok/s | decode 225.5 tok/s | dflash2 accepted 288/318 (90.6%) | thinking 28/1,536
+2026-11-03 13:32:42.848  INFO  req#100 started | anthropic non-stream | 102 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:32:43.714  INFO  req#100 done | anthropic | tool calls 1 | prompt 13,841 | output 106 | cache 13,425 (97.0%, shared prefix) | TTFT 290 ms | total 907 ms | prefill 1.70k tok/s | decode 171.7 tok/s | dflash2 accepted 69/111 (62.2%) | thinking 23/1,536
+2026-11-03 13:32:43.961  INFO  req#101 started | anthropic non-stream | 104 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:32:44.385  INFO  throughput | 5.0s | prefill 211.2 tok/s (1,055 tok) | decode 159.3 tok/s (796 tok) | running 1 (decode-ready 1) | batch 1.00 | host 25.5% (1.3s)
+2026-11-03 13:32:46.469  INFO  req#101 done | anthropic | tool calls 1 | prompt 14,038 | output 393 | cache 13,836 (98.6%, shared prefix) | TTFT 187 ms | total 2.5s | prefill 1.41k tok/s | decode 166.4 tok/s | dflash2 accepted 249/429 (58.0%) | thinking 296/1,536
+2026-11-03 13:32:46.686  INFO  req#102 started | anthropic non-stream | 106 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:32:48.180  INFO  req#102 done | anthropic | tool calls 1 | prompt 14,380 | output 233 | cache 14,033 (97.6%, shared prefix) | TTFT 269 ms | total 1.5s | prefill 1.54k tok/s | decode 183.8 tok/s | dflash2 accepted 156/228 (68.4%) | thinking 121/1,536
+2026-11-03 13:32:48.384  INFO  req#103 started | anthropic non-stream | 108 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:32:49.024  INFO  req#103 done | anthropic | tool calls 1 | prompt 14,513 | output 97 | cache 14,375 (99.0%, shared prefix) | TTFT 165 ms | total 684 ms | prefill 1.15k tok/s | decode 186.3 tok/s | dflash2 accepted 67/93 (72.0%) | thinking 52/1,536
+2026-11-03 13:32:49.109  INFO  req#104 started | anthropic non-stream | 110 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:32:49.393  INFO  throughput | 5.0s | prefill 115.2 tok/s (577 tok) | decode 143.4 tok/s (718 tok) | running 1 (decode-ready 1) | batch 1.00 | host 24.5% (1.2s)
+2026-11-03 13:32:49.498  INFO  req#104 done | anthropic | tool calls 1 | prompt 14,600 | output 60 | cache 14,508 (99.4%, shared prefix) | TTFT 144 ms | total 433 ms | prefill 939.7 tok/s | decode 207.3 tok/s | dflash2 accepted 44/51 (86.3%) | thinking 27/1,536
+2026-11-03 13:32:49.714  INFO  req#105 started | anthropic non-stream | 112 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:32:54.385  INFO  throughput | 5.0s | prefill 24.0 tok/s (120 tok) | decode 156.7 tok/s (782 tok) | running 1 (decode-ready 1) | batch 1.00 | host 28.3% (1.4s)
+2026-11-03 13:32:58.016  INFO  req#105 done | anthropic | tool calls 1 | prompt 14,715 | output 1,296 | cache 14,595 (99.2%, shared prefix) | TTFT 146 ms | total 8.3s | prefill 1.21k tok/s | decode 158.2 tok/s | dflash2 accepted 804/1,479 (54.4%) | thinking 1,219/1,536
+2026-11-03 13:32:58.286  INFO  req#106 started | anthropic non-stream | 114 messages | max output 16,384 | thinking xhigh, budget 1,536 | tools 3
+2026-11-03 13:32:59.383  INFO  throughput | 5.0s | prefill 30.4 tok/s (152 tok) | decode 140.6 tok/s (703 tok) | running 1 (decode-ready 1) | batch 1.00 | host 27.0% (1.3s)
+2026-11-03 13:33:04.385  INFO  throughput | 5.0s | decode 162.9 tok/s (815 tok) | running 1 (decode-ready 1) | batch 1.00 | host 28.0% (1.4s)
+2026-11-03 13:33:09.383  INFO  throughput | 5.0s | decode 172.4 tok/s (862 tok) | running 1 (decode-ready 1) | batch 1.00 | host 26.2% (1.3s)
+2026-11-03 13:33:09.976  INFO  req#106 done | anthropic | stop token | prompt 14,862 | output 1,959 | cache 14,710 (99.0%, shared prefix) | TTFT 168 ms | total 11.7s | prefill 1.28k tok/s | decode 169.6 tok/s | dflash2 accepted 1,263/2,085 (60.6%) | thinking 1,305/1,536
+2026-11-03 13:33:14.396  INFO  throughput | 5.0s | decode 22.1 tok/s (111 tok) | running 0 | batch 1.00 | host 3.2% (158 ms)

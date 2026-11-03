@@ -1,0 +1,30 @@
+{"tests": 9, "failures": 1, "errors": 0, "passed": false}
+test_authored_tests (external_acceptance.Acceptance.test_authored_tests) ... ok
+test_bounds (external_acceptance.Acceptance.test_bounds) ... ok
+test_defaults (external_acceptance.Acceptance.test_defaults) ... ok
+test_invalid (external_acceptance.Acceptance.test_invalid) ... ok
+test_legacy (external_acceptance.Acceptance.test_legacy) ... ok
+test_parse (external_acceptance.Acceptance.test_parse) ... ok
+test_pending (external_acceptance.Acceptance.test_pending) ... ok
+test_report (external_acceptance.Acceptance.test_report) ... FAIL
+test_sum (external_acceptance.Acceptance.test_sum) ... ok
+
+======================================================================
+FAIL: test_report (external_acceptance.Acceptance.test_report)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\fixtures\feature\acceptance.py", line 24, in test_report
+    def test_report(self): self.assertEqual(json.loads(render_report(DATA,by_currency=True)),{'totals':{'EUR':'2.20','USD':'1.00'}})
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'totals': {'EUR': '2.20', 'USD': '5.40'}} != {'totals': {'EUR': '2.20', 'USD': '1.00'}}
+- {'totals': {'EUR': '2.20', 'USD': '5.40'}}
+?                                    ^ ^
+
++ {'totals': {'EUR': '2.20', 'USD': '1.00'}}
+?                                    ^ ^
+
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.002s
+
+FAILED (failures=1)

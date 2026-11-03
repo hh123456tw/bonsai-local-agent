@@ -1,0 +1,11 @@
+{"phase": "short-recheck", "exit": 0, "time": "2026-11-03T13:06:53.403050"}
+{"phase": "draft-scan", "exit": 0, "time": "2026-11-03T13:08:52.995929"}
+{"phase": "chunk-scan", "exit": 0, "time": "2026-11-03T13:10:21.426821"}
+{"phase": "coding", "exit": 0, "time": "2026-11-03T13:56:17.214299"}
+{"phase": "context-prep", "exit": 0, "time": "2026-11-03T13:56:17.872706"}
+{"phase": "context", "exit": 0, "time": "2026-11-03T14:33:55.823577"}
+{"phase": "compatibility", "exit": 0, "time": "2026-11-03T14:34:29.170008"}
+{"phase": "refactor-pilot-replacement", "exit": 0, "time": "2026-11-03T14:37:35.657807"}
+{"phase": "draft5-confirm", "exit": 0, "time": "2026-11-03T14:40:49.462043"}
+{"phase": "combined-confirm", "exit": 0, "time": "2026-11-03T14:41:17.714256"}
+{"phase": "coding-audit", "exit": 0, "time": "2026-11-03T14:41:18.058391"}

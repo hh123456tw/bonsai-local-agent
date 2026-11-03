@@ -1,0 +1,23 @@
+{"phase": "benchmark", "key": "graph128chunk128-8192-256-0"}
+{"phase": "sample_done", "key": "graph128chunk128-8192-256-0-cold", "decode": 192.3774762941912, "prefill": 1862.2517214810541, "cache_n": 0, "ttft": 4.360000000000582}
+{"phase": "sample_done", "key": "graph128chunk128-8192-256-0-hot", "decode": 193.7040413423675, "prefill": 416.2850720173174, "cache_n": 8104, "ttft": 0.014999999999417923}
+{"phase": "benchmark", "key": "graph128chunk128-8192-256-1"}
+{"phase": "cooldown", "profile": "graph128chunk128", "temperature": 80.0}
+{"phase": "sample_done", "key": "graph128chunk128-8192-256-1-cold", "decode": 192.90006717461165, "prefill": 1858.0326981234145, "cache_n": 0, "ttft": 4.375}
+{"phase": "sample_done", "key": "graph128chunk128-8192-256-1-hot", "decode": 189.26231043709646, "prefill": 426.94902228673897, "cache_n": 8104, "ttft": 0.046999999991385266}
+{"phase": "benchmark", "key": "graph128chunk128-8192-256-2"}
+{"phase": "cooldown", "profile": "graph128chunk128", "temperature": 80.0}
+{"phase": "sample_done", "key": "graph128chunk128-8192-256-2-cold", "decode": 192.7582902505956, "prefill": 1861.4564303098064, "cache_n": 0, "ttft": 4.359000000011292}
+{"phase": "sample_done", "key": "graph128chunk128-8192-256-2-hot", "decode": 192.86086555805198, "prefill": 398.3534723144337, "cache_n": 8104, "ttft": 0.031000000002677552}
+{"phase": "benchmark", "key": "graph128chunk512-8192-256-0"}
+{"phase": "cooldown", "profile": "graph128chunk512", "temperature": 80.0}
+{"phase": "sample_done", "key": "graph128chunk512-8192-256-0-cold", "decode": 183.12207628549723, "prefill": 2436.1423228396347, "cache_n": 0, "ttft": 3.3280000000086147}
+{"phase": "sample_done", "key": "graph128chunk512-8192-256-0-hot", "decode": 189.92540326004348, "prefill": 423.4795906363957, "cache_n": 8104, "ttft": 0.046999999991385266}
+{"phase": "benchmark", "key": "graph128chunk512-8192-256-1"}
+{"phase": "cooldown", "profile": "graph128chunk512", "temperature": 80.0}
+{"phase": "sample_done", "key": "graph128chunk512-8192-256-1-cold", "decode": 190.13215601514017, "prefill": 2548.33857151504, "cache_n": 0, "ttft": 3.187999999994645}
+{"phase": "sample_done", "key": "graph128chunk512-8192-256-1-hot", "decode": 191.62126620326885, "prefill": 420.28579434015137, "cache_n": 8104, "ttft": 0.03199999999196734}
+{"phase": "benchmark", "key": "graph128chunk512-8192-256-2"}
+{"phase": "sample_done", "key": "graph128chunk512-8192-256-2-cold", "decode": 190.56931499224495, "prefill": 2535.922151534742, "cache_n": 0, "ttft": 3.202999999994063}
+{"phase": "sample_done", "key": "graph128chunk512-8192-256-2-hot", "decode": 191.31181763107202, "prefill": 428.6837028745624, "cache_n": 8104, "ttft": 0.015999999988707714}
+{"phase": "restored_original"}

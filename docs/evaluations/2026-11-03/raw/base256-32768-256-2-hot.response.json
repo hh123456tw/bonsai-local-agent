@@ -1,0 +1,46 @@
+{
+  "latency_s": 3.4690000000118744,
+  "ttft_observed_s": 0.04700000000593718,
+  "usage": {
+    "completion_tokens": 256,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 32680,
+    "prompt_tokens_details": {
+      "cached_tokens": 32673
+    },
+    "total_tokens": 32936
+  },
+  "timings": {
+    "cache_n": 32673,
+    "predicted_ms": 3421.3453,
+    "predicted_n": 256,
+    "predicted_per_second": 74.53208537589,
+    "predicted_per_token_ms": 13.417040392156862,
+    "prompt_ms": 33.2286,
+    "prompt_n": 7,
+    "prompt_per_second": 210.66189968882227,
+    "prompt_per_token_ms": 4.746942857142857
+  },
+  "finish_reason": "length",
+  "text": "# Technical Guide: Indexing, Validation, and Querying the Reference Dataset\n\n## 1. Data Structure Analysis\n\nThe provided dataset consists of 1,147 records (indices 000000 through 001146). Each record follows a strict schema:\n\n```\nrecord_XXXXXX: <24-character hexadecimal string>\n```\n\n### Key Characteristics:\n- **Identifier**: `record_` prefix followed by a 6-digit zero-padded integer (e.g., `record_000000`).\n- **Value**: A 24-character lowercase hexadecimal string (characters `0-9`, `a-f`).\n- **Total Records**: 1,147 records (0 to 1146 inclusive).\n- **Data Type**: The values appear to be cryptographic hashes (SHA-1 truncated to 24 hex chars, or similar fixed-length digest).\n\n---\n\n## 2. Indexing Strategy\n\n### 2.1 Primary Index: Record ID\nThe natural primary key is the **record ID** (e.g., `record_000000`). This provides O(1) lookup by index.\n\n**Implementation Options:**",
+  "key": "base256-32768-256-2-hot",
+  "profile": "base256",
+  "case": "32768",
+  "output_limit": 256,
+  "rep": 2,
+  "cache": "hot",
+  "ok": true,
+  "gpu": {
+    "sample_count": 14,
+    "used_mib_max": 11551.0,
+    "free_mib_min": 541.0,
+    "temp_c_max": 88.0,
+    "power_w_max": 437.18,
+    "power_w_mean": 433.78285714285715
+  },
+  "prompt_sha256": "931411d05d4034c924882aab1c42d9f34c6565315cd5458cfde53ca422d51d2f",
+  "actual_output_matches": true,
+  "cache_valid": true
+}

@@ -1,0 +1,35 @@
+{"phase": "benchmark", "key": "dflash128graph-short-256-0"}
+{"phase": "sample_done", "key": "dflash128graph-short-256-0-cold", "decode": 202.050167392621, "prefill": 1601.2776730609628, "cache_n": 0, "ttft": 0.10900000001129229}
+{"phase": "sample_done", "key": "dflash128graph-short-256-0-hot", "decode": 202.93756502457816, "prefill": 441.1332222331144, "cache_n": 144, "ttft": 0.04700000000593718}
+{"phase": "benchmark", "key": "dflash128graph-short-256-1"}
+{"phase": "cooldown", "profile": "dflash128graph", "temperature": 84.0}
+{"phase": "sample_done", "key": "dflash128graph-short-256-1-cold", "decode": 201.8794421888925, "prefill": 1586.0395348861316, "cache_n": 0, "ttft": 0.10899999999674037}
+{"phase": "sample_done", "key": "dflash128graph-short-256-1-hot", "decode": 203.61069634858154, "prefill": 435.2978162559551, "cache_n": 144, "ttft": 0.046999999991385266}
+{"phase": "benchmark", "key": "dflash128graph-short-256-2"}
+{"phase": "cooldown", "profile": "dflash128graph", "temperature": 81.0}
+{"phase": "sample_done", "key": "dflash128graph-short-256-2-cold", "decode": 202.10036970101748, "prefill": 1608.0144279882795, "cache_n": 0, "ttft": 0.11000000000058208}
+{"phase": "sample_done", "key": "dflash128graph-short-256-2-hot", "decode": 204.0851279885866, "prefill": 434.6461256127303, "cache_n": 144, "ttft": 0.03199999999196734}
+{"phase": "benchmark", "key": "dflash128graph-short-512-0"}
+{"phase": "cooldown", "profile": "dflash128graph", "temperature": 80.0}
+{"phase": "sample_done", "key": "dflash128graph-short-512-0-cold", "decode": 201.82957921100035, "prefill": 1589.927549183837, "cache_n": 0, "ttft": 0.09399999999732245}
+{"phase": "sample_done", "key": "dflash128graph-short-512-0-hot", "decode": 201.78538603893904, "prefill": 439.4638540980004, "cache_n": 144, "ttft": 0.01600000000325963}
+{"phase": "benchmark", "key": "dflash128graph-short-512-1"}
+{"phase": "cooldown", "profile": "dflash128graph", "temperature": 80.0}
+{"phase": "sample_done", "key": "dflash128graph-short-512-1-cold", "decode": 201.37165227016985, "prefill": 1616.0975996197415, "cache_n": 0, "ttft": 0.09400000001187436}
+{"phase": "sample_done", "key": "dflash128graph-short-512-1-hot", "decode": 201.49360784202082, "prefill": 440.2118886557396, "cache_n": 144, "ttft": 0.04700000000593718}
+{"phase": "benchmark", "key": "dflash128graph-short-512-2"}
+{"phase": "cooldown", "profile": "dflash128graph", "temperature": 80.0}
+{"phase": "sample_done", "key": "dflash128graph-short-512-2-cold", "decode": 201.78713108297376, "prefill": 1620.0728079779585, "cache_n": 0, "ttft": 0.125}
+{"phase": "sample_done", "key": "dflash128graph-short-512-2-hot", "decode": 202.6906851294214, "prefill": 433.7014977158388, "cache_n": 144, "ttft": 0.031000000002677552}
+{"phase": "benchmark", "key": "dflash128graph-short-1024-0"}
+{"phase": "sample_done", "key": "dflash128graph-short-1024-0-cold", "decode": 209.03139876374374, "prefill": 1602.7067936960198, "cache_n": 0, "ttft": 0.11000000000058208}
+{"phase": "sample_done", "key": "dflash128graph-short-1024-0-hot", "decode": 209.39253016403788, "prefill": 439.6334434045214, "cache_n": 144, "ttft": 0.046999999991385266}
+{"phase": "benchmark", "key": "dflash128graph-short-1024-1"}
+{"phase": "cooldown", "profile": "dflash128graph", "temperature": 81.0}
+{"phase": "sample_done", "key": "dflash128graph-short-1024-1-cold", "decode": 209.02403124563958, "prefill": 1623.9021413219411, "cache_n": 0, "ttft": 0.11000000000058208}
+{"phase": "sample_done", "key": "dflash128graph-short-1024-1-hot", "decode": 208.9254077884941, "prefill": 478.40531561461796, "cache_n": 144, "ttft": 0.03199999999196734}
+{"phase": "benchmark", "key": "dflash128graph-short-1024-2"}
+{"phase": "cooldown", "profile": "dflash128graph", "temperature": 82.0}
+{"phase": "sample_done", "key": "dflash128graph-short-1024-2-cold", "decode": 209.34457283812898, "prefill": 1620.9945278191267, "cache_n": 0, "ttft": 0.09299999999348074}
+{"phase": "sample_done", "key": "dflash128graph-short-1024-2-hot", "decode": 208.96608727567707, "prefill": 432.98998830927025, "cache_n": 144, "ttft": 0.031000000002677552}
+{"phase": "restored_original"}

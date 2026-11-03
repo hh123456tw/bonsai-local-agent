@@ -1,0 +1,46 @@
+{
+  "latency_s": 4.327999999994063,
+  "ttft_observed_s": 0.09299999999348074,
+  "usage": {
+    "completion_tokens": 256,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 98227,
+    "prompt_tokens_details": {
+      "cached_tokens": 98220
+    },
+    "total_tokens": 98483
+  },
+  "timings": {
+    "cache_n": 98220,
+    "predicted_ms": 4231.4389,
+    "predicted_n": 256,
+    "predicted_per_second": 60.26318848654532,
+    "predicted_per_token_ms": 16.593878039215685,
+    "prompt_ms": 43.1166,
+    "prompt_n": 7,
+    "prompt_per_second": 162.35046362653827,
+    "prompt_per_token_ms": 6.159514285714286
+  },
+  "finish_reason": "length",
+  "text": "# Technical Guide: Indexing, Validation, and Querying the Reference Dataset\n\n## 1. Data Structure Analysis\n\nThe provided dataset consists of 3,453 records (indices 000000 through 003452). Each record follows a strict schema:\n\n```\nrecord_XXXXXX: <24-character hexadecimal string>\n```\n\n### Key Characteristics\n- **Identifier**: A zero-padded 6-digit integer (e.g., `000000` to `003452`).\n- **Value**: A 24-character lowercase hexadecimal string (12 bytes / 96 bits).\n- **Total Records**: 3,453.\n- **Data Type**: The values appear to be cryptographic hashes (SHA-1 truncated, or custom 12-byte identifiers) or opaque binary identifiers represented in hex.\n\n---\n\n## 2. Indexing Strategy\n\nGiven the nature of the data (unique, fixed-length, high-cardinality keys), the following indexing strategies are recommended:\n\n### A. Primary Index (Primary Key)\n- **Field**: `record_id` (the 6-digit integer).\n- **Type**: `INT`",
+  "key": "base256-98304-256-1-hot",
+  "profile": "base256",
+  "case": "98304",
+  "output_limit": 256,
+  "rep": 1,
+  "cache": "hot",
+  "ok": true,
+  "gpu": {
+    "sample_count": 18,
+    "used_mib_max": 11554.0,
+    "free_mib_min": 538.0,
+    "temp_c_max": 88.0,
+    "power_w_max": 437.05,
+    "power_w_mean": 433.24888888888887
+  },
+  "prompt_sha256": "354c7bf348b3dd37bb788f505f5c2ec842c0ea80d8e39aaa790faf1a539a0066",
+  "actual_output_matches": true,
+  "cache_valid": true
+}

@@ -1,0 +1,21 @@
+E...
+======================================================================
+ERROR: test_currency (unittest.loader._FailedTest.test_currency)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_currency
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\unittest\loader.py", line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\unittest\loader.py", line 362, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\runs\dflash128graph-feature-0\test_currency.py", line 9
+    DATA = "account,amount,day,status,currency
+           ^
+SyntaxError: unterminated string literal (detected at line 9)
+
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+FAILED (errors=1)

@@ -1,0 +1,48 @@
+{
+  "latency_s": 5.5,
+  "ttft_observed_s": 0.09299999999348074,
+  "usage": {
+    "completion_tokens": 1024,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 153,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 1177
+  },
+  "timings": {
+    "cache_n": 0,
+    "draft_n": 1057,
+    "draft_n_accepted": 670,
+    "predicted_ms": 5400.111199999999,
+    "predicted_n": 1024,
+    "predicted_per_second": 189.44054337251427,
+    "predicted_per_token_ms": 5.278701075268817,
+    "prompt_ms": 99.7893,
+    "prompt_n": 153,
+    "prompt_per_second": 1533.2305166986841,
+    "prompt_per_token_ms": 0.6522176470588235
+  },
+  "finish_reason": "length",
+  "text": "# Python Data Structures, Concurrency, Testing, Profiling, Databases, and API Design: A Comprehensive Technical Tutorial\n\nThis tutorial provides a deep dive into advanced Python engineering practices. It covers data structure tradeoffs, concurrency models, testing strategies, performance profiling, database operations, and API design. Each section includes concrete code examples, invariants, edge cases, and verification strategies.\n\n---\n\n## 1. Python Data Structures: Implementation Tradeoffs\n\n### 1.1 Lists vs. Dictionaries: The Core Tradeoff\n\nPython's `list` and `dict` are the two most fundamental data structures. Understanding their internal implementations is critical for performance-critical code.\n\n#### 1.1.1 List Implementation\n\nA Python list is a dynamic array of pointers to objects. It over-allocates memory to amortize the cost of resizing.\n\n```python\nimport sys\n\n# Internal structure: array of PyObject* pointers\n# Over-allocation strategy: if new_size > old_size * 1.125,\n# allocate new_size * 1.125 (rounded up to multiple of 8)\n\nmy_list = [1, 2, 3, 4, 5]\nprint(sys.getsizeof(my_list))  # Size of the list object itself\nprint(len(my_list))            # 5\nprint(my_list[0])              # O(1) access by index\nprint(my_list.append(6))       # O(1) amortized\nprint(my_list.insert(0, 0))    # O(n) - shifts all elements\nprint(my_list.pop())           # O(1)\nprint(my_list.pop(0))          # O(n) - shifts all elements\n```\n\n**Invariants:**\n- `len(lst) == number of elements`\n- `0 <= index < len(lst)` for valid access\n- Elements are stored in insertion order (for Python 3.7+)\n\n**Edge Cases:**\n- **Memory fragmentation:** Frequent `insert(0)` on large lists causes repeated reallocations.\n- **Aliasing:** `lst1 = lst2` creates a reference, not a copy.\n- **Mutability:** Lists are mutable; modifying one affects all references.\n\n**Verification:**\n```python\nimport copy\n\ndef verify_list_invariants(lst):\n    assert isinstance(lst, list)\n    assert len(lst) >= 0\n    for i, item in enumerate(lst):\n        assert i < len(lst)\n        # Check for None if not expected\n        # assert item is not None  # Context-dependent\n```\n\n#### 1.1.2 Dictionary Implementation\n\nA Python dictionary is a hash table with open addressing. It stores key-value pairs where keys must be hashable.\n\n```python\nmy_dict = {\"a\": 1, \"b\": 2, \"c\": 3}\nprint(sys.getsizeof(my_dict))  # Size of the dict object\nprint(my_dict[\"a\"])             # O(1) average\nprint(my_dict.get(\"d\", 0))     # O(1) average, no exception\nprint(my_dict[\"d\"])            # KeyError if not found\nprint(my_dict[\"a\"] = 10)       # O(1) average\nprint(my_dict.pop(\"a\"))        # O(1) average\n```\n\n**Invariants:**\n- `len(d) == number of key-value pairs`\n- `key in d` is equivalent to `d.get(key) is not None` (with caveats for `None` values)\n- Keys must be hashable: `hash(key)` must not raise `TypeError`\n\n**Edge Cases:**\n- **Hash collisions:** Python uses a sophisticated collision resolution strategy. Adversarial inputs can degrade performance to O(n).\n- **Mutable keys:** Using mutable objects (lists, dicts) as keys raises `TypeError`.\n- **Order preservation:** Python 3.7+ guarantees insertion order.\n\n**Verification:**\n```python\ndef verify_dict_invariants(d):\n    assert isinstance(d, dict)\n    for key, value in d.items():\n        assert hash(key) is not None\n        assert key in d\n        assert d[key] == value\n```\n\n### 1.2 When to Use Which\n\n| Operation | List | Dict |\n|-----------|------|------|\n| Access by index | O(1) | O(1) average |\n| Access by key | O(n) | O(1) average |\n| Insertion | O(1) amortized (end) | O(1) average |\n| Deletion | O(n) (middle) | O(1) average |\n| Membership | O(n) | O(1) average |\n| Order preservation | Yes | Yes (3.7+) |\n\n**Rule of Thumb:**\n",
+  "key": "dflash144-short-1024-1-cold",
+  "profile": "dflash144",
+  "case": "short",
+  "output_limit": 1024,
+  "rep": 1,
+  "cache": "cold",
+  "ok": true,
+  "gpu": {
+    "sample_count": 22,
+    "used_mib_max": 11575.0,
+    "free_mib_min": 517.0,
+    "temp_c_max": 82.0,
+    "power_w_max": 426.82,
+    "power_w_mean": 378.48545454545456
+  },
+  "prompt_sha256": "244213ceadbd4ddd90a2e06c7f91d5c663226315a2663b82e2f1d52c612d3976",
+  "actual_output_matches": true,
+  "cache_valid": true
+}

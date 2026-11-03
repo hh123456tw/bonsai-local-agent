@@ -1,0 +1,98 @@
+{
+  "first": {
+    "choices": [
+      {
+        "finish_reason": "tool_calls",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": null,
+          "reasoning_content": "The user is asking to use the lookup function with the key \"answer\" and report its exact value.\n",
+          "refusal": null,
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "function": {
+                "arguments": "{\"key\":\"answer\"}",
+                "name": "lookup"
+              },
+              "id": "call_7d8f505427ba66f0",
+              "type": "function"
+            }
+          ]
+        }
+      }
+    ],
+    "created": 1793687636,
+    "id": "chatcmpl-c21f890e9524c3eb",
+    "model": "bonsai2-27b",
+    "object": "chat.completion",
+    "timings": {
+      "cache_n": 0,
+      "draft_n": 42,
+      "draft_n_accepted": 34,
+      "predicted_ms": 212.6051,
+      "predicted_n": 49,
+      "predicted_per_second": 225.7706894143179,
+      "predicted_per_token_ms": 4.429272916666666,
+      "prompt_ms": 312.4518,
+      "prompt_n": 323,
+      "prompt_per_second": 1033.7594470571141,
+      "prompt_per_token_ms": 0.9673430340557275
+    },
+    "usage": {
+      "completion_tokens": 49,
+      "completion_tokens_details": {
+        "reasoning_tokens": 24
+      },
+      "prompt_tokens": 323,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 372
+    }
+  },
+  "second": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "The exact value is: **TEAL-573921**",
+          "reasoning_content": "The user asked me to use lookup with key \"answer\" and report its exact value. The result is \"TEAL-573921\".\n",
+          "refusal": null,
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1793687636,
+    "id": "chatcmpl-04a4b94cb06b04e6",
+    "model": "bonsai2-27b",
+    "object": "chat.completion",
+    "timings": {
+      "cache_n": 316,
+      "draft_n": 45,
+      "draft_n_accepted": 36,
+      "predicted_ms": 230.6443,
+      "predicted_n": 52,
+      "predicted_per_second": 221.11970683862555,
+      "predicted_per_token_ms": 4.522437254901961,
+      "prompt_ms": 51.3723,
+      "prompt_n": 62,
+      "prompt_per_second": 1206.8760791321392,
+      "prompt_per_token_ms": 0.8285854838709678
+    },
+    "usage": {
+      "completion_tokens": 52,
+      "completion_tokens_details": {
+        "reasoning_tokens": 35
+      },
+      "prompt_tokens": 378,
+      "prompt_tokens_details": {
+        "cached_tokens": 316
+      },
+      "total_tokens": 430
+    }
+  }
+}

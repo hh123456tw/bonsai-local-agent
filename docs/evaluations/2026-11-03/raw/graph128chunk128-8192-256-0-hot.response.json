@@ -1,0 +1,50 @@
+{
+  "latency_s": 1.3429999999934807,
+  "ttft_observed_s": 0.014999999999417923,
+  "usage": {
+    "completion_tokens": 256,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 8113,
+    "prompt_tokens_details": {
+      "cached_tokens": 8104
+    },
+    "total_tokens": 8369
+  },
+  "timings": {
+    "cache_n": 8104,
+    "draft_n": 272,
+    "draft_n_accepted": 164,
+    "predicted_ms": 1316.4413,
+    "predicted_n": 256,
+    "predicted_per_second": 193.7040413423675,
+    "predicted_per_token_ms": 5.162514901960784,
+    "prompt_ms": 21.6198,
+    "prompt_n": 9,
+    "prompt_per_second": 416.2850720173174,
+    "prompt_per_token_ms": 2.4022
+  },
+  "finish_reason": "length",
+  "text": "Based on the provided reference dataset, which consists of 283 records (indices 000000 to 000282) mapping unique integer identifiers to 20-character hexadecimal strings, here is a detailed technical explanation of how to index, validate, and query this data.\n\n### 1. Data Structure Analysis\n\nThe dataset follows a strict key-value format:\n*   **Key:** A zero-padded integer identifier (e.g., `record_000000`). The numeric portion ranges from `0` to `282`.\n*   **Value:** A 20-character string consisting of lowercase hexadecimal digits (`0-9`, `a-f`).\n*   **Constraint:** The values appear to be unique hashes or identifiers (likely SHA-1 or similar, given the length, though SHA-1 is 40 hex chars, so this may be a truncated hash, a custom ID, or a specific token format).\n\n### 2. Indexing Strategy\n\nTo ensure efficient retrieval and management, the following indexing strategies are recommended:\n\n#### A. Primary Index (In-Memory Hash Map)\nGiven the small size of the dataset (283 records), an in-memory",
+  "key": "graph128chunk128-8192-256-0-hot",
+  "profile": "graph128chunk128",
+  "case": "8192",
+  "output_limit": 256,
+  "rep": 0,
+  "cache": "hot",
+  "ok": true,
+  "gpu": {
+    "sample_count": 6,
+    "used_mib_max": 11351.0,
+    "free_mib_min": 741.0,
+    "temp_c_max": 80.0,
+    "power_w_max": 434.06,
+    "power_w_mean": 430.59666666666664,
+    "graphics_clock_min_mhz": 1935.0,
+    "hw_thermal_slowdown_observed": false
+  },
+  "prompt_sha256": "41894d7f36f607df98a3b0e8bb0ec285f36e2eeb9a273819980ef4364dee5c22",
+  "actual_output_matches": true,
+  "cache_valid": true
+}

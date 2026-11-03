@@ -1,0 +1,56 @@
+EEE
+======================================================================
+ERROR: ledger (unittest.loader._FailedTest.ledger)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: ledger
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\unittest\loader.py", line 452, in _find_test_path
+    package = self._get_module_from_name(name)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\unittest\loader.py", line 362, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\runs\dflash128graph-feature-2\ledger\__init__.py", line 1, in <module>
+    from .parser import parse_csv
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\runs\dflash128graph-feature-2\ledger\parser.py", line 4, in <module>
+    from .models import Entry, normalize_currency
+ImportError: cannot import name 'normalize_currency' from 'ledger.models' (C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\runs\dflash128graph-feature-2\ledger\models.py)
+
+
+======================================================================
+ERROR: test_currency (unittest.loader._FailedTest.test_currency)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_currency
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\unittest\loader.py", line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\unittest\loader.py", line 362, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\runs\dflash128graph-feature-2\test_currency.py", line 1, in <module>
+    import unitest, json
+ModuleNotFoundError: No module named 'unitest'
+
+
+======================================================================
+ERROR: test_existing (unittest.loader._FailedTest.test_existing)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_existing
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\unittest\loader.py", line 419, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\unittest\loader.py", line 362, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\runs\dflash128graph-feature-2\test_existing.py", line 3, in <module>
+    from ledger import parse_csv,total,render_report
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\runs\dflash128graph-feature-2\ledger\__init__.py", line 1, in <module>
+    from .parser import parse_csv
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\runs\dflash128graph-feature-2\ledger\parser.py", line 4, in <module>
+    from .models import Entry, normalize_currency
+ImportError: cannot import name 'normalize_currency' from 'ledger.models' (C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-evaluation-20261103\runs\dflash128graph-feature-2\ledger\models.py)
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+FAILED (errors=3)

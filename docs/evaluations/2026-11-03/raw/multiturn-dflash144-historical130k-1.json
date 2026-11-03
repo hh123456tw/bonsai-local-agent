@@ -1,0 +1,45 @@
+{
+  "latency_s": 1.1570000000065193,
+  "ttft_observed_s": 0.34400000001187436,
+  "usage": {
+    "completion_tokens": 81,
+    "completion_tokens_details": {
+      "reasoning_tokens": 65
+    },
+    "prompt_tokens": 130517,
+    "prompt_tokens_details": {
+      "cached_tokens": 130420
+    },
+    "total_tokens": 130598
+  },
+  "timings": {
+    "cache_n": 130420,
+    "draft_n": 96,
+    "draft_n_accepted": 49,
+    "predicted_ms": 812.8525,
+    "predicted_n": 81,
+    "predicted_per_second": 98.41883982641377,
+    "predicted_per_token_ms": 10.160656249999999,
+    "prompt_ms": 296.5761,
+    "prompt_n": 97,
+    "prompt_per_second": 327.0661391797923,
+    "prompt_per_token_ms": 3.057485567010309
+  },
+  "finish_reason": "stop",
+  "text": "d34731e205be7a5c",
+  "gpu": {
+    "sample_count": 6,
+    "used_mib_max": 11797.0,
+    "free_mib_min": 295.0,
+    "temp_c_max": 88.0,
+    "power_w_max": 436.93,
+    "power_w_mean": 415.3466666666667,
+    "graphics_clock_min_mhz": 1950.0,
+    "hw_thermal_slowdown_observed": false
+  },
+  "expected": [
+    "d34731e205be7a5c"
+  ],
+  "correct": true,
+  "step": 1
+}

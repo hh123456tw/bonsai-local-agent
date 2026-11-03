@@ -1,0 +1,48 @@
+{
+  "latency_s": 1.937999999994645,
+  "ttft_observed_s": 0.09399999999732245,
+  "usage": {
+    "completion_tokens": 256,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 98227,
+    "prompt_tokens_details": {
+      "cached_tokens": 98218
+    },
+    "total_tokens": 98483
+  },
+  "timings": {
+    "cache_n": 98218,
+    "draft_n": 260,
+    "draft_n_accepted": 168,
+    "predicted_ms": 1843.2299,
+    "predicted_n": 256,
+    "predicted_per_second": 138.34410997781666,
+    "predicted_per_token_ms": 7.228352549019608,
+    "prompt_ms": 62.2496,
+    "prompt_n": 9,
+    "prompt_per_second": 144.5792422762556,
+    "prompt_per_token_ms": 6.916622222222222
+  },
+  "finish_reason": "length",
+  "text": "# Technical Guide: Indexing, Validation, and Querying the Reference Dataset\n\n## 1. Data Structure Analysis\n\nThe provided dataset consists of 3,453 records (indices 000000 through 003452). Each record follows a strict schema:\n\n```\nrecord_XXXXXX: <24-character hexadecimal string>\n```\n\n### Key Characteristics:\n- **Identifier**: Zero-padded 6-digit integer (000000–003452)\n- **Value**: 24-character lowercase hexadecimal string (12 bytes / 96 bits)\n- **Total Records**: 3,453\n- **Data Type**: Binary-like opaque tokens (likely cryptographic hashes, UUIDs, or session tokens)\n\n---\n\n## 2. Indexing Strategy\n\n### 2.1 Primary Index: Record ID\nThe natural primary key is the **record ID** (integer 0–3452). This provides O(1) lookup by index.\n\n**Implementation Options:**\n| Method | Use Case |\n|--------|----------|\n| Array/List | Sequential access, small dataset |\n| Hash Map (ID → Value)",
+  "key": "dflash128graph-98304-256-0-hot",
+  "profile": "dflash128graph",
+  "case": "98304",
+  "output_limit": 256,
+  "rep": 0,
+  "cache": "hot",
+  "ok": true,
+  "gpu": {
+    "sample_count": 9,
+    "used_mib_max": 11406.0,
+    "free_mib_min": 686.0,
+    "temp_c_max": 87.0,
+    "power_w_max": 442.46,
+    "power_w_mean": 433.7211111111111
+  },
+  "prompt_sha256": "354c7bf348b3dd37bb788f505f5c2ec842c0ea80d8e39aaa790faf1a539a0066",
+  "actual_output_matches": true,
+  "cache_valid": true
+}

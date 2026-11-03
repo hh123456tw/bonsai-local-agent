@@ -1,0 +1,48 @@
+{
+  "latency_s": 2.9070000000065193,
+  "ttft_observed_s": 0.09400000001187436,
+  "usage": {
+    "completion_tokens": 512,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 153,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 665
+  },
+  "timings": {
+    "cache_n": 0,
+    "draft_n": 549,
+    "draft_n_accepted": 328,
+    "predicted_ms": 2807.0074,
+    "predicted_n": 512,
+    "predicted_per_second": 182.04440786297891,
+    "predicted_per_token_ms": 5.493165166340509,
+    "prompt_ms": 102.0406,
+    "prompt_n": 153,
+    "prompt_per_second": 1499.403178734739,
+    "prompt_per_token_ms": 0.6669320261437909
+  },
+  "finish_reason": "length",
+  "text": "# Python Data Structures, Concurrency, Testing, Profiling, Databases, and API Design: A Comprehensive Technical Tutorial\n\nThis tutorial provides a deep dive into advanced Python engineering practices. It covers data structure tradeoffs, concurrency models, testing strategies, performance profiling, database operations, and API design. Each section includes concrete code examples, invariants, edge cases, and verification strategies.\n\n---\n\n## 1. Python Data Structures: Implementation Tradeoffs\n\n### 1.1 Lists vs. Dictionaries: The Core Tradeoff\n\nPython's `list` and `dict` are the two most fundamental data structures. Understanding their internal implementations is critical for performance-critical code.\n\n#### 1.1.1 List Implementation\n\nA Python list is a dynamic array of pointers to objects. It over-allocates memory to amortize the cost of resizing.\n\n```python\nimport sys\n\n# Internal structure: array of PyObject* pointers\n# Over-allocation strategy: if new_size > old_size * 1.125,\n# allocate new_size * 1.125 (rounded up to multiple of 8)\n\nmy_list = [1, 2, 3, 4, 5]\nprint(sys.getsizeof(my_list))  # Size of the list object itself\nprint(len(my_list))            # 5\nprint(my_list[0])              # O(1) access by index\nprint(my_list.append(6))       # O(1) amortized\nprint(my_list.insert(0, 0))    # O(n) - shifts all elements\nprint(my_list.pop())           # O(1)\nprint(my_list.pop(0))          # O(n) - shifts all elements\n```\n\n**Invariants:**\n- `len(lst) == number of elements`\n- `0 <= index < len(lst)` for valid access\n- Elements are stored in insertion order (for Python 3.7+)\n\n**Edge Cases:**\n- **Memory fragmentation:** Frequent `insert(0)` on large lists causes repeated reallocations.\n- **Aliasing:** `lst1 = lst2` creates a reference, not a copy.\n- **Mutability:** Lists are mutable; modifying one affects all references.\n\n**Verification:**\n```python\nimport copy\n\ndef verify_list_invariants(lst):\n    assert isinstance(lst, list)\n    assert len(lst) >= 0\n    for i, item in enumerate(lst",
+  "key": "dflash144-short-512-0-cold",
+  "profile": "dflash144",
+  "case": "short",
+  "output_limit": 512,
+  "rep": 0,
+  "cache": "cold",
+  "ok": true,
+  "gpu": {
+    "sample_count": 12,
+    "used_mib_max": 11575.0,
+    "free_mib_min": 517.0,
+    "temp_c_max": 82.0,
+    "power_w_max": 432.04,
+    "power_w_mean": 354.87583333333333
+  },
+  "prompt_sha256": "244213ceadbd4ddd90a2e06c7f91d5c663226315a2663b82e2f1d52c612d3976",
+  "actual_output_matches": true,
+  "cache_valid": true
+}
