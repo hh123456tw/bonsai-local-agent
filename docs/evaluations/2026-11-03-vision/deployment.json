@@ -1,0 +1,10 @@
+{
+  "bridge_pid": 40140,
+  "health": {
+    "status": "ok",
+    "service": "bonsai-guard",
+    "max_tool_calls": null,
+    "busy": false
+  },
+  "stable_profiles_unchanged": true
+}

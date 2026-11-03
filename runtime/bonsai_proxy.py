@@ -9,6 +9,7 @@ LOCK=threading.Lock()
 MAX_OUTPUT=32768
 MAX_THINKING=1536
 ANSWER_RESERVE=256
+MAX_REQUEST_BYTES=64*1024*1024
 
 class UpstreamOutputError(RuntimeError):
     def __init__(self,code,message):
@@ -139,10 +140,15 @@ class Handler(BaseHTTPRequestHandler):
         is_anthropic=path in ('/v1/messages','/v1/messages/count_tokens')
         if path!='/v1/chat/completions' and not is_anthropic:return self.send_json(404,{'error':{'message':'Unsupported endpoint'}})
         try:
-            body=json.loads(self.rfile.read(int(self.headers['Content-Length'])))
+            try:length=int(self.headers.get('Content-Length','0'))
+            except ValueError:raise anthropic.ProtocolError('Content-Length must be an integer')
+            if length<=0:return self.send_json(400,{'error':{'message':'A positive Content-Length is required'}})
+            if length>MAX_REQUEST_BYTES:return self.send_json(413,{'type':'error','error':{'type':'request_too_large','message':'Request exceeds 64 MiB; resize images or shorten the image history'}})
+            body=json.loads(self.rfile.read(length))
             if path=='/v1/messages/count_tokens':
                 req=urllib.request.Request(UPSTREAM+path,data=json.dumps(anthropic.count_request(body)).encode(),headers={'Content-Type':'application/json'})
-                with urllib.request.urlopen(req,timeout=60) as r:return self.send_json(200,json.load(r))
+                with LOCK:
+                    with urllib.request.urlopen(req,timeout=60) as r:return self.send_json(200,json.load(r))
             with LOCK:result=generate(body,anthropic_mode=is_anthropic)
             if is_anthropic:
                 message=result

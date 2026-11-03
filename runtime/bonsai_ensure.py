@@ -29,6 +29,9 @@ def ensure(profile=None):
   opts=json.loads((ROOT/profiles[profile]['engine_options']).read_text(encoding='utf-8'))
   opts=[v.replace('${ROOT}',ROOT.as_posix()) for v in opts]
   if ready(8080) and process_options()!=opts:
+   try:
+    if requests.get('http://127.0.0.1:8081/health',timeout=5).json().get('busy'):raise RuntimeError('Bonsai bridge is busy. Finish the current task before switching profiles.')
+   except requests.ConnectionError:pass
    slots=requests.get('http://127.0.0.1:8080/slots',timeout=5).json()
    if any(s.get('is_processing') for s in slots):raise RuntimeError('Bonsai is busy. Finish or stop the current task before switching profiles.')
    if process_options() is None:raise RuntimeError('Port 8080 is owned by another server; it will not be stopped automatically.')

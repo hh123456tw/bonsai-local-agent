@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-03T20:11:16.673474+08:00",
+  "active_options": [
+    "--model-id",
+    "bonsai2-27b",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8080",
+    "--max-context",
+    "147456",
+    "--kv-capacity",
+    "147456",
+    "--kv-dtype",
+    "rk2v4-e8",
+    "--gdn-state-fp16",
+    "--max-concurrency",
+    "1",
+    "--prefill-chunk",
+    "256",
+    "--device-snapshot-slots",
+    "1",
+    "--host-cache-mib",
+    "4096",
+    "--ngram-draft-tokens",
+    "0",
+    "--presence-penalty",
+    "0",
+    "--thinking-presence-penalty",
+    "1.0",
+    "--default-thinking-budget",
+    "1536",
+    "--default-max-tokens",
+    "16384",
+    "--use-alt-prefix-caching",
+    "--device-profile-path",
+    "C:/AI/bonsai/routes.json",
+    "--spec",
+    "dflash2",
+    "--draft-tokens",
+    "3",
+    "--no-cuda-graph"
+  ],
+  "stable_profile_hashes": {
+    "profiles/dflash144.engine.json": "7c6b6453c1be3491e86f8f6bb172b0ea3baba53c6ae7d949a3976c2c03f50f5e",
+    "profiles/dflash144.opencode.json": "607a5da20bdb070736041b32a8c67e874575d776725eacb1e6a7e56bbeb6fa35",
+    "profiles/dflash128graph.engine.json": "2773886bab608f0059de0c6e5a4c6ce56899d1d6fd4680c446050dae20d8dd90",
+    "profiles/dflash128graph.opencode.json": "d789d48630190a93d195be16ca717c0c3ebd488f309c4f9a5d29d4af947229ec",
+    "profiles/base256.engine.json": "2e5e3e0bf4ddf89ff0e0a6768f6109d54e08b417268753fd7f675899f1398f2f",
+    "profiles/base256.opencode.json": "16960ace5c3b3f79b32252c2390deda0e05d06c56a49a17bec2f4dbb2819ab84"
+  },
+  "guard_config": {
+    "max_tool_calls": null
+  },
+  "repo_commit": "ce481d626449ccb07880b4fe3521a54c26e35b26",
+  "engine_sha256": "cd6be5e8ca872a1044aaab4c219be38d2787ee852429e2dd9b073e635dcf5d3f",
+  "model_bytes": 9520051456,
+  "source_model": "WaveCut/Ternary-Bonsai-2-27B-NInfer-v3; same installed container includes vision tower",
+  "baseline_registry": {
+    "dflash144": {
+      "context": 147456,
+      "spec": "dflash2",
+      "engine_options": "profiles/dflash144.engine.json",
+      "opencode_config": "profiles/dflash144.opencode.json"
+    },
+    "base256": {
+      "context": 262144,
+      "spec": "none",
+      "engine_options": "profiles/base256.engine.json",
+      "opencode_config": "profiles/base256.opencode.json"
+    },
+    "dflash128graph": {
+      "context": 131072,
+      "spec": "dflash2",
+      "engine_options": "profiles/dflash128graph.engine.json",
+      "opencode_config": "profiles/dflash128graph.opencode.json"
+    }
+  }
+}

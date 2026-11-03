@@ -5,7 +5,7 @@ from unittest.mock import patch
 class Tests(unittest.TestCase):
  def test_environment_is_local_scoped_and_uses_profile_context(self):
   with patch.object(c,'ROOT',pathlib.Path(__file__).resolve().parents[1]/'config'),patch.dict(c.os.environ,{'ANTHROPIC_API_KEY':'test-secret','CLAUDE_CODE_USE_BEDROCK':'1','DISABLE_COMPACT':'1'}):
-   fast=c.environment('dflash144');large=c.environment('base256');graph=c.environment('dflash128graph')
+   fast=c.environment('dflash144');large=c.environment('base256');graph=c.environment('dflash128graph');vision=c.environment('dflash96vision')
   self.assertNotIn('ANTHROPIC_API_KEY',fast);self.assertNotIn('CLAUDE_CODE_USE_BEDROCK',fast);self.assertNotIn('DISABLE_COMPACT',fast)
   self.assertEqual(fast['ANTHROPIC_BASE_URL'],'http://127.0.0.1:8081')
   self.assertEqual(fast['CLAUDE_CODE_MAX_CONTEXT_TOKENS'],'147456');self.assertEqual(large['CLAUDE_CODE_MAX_CONTEXT_TOKENS'],'262144')
@@ -14,4 +14,6 @@ class Tests(unittest.TestCase):
   self.assertEqual(fast['ANTHROPIC_DEFAULT_HAIKU_MODEL'],'bonsai2-27b')
   self.assertEqual(graph['CLAUDE_CODE_MAX_CONTEXT_TOKENS'],'131072')
   self.assertEqual(graph['CLAUDE_CODE_AUTO_COMPACT_WINDOW'],'106496')
+  self.assertEqual(vision['CLAUDE_CODE_MAX_CONTEXT_TOKENS'],'98304')
+  self.assertEqual(vision['CLAUDE_CODE_AUTO_COMPACT_WINDOW'],'73728')
 if __name__=='__main__':unittest.main()

@@ -1,0 +1,188 @@
+[
+  {
+    "index": 0,
+    "api": "openai",
+    "fixture": "fixture-a",
+    "kind": "user",
+    "status": 200,
+    "seconds": 1.0160000000032596,
+    "gpu": {
+      "sample_count": 4,
+      "used_mib_max": 11102.0,
+      "free_mib_min": 990.0,
+      "temp_c_max": 37.0,
+      "power_w_max": 36.83,
+      "power_w_mean": 33.84,
+      "graphics_clock_min_mhz": 210.0,
+      "hw_thermal_slowdown_observed": false
+    },
+    "usage": {
+      "completion_tokens": 55,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens": 440,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 495
+    },
+    "text": "{\n  \"top_left_color\": \"blue\",\n  \"top_left_shape\": \"square\",\n  \"bottom_right_color\": \"orange\",\n  \"bottom_right_shape\": \"circle\",\n  \"code\": \"7319\"\n}",
+    "passed": true
+  },
+  {
+    "index": 1,
+    "api": "openai",
+    "fixture": "fixture-b",
+    "kind": "user",
+    "status": 200,
+    "seconds": 0.5469999999913853,
+    "gpu": {
+      "sample_count": 3,
+      "used_mib_max": 11102.0,
+      "free_mib_min": 990.0,
+      "temp_c_max": 43.0,
+      "power_w_max": 125.93,
+      "power_w_mean": 96.23,
+      "graphics_clock_min_mhz": 1785.0,
+      "hw_thermal_slowdown_observed": false
+    },
+    "usage": {
+      "completion_tokens": 55,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens": 440,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 495
+    },
+    "text": "{\n  \"top_left_color\": \"green\",\n  \"top_left_shape\": \"triangle\",\n  \"bottom_right_color\": \"purple\",\n  \"bottom_right_shape\": \"rectangle\",\n  \"code\": \"8462\"\n}",
+    "passed": true
+  },
+  {
+    "index": 2,
+    "api": "openai",
+    "fixture": "fixture-a",
+    "kind": "user",
+    "status": 200,
+    "seconds": 0.28099999998812564,
+    "gpu": {
+      "sample_count": 2,
+      "used_mib_max": 11102.0,
+      "free_mib_min": 990.0,
+      "temp_c_max": 45.0,
+      "power_w_max": 237.41,
+      "power_w_mean": 181.67000000000002,
+      "graphics_clock_min_mhz": 1785.0,
+      "hw_thermal_slowdown_observed": false
+    },
+    "usage": {
+      "completion_tokens": 55,
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "prompt_tokens": 440,
+      "prompt_tokens_details": {
+        "cached_tokens": 431
+      },
+      "total_tokens": 495
+    },
+    "text": "{\n  \"top_left_color\": \"blue\",\n  \"top_left_shape\": \"square\",\n  \"bottom_right_color\": \"orange\",\n  \"bottom_right_shape\": \"circle\",\n  \"code\": \"7319\"\n}",
+    "passed": true
+  },
+  {
+    "index": 3,
+    "api": "anthropic",
+    "fixture": "fixture-ui",
+    "kind": "user",
+    "status": 200,
+    "seconds": 1.125,
+    "gpu": {
+      "sample_count": 6,
+      "used_mib_max": 11102.0,
+      "free_mib_min": 990.0,
+      "temp_c_max": 47.0,
+      "power_w_max": 285.54,
+      "power_w_mean": 268.50666666666666,
+      "graphics_clock_min_mhz": 1785.0,
+      "hw_thermal_slowdown_observed": false
+    },
+    "usage": {
+      "cache_creation": null,
+      "cache_creation_input_tokens": null,
+      "cache_read_input_tokens": 0,
+      "inference_geo": null,
+      "input_tokens": 1037,
+      "output_tokens": 47,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": null
+    },
+    "text": "{\n  \"status\": \"FAILED\",\n  \"error_code\": \"E317\",\n  \"missing_field\": \"tax_code\",\n  \"total\": \"128.40\"\n}",
+    "passed": true
+  },
+  {
+    "index": 4,
+    "api": "anthropic",
+    "fixture": "fixture-b",
+    "kind": "tool",
+    "status": 200,
+    "seconds": 0.7660000000032596,
+    "gpu": {
+      "sample_count": 4,
+      "used_mib_max": 11102.0,
+      "free_mib_min": 990.0,
+      "temp_c_max": 47.0,
+      "power_w_max": 285.54,
+      "power_w_mean": 263.9625,
+      "graphics_clock_min_mhz": 1785.0,
+      "hw_thermal_slowdown_observed": false
+    },
+    "usage": {
+      "cache_creation": null,
+      "cache_creation_input_tokens": null,
+      "cache_read_input_tokens": 0,
+      "inference_geo": null,
+      "input_tokens": 750,
+      "output_tokens": 55,
+      "output_tokens_details": {
+        "thinking_tokens": 0
+      },
+      "server_tool_use": {
+        "web_fetch_requests": 0,
+        "web_search_requests": 0
+      },
+      "service_tier": null
+    },
+    "text": "{\n  \"top_left_color\": \"green\",\n  \"top_left_shape\": \"triangle\",\n  \"bottom_right_color\": \"purple\",\n  \"bottom_right_shape\": \"rectangle\",\n  \"code\": \"8462\"\n}",
+    "passed": true
+  },
+  {
+    "index": 5,
+    "api": "anthropic",
+    "fixture": "fixture-a",
+    "kind": "stream",
+    "status": 200,
+    "seconds": 0.26600000000325963,
+    "gpu": {
+      "sample_count": 2,
+      "used_mib_max": 11102.0,
+      "free_mib_min": 990.0,
+      "temp_c_max": 47.0,
+      "power_w_max": 259.71,
+      "power_w_mean": 259.71,
+      "graphics_clock_min_mhz": 1785.0,
+      "hw_thermal_slowdown_observed": false
+    },
+    "message_stop": true,
+    "text": "{\n  \"top_left_color\": \"blue\",\n  \"top_left_shape\": \"square\",\n  \"bottom_right_color\": \"orange\",\n  \"bottom_right_shape\": \"circle\",\n  \"code\": \"7319\"\n}",
+    "passed": true
+  }
+]

@@ -1,0 +1,63 @@
+{
+  "model": {
+    "providerID": "bonsai",
+    "model": "bonsai2-27b"
+  },
+  "default_agent": "build",
+  "providers": {
+    "bonsai": {
+      "name": "Bonsai Local Guard",
+      "package": "aisdk:@ai-sdk/openai-compatible",
+      "settings": {
+        "baseURL": "http://127.0.0.1:8081/v1",
+        "apiKey": "local"
+      },
+      "models": {
+        "bonsai2-27b": {
+          "name": "Bonsai Vision DFlash2 96K",
+          "compatibility": {
+            "reasoningField": "reasoning_content"
+          },
+          "limit": {
+            "context": 98304,
+            "output": 16384
+          },
+          "capabilities": {
+            "tools": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "agents": {
+    "build": {
+      "permissions": [
+        {
+          "action": "skill",
+          "resource": "*",
+          "effect": "deny"
+        },
+        {
+          "action": "subagent",
+          "resource": "*",
+          "effect": "deny"
+        }
+      ]
+    }
+  },
+  "compaction": {
+    "auto": true,
+    "buffer": 24576
+  },
+  "plugins": [
+    "-orca-opencode-status",
+    "-superpowers"
+  ]
+}

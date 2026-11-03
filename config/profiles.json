@@ -16,5 +16,11 @@
     "spec": "dflash2",
     "engine_options": "profiles/dflash128graph.engine.json",
     "opencode_config": "profiles/dflash128graph.opencode.json"
+  },
+  "dflash96vision": {
+    "context": 98304,
+    "spec": "dflash2",
+    "engine_options": "profiles/dflash96vision.engine.json",
+    "opencode_config": "profiles/dflash96vision.opencode.json"
   }
 }

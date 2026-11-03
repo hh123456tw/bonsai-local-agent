@@ -1,4 +1,4 @@
-param([string]$Project,[ValidateSet('dflash144','base256','dflash128graph')][string]$Profile='dflash144')
+param([string]$Project,[ValidateSet('dflash144','base256','dflash128graph','dflash96vision')][string]$Profile='dflash144')
 Add-Type -AssemblyName System.Windows.Forms
 $ErrorActionPreference='Stop'
 $root=$PSScriptRoot

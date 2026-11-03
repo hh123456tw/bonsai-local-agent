@@ -19,6 +19,10 @@ class HTTPTests(unittest.TestCase):
   with patch.object(p.urllib.request,'urlopen') as upstream:
    status,text=self.post('/v1/chat/completions',{'messages':[{'role':'user','content':'OK'}],'max_tokens':16,'max_completion_tokens':32})
   self.assertEqual(status,400);self.assertIn('must agree',json.loads(text)['error']['message']);upstream.assert_not_called()
+ def test_oversized_image_body_is_rejected_before_model_or_decode(self):
+  with patch.object(p,'MAX_REQUEST_BYTES',32),patch.object(p.urllib.request,'urlopen') as upstream:
+   status,text=self.post('/v1/messages',{'messages':[{'role':'user','content':'Long image payload placeholder'}],'max_tokens':256})
+  self.assertEqual(status,413);self.assertEqual(json.loads(text)['error']['type'],'request_too_large');upstream.assert_not_called()
  def test_malformed_tool_is_502_and_never_a_delivered_tool(self):
   call={'id':'c1','type':'function','function':{'name':'Edit','arguments':'{"file_path":'}}
   with patch.object(p.urllib.request,'urlopen',return_value=Reply(answer(None,'tool_calls',[call]))),patch.object(p,'event'):

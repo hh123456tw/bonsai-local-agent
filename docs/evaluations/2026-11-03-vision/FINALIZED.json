@@ -1,0 +1,46 @@
+{
+  "time": "2026-11-03T20:28:55.040848+08:00",
+  "stable_six_files_unchanged": true,
+  "old_registry_entries_unchanged": true,
+  "deployed_sources_match": true,
+  "engine_sha256": "cd6be5e8ca872a1044aaab4c219be38d2787ee852429e2dd9b073e635dcf5d3f",
+  "model_sha256": "cdc4810b0ff17c40d0f62cf214b6e0bcd08346e9eb05ca53371507037793c14a",
+  "active_profile": "dflash96vision",
+  "api_image_cases_passed": 6,
+  "claude_read_image_passed": true,
+  "opencode_attachment_passed": true,
+  "guard": {
+    "status": "ok",
+    "service": "bonsai-guard",
+    "max_tool_calls": null,
+    "busy": false
+  },
+  "models": {
+    "data": [
+      {
+        "context_window": 98304,
+        "created": 1793708935,
+        "id": "bonsai2-27b",
+        "max_model_len": 98304,
+        "meta": {
+          "ftype": "bf16+fp32+int32+q4_g64_fp16+q5_g64_fp16+q6_g64_fp16+q8_g32_fp16+t2_g128_fp16",
+          "n_ctx": 98304,
+          "n_ctx_train": 262144,
+          "n_embd": 5120,
+          "n_params": 30377080816,
+          "n_vocab": 248320,
+          "size": 9506793888
+        },
+        "modalities": {
+          "vision": true
+        },
+        "object": "model",
+        "owned_by": "ninfer",
+        "status": {
+          "value": "loaded"
+        }
+      }
+    ],
+    "object": "list"
+  }
+}

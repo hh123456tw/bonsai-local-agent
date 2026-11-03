@@ -1,0 +1,16 @@
+{
+  "name": "opencode-image",
+  "exit_code": 0,
+  "seconds": 7.171999999991385,
+  "gpu": {
+    "sample_count": 28,
+    "used_mib_max": 11102.0,
+    "free_mib_min": 990.0,
+    "temp_c_max": 52.0,
+    "power_w_max": 330.38,
+    "power_w_mean": 274.50678571428574,
+    "graphics_clock_min_mhz": 1785.0,
+    "hw_thermal_slowdown_observed": false
+  },
+  "stdout": "logs/opencode-image.stdout.jsonl"
+}

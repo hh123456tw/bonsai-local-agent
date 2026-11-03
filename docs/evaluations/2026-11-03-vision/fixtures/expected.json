@@ -1,0 +1,22 @@
+{
+  "fixture-a": {
+    "top_left_color": "blue",
+    "top_left_shape": "square",
+    "bottom_right_color": "orange",
+    "bottom_right_shape": "circle",
+    "code": "7319"
+  },
+  "fixture-b": {
+    "top_left_color": "green",
+    "top_left_shape": "triangle",
+    "bottom_right_color": "purple",
+    "bottom_right_shape": "rectangle",
+    "code": "8462"
+  },
+  "fixture-ui": {
+    "status": "FAILED",
+    "error_code": "E317",
+    "missing_field": "tax_code",
+    "total": "128.40"
+  }
+}

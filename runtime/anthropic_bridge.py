@@ -1,8 +1,46 @@
-"""Text/tool subset of Anthropic Messages, normalized through the shared loop guard."""
-import copy,json,uuid
+"""Text/image/tool subset of Anthropic Messages through the shared loop guard."""
+import base64,binascii,copy,json,uuid,urllib.parse
 
 MODEL='bonsai2-27b'
 class ProtocolError(ValueError):pass
+MAX_IMAGE_BYTES=16*1024*1024
+
+def image_part(block):
+ source=block.get('source')
+ if not isinstance(source,dict):raise ProtocolError('image.source must be an object')
+ kind=source.get('type')
+ if kind=='base64':
+  mime=source.get('media_type');data=source.get('data')
+  if mime not in ('image/png','image/jpeg','image/webp','image/gif'):raise ProtocolError('Supported image media types: PNG, JPEG, WebP and GIF')
+  if not isinstance(data,str) or not data:raise ProtocolError('image base64 data must be a non-empty string')
+  if len(data)>4*((MAX_IMAGE_BYTES+2)//3):raise ProtocolError('Inline image exceeds 16 MiB')
+  try:decoded=base64.b64decode(data,validate=True)
+  except (binascii.Error,ValueError):raise ProtocolError('Invalid image base64 data')
+  if len(decoded)>MAX_IMAGE_BYTES:raise ProtocolError('Inline image exceeds 16 MiB')
+  url='data:'+mime+';base64,'+data
+ elif kind=='url':
+  url=source.get('url')
+  try:parsed=urllib.parse.urlsplit(url) if isinstance(url,str) else None
+  except ValueError:raise ProtocolError('Invalid image URL')
+  if parsed is None or parsed.scheme not in ('http','https') or not parsed.hostname:raise ProtocolError('image URL must use HTTP(S)')
+ else:raise ProtocolError('image source must use base64 or url; the Files API is not supported')
+ return {'type':'image_url','image_url':{'url':url}}
+
+def parts_or_text(parts):
+ return parts if any(p['type']=='image_url' for p in parts) else '\n'.join(p['text'] for p in parts)
+
+def as_parts(content):return [{'type':'text','text':content}] if isinstance(content,str) and content else [] if content is None or content=='' else content
+
+def tool_content(value):
+ if isinstance(value,str) or value is None:return value or ''
+ if not isinstance(value,list):raise ProtocolError('tool_result content must be text or an array')
+ parts=[]
+ for b in value:
+  if not isinstance(b,dict):raise ProtocolError('tool_result blocks must be objects')
+  if b.get('type')=='text':parts.append({'type':'text','text':text_blocks([b])})
+  elif b.get('type')=='image':parts.append(image_part(b))
+  else:raise ProtocolError('Only text and images are supported in tool_result content')
+ return parts_or_text(parts)
 
 def text_blocks(value):
  if isinstance(value,str):return value
@@ -12,9 +50,11 @@ def text_blocks(value):
  for block in value:
   if not isinstance(block,dict):raise ProtocolError('content blocks must be objects')
   kind=block.get('type')
-  if kind=='text':texts.append(block.get('text',''))
+  if kind=='text':
+   if not isinstance(block.get('text',''),str):raise ProtocolError('text must be a string')
+   texts.append(block.get('text',''))
   elif kind in ('thinking','redacted_thinking'):continue
-  else:raise ProtocolError(f'Unsupported content block {kind!r}; this deployment supports text and tools, not images/documents/server tools')
+  else:raise ProtocolError(f'Unsupported content block {kind!r} here; documents and server tools are not supported')
  return '\n'.join(texts)
 
 def to_openai(body):
@@ -26,17 +66,20 @@ def to_openai(body):
   if role not in ('user','assistant'):raise ProtocolError('Messages roles must be user or assistant')
   if isinstance(content,str):messages.append({'role':role,'content':content});continue
   if not isinstance(content,list):raise ProtocolError('message content must be text or an array')
-  texts=[];calls=[];results=[]
+  texts=[];parts=[];calls=[];results=[]
   for block in content:
+   if not isinstance(block,dict):raise ProtocolError('content blocks must be objects')
    kind=block.get('type')
-   if kind=='text':texts.append(block.get('text',''))
+   if kind=='text':
+    text=text_blocks([block]);texts.append(text);parts.append({'type':'text','text':text})
+   elif kind=='image' and role=='user':parts.append(image_part(block))
    elif kind in ('thinking','redacted_thinking'):continue
    elif kind=='tool_use' and role=='assistant':
     if not isinstance(block.get('input',{}),dict):raise ProtocolError('tool_use.input must be an object')
     calls.append({'id':block['id'],'type':'function','function':{'name':block['name'],'arguments':json.dumps(block.get('input',{}),ensure_ascii=False)}})
    elif kind=='tool_result' and role=='user':
-    result=text_blocks(block.get('content',''))
-    if block.get('is_error'):result='Tool error:\n'+result
+    result=tool_content(block.get('content',''))
+    if block.get('is_error'):result='Tool error:\n'+result if isinstance(result,str) else [{'type':'text','text':'Tool error:\n'}]+result
     results.append({'role':'tool','tool_call_id':block['tool_use_id'],'content':result})
    else:raise ProtocolError(f'Unsupported {role} content block {kind!r}')
   if role=='assistant':
@@ -46,9 +89,12 @@ def to_openai(body):
     messages.append(out)
   elif results:
    # Tool-result wrappers are not new human turns: preserve the guard's per-turn budget.
-   if texts:results[-1]['content']+='\n\nClient note:\n'+'\n'.join(texts)
+   if parts:
+    note=parts_or_text(parts);previous=results[-1]['content']
+    if isinstance(previous,str) and isinstance(note,str):results[-1]['content']+='\n\nClient note:\n'+note
+    else:results[-1]['content']=as_parts(previous)+[{'type':'text','text':'Client note:\n'}]+as_parts(note)
    messages.extend(results)
-  elif texts:messages.append({'role':'user','content':'\n'.join(texts)})
+  elif parts:messages.append({'role':'user','content':parts_or_text(parts)})
  if not messages:raise ProtocolError('messages must contain text or tools')
  out={'model':MODEL,'messages':messages,'max_tokens':body.get('max_tokens',16384)}
  for key in ('temperature','top_p','top_k'): 

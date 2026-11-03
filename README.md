@@ -4,6 +4,10 @@
 
 先看 [互動式專案與速度指南](docs/project-guide.zh-TW.html)：用瀏覽器開啟本機 HTML，可離線閱讀架構、請求流程、配置比較及加速取捨；含教學用等待時間估算器，不會修改服務設定。
 
+## 看圖已接通
+
+桌面新增 **Bonsai Claude Code 看圖96K**、**Bonsai OpenCode 看圖96K**。同一個模型檔，DFlash2 draft3、Graph OFF、視覺overlay；6組API及兩個真實CLI讀圖通過，原三套設定保留。[使用方式、限制與原始證據](docs/vision.zh-TW.md)。
+
 ## 2026-11-03 完整實機評估
 
 [本輪完整報告](docs/evaluations/2026-11-03/REPORT.md)包含218個推論樣本、18次正式Coding任務、48次長文查找，以及真正多輪對話回歸；[資料與重跑說明](docs/evaluations/2026-11-03/README.md)附CSV、測試專案、腳本與原始證據。
@@ -81,7 +85,7 @@ CLI 連 `ANTHROPIC_BASE_URL=http://127.0.0.1:8081`，不加 `/v1`。橋接提供
 
 實測 Claude Code 2.1.316：DFlash144K 執行13次工具呼叫，連續相同呼叫0次，約44.2秒完成貪吃蛇核心修復；外部重跑四項測試通過，測試檔未變。其中兩次 Bash 呼叫被限定的測試授權拒絕，模型改用允許的操作完成。人工構造的重複工具歷史也經真實 HTTP 觸發糾正，沒有實際執行測試指令。詳見 [驗證紀錄](docs/claude-code-validation.json)。一般改檔測試本身沒有觸發循環恢復。
 
-支援文字及自訂客戶端工具；圖片、文件、雲端內建工具明確拒絕。思考預算1536，過小的輸出額度會關閉思考；輸出上限32768。舊思考不回放，原生引擎的 signature 僅是不透明本機標記，不是 Anthropic 密碼學簽章。完整一輪檢查後才送出 SSE，長文首讀仍可能等數分鐘，API逾時設900秒。此整合不會消除模型原本的長文精確查找誤答。CLI 可能提示自訂模型未知；顯示的美元成本是未知模型的客戶端估算，不代表本機推論產生雲端費用。
+支援文字、自訂客戶端工具；新增獨立96K看圖模式，支援user及工具回傳圖片，見[看圖使用說明與實測](docs/vision.zh-TW.md)。文件及雲端內建工具仍拒絕。思考預算1536，過小的輸出額度會關閉思考；輸出上限32768。舊思考不回放，原生引擎的 signature 僅是不透明本機標記，不是 Anthropic 密碼學簽章。完整一輪檢查後才送出 SSE，長文首讀仍可能等數分鐘，API逾時設900秒。此整合不會消除模型原本的長文精確查找誤答。CLI 可能提示自訂模型未知；顯示的美元成本是未知模型的客戶端估算，不代表本機推論產生雲端費用。
 
 參考：[Claude Code gateway 設定](https://code.claude.com/docs/en/llm-gateway-connect)、[模型設定](https://code.claude.com/docs/en/model-config)。Claude 聊天網頁/App 與 Claude Code 是不同的客戶端。
 

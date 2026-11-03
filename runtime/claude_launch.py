@@ -18,7 +18,7 @@ def environment(profile):
  return env
 
 def main():
- parser=argparse.ArgumentParser();parser.add_argument('--profile',choices=('dflash144','base256','dflash128graph'),default='dflash144');parser.add_argument('--project',type=pathlib.Path,default=pathlib.Path.cwd());parser.add_argument('claude_args',nargs=argparse.REMAINDER);args=parser.parse_args()
+ parser=argparse.ArgumentParser();parser.add_argument('--profile',choices=('dflash144','base256','dflash128graph','dflash96vision'),default='dflash144');parser.add_argument('--project',type=pathlib.Path,default=pathlib.Path.cwd());parser.add_argument('claude_args',nargs=argparse.REMAINDER);args=parser.parse_args()
  executable=shutil.which('claude')
  if not executable:raise RuntimeError('Claude Code CLI is not installed or is not on PATH')
  project=args.project.resolve()
