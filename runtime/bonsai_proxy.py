@@ -6,6 +6,14 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 ROOT=pathlib.Path(__file__).resolve().parent
 UPSTREAM='http://127.0.0.1:8080'
 LOCK=threading.Lock()
+
+def tool_limit():
+    path=ROOT/'guard-config.json'
+    limit=json.loads(path.read_text(encoding='utf-8')).get('max_tool_calls') if path.exists() else None
+    if limit is None:return None
+    if not isinstance(limit,int) or isinstance(limit,bool) or not 1<=limit<=1000:
+        raise ValueError('guard-config.json: max_tool_calls must be null (unlimited) or an integer from 1 to 1000')
+    return limit
 def signature(call):
     f=call.get('function',{})
     try: args=json.loads(f.get('arguments','{}'))
@@ -39,21 +47,25 @@ def generate(body,anthropic_mode=False):
     def finish_stopped(message):
         result=stopped(message)
         return anthropic.from_openai(result) if anthropic_mode else result
-    if len(calls)>=24:
-        event('tool_budget_stop',calls=len(calls))
-        return finish_stopped('已停止：本輪已執行 24 次工具，仍未完成。請檢查目前結果；這次任務不能算成功。')
+    limit=tool_limit()
+    if limit is not None and len(calls)>=limit:
+        event('tool_budget_stop',protocol='anthropic' if anthropic_mode else 'openai',calls=len(calls),limit=limit)
+        return finish_stopped(f'已暫停：本輪已記錄 {len(calls)} 次工具呼叫（包含失敗或遭拒的呼叫），達橋接設定上限 {limit} 次。此步未再請求模型，目前回報未完成，請檢查實際進度；不代表已確認陷入循環。若要接續，請輸入「繼續，先檢查目前進度，再處理剩餘工作」。新使用者輪次會重新計數；這次任務不能算成功。')
     for attempt in range(3):
         route='/v1/messages' if anthropic_mode else '/v1/chat/completions'
         req=urllib.request.Request(UPSTREAM+route,data=json.dumps(b).encode(),headers={'Content-Type':'application/json','anthropic-version':'2023-06-01'})
         with urllib.request.urlopen(req,timeout=900) as r:result=json.load(r)
         view=anthropic.openai_view(result) if anthropic_mode else result
         choice=view['choices'][0];msg=choice['message'];new=msg.get('tool_calls') or []
+        if limit is not None and len(calls)+len(new)>limit:
+            event('tool_budget_batch_stop',calls=len(calls),proposed=len(new),limit=limit)
+            return finish_stopped(f'已暫停：本輪已記錄 {len(calls)} 次工具呼叫，模型一次提出 {len(new)} 次，將超過橋接上限 {limit} 次；這批工具未放行。任務未完成。請輸入「繼續，先檢查目前進度，再處理剩餘工作」後接續。')
         if choice.get('finish_reason')=='length':
             event('output_truncated',limit=b['max_tokens'],tool_calls=len(new))
         repeated=bool(new) and any(history[-2:]==[signature(c)]*2 for c in new)
         empty=not new and not (msg.get('content') or '').strip()
         if not repeated and not empty:
-            event('delivered',protocol='anthropic' if anthropic_mode else 'openai',attempt=attempt,tool_calls=len(new),finish=choice.get('finish_reason'),reasoning_tokens=view.get('usage',{}).get('completion_tokens_details',{}).get('reasoning_tokens'))
+            event('delivered',protocol='anthropic' if anthropic_mode else 'openai',attempt=attempt,prior_tool_calls=len(calls),tool_limit=limit,tool_calls=len(new),finish=choice.get('finish_reason'),reasoning_tokens=view.get('usage',{}).get('completion_tokens_details',{}).get('reasoning_tokens'))
             return result
         event('recovery',attempt=attempt,reason='repeated_tool' if repeated else 'empty_answer')
         if attempt==2:
@@ -70,7 +82,7 @@ class Handler(BaseHTTPRequestHandler):
         if getattr(self,'request_id',None):self.send_header('request-id',self.request_id)
         self.end_headers();self.wfile.write(data)
     def do_GET(self):
-        if self.path in ('/health','/healthz'):return self.send_json(200,{'status':'ok','service':'bonsai-guard'})
+        if self.path in ('/health','/healthz'):return self.send_json(200,{'status':'ok','service':'bonsai-guard','max_tool_calls':tool_limit()})
         try:
             with urllib.request.urlopen(UPSTREAM+self.path,timeout=5) as r:self.send_json(r.status,json.load(r))
         except Exception as e:self.send_json(503,{'error':{'message':str(e)}})

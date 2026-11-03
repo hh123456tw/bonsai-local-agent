@@ -27,7 +27,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File C:\AI\bonsai\start.ps1
 - 已發布的 fusion-kvmem sm_86 引擎：思考重複懲罰 1.0、一般 presence 0。
 - 橋接層設定思考預算，剝除舊 reasoning 欄位，設定 preserve_thinking=false。
 - 相同工具連續執行兩次後，若模型仍要求同一工具，最多糾正重試兩次。
-- 無法恢復時明確停止、回報未完成；本輪 24 次工具為上限，停止不算成功。輸出預設16384，保留客戶端請求至32768；length會記錄為截斷事件。
+- 無法恢復時明確停止、回報未完成；總工具次數目前無上限，仍可設定有限額度，停止不算成功。輸出預設16384，保留客戶端請求至32768；length會記錄為截斷事件。
 - 為檢查工具指令，橋接層會緩衝一輪回應；不是逐 token 即時顯示。
 - OpenCode 使用獨立 config、Build，停用 Orca / Superpowers。
 
@@ -60,7 +60,7 @@ python tools/long_context_check.py 262144 base256 --thinking
 powershell -NoProfile -ExecutionPolicy Bypass -File C:\AI\bonsai\start-claude.ps1
 ```
 
-CLI 連 `ANTHROPIC_BASE_URL=http://127.0.0.1:8081`，不加 `/v1`。橋接提供 `/v1/messages`、命名 SSE 事件、`/v1/messages/count_tokens`，工具結果會納入原輪次的重複檢查與24次工具上限。最多糾正重試兩次，仍失敗就明確回報未完成；不直接連會繞過保護的8080。
+CLI 連 `ANTHROPIC_BASE_URL=http://127.0.0.1:8081`，不加 `/v1`。橋接提供 `/v1/messages`、命名 SSE 事件、`/v1/messages/count_tokens`，工具結果會納入原輪次的重複檢查；目前取消總工具次數上限。最多糾正重試兩次，仍失敗就明確回報未完成；不直接連會繞過保護的8080。
 
 獨立啟動器使用隔離的 Claude 設定目錄，清除子程序中的個人雲端金鑰，固定本機模型別名及真實窗口。只啟用 Read/Write/Edit/Bash/Glob/Grep，不載入個人 MCP、外掛或專案 Claude 設定；不更動原有 Claude 登入與全域設定。CLI 原有工具授權保留。壓縮觸發窗口分別122880 / 229376，另外預留輸出及工具空間。
 
@@ -79,3 +79,7 @@ CLI 連 `ANTHROPIC_BASE_URL=http://127.0.0.1:8081`，不加 `/v1`。橋接提供
 - [PR #10](https://github.com/1314521gjy/ninfer-fusion-kvmem/pull/10)
 - [模型](https://huggingface.co/WaveCut/Ternary-Bonsai-2-27B-NInfer-v3)
 - [FFmpeg builds](https://github.com/BtbN/FFmpeg-Builds)、[curl Windows](https://curl.se/windows/)、[NVIDIA CUDA](https://docs.nvidia.com/cuda/)
+
+工具額度設定與接續方式見 [24次訊息來源與無上限設定](docs/tool-budget.zh-TW.md)。這是本機橋接的額度，包含失敗／遭拒工具，並非Claude Code官方24次限制。
+
+新增可選128K CUDA Graph加速檔位；原144K預設不變。完整對照、失敗紀錄與限制見 [CUDA Graph實測](docs/cuda-graph.zh-TW.md)。

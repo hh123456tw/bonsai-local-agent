@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-03",
+  "transport": "real HTTP Anthropic Messages through port8081",
+  "max_tool_calls": 64,
+  "24_calls_allowed": true,
+  "64_calls_stopped_before_model": true,
+  "explicit_new_user_turn_resumed": true,
+  "synthetic_tool_commands_executed": false,
+  "guard_events": [
+    {
+      "time": 1793678420.3719847,
+      "kind": "delivered",
+      "protocol": "anthropic",
+      "attempt": 0,
+      "prior_tool_calls": 24,
+      "tool_limit": 64,
+      "tool_calls": 0,
+      "finish": "stop",
+      "reasoning_tokens": 0
+    },
+    {
+      "time": 1793678420.3902218,
+      "kind": "tool_budget_stop",
+      "protocol": "anthropic",
+      "calls": 64,
+      "limit": 64
+    },
+    {
+      "time": 1793678421.8277307,
+      "kind": "delivered",
+      "protocol": "anthropic",
+      "attempt": 0,
+      "prior_tool_calls": 0,
+      "tool_limit": 64,
+      "tool_calls": 0,
+      "finish": "stop",
+      "reasoning_tokens": 0
+    }
+  ],
+  "current_policy": null,
+  "unlimited_128_prior_calls_allowed": true,
+  "note": "Bounded64 tests temporarily set64 then restore user-selected unlimited policy; no synthetic tool executed."
+}

@@ -1,0 +1,863 @@
+{
+  "contexts": {
+    "off": 147456,
+    "on": 131072
+  },
+  "kv": "rk2v4-e8",
+  "spec": "dflash2",
+  "draft_tokens": 3,
+  "prefill_chunk": 256,
+  "host_cache_mib": 4096,
+  "order": [
+    "off",
+    "on",
+    "on",
+    "on"
+  ],
+  "runs": [
+    {
+      "mode": "off",
+      "context": 147456,
+      "index": 0,
+      "ready": true,
+      "options_difference": "context+KV 147456 and graph disabled",
+      "startup_seconds": 3.67,
+      "capacity_log": [
+        "2026-11-03 12:00:48.396  INFO  capacity | KV 147,456 tokens, rk2v4-e8, explicit | pages 2,304/33,554,431 | runtime 2.19 GiB | free 461.0 MiB"
+      ],
+      "errors": [],
+      "gpu_after_start": "11623, 469, 51",
+      "health": {
+        "seconds": 0.047,
+        "answer": "OK",
+        "usage": {
+          "completion_tokens": 2,
+          "completion_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "prompt_tokens": 15,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 17
+        },
+        "timings": {
+          "cache_n": 0,
+          "draft_n": 3,
+          "draft_n_accepted": 1,
+          "predicted_ms": 16.272499999999997,
+          "predicted_n": 2,
+          "predicted_per_second": 61.453372253802435,
+          "predicted_per_token_ms": 16.272499999999997,
+          "prompt_ms": 20.1562,
+          "prompt_n": 15,
+          "prompt_per_second": 744.1878925591134,
+          "prompt_per_token_ms": 1.3437466666666666
+        },
+        "finish": "stop"
+      },
+      "short": [
+        {
+          "seconds": 1.39,
+          "answer": "# Hash Tables: Collision Handling and Comparison of Strategies\n\n## 1. What is a Hash Table?\n\nA **hash table** is a data structure that maps keys to values using a **hash function**. The hash function takes a key and produces an integer index (the \"hash\") into an array of buckets. The ideal scenario is that each key maps to a unique index, allowing **O(1)** average-time lookups, insertions, and deletions.\n\nHowever, since the number of possible keys is typically much larger than the number of available slots, **collisions** are inevitable: two different keys produce the same hash index.\n\n---\n\n## 2. What is a Collision?\n\nA **collision** occurs when two or more keys hash to the same index. For example:\n\n```\nhash(\"apple\")  → 3\nhash(\"banana\") → 3   ← collision!\n```\n\nThe hash table must have a strategy to resolve this ambiguity. The two most common strategies are:\n\n1. **Separate Chaining**\n2. **Open Addressing**\n\n---\n\n## 3. Separate Chaining\n\n### How It Works\n\nEach bucket in the hash table array holds a **linked list** (or",
+          "usage": {
+            "completion_tokens": 256,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "prompt_tokens": 32,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 288
+          },
+          "timings": {
+            "cache_n": 0,
+            "draft_n": 261,
+            "draft_n_accepted": 168,
+            "predicted_ms": 1341.9115,
+            "predicted_n": 256,
+            "predicted_per_second": 190.0274347451378,
+            "predicted_per_token_ms": 5.262398039215686,
+            "prompt_ms": 30.182000000000002,
+            "prompt_n": 32,
+            "prompt_per_second": 1060.234576900139,
+            "prompt_per_token_ms": 0.9431875000000001
+          },
+          "finish": "length"
+        },
+        {
+          "seconds": 1.375,
+          "answer": "# Hash Tables: Collision Handling and Comparison of Strategies\n\n## 1. What is a Hash Table?\n\nA **hash table** is a data structure that maps keys to values using a **hash function**. The hash function takes a key and produces an integer index (the \"hash\") into an array of buckets. The ideal scenario is that each key maps to a unique index, allowing **O(1)** average-time lookups, insertions, and deletions.\n\nHowever, since the number of possible keys is typically much larger than the number of available slots, **collisions** are inevitable: two different keys produce the same hash index.\n\n---\n\n## 2. What is a Collision?\n\nA **collision** occurs when two or more keys hash to the same index. For example:\n\n```\nhash(\"apple\")  → 3\nhash(\"banana\") → 3   ← collision!\n```\n\nThe hash table must have a strategy to resolve this ambiguity. The two most common strategies are:\n\n1. **Separate Chaining**\n2. **Open Addressing**\n\n---\n\n## 3. Separate Chaining\n\n### How It Works\n\nEach bucket in the hash table array holds a **linked list** (or",
+          "usage": {
+            "completion_tokens": 256,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "prompt_tokens": 32,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 288
+          },
+          "timings": {
+            "cache_n": 0,
+            "draft_n": 261,
+            "draft_n_accepted": 168,
+            "predicted_ms": 1331.8865,
+            "predicted_n": 256,
+            "predicted_per_second": 191.45775559704222,
+            "predicted_per_token_ms": 5.22308431372549,
+            "prompt_ms": 27.7885,
+            "prompt_n": 32,
+            "prompt_per_second": 1151.5554995771633,
+            "prompt_per_token_ms": 0.868390625
+          },
+          "finish": "length"
+        },
+        {
+          "seconds": 1.422,
+          "answer": "# Hash Tables: Collision Handling and Comparison of Strategies\n\n## 1. What is a Hash Table?\n\nA **hash table** is a data structure that maps keys to values using a **hash function**. The hash function takes a key and produces an integer index (the \"hash\") into an array of buckets. The ideal scenario is that each key maps to a unique index, allowing **O(1)** average-time lookups, insertions, and deletions.\n\nHowever, since the number of possible keys is typically much larger than the number of available slots, **collisions** are inevitable: two different keys produce the same hash index.\n\n---\n\n## 2. What is a Collision?\n\nA **collision** occurs when two or more keys hash to the same index. For example:\n\n```\nhash(\"apple\")  → 3\nhash(\"banana\") → 3   ← collision!\n```\n\nThe hash table must have a strategy to resolve this ambiguity. The two most common strategies are:\n\n1. **Separate Chaining**\n2. **Open Addressing**\n\n---\n\n## 3. Separate Chaining\n\n### How It Works\n\nEach bucket in the hash table array holds a **linked list** (or",
+          "usage": {
+            "completion_tokens": 256,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "prompt_tokens": 32,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 288
+          },
+          "timings": {
+            "cache_n": 0,
+            "draft_n": 261,
+            "draft_n_accepted": 168,
+            "predicted_ms": 1380.5139,
+            "predicted_n": 256,
+            "predicted_per_second": 184.71382287422097,
+            "predicted_per_token_ms": 5.41378,
+            "prompt_ms": 26.8611,
+            "prompt_n": 32,
+            "prompt_per_second": 1191.313833015029,
+            "prompt_per_token_ms": 0.839409375
+          },
+          "finish": "length"
+        }
+      ],
+      "short_decode_median": 190.0274347451378,
+      "thinking": {
+        "seconds": 1.078,
+        "answer": "17 × 23 = 391  \n391 − 39 = 352\n\nRESULT=352",
+        "usage": {
+          "completion_tokens": 208,
+          "completion_tokens_details": {
+            "reasoning_tokens": 177
+          },
+          "prompt_tokens": 86,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 294
+        },
+        "timings": {
+          "cache_n": 0,
+          "draft_n": 186,
+          "draft_n_accepted": 146,
+          "predicted_ms": 956.4703,
+          "predicted_n": 208,
+          "predicted_per_second": 216.4207294256811,
+          "predicted_per_token_ms": 4.6206294685990335,
+          "prompt_ms": 121.1919,
+          "prompt_n": 86,
+          "prompt_per_second": 709.6183820865916,
+          "prompt_per_token_ms": 1.4092081395348837
+        },
+        "finish": "stop"
+      },
+      "thinking_correct": true,
+      "gpu_after_requests": "11567, 525, 62",
+      "long": [
+        {
+          "seconds": 73.86,
+          "answer": "{\n  \"SECRET_ALPHA\": \"VIOLET-582731\",\n  \"SECRET_BETA\": \"COPPER-294865\",\n  \"SECRET_GAMMA\": \"ORBIT-716943\"\n}",
+          "usage": {
+            "completion_tokens": 159,
+            "completion_tokens_details": {
+              "reasoning_tokens": 99
+            },
+            "prompt_tokens": 99686,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 99845
+          },
+          "timings": {
+            "cache_n": 0,
+            "draft_n": 147,
+            "draft_n_accepted": 110,
+            "predicted_ms": 1131.2448,
+            "predicted_n": 159,
+            "predicted_per_second": 139.66915030239255,
+            "predicted_per_token_ms": 7.159777215189873,
+            "prompt_ms": 72685.51770000001,
+            "prompt_n": 99686,
+            "prompt_per_second": 1371.4699042447623,
+            "prompt_per_token_ms": 0.7291446913307787
+          },
+          "finish": "stop",
+          "correct": true
+        },
+        {
+          "seconds": 1.328,
+          "answer": "d34731e205be7a5c",
+          "usage": {
+            "completion_tokens": 127,
+            "completion_tokens_details": {
+              "reasoning_tokens": 111
+            },
+            "prompt_tokens": 99776,
+            "prompt_tokens_details": {
+              "cached_tokens": 99679
+            },
+            "total_tokens": 99903
+          },
+          "timings": {
+            "cache_n": 99679,
+            "draft_n": 135,
+            "draft_n_accepted": 82,
+            "predicted_ms": 1038.5937999999999,
+            "predicted_n": 127,
+            "predicted_per_second": 121.31788192843055,
+            "predicted_per_token_ms": 8.242807936507935,
+            "prompt_ms": 245.68499999999997,
+            "prompt_n": 97,
+            "prompt_per_second": 394.81449823961583,
+            "prompt_per_token_ms": 2.5328350515463915
+          },
+          "finish": "stop",
+          "correct": true,
+          "expected": "d34731e205be7a5c"
+        },
+        {
+          "seconds": 0.937,
+          "answer": "87539f7e10f164cb",
+          "usage": {
+            "completion_tokens": 97,
+            "completion_tokens_details": {
+              "reasoning_tokens": 81
+            },
+            "prompt_tokens": 99822,
+            "prompt_tokens_details": {
+              "cached_tokens": 99769
+            },
+            "total_tokens": 99919
+          },
+          "timings": {
+            "cache_n": 99769,
+            "draft_n": 90,
+            "draft_n_accepted": 67,
+            "predicted_ms": 690.7422,
+            "predicted_n": 97,
+            "predicted_per_second": 138.98093963276023,
+            "predicted_per_token_ms": 7.19523125,
+            "prompt_ms": 213.3878,
+            "prompt_n": 53,
+            "prompt_per_second": 248.37408699091515,
+            "prompt_per_token_ms": 4.026184905660378
+          },
+          "finish": "stop",
+          "correct": true,
+          "expected": "87539f7e10f164cb"
+        }
+      ]
+    },
+    {
+      "mode": "on",
+      "context": 131072,
+      "index": 1,
+      "ready": true,
+      "options_difference": "context+KV 131072 and graph enabled",
+      "startup_seconds": 3.64,
+      "capacity_log": [
+        "2026-11-03 12:02:13.815  INFO  CUDA graphs ready | 218 ms",
+        "2026-11-03 12:02:14.299  INFO  capacity | KV 131,072 tokens, rk2v4-e8, explicit | pages 2,048/33,554,431 | runtime 2.45 GiB | free 648.6 MiB"
+      ],
+      "errors": [],
+      "gpu_after_start": "11408, 684, 71",
+      "health": {
+        "seconds": 0.047,
+        "answer": "OK",
+        "usage": {
+          "completion_tokens": 2,
+          "completion_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "prompt_tokens": 15,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 17
+        },
+        "timings": {
+          "cache_n": 0,
+          "draft_n": 3,
+          "draft_n_accepted": 1,
+          "predicted_ms": 13.6959,
+          "predicted_n": 2,
+          "predicted_per_second": 73.01455180017378,
+          "predicted_per_token_ms": 13.6959,
+          "prompt_ms": 19.3707,
+          "prompt_n": 15,
+          "prompt_per_second": 774.365407548514,
+          "prompt_per_token_ms": 1.29138
+        },
+        "finish": "stop"
+      },
+      "short": [
+        {
+          "seconds": 1.265,
+          "answer": "# Hash Tables: Collision Handling and Comparison of Strategies\n\n## 1. What is a Hash Table?\n\nA **hash table** is a data structure that maps keys to values using a **hash function**. The hash function takes a key and produces an integer index (the \"hash\") into an array of buckets. The ideal scenario is that each key maps to a unique index, allowing **O(1)** average-time lookups, insertions, and deletions.\n\nHowever, since the number of possible keys is typically much larger than the number of available slots, **collisions** are inevitable: two different keys produce the same hash index.\n\n---\n\n## 2. What is a Collision?\n\nA **collision** occurs when two or more keys hash to the same index. For example:\n\n```\nhash(\"apple\")  → 3\nhash(\"banana\") → 3   ← collision!\n```\n\nThe hash table must have a strategy to resolve this ambiguity. The two most common strategies are:\n\n1. **Separate Chaining**\n2. **Open Addressing**\n\n---\n\n## 3. Separate Chaining\n\n### How It Works\n\nEach bucket in the hash table array holds a **linked list** (or",
+          "usage": {
+            "completion_tokens": 256,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "prompt_tokens": 32,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 288
+          },
+          "timings": {
+            "cache_n": 0,
+            "draft_n": 261,
+            "draft_n_accepted": 168,
+            "predicted_ms": 1219.9033,
+            "predicted_n": 256,
+            "predicted_per_second": 209.03296187492896,
+            "predicted_per_token_ms": 4.783934509803921,
+            "prompt_ms": 27.7969,
+            "prompt_n": 32,
+            "prompt_per_second": 1151.2075087509759,
+            "prompt_per_token_ms": 0.868653125
+          },
+          "finish": "length"
+        },
+        {
+          "seconds": 1.25,
+          "answer": "# Hash Tables: Collision Handling and Comparison of Strategies\n\n## 1. What is a Hash Table?\n\nA **hash table** is a data structure that maps keys to values using a **hash function**. The hash function takes a key and produces an integer index (the \"hash\") into an array of buckets. The ideal scenario is that each key maps to a unique index, allowing **O(1)** average-time lookups, insertions, and deletions.\n\nHowever, since the number of possible keys is typically much larger than the number of available slots, **collisions** are inevitable: two different keys produce the same hash index.\n\n---\n\n## 2. What is a Collision?\n\nA **collision** occurs when two or more keys hash to the same index. For example:\n\n```\nhash(\"apple\")  → 3\nhash(\"banana\") → 3   ← collision!\n```\n\nThe hash table must have a strategy to resolve this ambiguity. The two most common strategies are:\n\n1. **Separate Chaining**\n2. **Open Addressing**\n\n---\n\n## 3. Separate Chaining\n\n### How It Works\n\nEach bucket in the hash table array holds a **linked list** (or",
+          "usage": {
+            "completion_tokens": 256,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "prompt_tokens": 32,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 288
+          },
+          "timings": {
+            "cache_n": 0,
+            "draft_n": 261,
+            "draft_n_accepted": 168,
+            "predicted_ms": 1222.7234,
+            "predicted_n": 256,
+            "predicted_per_second": 208.55084641383323,
+            "predicted_per_token_ms": 4.794993725490197,
+            "prompt_ms": 28.9543,
+            "prompt_n": 32,
+            "prompt_per_second": 1105.1899027087513,
+            "prompt_per_token_ms": 0.904821875
+          },
+          "finish": "length"
+        },
+        {
+          "seconds": 1.266,
+          "answer": "# Hash Tables: Collision Handling and Comparison of Strategies\n\n## 1. What is a Hash Table?\n\nA **hash table** is a data structure that maps keys to values using a **hash function**. The hash function takes a key and produces an integer index (the \"hash\") into an array of buckets. The ideal scenario is that each key maps to a unique index, allowing **O(1)** average-time lookups, insertions, and deletions.\n\nHowever, since the number of possible keys is typically much larger than the number of available slots, **collisions** are inevitable: two different keys produce the same hash index.\n\n---\n\n## 2. What is a Collision?\n\nA **collision** occurs when two or more keys hash to the same index. For example:\n\n```\nhash(\"apple\")  → 3\nhash(\"banana\") → 3   ← collision!\n```\n\nThe hash table must have a strategy to resolve this ambiguity. The two most common strategies are:\n\n1. **Separate Chaining**\n2. **Open Addressing**\n\n---\n\n## 3. Separate Chaining\n\n### How It Works\n\nEach bucket in the hash table array holds a **linked list** (or",
+          "usage": {
+            "completion_tokens": 256,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "prompt_tokens": 32,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 288
+          },
+          "timings": {
+            "cache_n": 0,
+            "draft_n": 261,
+            "draft_n_accepted": 168,
+            "predicted_ms": 1219.103,
+            "predicted_n": 256,
+            "predicted_per_second": 209.17018496386277,
+            "predicted_per_token_ms": 4.780796078431373,
+            "prompt_ms": 27.4953,
+            "prompt_n": 32,
+            "prompt_per_second": 1163.8352736649535,
+            "prompt_per_token_ms": 0.859228125
+          },
+          "finish": "length"
+        }
+      ],
+      "short_decode_median": 209.03296187492896,
+      "thinking": {
+        "seconds": 1.016,
+        "answer": "17 × 23 = 391  \n391 − 39 = 352\n\nRESULT=352",
+        "usage": {
+          "completion_tokens": 208,
+          "completion_tokens_details": {
+            "reasoning_tokens": 177
+          },
+          "prompt_tokens": 86,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 294
+        },
+        "timings": {
+          "cache_n": 0,
+          "draft_n": 186,
+          "draft_n_accepted": 146,
+          "predicted_ms": 875.6476,
+          "predicted_n": 208,
+          "predicted_per_second": 236.39646816824484,
+          "predicted_per_token_ms": 4.230181642512077,
+          "prompt_ms": 125.5956,
+          "prompt_n": 86,
+          "prompt_per_second": 684.7373634108201,
+          "prompt_per_token_ms": 1.4604139534883722
+        },
+        "finish": "stop"
+      },
+      "thinking_correct": true,
+      "gpu_after_requests": "11408, 684, 79",
+      "long": [
+        {
+          "seconds": 76.234,
+          "answer": "{\n  \"SECRET_ALPHA\": \"VIOLET-582731\",\n  \"SECRET_BETA\": \"COPPER-294865\",\n  \"SECRET_GAMMA\": \"ORBIT-716943\"\n}",
+          "usage": {
+            "completion_tokens": 159,
+            "completion_tokens_details": {
+              "reasoning_tokens": 99
+            },
+            "prompt_tokens": 99686,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 99845
+          },
+          "timings": {
+            "cache_n": 0,
+            "draft_n": 147,
+            "draft_n_accepted": 110,
+            "predicted_ms": 1092.7312,
+            "predicted_n": 159,
+            "predicted_per_second": 144.59182642538258,
+            "predicted_per_token_ms": 6.9160202531645565,
+            "prompt_ms": 75104.7615,
+            "prompt_n": 99686,
+            "prompt_per_second": 1327.29267770859,
+            "prompt_per_token_ms": 0.7534133328651966
+          },
+          "finish": "stop",
+          "correct": true
+        },
+        {
+          "seconds": 1.344,
+          "answer": "d34731e205be7a5c",
+          "usage": {
+            "completion_tokens": 127,
+            "completion_tokens_details": {
+              "reasoning_tokens": 111
+            },
+            "prompt_tokens": 99776,
+            "prompt_tokens_details": {
+              "cached_tokens": 99679
+            },
+            "total_tokens": 99903
+          },
+          "timings": {
+            "cache_n": 99679,
+            "draft_n": 135,
+            "draft_n_accepted": 82,
+            "predicted_ms": 1042.2782,
+            "predicted_n": 127,
+            "predicted_per_second": 120.88902943571112,
+            "predicted_per_token_ms": 8.272049206349205,
+            "prompt_ms": 281.0546,
+            "prompt_n": 97,
+            "prompt_per_second": 345.1286689490227,
+            "prompt_per_token_ms": 2.8974701030927834
+          },
+          "finish": "stop",
+          "correct": true,
+          "expected": "d34731e205be7a5c"
+        },
+        {
+          "seconds": 0.891,
+          "answer": "87539f7e10f164cb",
+          "usage": {
+            "completion_tokens": 97,
+            "completion_tokens_details": {
+              "reasoning_tokens": 81
+            },
+            "prompt_tokens": 99822,
+            "prompt_tokens_details": {
+              "cached_tokens": 99769
+            },
+            "total_tokens": 99919
+          },
+          "timings": {
+            "cache_n": 99769,
+            "draft_n": 90,
+            "draft_n_accepted": 67,
+            "predicted_ms": 653.2491,
+            "predicted_n": 97,
+            "predicted_per_second": 146.95772255943407,
+            "predicted_per_token_ms": 6.804678125,
+            "prompt_ms": 210.8939,
+            "prompt_n": 53,
+            "prompt_per_second": 251.31120435441707,
+            "prompt_per_token_ms": 3.979130188679245
+          },
+          "finish": "stop",
+          "correct": true,
+          "expected": "87539f7e10f164cb"
+        }
+      ]
+    },
+    {
+      "mode": "on",
+      "context": 131072,
+      "index": 2,
+      "ready": true,
+      "options_difference": "context+KV 131072 and graph enabled",
+      "startup_seconds": 3.64,
+      "capacity_log": [
+        "2026-11-03 12:03:41.340  INFO  CUDA graphs ready | 213 ms",
+        "2026-11-03 12:03:41.826  INFO  capacity | KV 131,072 tokens, rk2v4-e8, explicit | pages 2,048/33,554,431 | runtime 2.45 GiB | free 668.2 MiB"
+      ],
+      "errors": [],
+      "gpu_after_start": "11408, 684, 75",
+      "health": {
+        "seconds": 0.047,
+        "answer": "OK",
+        "usage": {
+          "completion_tokens": 2,
+          "completion_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "prompt_tokens": 15,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 17
+        },
+        "timings": {
+          "cache_n": 0,
+          "draft_n": 3,
+          "draft_n_accepted": 1,
+          "predicted_ms": 14.004000000000001,
+          "predicted_n": 2,
+          "predicted_per_second": 71.4081690945444,
+          "predicted_per_token_ms": 14.004000000000001,
+          "prompt_ms": 18.6453,
+          "prompt_n": 15,
+          "prompt_per_second": 804.4922849189877,
+          "prompt_per_token_ms": 1.24302
+        },
+        "finish": "stop"
+      },
+      "short": [
+        {
+          "seconds": 1.266,
+          "answer": "# Hash Tables: Collision Handling and Comparison of Strategies\n\n## 1. What is a Hash Table?\n\nA **hash table** is a data structure that maps keys to values using a **hash function**. The hash function takes a key and produces an integer index (the \"hash\") into an array of buckets. The ideal scenario is that each key maps to a unique index, allowing **O(1)** average-time lookups, insertions, and deletions.\n\nHowever, since the number of possible keys is typically much larger than the number of available slots, **collisions** are inevitable: two different keys produce the same hash index.\n\n---\n\n## 2. What is a Collision?\n\nA **collision** occurs when two or more keys hash to the same index. For example:\n\n```\nhash(\"apple\")  → 3\nhash(\"banana\") → 3   ← collision!\n```\n\nThe hash table must have a strategy to resolve this ambiguity. The two most common strategies are:\n\n1. **Separate Chaining**\n2. **Open Addressing**\n\n---\n\n## 3. Separate Chaining\n\n### How It Works\n\nEach bucket in the hash table array holds a **linked list** (or",
+          "usage": {
+            "completion_tokens": 256,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "prompt_tokens": 32,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 288
+          },
+          "timings": {
+            "cache_n": 0,
+            "draft_n": 261,
+            "draft_n_accepted": 168,
+            "predicted_ms": 1247.8476,
+            "predicted_n": 256,
+            "predicted_per_second": 204.35187758505126,
+            "predicted_per_token_ms": 4.8935200000000005,
+            "prompt_ms": 27.116600000000002,
+            "prompt_n": 32,
+            "prompt_per_second": 1180.0889492045462,
+            "prompt_per_token_ms": 0.8473937500000001
+          },
+          "finish": "length"
+        },
+        {
+          "seconds": 1.25,
+          "answer": "# Hash Tables: Collision Handling and Comparison of Strategies\n\n## 1. What is a Hash Table?\n\nA **hash table** is a data structure that maps keys to values using a **hash function**. The hash function takes a key and produces an integer index (the \"hash\") into an array of buckets. The ideal scenario is that each key maps to a unique index, allowing **O(1)** average-time lookups, insertions, and deletions.\n\nHowever, since the number of possible keys is typically much larger than the number of available slots, **collisions** are inevitable: two different keys produce the same hash index.\n\n---\n\n## 2. What is a Collision?\n\nA **collision** occurs when two or more keys hash to the same index. For example:\n\n```\nhash(\"apple\")  → 3\nhash(\"banana\") → 3   ← collision!\n```\n\nThe hash table must have a strategy to resolve this ambiguity. The two most common strategies are:\n\n1. **Separate Chaining**\n2. **Open Addressing**\n\n---\n\n## 3. Separate Chaining\n\n### How It Works\n\nEach bucket in the hash table array holds a **linked list** (or",
+          "usage": {
+            "completion_tokens": 256,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "prompt_tokens": 32,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 288
+          },
+          "timings": {
+            "cache_n": 0,
+            "draft_n": 261,
+            "draft_n_accepted": 168,
+            "predicted_ms": 1220.5664000000002,
+            "predicted_n": 256,
+            "predicted_per_second": 208.91940004247206,
+            "predicted_per_token_ms": 4.786534901960785,
+            "prompt_ms": 29.0244,
+            "prompt_n": 32,
+            "prompt_per_second": 1102.520637808189,
+            "prompt_per_token_ms": 0.9070125
+          },
+          "finish": "length"
+        },
+        {
+          "seconds": 1.266,
+          "answer": "# Hash Tables: Collision Handling and Comparison of Strategies\n\n## 1. What is a Hash Table?\n\nA **hash table** is a data structure that maps keys to values using a **hash function**. The hash function takes a key and produces an integer index (the \"hash\") into an array of buckets. The ideal scenario is that each key maps to a unique index, allowing **O(1)** average-time lookups, insertions, and deletions.\n\nHowever, since the number of possible keys is typically much larger than the number of available slots, **collisions** are inevitable: two different keys produce the same hash index.\n\n---\n\n## 2. What is a Collision?\n\nA **collision** occurs when two or more keys hash to the same index. For example:\n\n```\nhash(\"apple\")  → 3\nhash(\"banana\") → 3   ← collision!\n```\n\nThe hash table must have a strategy to resolve this ambiguity. The two most common strategies are:\n\n1. **Separate Chaining**\n2. **Open Addressing**\n\n---\n\n## 3. Separate Chaining\n\n### How It Works\n\nEach bucket in the hash table array holds a **linked list** (or",
+          "usage": {
+            "completion_tokens": 256,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "prompt_tokens": 32,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 288
+          },
+          "timings": {
+            "cache_n": 0,
+            "draft_n": 261,
+            "draft_n_accepted": 168,
+            "predicted_ms": 1220.1360000000002,
+            "predicted_n": 256,
+            "predicted_per_second": 208.99309585160995,
+            "predicted_per_token_ms": 4.78484705882353,
+            "prompt_ms": 27.8785,
+            "prompt_n": 32,
+            "prompt_per_second": 1147.8379396308985,
+            "prompt_per_token_ms": 0.871203125
+          },
+          "finish": "length"
+        }
+      ],
+      "short_decode_median": 208.91940004247206,
+      "thinking": {
+        "seconds": 1.031,
+        "answer": "17 × 23 = 391  \n391 − 39 = 352\n\nRESULT=352",
+        "usage": {
+          "completion_tokens": 208,
+          "completion_tokens_details": {
+            "reasoning_tokens": 177
+          },
+          "prompt_tokens": 86,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 294
+        },
+        "timings": {
+          "cache_n": 0,
+          "draft_n": 186,
+          "draft_n_accepted": 146,
+          "predicted_ms": 891.3068,
+          "predicted_n": 208,
+          "predicted_per_second": 232.24326348682632,
+          "predicted_per_token_ms": 4.305829951690821,
+          "prompt_ms": 124.17580000000001,
+          "prompt_n": 86,
+          "prompt_per_second": 692.5665065173729,
+          "prompt_per_token_ms": 1.4439046511627909
+        },
+        "finish": "stop"
+      },
+      "thinking_correct": true,
+      "gpu_after_requests": "11412, 680, 82"
+    },
+    {
+      "mode": "on",
+      "context": 131072,
+      "index": 3,
+      "ready": true,
+      "options_difference": "context+KV 131072 and graph enabled",
+      "startup_seconds": 3.66,
+      "capacity_log": [
+        "2026-11-03 12:03:50.302  INFO  CUDA graphs ready | 212 ms",
+        "2026-11-03 12:03:50.791  INFO  capacity | KV 131,072 tokens, rk2v4-e8, explicit | pages 2,048/33,554,431 | runtime 2.45 GiB | free 644.8 MiB"
+      ],
+      "errors": [],
+      "gpu_after_start": "11412, 679, 73",
+      "health": {
+        "seconds": 0.047,
+        "answer": "OK",
+        "usage": {
+          "completion_tokens": 2,
+          "completion_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "prompt_tokens": 15,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 17
+        },
+        "timings": {
+          "cache_n": 0,
+          "draft_n": 3,
+          "draft_n_accepted": 1,
+          "predicted_ms": 14.4161,
+          "predicted_n": 2,
+          "predicted_per_second": 69.36688840948662,
+          "predicted_per_token_ms": 14.4161,
+          "prompt_ms": 18.764699999999998,
+          "prompt_n": 15,
+          "prompt_per_second": 799.3732913395899,
+          "prompt_per_token_ms": 1.2509799999999998
+        },
+        "finish": "stop"
+      },
+      "short": [
+        {
+          "seconds": 1.296,
+          "answer": "# Hash Tables: Collision Handling and Comparison of Strategies\n\n## 1. What is a Hash Table?\n\nA **hash table** is a data structure that maps keys to values using a **hash function**. The hash function takes a key and produces an integer index (the \"hash\") into an array of buckets. The ideal scenario is that each key maps to a unique index, allowing **O(1)** average-time lookups, insertions, and deletions.\n\nHowever, since the number of possible keys is typically much larger than the number of available slots, **collisions** are inevitable: two different keys produce the same hash index.\n\n---\n\n## 2. What is a Collision?\n\nA **collision** occurs when two or more keys hash to the same index. For example:\n\n```\nhash(\"apple\")  → 3\nhash(\"banana\") → 3   ← collision!\n```\n\nThe hash table must have a strategy to resolve this ambiguity. The two most common strategies are:\n\n1. **Separate Chaining**\n2. **Open Addressing**\n\n---\n\n## 3. Separate Chaining\n\n### How It Works\n\nEach bucket in the hash table array holds a **linked list** (or",
+          "usage": {
+            "completion_tokens": 256,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "prompt_tokens": 32,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 288
+          },
+          "timings": {
+            "cache_n": 0,
+            "draft_n": 261,
+            "draft_n_accepted": 168,
+            "predicted_ms": 1247.9079,
+            "predicted_n": 256,
+            "predicted_per_second": 204.34200312378823,
+            "predicted_per_token_ms": 4.893756470588235,
+            "prompt_ms": 27.8381,
+            "prompt_n": 32,
+            "prompt_per_second": 1149.503737683247,
+            "prompt_per_token_ms": 0.869940625
+          },
+          "finish": "length"
+        },
+        {
+          "seconds": 1.25,
+          "answer": "# Hash Tables: Collision Handling and Comparison of Strategies\n\n## 1. What is a Hash Table?\n\nA **hash table** is a data structure that maps keys to values using a **hash function**. The hash function takes a key and produces an integer index (the \"hash\") into an array of buckets. The ideal scenario is that each key maps to a unique index, allowing **O(1)** average-time lookups, insertions, and deletions.\n\nHowever, since the number of possible keys is typically much larger than the number of available slots, **collisions** are inevitable: two different keys produce the same hash index.\n\n---\n\n## 2. What is a Collision?\n\nA **collision** occurs when two or more keys hash to the same index. For example:\n\n```\nhash(\"apple\")  → 3\nhash(\"banana\") → 3   ← collision!\n```\n\nThe hash table must have a strategy to resolve this ambiguity. The two most common strategies are:\n\n1. **Separate Chaining**\n2. **Open Addressing**\n\n---\n\n## 3. Separate Chaining\n\n### How It Works\n\nEach bucket in the hash table array holds a **linked list** (or",
+          "usage": {
+            "completion_tokens": 256,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "prompt_tokens": 32,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 288
+          },
+          "timings": {
+            "cache_n": 0,
+            "draft_n": 261,
+            "draft_n_accepted": 168,
+            "predicted_ms": 1219.6374,
+            "predicted_n": 256,
+            "predicted_per_second": 209.0785343250379,
+            "predicted_per_token_ms": 4.782891764705883,
+            "prompt_ms": 28.3396,
+            "prompt_n": 32,
+            "prompt_per_second": 1129.162020635436,
+            "prompt_per_token_ms": 0.8856125
+          },
+          "finish": "length"
+        },
+        {
+          "seconds": 1.344,
+          "answer": "# Hash Tables: Collision Handling and Comparison of Strategies\n\n## 1. What is a Hash Table?\n\nA **hash table** is a data structure that maps keys to values using a **hash function**. The hash function takes a key and produces an integer index (the \"hash\") into an array of buckets. The ideal scenario is that each key maps to a unique index, allowing **O(1)** average-time lookups, insertions, and deletions.\n\nHowever, since the number of possible keys is typically much larger than the number of available slots, **collisions** are inevitable: two different keys produce the same hash index.\n\n---\n\n## 2. What is a Collision?\n\nA **collision** occurs when two or more keys hash to the same index. For example:\n\n```\nhash(\"apple\")  → 3\nhash(\"banana\") → 3   ← collision!\n```\n\nThe hash table must have a strategy to resolve this ambiguity. The two most common strategies are:\n\n1. **Separate Chaining**\n2. **Open Addressing**\n\n---\n\n## 3. Separate Chaining\n\n### How It Works\n\nEach bucket in the hash table array holds a **linked list** (or",
+          "usage": {
+            "completion_tokens": 256,
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "prompt_tokens": 32,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "total_tokens": 288
+          },
+          "timings": {
+            "cache_n": 0,
+            "draft_n": 261,
+            "draft_n_accepted": 168,
+            "predicted_ms": 1293.0113999999999,
+            "predicted_n": 256,
+            "predicted_per_second": 197.21403848411546,
+            "predicted_per_token_ms": 5.07063294117647,
+            "prompt_ms": 28.2579,
+            "prompt_n": 32,
+            "prompt_per_second": 1132.4266842192803,
+            "prompt_per_token_ms": 0.883059375
+          },
+          "finish": "length"
+        }
+      ],
+      "short_decode_median": 204.34200312378823,
+      "thinking": {
+        "seconds": 1.125,
+        "answer": "17 × 23 = 391  \n391 − 39 = 352\n\nRESULT=352",
+        "usage": {
+          "completion_tokens": 208,
+          "completion_tokens_details": {
+            "reasoning_tokens": 177
+          },
+          "prompt_tokens": 86,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 294
+        },
+        "timings": {
+          "cache_n": 0,
+          "draft_n": 186,
+          "draft_n_accepted": 146,
+          "predicted_ms": 992.5248,
+          "predicted_n": 208,
+          "predicted_per_second": 208.55902038921343,
+          "predicted_per_token_ms": 4.794805797101449,
+          "prompt_ms": 133.6291,
+          "prompt_n": 86,
+          "prompt_per_second": 643.5723955336076,
+          "prompt_per_token_ms": 1.5538267441860465
+        },
+        "finish": "stop"
+      },
+      "thinking_correct": true,
+      "gpu_after_requests": "11457, 635, 80"
+    }
+  ],
+  "restored_profile": "dflash144_graph_off"
+}

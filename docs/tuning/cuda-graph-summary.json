@@ -1,0 +1,150 @@
+{
+  "date": "2026-11-03",
+  "same144k_graph_ab": {
+    "off_decode_median_tok_s": 189.57,
+    "on_decode_median_tok_s": 209.25,
+    "decode_gain_percent": 10.38,
+    "short_samples_per_arm": 9,
+    "controlled_startups_per_arm": 3,
+    "controlled_startups_success_per_arm": 3,
+    "long_input_tokens": 130427,
+    "long_wall_seconds": {
+      "off": 109.172,
+      "on": 111.438
+    },
+    "long_correctness": {
+      "off": [
+        true,
+        true,
+        false
+      ],
+      "on": [
+        true,
+        true,
+        false
+      ]
+    },
+    "additional_graph_startup_failure": {
+      "during": "first attempt to start graph-on agent arm",
+      "type": "runtime reservation capacity shortage, not graph update failure",
+      "required_bytes": 2852387840,
+      "available_bytes": 2694217728,
+      "deficit_mib": 150.84,
+      "retry_started": true
+    }
+  },
+  "capacity_tradeoff": {
+    "baseline_context": 147456,
+    "candidate_context": 131072,
+    "capacity_loss_tokens": 16384,
+    "capacity_loss_percent": 11.11,
+    "baseline_decode_median_tok_s": 190.03,
+    "candidate_decode_median_tok_s": 208.92,
+    "candidate_gain_percent": 9.94,
+    "candidate_controlled_startups_success": 3,
+    "candidate_controlled_startups_attempted": 3,
+    "runtime_budget_gib": {
+      "144_graph_off": 2.19,
+      "144_graph_on": 2.66,
+      "128_graph_on": 2.45
+    },
+    "matched_long_input_tokens": 99686,
+    "matched_long_wall_seconds": {
+      "144_off": 73.86,
+      "128_on": 76.234
+    },
+    "matched_long_correctness": {
+      "144_off": [
+        true,
+        true,
+        true
+      ],
+      "128_on": [
+        true,
+        true,
+        true
+      ]
+    },
+    "128_startup_free_mib": [
+      648.6,
+      668.2,
+      644.8
+    ]
+  },
+  "agent": {
+    "144_graph_off": {
+      "mode": "off",
+      "seconds": 107.11,
+      "exit_code": 0,
+      "tool_calls": 20,
+      "consecutive_identical_calls": 0,
+      "client_success": true,
+      "context_reported": 147456,
+      "permission_denials": 3,
+      "external_tests_passed": true,
+      "test_file_unchanged": true,
+      "sampled_gpu": {
+        "samples": 134,
+        "max_device_memory_used_mib": 12062,
+        "min_device_memory_free_mib": 30,
+        "max_temperature_c": 80,
+        "interval_seconds": 0.75,
+        "scope": "whole GPU including Windows; sampled, not exact transient peak"
+      }
+    },
+    "144_graph_on_retry": {
+      "mode": "on",
+      "seconds": 96.34,
+      "exit_code": 0,
+      "tool_calls": 28,
+      "consecutive_identical_calls": 0,
+      "client_success": true,
+      "context_reported": 147456,
+      "permission_denials": 4,
+      "external_tests_passed": true,
+      "test_file_unchanged": true,
+      "sampled_gpu": {
+        "samples": 121,
+        "max_device_memory_used_mib": 11857,
+        "min_device_memory_free_mib": 235,
+        "max_temperature_c": 82,
+        "interval_seconds": 0.75,
+        "scope": "whole GPU including Windows; sampled, not exact transient peak"
+      }
+    },
+    "128_graph_on": {
+      "mode": "on",
+      "seconds": 88.53,
+      "exit_code": 0,
+      "tool_calls": 19,
+      "consecutive_identical_calls": 0,
+      "client_success": true,
+      "context_reported": 131072,
+      "permission_denials": 1,
+      "external_tests_passed": true,
+      "test_file_unchanged": true,
+      "sampled_gpu": {
+        "samples": 112,
+        "max_device_memory_used_mib": 11463,
+        "min_device_memory_free_mib": 629,
+        "max_temperature_c": 85,
+        "interval_seconds": 0.75,
+        "scope": "whole GPU including Windows; sampled, not exact transient peak"
+      }
+    },
+    "comparison_limit": "One stochastic task per arm; tool paths, permission denials, Windows GPU activity and temperature differ. Wall time is not a causal graph speedup estimate."
+  },
+  "decision": {
+    "default": "dflash144 graph off, unchanged",
+    "optional": "dflash128graph added after successful validation",
+    "max_tool_calls": null,
+    "repeat_guard": "unchanged"
+  },
+  "measurement_limits": [
+    "Whole-device memory sampling includes Windows and other applications, and may miss transient peaks",
+    "Three startup passes do not establish long-term stability",
+    "Graph did not fix 130K middle-record error",
+    "128K cannot take the previous 130K input plus configured output reserve",
+    "Short generation benchmark disables thinking; actual agent uses budget1536"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "model": {
+    "providerID": "bonsai",
+    "model": "bonsai2-27b"
+  },
+  "default_agent": "build",
+  "providers": {
+    "bonsai": {
+      "name": "Bonsai Local Guard",
+      "package": "aisdk:@ai-sdk/openai-compatible",
+      "settings": {
+        "baseURL": "http://127.0.0.1:8081/v1",
+        "apiKey": "local"
+      },
+      "models": {
+        "bonsai2-27b": {
+          "name": "Bonsai DFlash2 128K Graph",
+          "compatibility": {
+            "reasoningField": "reasoning_content"
+          },
+          "limit": {
+            "context": 131072,
+            "output": 16384
+          },
+          "capabilities": {
+            "tools": true,
+            "input": [
+              "text"
+            ],
+            "output": [
+              "text"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "agents": {
+    "build": {
+      "steps": 24,
+      "permissions": [
+        {
+          "action": "skill",
+          "resource": "*",
+          "effect": "deny"
+        },
+        {
+          "action": "subagent",
+          "resource": "*",
+          "effect": "deny"
+        }
+      ]
+    }
+  },
+  "compaction": {
+    "auto": true,
+    "buffer": 24576
+  },
+  "plugins": [
+    "-orca-opencode-status",
+    "-superpowers"
+  ]
+}

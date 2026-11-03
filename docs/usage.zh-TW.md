@@ -16,7 +16,7 @@ OpenCode預留系統/工具、輸出及壓縮空間；標示context不是純使�
 
 安裝目錄C:\AI\bonsai；OpenCode連127.0.0.1:8081/v1，原始引擎在8080。啟動器會驗真實生成，檢查配置與自有PID。關閉CLI本身保留模型；不用時點停止Bonsai。
 
-橋接最多糾正重試兩次，工具上限24；仍無進展會明確回報未完成，停止不算成功。輸出上限訊號不再被隱藏，日誌見guard-events.jsonl。橋接會緩衝一輪後才送出。
+橋接最多糾正重試兩次，工具總次數目前無上限（仍可設定有限額度）；仍無進展會明確回報未完成，停止不算成功。輸出上限訊號不再被隱藏，日誌見guard-events.jsonl。橋接會緩衝一輪後才送出。
 
 這是已發布引擎的部署調校，沒有宣稱已編譯未合併PR10。
 
@@ -25,3 +25,7 @@ Claude Code 已接入同一套防循環橋接。桌面「Bonsai Claude Code」�
 Anthropic base URL 是 `http://127.0.0.1:8081`（不加 `/v1`），提供 Messages、SSE 與 count_tokens。獨立啟動器設定模型 bonsai2-27b、思考預算1536，移除舊思考回傳，預留壓縮空間；不更動平常的 Claude 登入和全域設定。只啟用 Read/Write/Edit/Bash/Glob/Grep，不載入個人 MCP 或外掛；一般工具授權仍由 CLI 管理。
 
 支援文字及客戶端工具，不支援圖片、文件區塊、雲端內建工具。串流會先緩衝一輪做檢查，長文首讀可能等數分鐘；請求逾時設為900秒。模型仍是 Bonsai，不是 Claude。新環境可能需要完成 CLI 的介面初始選項，無須填入雲端 API 金鑰。CLI 的 unknown model 提示及估算美元金額不是雲端帳單；本機窗口已明確設定。
+
+若看到舊「24次工具」訊息，來源是本機橋接。現可編輯 `C:\AI\bonsai\guard-config.json` 的 `max_tool_calls`，下一次請求生效；目前設定null取消總次數上限；若改為有限額度，達上限可由使用者輸入「繼續」開新輪接續，沒有啟用無限自動重開。詳見 [來源與接續說明](tool-budget.zh-TW.md)。
+
+新增可選「Bonsai Claude Code 加速128K」：DFlash2與CUDA Graph開啟，完整KV/context131072、壓縮窗口106496。原144K與256K捷徑保留，預設未變。速度、啟動失敗與容量取捨見 [CUDA Graph實測](cuda-graph.zh-TW.md)。

@@ -45,7 +45,7 @@ class Tests(unittest.TestCase):
   self.assertEqual(seen[1][1]['thinking']['budget_tokens'],1024)
  def test_tool_budget_applies_across_anthropic_user_wrappers(self):
   b=repeated_history();base=b['messages'][1:3];b['messages']=b['messages'][:1]+base*24
-  with patch.object(p.urllib.request,'urlopen') as upstream,patch.object(p,'event'):
+  with patch.object(p,'tool_limit',return_value=24),patch.object(p.urllib.request,'urlopen') as upstream,patch.object(p,'event'):
    result=p.generate(b,anthropic_mode=True)
   upstream.assert_not_called();self.assertIn('未完成',result['content'][0]['text']);self.assertEqual(result['stop_reason'],'end_turn')
  def test_anthropic_exhausted_recovery_stops_honestly(self):
