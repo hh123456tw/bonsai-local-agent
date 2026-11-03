@@ -11,7 +11,11 @@ def environment(profile):
  for name in ('ANTHROPIC_API_KEY','ANTHROPIC_CUSTOM_HEADERS','CLAUDE_CODE_OAUTH_TOKEN','CLAUDE_CODE_USE_BEDROCK','CLAUDE_CODE_USE_VERTEX','CLAUDE_CODE_USE_FOUNDRY','DISABLE_COMPACT'):
   env.pop(name,None)
  context=settings['context'];reserve=24576 if profile.startswith('dflash') else 32768
- env.update(ANTHROPIC_BASE_URL='http://127.0.0.1:8081',ANTHROPIC_AUTH_TOKEN='local',ANTHROPIC_MODEL='bonsai2-27b',CLAUDE_CONFIG_DIR=str(ROOT/'claude-home'),CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC='1',CLAUDE_CODE_MAX_CONTEXT_TOKENS=str(context),CLAUDE_CODE_AUTO_COMPACT_WINDOW=str(context-reserve),CLAUDE_CODE_MAX_OUTPUT_TOKENS='16384',API_TIMEOUT_MS='900000')
+ env.update(ANTHROPIC_BASE_URL='http://127.0.0.1:8081',ANTHROPIC_AUTH_TOKEN='local',ANTHROPIC_MODEL='bonsai2-27b',CLAUDE_CONFIG_DIR=str(ROOT/'claude-home'),CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC='1',CLAUDE_CODE_MAX_CONTEXT_TOKENS=str(context),CLAUDE_CODE_MAX_OUTPUT_TOKENS='16384',API_TIMEOUT_MS='900000')
+ # Claude Code clamps explicit auto-compact windows below 100,000.
+ # For smaller profiles declare the real model window and use its default policy.
+ if context-reserve>=100000:env['CLAUDE_CODE_AUTO_COMPACT_WINDOW']=str(context-reserve)
+ else:env.pop('CLAUDE_CODE_AUTO_COMPACT_WINDOW',None)
  for slot in ('OPUS','SONNET','HAIKU','FABLE'):env['ANTHROPIC_DEFAULT_'+slot+'_MODEL']='bonsai2-27b'
  hosts=[v for v in env.get('NO_PROXY','').split(',') if v]+['127.0.0.1','localhost']
  env['NO_PROXY']=','.join(dict.fromkeys(hosts))

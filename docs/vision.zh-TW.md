@@ -25,10 +25,12 @@ powershell -NoProfile -ExecutionPolicy Bypass -File C:\AI\bonsai\start-claude.ps
 |視覺權重|`overlay`：平時放系統記憶體，讀圖時暫借 GPU 記憶體|
 |每圖視覺 token 上限|2,048；大圖縮小可能漏掉細字，請裁切重要區域|
 |圖片前處理|cache 128 MiB、live 上限2,048 MiB、2 workers；這是主機端媒體容量設定，並非預留2 GiB顯存|
-|Claude 自動壓縮門檻|73,728；預留24,576，圖片也占 Context|
+|Claude 壓縮策略|宣告實際98,304 Context，移除低於100K的不合法AUTO_COMPACT_WINDOW覆寫，由CLI預設策略管理；圖片也占Context|
 |Agent API|8081保護橋接，兩種協定共用，序列執行|
 
 96K 是本次保守新增的容量，**沒有測出它是看圖的最大容量，也沒有驗證填滿96K後的視覺正確率**。這輪不重跑之前的長文與 Coding 效能評估。原144K、128K Graph及256K六個設定檔均通過SHA比對，沒有覆寫。
+
+後續修正：初版啟動器曾設定 `CLAUDE_CODE_AUTO_COMPACT_WINDOW=73728`，互動模式警告並將它提高到100K，再受模型窗口限制，並未照73,728執行。現已移除96K模式的這個覆寫（也移除繼承值），保留 `CLAUDE_CODE_MAX_CONTEXT_TOKENS=98304`。原144K、128K、256K的合法覆寫不變。依據[Claude Code官方範圍說明](https://code.claude.com/docs/en/model-config#values-and-warnings-for-claude_code_auto_compact_window)，不應把AUTO_COMPACT_WINDOW設成小於100,000；這次沒有實測長對話自動壓縮的確切觸發點。初次短讀圖通過不代表當時的壓縮設定有效。
 
 ## 實測結果
 
