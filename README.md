@@ -82,4 +82,6 @@ CLI 連 `ANTHROPIC_BASE_URL=http://127.0.0.1:8081`，不加 `/v1`。橋接提供
 
 工具額度設定與接續方式見 [24次訊息來源與無上限設定](docs/tool-budget.zh-TW.md)。這是本機橋接的額度，包含失敗／遭拒工具，並非Claude Code官方24次限制。
 
+OpenCode自身的`agents.build.steps=24`也已從所有Bonsai檔位移除；獨立服務實際載入驗證通過。既有OpenCode CLI請從桌面捷徑重新開啟，以載入新設定。
+
 新增可選128K CUDA Graph加速檔位；原144K預設不變。完整對照、失敗紀錄與限制見 [CUDA Graph實測](docs/cuda-graph.zh-TW.md)。

@@ -37,7 +37,6 @@
   },
   "agents": {
     "build": {
-      "steps": 24,
       "permissions": [
         {
           "action": "skill",

@@ -8,7 +8,11 @@
 
 本機 `guard-events.jsonl` 找到三筆相符的 `tool_budget_stop`，記錄的calls均為24。這條限制不要求工具重複，也不檢查任務實際進度；合法的長任務也會碰到。它不是Claude Code的官方24次工具限制，也不是context或GPU錯誤。
 
-另有OpenCode專用設定 `agents.build.steps=24`，它不會被Claude Code讀取，並不是本次訊息的來源；本次依使用者選擇取消的是橋接的總工具次數限制，OpenCode自身步數設定未更動。
+原先另有OpenCode專用設定 `agents.build.steps=24`，它不會被Claude Code讀取，並不是那句橋接訊息的來源。現在也已從共用設定及144K、128K Graph、256K三份檔位設定移除，並同步到安裝目錄。兩層固定24限制都已移除，重複工具恢復檢查保留。
+
+OpenCode的steps計算模型步數，與橋接計算工具呼叫數是兩個不同概念。OpenCode在最後一步會移除工具並要求模型以文字總結；不應用0代替24，而是省略steps欄位。[官方V2說明](https://dev.opencode.ai/v2/docs/agents/#steps)
+
+已用OpenCode CLI2.2.5的獨立服務 `opencode api --standalone agent.list` 驗證四份設定：Build均沒有steps欄位，Bonsai權限設定仍正常載入；另以含steps24的正對照確認API能顯示該值。詳見[驗證紀錄](opencode-steps-validation.json)。既有OpenCode CLI請關閉後從Bonsai桌面捷徑重開，避免繼續使用已載入的舊設定；本次未修改個人全域OpenCode設定或專案自訂覆寫。
 
 計數是「最近一個實際使用者輪次之後，歷史中的工具呼叫數」，包括讀檔、搜尋、執行、失敗和遭拒的呼叫。它不代表24次成功執行，也不是24則使用者訊息。Anthropic的tool_result包在user訊息內，橋接會把它識別成工具結果，不重置輪次。
 

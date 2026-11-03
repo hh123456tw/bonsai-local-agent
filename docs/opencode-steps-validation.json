@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-03",
+  "cli_version": "2.2.5",
+  "verification": "opencode api --standalone agent.list",
+  "positive_control_steps24_observed": true,
+  "configs": [
+    {
+      "config": "opencode.json",
+      "build_has_steps": false,
+      "bonsai_permissions_loaded": true
+    },
+    {
+      "config": "base256.opencode.json",
+      "build_has_steps": false,
+      "bonsai_permissions_loaded": true
+    },
+    {
+      "config": "dflash128graph.opencode.json",
+      "build_has_steps": false,
+      "bonsai_permissions_loaded": true
+    },
+    {
+      "config": "dflash144.opencode.json",
+      "build_has_steps": false,
+      "bonsai_permissions_loaded": true
+    }
+  ],
+  "bridge_max_tool_calls": null,
+  "repeat_tool_recovery": "preserved",
+  "inference_requests_made": false
+}
