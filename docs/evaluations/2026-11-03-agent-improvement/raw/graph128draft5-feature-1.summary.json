@@ -1,0 +1,99 @@
+{
+  "key": "graph128draft5-feature-1",
+  "profile": "graph128draft5",
+  "task": "feature",
+  "rep": 1,
+  "prompt_sha256": "71c47b5376920508a05953539879138372e3e3d80016cce50ec2ff8691c3e398",
+  "guidance": "For coding tasks, identify the required behavior and compatibility constraints before editing. Inspect relevant files with Read, Glob and Grep. Prefer Edit for targeted source changes and Write for new files or complete replacements. Avoid nested Bash/python -c strings and shell heredocs for modifying source; if a helper script is necessary, create it with Write and run the file. Use Bash for running tests and other authorized commands. After an error, inspect its actual output and change the diagnosis or action instead of repeating the same failed command unchanged. Check each requested behavior, including filtering and edge cases, against tests. Preserve existing public interfaces unless the user requests a change. Run the relevant test suite and report actual failures honestly; do not claim completion while required checks fail. Follow the user's scope and tool permissions.",
+  "guidance_sha256": "bc63a2d85768674a8fd036f9afe54fd5ee252968d3a2d5b1bcef11fc4b1928c9",
+  "input_manifest": {
+    "README.md": "acde69ec95036e39fed94c4d6cd56d7f68324eb215384f3a09cea3faea569c6b",
+    "ledger/__init__.py": "ec0ca500ebce758808319e1997f40d53fbbc0209c756126caa4401be97928084",
+    "ledger/models.py": "aadaacd4f740d3438f56a56e0d03d382048c879d0c2fe034605b90338a201467",
+    "ledger/parser.py": "5d581d94e997d2cb29fa65d43d918586dae84116878f637cd0c77ac9191c6060",
+    "ledger/summary.py": "0c4361190e25bb0ca4b02ed661112dd01f3e26801bf5c35c6a70d30e7b84850a",
+    "ledger/cli.py": "4885e1e823aaaf8df75f159309c02852eeade02b41155c060afb535fb0b1ce64",
+    "test_existing.py": "b0f93bbc383ad23ff76100aa5601a3ff01ac17a592f4562b585b9a9ea06ab32e"
+  },
+  "passed": true,
+  "cli_exit": 0,
+  "agent_latency_s": 242.42199999999139,
+  "tool_calls": 61,
+  "consecutive_repeat_count": 0,
+  "nonconsecutive_duplicate_count": 6,
+  "tool_errors": 9,
+  "permission_denials": 8,
+  "usage": {
+    "input_tokens": 21595,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 487640,
+    "output_tokens": 52584,
+    "output_tokens_details": {
+      "thinking_tokens": 39117
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "bonsai2-27b": {
+      "inputTokens": 21595,
+      "outputTokens": 52584,
+      "cacheReadInputTokens": 487640,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 1.6663949999999998,
+      "contextWindow": 131072,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 39117,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "bonsai2-27b",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "client_success": true,
+  "agent_ran_tests": true,
+  "acceptance_sha256": "f9cdc79e3338e1be3b1b8e8c8188a6e0556dc0fb937e1932531274ed442a3e1b",
+  "guard_recoveries": 0,
+  "guard_stops": 0,
+  "acceptance": {
+    "tests": 9,
+    "failures": 0,
+    "errors": 0,
+    "passed": true
+  },
+  "public_tests_passed": true,
+  "protected_files_changed": [],
+  "changed_files": [
+    "test_currency.py",
+    "ledger\\cli.py",
+    "ledger\\currency.py",
+    "ledger\\models.py",
+    "ledger\\parser.py",
+    "ledger\\summary.py",
+    "ledger\\__init__.py"
+  ],
+  "gpu": {
+    "sample_count": 948,
+    "used_mib_max": 11545.0,
+    "free_mib_min": 547.0,
+    "temp_c_max": 89.0,
+    "power_w_max": 449.81,
+    "power_w_mean": 430.0776793248945,
+    "graphics_clock_min_mhz": 1875.0,
+    "hw_thermal_slowdown_observed": false
+  },
+  "evaluation_total_s": 242.71900000001187
+}

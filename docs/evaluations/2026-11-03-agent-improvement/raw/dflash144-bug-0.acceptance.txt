@@ -1,0 +1,10 @@
+{"tests": 4, "failures": 0, "errors": 0, "passed": true}
+test_endpoint_holiday (external_acceptance.Acceptance.test_endpoint_holiday) ... ok
+test_inclusive (external_acceptance.Acceptance.test_inclusive) ... ok
+test_reference (external_acceptance.Acceptance.test_reference) ... ok
+test_weekend (external_acceptance.Acceptance.test_weekend) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK

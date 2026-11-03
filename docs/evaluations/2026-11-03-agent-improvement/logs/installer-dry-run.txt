@@ -1,0 +1,17 @@
+{
+  "root": "C:\\AI\\bonsai",
+  "assets": [
+    {
+      "name": "ninfer-serve.exe",
+      "bytes": 820153856,
+      "sha256": "cd6be5e8ca872a1044aaab4c219be38d2787ee852429e2dd9b073e635dcf5d3f",
+      "url": "https://github.com/1314521gjy/ninfer-fusion-kvmem/releases/download/engine-v0.11.0-kvmem-20261008/ninfer-serve-86.exe"
+    },
+    {
+      "name": "Ternary-Bonsai-2-27B-ninfer-v3.ninfer",
+      "bytes": 9520051456,
+      "sha256": "cdc4810b0ff17c40d0f62cf214b6e0bcd08346e9eb05ca53371507037793c14a",
+      "url": "https://huggingface.co/WaveCut/Ternary-Bonsai-2-27B-NInfer-v3/resolve/main/Ternary-Bonsai-2-27B-ninfer-v3.ninfer"
+    }
+  ]
+}

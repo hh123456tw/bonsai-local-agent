@@ -1,0 +1,17 @@
+{
+  "repo_head": "4f5259e11f365de0c9cb158fc7621b9eaac3c291",
+  "runtime_sha256": {
+    "bonsai_proxy.py": "0fecc94f5776145da1d9b9f8bb9451a9c2dd0f6b75a2cfa5d3cb90ed5023e9f9",
+    "claude_launch.py": "48ccb67e73e8820ae979c6a92170dca3b84bd243c9ab8ebfbaaa55621359a6aa",
+    "anthropic_bridge.py": "a76ea2b09c390c02b191e7a6d6dca3c7df244452cd058203101ce888b5f7f00b"
+  },
+  "guidance_scope": "Claude Code only; OpenCode stable config unchanged",
+  "stable_profiles": {
+    "profiles\\base256.engine.json": "2e5e3e0bf4ddf89ff0e0a6768f6109d54e08b417268753fd7f675899f1398f2f",
+    "profiles\\base256.opencode.json": "16960ace5c3b3f79b32252c2390deda0e05d06c56a49a17bec2f4dbb2819ab84",
+    "profiles\\dflash128graph.engine.json": "2773886bab608f0059de0c6e5a4c6ce56899d1d6fd4680c446050dae20d8dd90",
+    "profiles\\dflash128graph.opencode.json": "d789d48630190a93d195be16ca717c0c3ebd488f309c4f9a5d29d4af947229ec",
+    "profiles\\dflash144.engine.json": "7c6b6453c1be3491e86f8f6bb172b0ea3baba53c6ae7d949a3976c2c03f50f5e",
+    "profiles\\dflash144.opencode.json": "607a5da20bdb070736041b32a8c67e874575d776725eacb1e6a7e56bbeb6fa35"
+  }
+}

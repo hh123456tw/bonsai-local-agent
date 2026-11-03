@@ -1,0 +1,16 @@
+{"tests": 10, "failures": 0, "errors": 0, "passed": true}
+test_api (external_acceptance.Acceptance.test_api) ... ok
+test_discount_reference (external_acceptance.Acceptance.test_discount_reference) ... ok
+test_edges (external_acceptance.Acceptance.test_edges) ... ok
+test_empty (external_acceptance.Acceptance.test_empty) ... ok
+test_invalid (external_acceptance.Acceptance.test_invalid) ... ok
+test_modules_preserved (external_acceptance.Acceptance.test_modules_preserved) ... ok
+test_money_api (external_acceptance.Acceptance.test_money_api) ... ok
+test_real_refactor (external_acceptance.Acceptance.test_real_refactor) ... ok
+test_reporting (external_acceptance.Acceptance.test_reporting) ... ok
+test_shipping (external_acceptance.Acceptance.test_shipping) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.002s
+
+OK

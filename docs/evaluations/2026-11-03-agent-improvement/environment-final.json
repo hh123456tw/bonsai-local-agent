@@ -1,0 +1,8 @@
+{
+  "checked_at": "2026-11-03T19:30:37.739092+08:00",
+  "client_versions": {
+    "claude": "2.1.316 (Claude Code)",
+    "opencode": "opencode v2.2.5"
+  },
+  "versions_match_start": true
+}

@@ -1,0 +1,241 @@
+{
+  "dflash144-bug-0": {
+    "tools": {
+      "Bash": 4,
+      "Read": 3,
+      "Edit": 1
+    },
+    "bash_python_c_or_heredoc": 0,
+    "bash_source_write_pattern": 0
+  },
+  "dflash144-feature-0": {
+    "tools": {
+      "Bash": 43,
+      "Read": 17,
+      "Edit": 5
+    },
+    "bash_python_c_or_heredoc": 19,
+    "bash_source_write_pattern": 15
+  },
+  "dflash144-refactor-0": {
+    "tools": {
+      "Bash": 17,
+      "Read": 10
+    },
+    "bash_python_c_or_heredoc": 9,
+    "bash_source_write_pattern": 5
+  },
+  "dflash144-bug-1": {
+    "tools": {
+      "Bash": 2,
+      "Read": 3,
+      "Edit": 1
+    },
+    "bash_python_c_or_heredoc": 0,
+    "bash_source_write_pattern": 0
+  },
+  "dflash144-feature-1": {
+    "tools": {
+      "Bash": 25,
+      "Read": 8,
+      "Edit": 9
+    },
+    "bash_python_c_or_heredoc": 12,
+    "bash_source_write_pattern": 9
+  },
+  "dflash144-refactor-1": {
+    "tools": {
+      "Bash": 54,
+      "Read": 22,
+      "malformed_tool_call": 1
+    },
+    "bash_python_c_or_heredoc": 24,
+    "bash_source_write_pattern": 13
+  },
+  "dflash144-bug-2": {
+    "tools": {
+      "Bash": 3,
+      "Read": 3,
+      "Edit": 1
+    },
+    "bash_python_c_or_heredoc": 0,
+    "bash_source_write_pattern": 0
+  },
+  "dflash144-feature-2": {
+    "tools": {
+      "Bash": 20,
+      "Read": 8,
+      "Edit": 8,
+      "Write": 1
+    },
+    "bash_python_c_or_heredoc": 9,
+    "bash_source_write_pattern": 5
+  },
+  "dflash144-refactor-2": {
+    "tools": {
+      "Bash": 31,
+      "Read": 10,
+      "Edit": 2
+    },
+    "bash_python_c_or_heredoc": 15,
+    "bash_source_write_pattern": 11
+  },
+  "graph128draft5-bug-0": {
+    "tools": {
+      "Bash": 4,
+      "Read": 4,
+      "Edit": 1
+    },
+    "bash_python_c_or_heredoc": 0,
+    "bash_source_write_pattern": 0
+  },
+  "graph128draft5-feature-0": {
+    "tools": {
+      "Bash": 19,
+      "Read": 12,
+      "Edit": 6
+    },
+    "bash_python_c_or_heredoc": 5,
+    "bash_source_write_pattern": 6
+  },
+  "graph128draft5-refactor-0": {
+    "tools": {
+      "Bash": 34,
+      "Read": 10,
+      "Write": 1
+    },
+    "bash_python_c_or_heredoc": 19,
+    "bash_source_write_pattern": 10
+  },
+  "graph128draft5-bug-1": {
+    "tools": {
+      "Bash": 2,
+      "Read": 3,
+      "Edit": 1
+    },
+    "bash_python_c_or_heredoc": 0,
+    "bash_source_write_pattern": 0
+  },
+  "graph128draft5-feature-1": {
+    "tools": {
+      "Bash": 46,
+      "Read": 12,
+      "Edit": 3
+    },
+    "bash_python_c_or_heredoc": 30,
+    "bash_source_write_pattern": 10
+  },
+  "graph128draft5-refactor-1": {
+    "tools": {
+      "Bash": 78,
+      "Write": 1
+    },
+    "bash_python_c_or_heredoc": 20,
+    "bash_source_write_pattern": 11
+  },
+  "graph128draft5-bug-2": {
+    "tools": {
+      "Bash": 3,
+      "Read": 3,
+      "Edit": 1
+    },
+    "bash_python_c_or_heredoc": 0,
+    "bash_source_write_pattern": 0
+  },
+  "graph128draft5-feature-2": {
+    "tools": {
+      "Bash": 41,
+      "Read": 10,
+      "Edit": 6
+    },
+    "bash_python_c_or_heredoc": 7,
+    "bash_source_write_pattern": 21
+  },
+  "graph128draft5-refactor-2": {
+    "tools": {
+      "Bash": 99,
+      "Read": 11
+    },
+    "bash_python_c_or_heredoc": 84,
+    "bash_source_write_pattern": 14
+  },
+  "dflash144windows-bug-0": {
+    "tools": {
+      "Bash": 2,
+      "Read": 4,
+      "Edit": 1
+    },
+    "bash_python_c_or_heredoc": 0,
+    "bash_source_write_pattern": 0
+  },
+  "dflash144windows-feature-0": {
+    "tools": {
+      "Bash": 34,
+      "Read": 8,
+      "Edit": 5
+    },
+    "bash_python_c_or_heredoc": 19,
+    "bash_source_write_pattern": 8
+  },
+  "dflash144windows-refactor-0": {
+    "tools": {
+      "Bash": 58,
+      "malformed_tool_call": 1
+    },
+    "bash_python_c_or_heredoc": 25,
+    "bash_source_write_pattern": 10
+  },
+  "dflash144windows-bug-1": {
+    "tools": {
+      "Bash": 3,
+      "Read": 3,
+      "Edit": 1
+    },
+    "bash_python_c_or_heredoc": 1,
+    "bash_source_write_pattern": 0
+  },
+  "dflash144windows-feature-1": {
+    "tools": {
+      "Bash": 24,
+      "Read": 7,
+      "Edit": 6
+    },
+    "bash_python_c_or_heredoc": 10,
+    "bash_source_write_pattern": 6
+  },
+  "dflash144windows-refactor-1": {
+    "tools": {
+      "Bash": 65,
+      "Read": 17
+    },
+    "bash_python_c_or_heredoc": 54,
+    "bash_source_write_pattern": 17
+  },
+  "dflash144windows-bug-2": {
+    "tools": {
+      "Bash": 2,
+      "Read": 4,
+      "Edit": 1
+    },
+    "bash_python_c_or_heredoc": 0,
+    "bash_source_write_pattern": 0
+  },
+  "dflash144windows-feature-2": {
+    "tools": {
+      "Bash": 15,
+      "Read": 9,
+      "Edit": 7
+    },
+    "bash_python_c_or_heredoc": 6,
+    "bash_source_write_pattern": 3
+  },
+  "dflash144windows-refactor-2": {
+    "tools": {
+      "Bash": 43,
+      "Read": 16,
+      "Edit": 7
+    },
+    "bash_python_c_or_heredoc": 26,
+    "bash_source_write_pattern": 4
+  }
+}

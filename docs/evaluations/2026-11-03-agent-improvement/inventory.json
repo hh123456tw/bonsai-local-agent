@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-03T17:49:03.174120",
+  "gpu": "name, driver_version, memory.total [MiB], memory.used [MiB], memory.free [MiB], temperature.gpu, power.draw [W]\nNVIDIA GeForce RTX 3080, 610.88, 12288 MiB, 11713 MiB, 379 MiB, 42, 141.19 W\n",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "claude": "2.1.316 (Claude Code)",
+  "opencode": "opencode v2.2.5",
+  "model": {
+    "file": "Ternary-Bonsai-2-27B-ninfer-v3.ninfer",
+    "bytes": 9520051456,
+    "sha256": "cdc4810b0ff17c40d0f62cf214b6e0bcd08346e9eb05ca53371507037793c14a"
+  },
+  "engine": {
+    "bytes": 820153856,
+    "sha256": "cd6be5e8ca872a1044aaab4c219be38d2787ee852429e2dd9b073e635dcf5d3f"
+  },
+  "stable_profile_hashes": {
+    "profiles\\base256.engine.json": "2e5e3e0bf4ddf89ff0e0a6768f6109d54e08b417268753fd7f675899f1398f2f",
+    "profiles\\base256.opencode.json": "16960ace5c3b3f79b32252c2390deda0e05d06c56a49a17bec2f4dbb2819ab84",
+    "profiles\\dflash128graph.engine.json": "2773886bab608f0059de0c6e5a4c6ce56899d1d6fd4680c446050dae20d8dd90",
+    "profiles\\dflash128graph.opencode.json": "d789d48630190a93d195be16ca717c0c3ebd488f309c4f9a5d29d4af947229ec",
+    "profiles\\dflash144.engine.json": "7c6b6453c1be3491e86f8f6bb172b0ea3baba53c6ae7d949a3976c2c03f50f5e",
+    "profiles\\dflash144.opencode.json": "607a5da20bdb070736041b32a8c67e874575d776725eacb1e6a7e56bbeb6fa35"
+  },
+  "active_options": [
+    "--model-id",
+    "bonsai2-27b",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8080",
+    "--max-context",
+    "147456",
+    "--kv-capacity",
+    "147456",
+    "--kv-dtype",
+    "rk2v4-e8",
+    "--gdn-state-fp16",
+    "--max-concurrency",
+    "1",
+    "--prefill-chunk",
+    "256",
+    "--device-snapshot-slots",
+    "1",
+    "--host-cache-mib",
+    "4096",
+    "--ngram-draft-tokens",
+    "0",
+    "--presence-penalty",
+    "0",
+    "--thinking-presence-penalty",
+    "1.0",
+    "--default-thinking-budget",
+    "1536",
+    "--default-max-tokens",
+    "16384",
+    "--use-alt-prefix-caching",
+    "--device-profile-path",
+    "C:/AI/bonsai/routes.json",
+    "--spec",
+    "dflash2",
+    "--draft-tokens",
+    "3",
+    "--no-cuda-graph"
+  ],
+  "guard_config": {
+    "max_tool_calls": null
+  },
+  "repo_commit": "4f5259e11f365de0c9cb158fc7621b9eaac3c291",
+  "slots": [
+    {
+      "id": 0,
+      "is_processing": false,
+      "n_ctx": 147456,
+      "speculative": true
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "claude-launcher": {
+    "client_exit": 0,
+    "seconds": 20.719000000011874,
+    "external_pass": true,
+    "protected_files_unchanged": true
+  },
+  "opencode": {
+    "client_exit": 0,
+    "seconds": 13.047000000020489,
+    "external_pass": true,
+    "protected_files_unchanged": true
+  }
+}

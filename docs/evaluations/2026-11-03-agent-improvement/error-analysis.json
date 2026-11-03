@@ -1,0 +1,1150 @@
+{
+  "dflash144-bug-0": {
+    "counts": {
+      "missing_file": 2
+    },
+    "examples": [
+      {
+        "category": "missing_file",
+        "tool": "Bash",
+        "first_line": "Exit code 2\nls: cannot access 'C:UserscygnuDocumentsCodex2026-11-01i7-12700k-rtx-3080-12gb-32gboutputsbonsai-agent-improvement-20261103runsdflash144-bug-0': No such file or directory"
+      },
+      {
+        "category": "missing_file",
+        "tool": "Bash",
+        "first_line": "Exit code 1\n/usr/bin/bash: line 1: cd: /Users/cygnu/Documents/Codex/2026-11-01/i7-12700k-rtx-3080-12gb-32gb/outputs/bonsai-agent-improvement-20261103/runs/dflash144-bug-0: No such file or directory"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 7,
+      "assistant:": 18,
+      "user:": 8,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144-feature-0": {
+    "counts": {
+      "permission": 3,
+      "missing_file": 3,
+      "test_or_other_command": 8,
+      "python_syntax": 3
+    },
+    "examples": [
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This Bash command contains multiple operations. The following part requires approval: find / -path /proc -prune -o -name \"ledger*\" -type d -print"
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This Bash command contains multiple operations. The following parts require approval: ls /root /home /workspace, ls ~"
+      },
+      {
+        "category": "missing_file",
+        "tool": "Read",
+        "first_line": "File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\dflash144-feature-0."
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This Bash command contains multiple operations. The following part requires approval: cd /root && find . -type f -name \"*.py\""
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "cd in '/root' was blocked. For security, Claude Code may only change directories to the allowed working directories for this session: 'C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-2"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "cd in '/root' was blocked. For security, Claude Code may only change directories to the allowed working directories for this session: 'C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-2"
+      },
+      {
+        "category": "missing_file",
+        "tool": "Read",
+        "first_line": "File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\dflash144-feature-0."
+      },
+      {
+        "category": "missing_file",
+        "tool": "Edit",
+        "first_line": "<tool_use_error>File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\dflash144-feature-0.</tool_use_error>"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 56,
+      "assistant:": 155,
+      "system:permission_denied": 10,
+      "user:": 65,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144-refactor-0": {
+    "counts": {
+      "missing_file": 1,
+      "test_or_other_command": 3
+    },
+    "examples": [
+      {
+        "category": "missing_file",
+        "tool": "Read",
+        "first_line": "File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\dflash144-refactor-0."
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Output redirection to 'C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\dflash144-refactor-0\\catalog\\money.py' needs approval. The path is inside the working directories f"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Output redirection to 'C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\dflash144-refactor-0\\catalog\\money.py' needs approval. The path is inside the working directories f"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 23,
+      "assistant:": 53,
+      "user:": 27,
+      "system:permission_denied": 3,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144-bug-1": {
+    "counts": {},
+    "examples": [],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 5,
+      "assistant:": 13,
+      "user:": 6,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144-feature-1": {
+    "counts": {
+      "missing_file": 1,
+      "test_or_other_command": 8,
+      "import": 1
+    },
+    "examples": [
+      {
+        "category": "missing_file",
+        "tool": "Read",
+        "first_line": "File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\dflash144-feature-1."
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Output redirection to 'C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\dflash144-feature-1\\ledger\\parser.py' needs approval. The path is inside the working directories fo"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "A variable in this command can't be checked before it runs"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Edit",
+        "first_line": "<tool_use_error>File has been modified since read, either by the user or by a linter. Read it again before attempting to write it.</tool_use_error>"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      },
+      {
+        "category": "import",
+        "tool": "Bash",
+        "first_line": "Exit code 1\nTraceback (most recent call last):\r\n  File \"<string>\", line 1, in <module>\r\nImportError: cannot import name 'Entry' from 'ledger' (C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-impro"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 39,
+      "assistant:": 100,
+      "user:": 42,
+      "system:permission_denied": 5,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144-refactor-1": {
+    "counts": {
+      "test_or_other_command": 9,
+      "missing_tool": 1,
+      "permission": 13
+    },
+    "examples": [
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      },
+      {
+        "category": "missing_tool",
+        "tool": "malformed_tool_call",
+        "first_line": "<tool_use_error>Error: No such tool available: malformed_tool_call</tool_use_error>"
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This Bash command contains multiple operations. The following parts require approval: cd /tmp, python3 -c '\nfrom decimal import Decimal, ROUND_HALF_UP\nprint(repr((Decimal('\\''1.005'\\'')*(1-Decimal(0)/100)).quantize(Decimal('\\''.01'\\''),roun"
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This command requires approval"
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This command requires approval"
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This Bash command contains multiple operations. The following part requires approval: which python3; which python; ls /usr/bin"
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This Bash command contains multiple operations. The following part requires approval: ls /usr/bin"
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This command requires approval"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 64,
+      "assistant:": 151,
+      "user:": 77,
+      "system:permission_denied": 21,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144-bug-2": {
+    "counts": {
+      "missing_file": 1
+    },
+    "examples": [
+      {
+        "category": "missing_file",
+        "tool": "Bash",
+        "first_line": "Exit code 2\nls: cannot access 'C:UserscygnuDocumentsCodex2026-11-01i7-12700k-rtx-3080-12gb-32gboutputsbonsai-agent-improvement-20261103runsdflash144-bug-2': No such file or directory"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 6,
+      "assistant:": 15,
+      "user:": 7,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144-feature-2": {
+    "counts": {
+      "test_or_other_command": 10,
+      "missing_tool": 1,
+      "permission": 1
+    },
+    "examples": [
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "A variable in this command can't be checked before it runs"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "A variable in this command can't be checked before it runs"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "A variable in this command can't be checked before it runs"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "A variable in this command can't be checked before it runs"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "A variable in this command can't be checked before it runs"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 33,
+      "assistant:": 73,
+      "user:": 37,
+      "system:permission_denied": 11,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144-refactor-2": {
+    "counts": {
+      "permission": 2,
+      "test_or_other_command": 4
+    },
+    "examples": [
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This Bash command contains multiple operations. The following part requires approval: find / -maxdepth 4 -type d -name \"catalog\""
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Output redirection to 'C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\dflash144-refactor-2\\catalog\\money.py' needs approval. The path is inside the working directories f"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Output redirection to 'C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\dflash144-refactor-2\\catalog\\money.py' needs approval. The path is inside the working directories f"
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This Bash command contains multiple operations. The following part requires approval: cd /home/user ; python -m unittest -v test_existing.py 2>&1"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 35,
+      "assistant:": 85,
+      "system:permission_denied": 6,
+      "user:": 43,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "graph128draft5-bug-0": {
+    "counts": {
+      "missing_file": 1,
+      "test_or_other_command": 1
+    },
+    "examples": [
+      {
+        "category": "missing_file",
+        "tool": "Bash",
+        "first_line": "Exit code 2\nls: cannot access 'C:UserscygnuDocumentsCodex2026-11-01i7-12700k-rtx-3080-12gb-32gboutputsbonsai-agent-improvement-20261103runsgraph128draft5-bug-0': No such file or directory"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "ls in '/C:/Users/cygnu/Documents/Codex/2026-11-01/i7-12700k-rtx-3080-12gb-32gb/outputs/bonsai-agent-improvement-20261103/runs/graph128draft5-bug-0' was blocked. For security, Claude Code may only list files in the allowed working directorie"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 8,
+      "assistant:": 21,
+      "user:": 9,
+      "system:permission_denied": 1,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "graph128draft5-feature-0": {
+    "counts": {
+      "missing_file": 1,
+      "test_or_other_command": 4,
+      "python_syntax": 1,
+      "permission": 1
+    },
+    "examples": [
+      {
+        "category": "missing_file",
+        "tool": "Read",
+        "first_line": "File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\graph128draft5-feature-0."
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "python_syntax",
+        "tool": "Bash",
+        "first_line": "Exit code 1\ntest_currency (unittest.loader._FailedTest.test_currency) ... ERROR\r\ntest_parse (test_existing.Tests.test_parse) ... ok\r\ntest_report_legacy (test_existing.Tests.test_report_legacy) ... ok\r\ntest_total_legacy (test_existing.Tests."
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This Bash command contains multiple operations. The following part requires approval: python3 -c '\nimport base64\ncontent = open('\\''test_currency.py'\\'','\\''rb'\\'').read()\nprint(base64.b64encode(content).decode())\n'"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Exit code 1\ntest_currency_normalized_uppercase (test_currency.CurrencyParseTests.test_currency_normalized_uppercase) ... ERROR\r\ntest_default_currency_usd (test_currency.CurrencyParseTests.test_default_currency_usd) ... ERROR\r\ntest_invalid_c"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Exit code 1\ntest_currency_normalized_uppercase (test_currency.CurrencyParseTests.test_currency_normalized_uppercase) ... ok\r\ntest_default_currency_usd (test_currency.CurrencyParseTests.test_default_currency_usd) ... ok\r\ntest_invalid_code_di"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 33,
+      "assistant:": 81,
+      "user:": 37,
+      "system:permission_denied": 3,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "graph128draft5-refactor-0": {
+    "counts": {
+      "test_or_other_command": 8,
+      "missing_tool": 1,
+      "python_syntax": 1,
+      "permission": 2
+    },
+    "examples": [
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "cd in '/home/user' was blocked. For security, Claude Code may only change directories to the allowed working directories for this session: 'C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvem"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Output redirection to 'C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\graph128draft5-refactor-0\\catalog\\money.py' needs approval. The path is inside the working director"
+      },
+      {
+        "category": "missing_tool",
+        "tool": "Write",
+        "first_line": "<tool_use_error>Error: No such tool available: Write. Write is not among the tools available here. Continue with the tools you have.</tool_use_error>"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Output redirection to 'C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\graph128draft5-refactor-0\\catalog\\money.py' needs approval. The path is inside the working director"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Exit code 1\ntest_checkout (test_existing.Tests.test_checkout) ... ok\r\ntest_discount (test_existing.Tests.test_discount) ... ok\r\ntest_invoice (test_existing.Tests.test_invoice) ... ok\r\ntest_stock (test_existing.Tests.test_stock) ... ERROR\r\n\r"
+      },
+      {
+        "category": "python_syntax",
+        "tool": "Bash",
+        "first_line": "Exit code 1\n  File \"<stdin>\", line 64\r\n    assert line_total('1.005', 3, 50) == Decimal('1.51\"), \"line_total(1.005,3,50)\" if False else None\r\n                                                 ^\r\nSyntaxError: unterminated string literal (dete"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 38,
+      "assistant:": 88,
+      "user:": 45,
+      "system:permission_denied": 8,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "graph128draft5-bug-1": {
+    "counts": {},
+    "examples": [],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 5,
+      "assistant:": 13,
+      "user:": 6,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "graph128draft5-feature-1": {
+    "counts": {
+      "test_or_other_command": 9
+    },
+    "examples": [
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "cd in '/home/user' was blocked. For security, Claude Code may only change directories to the allowed working directories for this session: 'C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvem"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "A variable in this command can't be checked before it runs"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 53,
+      "assistant:": 133,
+      "user:": 61,
+      "system:permission_denied": 8,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "graph128draft5-refactor-1": {
+    "counts": {
+      "test_or_other_command": 7,
+      "permission": 16,
+      "missing_tool": 1
+    },
+    "examples": [
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "A variable in this command can't be checked before it runs"
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This Bash command contains multiple operations. The following part requires approval: cd /home/user && python -m unittest -v 2>&1"
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This Bash command contains multiple operations. The following part requires approval: cd /home/user && python -m unittest -v 2>&1"
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This Bash command contains multiple operations. The following part requires approval: cd /home/user && python -m unittest -v 2>&1"
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This Bash command contains multiple operations. The following part requires approval: grep -rn \"discounted\\|invoice_total\\|stock_value\\|quote\\|format_total\\|checkout\\|parse_money\\|apply_discount\\|line_total\" /home/user --include=\"*.py\""
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This Bash command contains multiple operations. The following part requires approval: grep -rn \"stock_value\\|format_total\\|quote\\|checkout\\|invoice_total\" /home/user --include=\"*.py\""
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This Bash command contains multiple operations. The following part requires approval: cd /home/user && python -m unittest -v 2>&1"
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This Bash command contains multiple operations. The following part requires approval: cd /home/user && python -m unittest -v 2>&1"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 80,
+      "assistant:": 187,
+      "user:": 79,
+      "system:permission_denied": 22,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "graph128draft5-bug-2": {
+    "counts": {},
+    "examples": [],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 6,
+      "assistant:": 16,
+      "user:": 7,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "graph128draft5-feature-2": {
+    "counts": {
+      "test_or_other_command": 19,
+      "python_syntax": 2,
+      "permission": 11
+    },
+    "examples": [
+      {
+        "category": "test_or_other_command",
+        "tool": "Edit",
+        "first_line": "<tool_use_error>String to replace not found in file.\nString: import csv,io\nfrom datetime import date\nfrom decimal import Decimal\nfrom .models import Entry\ndef parse_csv(text):\n    return [Entry(account,Decimal(row['amount']),date.fromisofor"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Exit code 2\n/usr/bin/bash: -c: line 116: unexpected EOF while looking for matching `''"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Exit code 2\n/usr/bin/bash: -c: line 135: unexpected EOF while looking for matching `''"
+      },
+      {
+        "category": "python_syntax",
+        "tool": "Bash",
+        "first_line": "Exit code 2\n============================= test session starts =============================\r\nplatform win32 -- Python 3.11.9, pytest-9.1.1, pluggy-1.6.0 -- C:\\Program Files\\Python311\\python.exe\r\ncachedir: .pytest_cache\r\nrootdir: C:\\Users\\cy"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Exit code 2\n/usr/bin/bash: -c: line 143: unexpected EOF while looking for matching `''"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 51,
+      "assistant:": 133,
+      "user:": 58,
+      "system:permission_denied": 26,
+      "system:status": 4,
+      "system:compact_boundary": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "graph128draft5-refactor-2": {
+    "counts": {
+      "permission": 1,
+      "test_or_other_command": 25,
+      "python_syntax": 8
+    },
+    "examples": [
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This Bash command contains multiple operations. The following part requires approval: find / -maxdepth 6 -type d -name \"catalog\""
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "A variable in this command can't be checked before it runs"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "cd in 'C:\\' was blocked. For security, Claude Code may only change directories to the allowed working directories for this session: 'C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-202"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 104,
+      "assistant:": 252,
+      "system:permission_denied": 26,
+      "user:": 110,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144windows-bug-0": {
+    "counts": {},
+    "examples": [],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 6,
+      "assistant:": 16,
+      "user:": 7,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144windows-feature-0": {
+    "counts": {
+      "missing_file": 1,
+      "test_or_other_command": 2,
+      "python_syntax": 2
+    },
+    "examples": [
+      {
+        "category": "missing_file",
+        "tool": "Read",
+        "first_line": "File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\dflash144windows-feature-0."
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "python_syntax",
+        "tool": "Bash",
+        "first_line": "Exit code 1\ntest_currency (unittest.loader._FailedTest.test_currency) ... ERROR\r\ntest_parse (test_existing.Tests.test_parse) ... ok\r\ntest_report_legacy (test_existing.Tests.test_report_legacy) ... ok\r\ntest_total_legacy (test_existing.Tests."
+      },
+      {
+        "category": "python_syntax",
+        "tool": "Bash",
+        "first_line": "Exit code 1\ntest_currency (unittest.loader._FailedTest.test_currency) ... ERROR\r\ntest_parse (test_existing.Tests.test_parse) ... ok\r\ntest_report_legacy (test_existing.Tests.test_report_legacy) ... ok\r\ntest_total_legacy (test_existing.Tests."
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Exit code 1\ntest_currency_defaults_to_usd (test_currency.TestEntry.test_currency_defaults_to_usd) ... ok\r\ntest_entry_currency_can_be_set (test_currency.TestEntry.test_entry_currency_can_be_set) ... ok\r\ntest_empty_code_raises (test_currency."
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 44,
+      "assistant:": 103,
+      "user:": 47,
+      "system:permission_denied": 1,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144windows-refactor-0": {
+    "counts": {
+      "test_or_other_command": 14,
+      "missing_tool": 1,
+      "permission": 1,
+      "missing_file": 1
+    },
+    "examples": [
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "A variable in this command can't be checked before it runs"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      },
+      {
+        "category": "missing_tool",
+        "tool": "malformed_tool_call",
+        "first_line": "<tool_use_error>Error: No such tool available: malformed_tool_call</tool_use_error>"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Output redirection to 'C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\dflash144windows-refactor-0\\catalog\\money.py' needs approval. The path is inside the working direct"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Output redirection to 'C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\dflash144windows-refactor-0\\catalog\\money.py' needs approval. The path is inside the working direct"
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This Bash command contains multiple operations. The following parts require approval: echo \"test\", rm catalog/_probe.txt"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 55,
+      "assistant:": 146,
+      "user:": 59,
+      "system:permission_denied": 13,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144windows-bug-1": {
+    "counts": {},
+    "examples": [],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 6,
+      "assistant:": 16,
+      "user:": 7,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144windows-feature-1": {
+    "counts": {
+      "missing_file": 1,
+      "test_or_other_command": 5
+    },
+    "examples": [
+      {
+        "category": "missing_file",
+        "tool": "Edit",
+        "first_line": "<tool_use_error>File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\dflash144windows-feature-1.</tool_use_error>"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Exit code 1\ntest_default_currency_is_usd (test_currency.TestCurrencyParsing.test_default_currency_is_usd) ... ok\r\ntest_explicit_currency_normalized_uppercase (test_currency.TestCurrencyParsing.test_explicit_currency_normalized_uppercase) .."
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Exit code 1\ntest_default_currency_is_usd (test_currency.TestCurrencyParsing.test_default_currency_is_usd) ... ok\r\ntest_explicit_currency_normalized_uppercase (test_currency.TestCurrencyParsing.test_explicit_currency_normalized_uppercase) .."
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 33,
+      "assistant:": 83,
+      "user:": 37,
+      "system:permission_denied": 3,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144windows-refactor-1": {
+    "counts": {
+      "missing_file": 1,
+      "test_or_other_command": 26,
+      "permission": 1
+    },
+    "examples": [
+      {
+        "category": "missing_file",
+        "tool": "Read",
+        "first_line": "File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\dflash144windows-refactor-1."
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "A variable in this command can't be checked before it runs"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This Bash command contains multiple operations. The following parts require approval: ls /tmp, echo \"exit $?\""
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 72,
+      "assistant:": 184,
+      "user:": 82,
+      "system:permission_denied": 26
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144windows-bug-2": {
+    "counts": {},
+    "examples": [],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 6,
+      "assistant:": 16,
+      "user:": 7,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144windows-feature-2": {
+    "counts": {
+      "test_or_other_command": 2
+    },
+    "examples": [
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "A variable in this command can't be checked before it runs"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 28,
+      "assistant:": 64,
+      "user:": 31,
+      "system:permission_denied": 2,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144windows-refactor-2": {
+    "counts": {
+      "test_or_other_command": 14,
+      "missing_file": 2
+    },
+    "examples": [
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "A variable in this command can't be checked before it runs"
+      },
+      {
+        "category": "missing_file",
+        "tool": "Read",
+        "first_line": "File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\dflash144windows-refactor-2."
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Output redirection to '/tmp/verify_current.py' needs approval. The path is outside the working directories for this session ('C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\r"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Output redirection to 'C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\dflash144windows-refactor-2\\.verify_current.py' needs approval. The path is inside the working dire"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Output redirection to 'C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\dflash144windows-refactor-2\\catalog\\money.py' needs approval. The path is inside the working direct"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Output redirection to 'C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\dflash144windows-refactor-2\\catalog\\money.py' needs approval. The path is inside the working direct"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 58,
+      "assistant:": 148,
+      "user:": 66,
+      "system:permission_denied": 13,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  }
+}

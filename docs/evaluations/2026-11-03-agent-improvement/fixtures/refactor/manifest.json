@@ -1,0 +1,12 @@
+{
+  "README.md": "e3a24d26b02d3650ec3a443d1192705a0eb3d77baf009f05817647f706e53a1f",
+  "catalog/__init__.py": "b4b4800ac54581bbd0b83346d3c67aab4a30a48dea268353aee5c82a60c6e9c6",
+  "catalog/models.py": "44ba708caaa57992225c89e6dbf2cf0991a9b8524966a36521906ac616b3798f",
+  "catalog/pricing.py": "c979b0a0b7d57a40e9af519f1a1e2be4c51519df1ae80b93f61c5955a3073b05",
+  "catalog/orders.py": "4d6db6eb5f92b8afc335918cc5ca79e9ee5ac615102d0fa2803df5c5f8514975",
+  "catalog/inventory.py": "b1c6b3561e635e838edcf199398594c61753bd5f40a3b53c0a13dcbb23fcfc13",
+  "catalog/shipping.py": "28d8e2f0329b4c59fabc51e8d8d166bdeb7ff6d326f7117f05bf70a44a4c76e3",
+  "catalog/reporting.py": "f79c3c3d4ccd0628bbe3283be344bfae3615dfd89b2bb496ff147aab90e8ae40",
+  "catalog/api.py": "9f91df4a7e6f8b692f959b6ee8bd40407dd12b98bf619e6376eaebb3622671c9",
+  "test_existing.py": "d94b002a15b05f5f834afc0ed84b7349c169c55289ed5f495720429bf4bf548a"
+}

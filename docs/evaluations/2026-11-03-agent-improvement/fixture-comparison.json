@@ -1,0 +1,11 @@
+{
+  "bug/manifest.json": "f071c940fa986d74af9de562ca94dcf2411c2a6d71bc9bf3a1ef347a9ba8aebd",
+  "bug/prompt.txt": "c6eac701b5c34784baebe00829228482f6770c2f6b23076dc5cf81844e75536e",
+  "bug/acceptance.py": "d2842926ca7257e86afd0d0a25d80a519f3243386c4d52ad2bfed74292a821a9",
+  "feature/manifest.json": "e7094e05815925aa9c7fddfa9d21beca7f7fb1a91960347bede4d8972edd7195",
+  "feature/prompt.txt": "71c47b5376920508a05953539879138372e3e3d80016cce50ec2ff8691c3e398",
+  "feature/acceptance.py": "f9cdc79e3338e1be3b1b8e8c8188a6e0556dc0fb937e1932531274ed442a3e1b",
+  "refactor/manifest.json": "2461e08403cebfeca11e43698d94ad3ac2cfec996639fcc9d1b6cda6b952c0ae",
+  "refactor/prompt.txt": "014722044a73a26517b467f6bf498355f611381ab04cd1d1b4f95f370ebb51fe",
+  "refactor/acceptance.py": "70a1b21852f7f9366912fd0661b7c30caefa5843a97bb59349730ca9acc6d3d6"
+}

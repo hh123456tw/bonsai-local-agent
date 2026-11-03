@@ -1,0 +1,89 @@
+{
+  "key": "dflash144-bug-2",
+  "profile": "dflash144",
+  "task": "bug",
+  "rep": 2,
+  "prompt_sha256": "c6eac701b5c34784baebe00829228482f6770c2f6b23076dc5cf81844e75536e",
+  "guidance": "For coding tasks, identify the required behavior and compatibility constraints before editing. Inspect relevant files with Read, Glob and Grep. Prefer Edit for targeted source changes and Write for new files or complete replacements. Avoid nested Bash/python -c strings and shell heredocs for modifying source; if a helper script is necessary, create it with Write and run the file. Use Bash for running tests and other authorized commands. After an error, inspect its actual output and change the diagnosis or action instead of repeating the same failed command unchanged. Check each requested behavior, including filtering and edge cases, against tests. Preserve existing public interfaces unless the user requests a change. Run the relevant test suite and report actual failures honestly; do not claim completion while required checks fail. Follow the user's scope and tool permissions.",
+  "guidance_sha256": "bc63a2d85768674a8fd036f9afe54fd5ee252968d3a2d5b1bcef11fc4b1928c9",
+  "input_manifest": {
+    "README.md": "53808c66395799032795152d127d8470e22355707c66ab76d7ab95a40860bf88",
+    "schedule.py": "5fc8d046adb1a3f3254fd9033a3f487f9ed69e2b5b6a1253b0b92a70e292c9c1",
+    "test_existing.py": "b9eb10df93c88e4b9752330fdd02199206e9ce75b96d9576e4850ab559d6f875"
+  },
+  "passed": true,
+  "cli_exit": 0,
+  "agent_latency_s": 13.48499999998603,
+  "tool_calls": 7,
+  "consecutive_repeat_count": 0,
+  "nonconsecutive_duplicate_count": 0,
+  "tool_errors": 1,
+  "permission_denials": 0,
+  "usage": {
+    "input_tokens": 3305,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 11052,
+    "output_tokens": 2021,
+    "output_tokens_details": {
+      "thinking_tokens": 964
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "",
+    "iterations": [],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "modelUsage": {
+    "bonsai2-27b": {
+      "inputTokens": 3305,
+      "outputTokens": 2021,
+      "cacheReadInputTokens": 11052,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.07257599999999999,
+      "contextWindow": 147456,
+      "maxOutputTokens": 32000,
+      "thinkingTokens": 964,
+      "cacheCreationEphemeral5mInputTokens": 0,
+      "cacheCreationEphemeral1hInputTokens": 0,
+      "canonicalModel": "bonsai2-27b",
+      "provider": "firstParty",
+      "costBasis": "unknown"
+    }
+  },
+  "client_success": true,
+  "agent_ran_tests": true,
+  "acceptance_sha256": "d2842926ca7257e86afd0d0a25d80a519f3243386c4d52ad2bfed74292a821a9",
+  "guard_recoveries": 0,
+  "guard_stops": 0,
+  "acceptance": {
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "passed": true
+  },
+  "public_tests_passed": true,
+  "protected_files_changed": [],
+  "changed_files": [
+    "schedule.py"
+  ],
+  "gpu": {
+    "sample_count": 54,
+    "used_mib_max": 11714.0,
+    "free_mib_min": 378.0,
+    "temp_c_max": 83.0,
+    "power_w_max": 430.02,
+    "power_w_mean": 363.52,
+    "graphics_clock_min_mhz": 1800.0,
+    "hw_thermal_slowdown_observed": false
+  },
+  "evaluation_total_s": 13.687999999994645
+}

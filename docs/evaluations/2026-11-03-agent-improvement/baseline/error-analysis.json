@@ -1,0 +1,423 @@
+{
+  "dflash144-bug-0": {
+    "counts": {
+      "missing_file": 1
+    },
+    "examples": [
+      {
+        "category": "missing_file",
+        "tool": "Read",
+        "first_line": "File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-bug-0."
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 7,
+      "assistant:": 18,
+      "user:": 8,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144-feature-0": {
+    "counts": {
+      "missing_file": 3,
+      "test_or_other_command": 3,
+      "python_syntax": 2,
+      "permission": 1
+    },
+    "examples": [
+      {
+        "category": "missing_file",
+        "tool": "Edit",
+        "first_line": "<tool_use_error>File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-feature-0.</tool_use_error>"
+      },
+      {
+        "category": "missing_file",
+        "tool": "Edit",
+        "first_line": "<tool_use_error>File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-feature-0.</tool_use_error>"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Edit",
+        "first_line": "<tool_use_error>String to replace not found in file.\nString: import json\nfrom .parser import parse_csv\nfrom .summary import total, totals_by_currency\ndef render_report(text, *, by_currency=False, start=None, end=None):\n    if by_currency:\n "
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "python_syntax",
+        "tool": "Bash",
+        "first_line": "Exit code 1\n  File \"<string>\", line 3\r\n    data = b'''import unittest, json\r\n           ^\r\nSyntaxError: unterminated triple-quoted string literal (detected at line 85)"
+      },
+      {
+        "category": "python_syntax",
+        "tool": "Bash",
+        "first_line": "Exit code 1\nTraceback (most recent call last):\r\n  File \"<string>\", line 1, in <module>\r\n  File \"C:\\Program Files\\Python311\\Lib\\ast.py\", line 50, in parse\r\n    return compile(source, filename, mode, flags,\r\n           ^^^^^^^^^^^^^^^^^^^^^^^"
+      },
+      {
+        "category": "missing_file",
+        "tool": "Edit",
+        "first_line": "<tool_use_error>File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-feature-0.</tool_use_error>"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 48,
+      "assistant:": 114,
+      "user:": 52,
+      "system:permission_denied": 3,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144-refactor-0": {
+    "counts": {
+      "test_or_other_command": 6
+    },
+    "examples": [
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "A variable in this command can't be checked before it runs"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Output redirection to 'C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-refactor-0\\catalog\\money.py' needs approval. The path is inside the working directories for this"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Edit",
+        "first_line": "<tool_use_error>String to replace not found in file.\nString: from decimal import Decimal,ROUND_HALF_UP\ndef discounted(price,percent=0):\n    value=Decimal(str(price));rate=Decimal(str(percent))\n    if value<0 or not 0<=rate<=100: raise Value"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains brace with quote character (expansion obfuscation)"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Exit code 1\nTraceback (most recent call last):\r\n  File \"<string>\", line 13, in <module>\r\nAssertionError: line_total\r\nparse_money(1.005) = 1.01\r\napply_discount(1.005,10) = 0.90"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 29,
+      "assistant:": 68,
+      "user:": 29,
+      "system:permission_denied": 4,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144-bug-1": {
+    "counts": {},
+    "examples": [],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 5,
+      "assistant:": 13,
+      "user:": 6,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144-feature-1": {
+    "counts": {
+      "missing_file": 6,
+      "test_or_other_command": 4,
+      "permission": 3
+    },
+    "examples": [
+      {
+        "category": "missing_file",
+        "tool": "Edit",
+        "first_line": "<tool_use_error>File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-feature-1.</tool_use_error>"
+      },
+      {
+        "category": "missing_file",
+        "tool": "Edit",
+        "first_line": "<tool_use_error>File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-feature-1.</tool_use_error>"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Output redirection to 'C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-feature-1\\ledger\\parser.py' needs approval. The path is inside the working directories for this "
+      },
+      {
+        "category": "missing_file",
+        "tool": "Edit",
+        "first_line": "<tool_use_error>File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-feature-1.</tool_use_error>"
+      },
+      {
+        "category": "missing_file",
+        "tool": "Edit",
+        "first_line": "<tool_use_error>File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-feature-1.</tool_use_error>"
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This command requires approval"
+      },
+      {
+        "category": "missing_file",
+        "tool": "Read",
+        "first_line": "File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-feature-1."
+      },
+      {
+        "category": "missing_file",
+        "tool": "Edit",
+        "first_line": "<tool_use_error>File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-feature-1.</tool_use_error>"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 44,
+      "assistant:": 113,
+      "user:": 53,
+      "system:permission_denied": 7,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144-refactor-1": {
+    "counts": {
+      "test_or_other_command": 10,
+      "permission": 12
+    },
+    "examples": [
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "A variable in this command can't be checked before it runs"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This command requires approval"
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This command requires approval"
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This command requires approval"
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This Bash command contains multiple operations. The following part requires approval: which python3 python; ls /usr/bin"
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This command requires approval"
+      },
+      {
+        "category": "permission",
+        "tool": "Bash",
+        "first_line": "This command requires approval"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 57,
+      "assistant:": 125,
+      "user:": 56,
+      "system:permission_denied": 22,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144-bug-2": {
+    "counts": {
+      "missing_file": 4
+    },
+    "examples": [
+      {
+        "category": "missing_file",
+        "tool": "Bash",
+        "first_line": "Exit code 2\nls: cannot access 'C:UserscygnuDocumentsCodex2026-11-01i7-12700k-rtx-3080-12gb-32gboutputsbonsai-evaluation-20261103runsdflash144-bug-2': No such file or directory"
+      },
+      {
+        "category": "missing_file",
+        "tool": "Read",
+        "first_line": "File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-bug-2."
+      },
+      {
+        "category": "missing_file",
+        "tool": "Read",
+        "first_line": "File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-bug-2."
+      },
+      {
+        "category": "missing_file",
+        "tool": "Read",
+        "first_line": "File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-bug-2."
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 8,
+      "assistant:": 22,
+      "user:": 11,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144-feature-2": {
+    "counts": {
+      "missing_file": 10,
+      "test_or_other_command": 4,
+      "python_syntax": 2,
+      "permission": 5
+    },
+    "examples": [
+      {
+        "category": "missing_file",
+        "tool": "Read",
+        "first_line": "File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-feature-2."
+      },
+      {
+        "category": "missing_file",
+        "tool": "Read",
+        "first_line": "File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-feature-2."
+      },
+      {
+        "category": "missing_file",
+        "tool": "Edit",
+        "first_line": "<tool_use_error>File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-feature-2.</tool_use_error>"
+      },
+      {
+        "category": "missing_file",
+        "tool": "Edit",
+        "first_line": "<tool_use_error>File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-feature-2.</tool_use_error>"
+      },
+      {
+        "category": "missing_file",
+        "tool": "Read",
+        "first_line": "File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-feature-2."
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Output redirection to 'C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-feature-2\\ledger\\parser.py' needs approval. The path is inside the working directories for this "
+      },
+      {
+        "category": "missing_file",
+        "tool": "Edit",
+        "first_line": "<tool_use_error>File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-feature-2.</tool_use_error>"
+      },
+      {
+        "category": "missing_file",
+        "tool": "Edit",
+        "first_line": "<tool_use_error>File does not exist. Note: your current working directory is C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-feature-2.</tool_use_error>"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 59,
+      "assistant:": 125,
+      "user:": 60,
+      "system:permission_denied": 9,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  },
+  "dflash144-refactor-2": {
+    "counts": {
+      "test_or_other_command": 11,
+      "missing_file": 1
+    },
+    "examples": [
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "cd in 'C:\\tmp' was blocked. For security, Claude Code may only change directories to the allowed working directories for this session: 'C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-2026110"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Output redirection to 'C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-refactor-2\\catalog\\money.py' needs approval. The path is inside the working directories for this"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Output redirection to 'C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-evaluation-20261103\\runs\\dflash144-refactor-2\\catalog\\money.py' needs approval. The path is inside the working directories for this"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Contains backslash-escaped whitespace"
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Edit",
+        "first_line": "<tool_use_error>String to replace not found in file.\nString: from decimal import Decimal,ROUND_HALF_UP\ndef invoice_total(lines):\n    result=Decimal('0.00')\n    for row in lines:\n        qty=row['qty'];value=Decimal(str(row['price']))\n      "
+      },
+      {
+        "category": "test_or_other_command",
+        "tool": "Bash",
+        "first_line": "Newline followed by # inside a quoted argument can hide arguments from path validation"
+      }
+    ],
+    "event_kinds": {
+      "system:ui_invalidate": 1,
+      "system:init": 1,
+      "system:thinking_tokens": 39,
+      "assistant:": 107,
+      "user:": 46,
+      "system:permission_denied": 10,
+      "result:success": 1
+    },
+    "client_api_retry_events": 0,
+    "client_api_error_events": 0
+  }
+}

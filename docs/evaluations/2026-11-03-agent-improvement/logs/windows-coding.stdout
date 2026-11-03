@@ -1,0 +1,20 @@
+{"phase": "coding_start", "key": "dflash144windows-bug-0"}
+{"phase": "coding_done", "key": "dflash144windows-bug-0", "passed": true, "seconds": 13.062000000005355, "tools": 7, "errors": 0}
+{"phase": "coding_start", "key": "dflash144windows-feature-0"}
+{"phase": "coding_done", "key": "dflash144windows-feature-0", "passed": true, "seconds": 216.4529999999795, "tools": 47, "errors": 5}
+{"phase": "coding_start", "key": "dflash144windows-refactor-0"}
+{"phase": "coding_done", "key": "dflash144windows-refactor-0", "passed": true, "seconds": 281.375, "tools": 59, "errors": 17}
+{"phase": "cooldown", "profile": "dflash144windows", "temperature": 83.0}
+{"phase": "coding_start", "key": "dflash144windows-bug-1"}
+{"phase": "coding_done", "key": "dflash144windows-bug-1", "passed": true, "seconds": 11.65600000001723, "tools": 7, "errors": 0}
+{"phase": "coding_start", "key": "dflash144windows-feature-1"}
+{"phase": "coding_done", "key": "dflash144windows-feature-1", "passed": true, "seconds": 194.0789999999979, "tools": 37, "errors": 6}
+{"phase": "coding_start", "key": "dflash144windows-refactor-1"}
+{"phase": "coding_done", "key": "dflash144windows-refactor-1", "passed": false, "seconds": 480.21899999998277, "tools": null, "errors": null}
+{"phase": "coding_start", "key": "dflash144windows-bug-2"}
+{"phase": "coding_done", "key": "dflash144windows-bug-2", "passed": true, "seconds": 14.780999999988126, "tools": 7, "errors": 0}
+{"phase": "coding_start", "key": "dflash144windows-feature-2"}
+{"phase": "coding_done", "key": "dflash144windows-feature-2", "passed": true, "seconds": 157.59400000001187, "tools": 31, "errors": 2}
+{"phase": "coding_start", "key": "dflash144windows-refactor-2"}
+{"phase": "coding_done", "key": "dflash144windows-refactor-2", "passed": false, "seconds": 372.73399999999674, "tools": 66, "errors": 16}
+{"phase": "restored_original"}

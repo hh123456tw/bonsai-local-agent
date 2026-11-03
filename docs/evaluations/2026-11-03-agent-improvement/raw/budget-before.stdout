@@ -1,0 +1,1 @@
+{"requested_max_tokens": 16, "requested_thinking": false, "actual_usage": {"completion_tokens": 2048, "completion_tokens_details": {"reasoning_tokens": 63}, "prompt_tokens": 60, "prompt_tokens_details": {"cached_tokens": 0}, "total_tokens": 2108}, "seconds": 10.969, "finish_reason": "length"}

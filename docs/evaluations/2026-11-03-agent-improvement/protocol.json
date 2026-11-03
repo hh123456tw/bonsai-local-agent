@@ -1,0 +1,16 @@
+{
+  "started_at": "2026-11-03T17:47:30.655303+08:00",
+  "baseline_repo_commit": "4f5259e11f365de0c9cb158fc7621b9eaac3c291",
+  "baseline_source": "../bonsai-evaluation-20261103",
+  "main_profile": "dflash144",
+  "coding_repeats": 3,
+  "task_prompts_and_acceptance_unchanged": true,
+  "new_coding_policy": "Claude launcher append-system-prompt; controlled Bash permissions unchanged",
+  "openai_policy_changes_do_not_directly_reduce_Claude_Anthropic_output_budget": true,
+  "draft5_gate": "After daily validation; stop profile after first startup/OOM failure; keep same131072 context",
+  "baseline_runtime_sha256": {
+    "bonsai_proxy.py": "d44cf5f3e2f73117a33a6ab79f91d2e042673ebf8007f702d7c2347ac19d9325",
+    "claude_launch.py": "304271687a2b2b455089b96df0e356b7e555f529deeb42115a1c6b94b9f8bae9",
+    "anthropic_bridge.py": "a76ea2b09c390c02b191e7a6d6dca3c7df244452cd058203101ce888b5f7f00b"
+  }
+}

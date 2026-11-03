@@ -1,0 +1,1018 @@
+{
+  "passed_cases_missing_successful_test_output": [],
+  "runs": [
+    {
+      "cohort": "new",
+      "run": "dflash144-bug-0",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_86067b21765cecdd",
+          "command": "python -m unittest discover",
+          "test_count": 4,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "dflash144-feature-0",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_d68c0633c5f8540a",
+          "command": "python --version && python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 | tail -20",
+          "test_count": 3,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_2abe5a1dca1fe7fd",
+          "command": "python -m py_compile test_currency.py && echo \"COMPILE OK\" && python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 | tail -30",
+          "test_count": 22,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_eb33ad62cd6099be",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 | tail -30",
+          "test_count": 22,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_a311d17108f78496",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 | tail -8",
+          "test_count": 22,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "dflash144-refactor-0",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_65526ce69e453cfe",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 | tail -30",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_f01ab4287a214656",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 | tail -40",
+          "test_count": 20,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_00a325ed73377090",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" 2>&1 | tail -5",
+          "test_count": 20,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "dflash144-bug-1",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_e2301a56db6a8075",
+          "command": "python -m unittest discover -v 2>&1",
+          "test_count": 4,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "dflash144-feature-1",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_d4081a0b862328e8",
+          "command": "python -m unittest discover -v 2>&1 | tail -20",
+          "test_count": 3,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_5508c9b195411b9f",
+          "command": "python -m unittest discover -v 2>&1 | tail -15",
+          "test_count": 3,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_d887b8b9a07e5063",
+          "command": "python -m unittest discover -v 2>&1 | tail -35",
+          "test_count": 23,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_076b59df044626a1",
+          "command": "echo \"=== test_existing.py (must be unchanged) ===\" && cat test_existing.py && echo \"\" && echo \"=== README.md (must be unchanged) ===\" && cat README.md && echo \"\" && echo \"=== FINAL TEST RUN ===\" && python -m unittest discover 2>&1 | tail -3",
+          "test_count": 23,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "dflash144-refactor-1",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_a806964c646be6bb",
+          "command": "python -m unittest -v",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_96371dc5f389e078",
+          "command": "python -m unittest -v",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_0617d0df28286340",
+          "command": "python -m unittest -v",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_469939550282e376",
+          "command": "python -m unittest -v",
+          "test_count": 18,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_0b1b21dc986f67d4",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v",
+          "test_count": 18,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "dflash144-bug-2",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_d49258dbd12fd918",
+          "command": "python -m unittest discover 2>&1",
+          "test_count": 4,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "dflash144-feature-2",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_c6e46e3a36ebd207",
+          "command": "python --version && python -m unittest discover -v 2>&1 | tail -20",
+          "test_count": 3,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_001a2a0575cff6f8",
+          "command": "python -m unittest discover -v 2>&1 | tail -25",
+          "test_count": 18,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_e71fe24e49749d7b",
+          "command": "echo \"=== test_existing.py ===\" && cat test_existing.py && echo \"=== README.md ===\" && cat README.md && echo \"=== FINAL TEST RUN ===\" && python -m unittest discover 2>&1 | tail -5",
+          "test_count": 18,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "dflash144-refactor-2",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_184075255260b575",
+          "command": "python -m unittest -v test_existing.py 2>&1 | tail -20",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_fca611c41fed3dcb",
+          "command": "python -m unittest -v test_money.py 2>&1 | tail -20",
+          "test_count": 7,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_c8e4e0e24e02042e",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 | tail -30",
+          "test_count": 11,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_d3fa788dc050e0c3",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" 2>&1",
+          "test_count": 11,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_c02af6d494ca3a1e",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" 2>&1",
+          "test_count": 11,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "graph128draft5-bug-0",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_29085464bb574e51",
+          "command": "python -m unittest discover -v",
+          "test_count": 4,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "graph128draft5-feature-0",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_0641125b42e85328",
+          "command": "python --version && python -m unittest discover -s . -p \"test_*.py\" -v",
+          "test_count": 3,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_a79c2252f5a8581a",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v",
+          "test_count": 25,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_d439c9a7473dc4d7",
+          "command": "echo \"=== test_existing.py (must be unchanged) ===\" && cat test_existing.py && echo \"\" && echo \"=== README.md (must be unchanged) ===\" && cat README.md && echo \"\" && echo \"=== FINAL FULL TEST RUN ===\" && python -m unittest discover -s . -p \"test_*.py\" 2>&1 | tail -5",
+          "test_count": 25,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "graph128draft5-refactor-0",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_2c3064424c69e425",
+          "command": "python -m unittest test_existing -v 2>&1",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_5b96e904af99453d",
+          "command": "python -m unittest test_existing -v 2>&1",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_ebc9ce2203e70e95",
+          "command": "python -m unittest test_existing -v 2>&1 && echo \"---EDGE---\" && python edge_test.py",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_8c6a6270f66b071d",
+          "command": "python -m unittest discover -s . -p 'test_*.py' -v 2>&1",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_8cd23864e846b307",
+          "command": "python -m unittest 2>&1",
+          "test_count": 4,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "graph128draft5-bug-1",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_63409a418c8133e3",
+          "command": "python -m unittest discover -v",
+          "test_count": 4,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "graph128draft5-feature-1",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_5121e1e541a5752f",
+          "command": "python -m unittest discover -v 2>&1 | tail -20",
+          "test_count": 3,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_7f3819ca43725ced",
+          "command": "python -m unittest discover -v 2>&1 | tail -8",
+          "test_count": 3,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_4aa1d9f33aa47661",
+          "command": "python -m unittest discover -v 2>&1 | tail -8",
+          "test_count": 3,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_0f420045738c7ea3",
+          "command": "cd \"C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\graph128draft5-feature-1\" && python -m unittest discover -v 2>&1 | tail -12",
+          "test_count": 3,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_7660a48aac8a760e",
+          "command": "cd \"C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\graph128draft5-feature-1\" && python -m unittest discover -v 2>&1 | tail -40",
+          "test_count": 29,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_81043dc956446c80",
+          "command": "cd \"C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\graph128draft5-feature-1\" && python -m unittest discover -v 2>&1 | tail -8",
+          "test_count": 29,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_4af21510d1dab65a",
+          "command": "cd \"C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\graph128draft5-feature-1\" && python -m unittest discover -v 2>&1 | tail -12 && echo \"---FINAL FILE LIST---\" && ls -la ledger/",
+          "test_count": 29,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "graph128draft5-refactor-1",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_92843bccb3525755",
+          "command": "python -m unittest -v 2>&1 | tail -20",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_9f7fca33e97bd921",
+          "command": "python -m unittest -v 2>&1 | tail -8",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_f98e062fa98998d1",
+          "command": "python -m unittest -v 2>&1 | tail -8",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_2ad1be47c2e54d06",
+          "command": "python -m unittest -v 2>&1 | tail -8",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_df1598b11d000123",
+          "command": "python -m unittest -v 2>&1 | tail -8",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_c3acc08e1494bd48",
+          "command": "python -m unittest -v 2>&1 | tail -8",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_e14015c362c9e1b4",
+          "command": "python -m unittest -v 2>&1 | tail -8",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_b02954b48e51f645",
+          "command": "python -m unittest -v 2>&1 | tail -8",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_d3b162cefb025662",
+          "command": "python -m unittest -v 2>&1 | tail -8",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_57af60b874dd06e2",
+          "command": "python -m unittest -v 2>&1 | tail -8",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_b1433f97ca1ccad8",
+          "command": "python -m unittest -v 2>&1 | tail -8",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_809adc7e21219843",
+          "command": "python -m unittest -v 2>&1 | tail -8",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_e7c464f09bdb4f8a",
+          "command": "python -m unittest -v 2>&1 | tail -8",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_722eeaae22738c5e",
+          "command": "python -m unittest -v 2>&1 | tail -8",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_3e2988c5884f3248",
+          "command": "python -m unittest -v 2>&1 | tail -8",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_456fc7f22b3aa56e",
+          "command": "python -m unittest -v 2>&1 | tail -8",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_f87fafcfa85442e0",
+          "command": "python -m unittest -v 2>&1 | tail -8",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_ebfc023c1b48c784",
+          "command": "python -m unittest -v 2>&1 | tail -8",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_a4dae23f88672660",
+          "command": "python -m unittest -v 2>&1 | tail -8",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_4eac871d5c4479e8",
+          "command": "python -m unittest -v 2>&1 | tail -8",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_02ec7d7afb8f9380",
+          "command": "python -m unittest -v 2>&1 | tail -10",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_86d5c34dfa4de5ff",
+          "command": "python -m unittest discover -v 2>&1 | tail -15",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_e3e7e6440dba62b4",
+          "command": "python -m unittest discover -v 2>&1 | tail -20",
+          "test_count": 10,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "graph128draft5-bug-2",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_0017616a0a413218",
+          "command": "cd \"C:\\Users\\cygnu\\Documents\\Codex\\2026-11-01\\i7-12700k-rtx-3080-12gb-32gb\\outputs\\bonsai-agent-improvement-20261103\\runs\\graph128draft5-bug-2\" && python -m unittest discover -v 2>&1 | tail -n 15",
+          "test_count": 4,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "graph128draft5-feature-2",
+      "graded_passed": false,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_42c22479e8f54d7b",
+          "command": "python -m pytest test_existing.py -v 2>&1 || python -m unittest test_existing -v 2>&1",
+          "test_count": 3,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "graph128draft5-refactor-2",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_8b8551d63ecfcfc5",
+          "command": "python -m unittest -v 2>&1 | tail -30",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_3ce10bfa73389784",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 | tail -20",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_332cf13c2c8dff77",
+          "command": "python -m unittest -v 2>&1",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_41cb214eb38d4502",
+          "command": "python -m unittest -v 2>&1",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_da3ef5f514b176f2",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v 2>&1",
+          "test_count": 25,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_11c6cb2c99374f34",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 | tail -5",
+          "test_count": 25,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "dflash144windows-bug-0",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_b7f34826fb587afa",
+          "command": "python -m unittest discover",
+          "test_count": 4,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "dflash144windows-feature-0",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_85250f5e2ca343f1",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v",
+          "test_count": 3,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_7bac60aa3f29dc0b",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v",
+          "test_count": 3,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_eaee8f1652539465",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v",
+          "test_count": 27,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_aac020c4241a629b",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 | tail -8",
+          "test_count": 27,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_230b541870844d21",
+          "command": "python -m unittest discover",
+          "test_count": 27,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "dflash144windows-refactor-0",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_c01cf55536ae17db",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 | tail -20",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_9becdbab3412b0e8",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 | tail -20",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_300ff0193099c3da",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 | tail -30",
+          "test_count": 21,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_9ab0eefb87e784d5",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" 2>&1 | tail -8",
+          "test_count": 21,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "dflash144windows-bug-1",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_4d25ad9a07c7ce6b",
+          "command": "python -m unittest discover",
+          "test_count": 4,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "dflash144windows-feature-1",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_c9e534e881565924",
+          "command": "python -m unittest discover -v 2>&1 | tail -20",
+          "test_count": 3,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_eb48d549db889e94",
+          "command": "python -m unittest discover -v 2>&1",
+          "test_count": 15,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_21cd291be16436db",
+          "command": "python -m unittest discover 2>&1 | tail -3",
+          "test_count": 15,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "dflash144windows-refactor-1",
+      "graded_passed": false,
+      "successful_test_tool_results": []
+    },
+    {
+      "cohort": "new",
+      "run": "dflash144windows-bug-2",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_98e877e105ff87e2",
+          "command": "python -m unittest discover",
+          "test_count": 4,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "dflash144windows-feature-2",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_82f0bb5c682eec46",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 | tail -20",
+          "test_count": 3,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_13dc78e43a98603e",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 | tail -30",
+          "test_count": 3,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_7e15042df9d3d727",
+          "command": "ls -la && python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 | tail -30",
+          "test_count": 3,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_88cb471f6cc24a7d",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 | tail -35",
+          "test_count": 22,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_48bf0ddfe007db3b",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" 2>&1 | tail -3 && echo \"---\" && ls -la test_existing.py README.md && python -c \"from ledger import parse_csv, total, render_report; from ledger.summary import totals_by_currency; print('exports OK')\"",
+          "test_count": 22,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "new",
+      "run": "dflash144windows-refactor-2",
+      "graded_passed": false,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_832b576aa8220dc6",
+          "command": "python -m unittest discover -v 2>&1 | tail -30",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_3fb1ad7d15219f53",
+          "command": "python -m unittest discover -v 2>&1 | tail -20",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_20a1d0b2f39fe7b3",
+          "command": "python -m unittest discover -v 2>&1 | tail -20",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_6667f02e3f7d268e",
+          "command": "python -m unittest discover -v 2>&1 | tail -15",
+          "test_count": 4,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "baseline",
+      "run": "dflash144-bug-0",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_a75fa171136a593d",
+          "command": "python -m unittest discover",
+          "test_count": 4,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "baseline",
+      "run": "dflash144-feature-0",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_4b177d1d5d0a1561",
+          "command": "python -m pytest test_existing.py -q 2>&1 | tail -5 || python -m unittest -v 2>&1 | tail -5",
+          "test_count": 3,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_70880ba6e3a22fb1",
+          "command": "python -m pytest test_existing.py -q",
+          "test_count": 3,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_565633b038c91968",
+          "command": "python -c \"import ast; ast.parse(open('test_currency.py').read()); print('syntax OK')\" && python -m pytest test_currency.py test_existing.py -v 2>&1 | tail -30",
+          "test_count": 14,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_0e7e415a2765bf91",
+          "command": "python -m pytest test_currency.py test_existing.py -v 2>&1 | tail -30",
+          "test_count": 15,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_428406e7ff76662b",
+          "command": "python -m pytest test_currency.py test_existing.py -v 2>&1 | tail -30",
+          "test_count": 16,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_2203ddf969ed661e",
+          "command": "python -m pytest test_currency.py test_existing.py -v 2>&1 | tail -30",
+          "test_count": 17,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_b2971475cbfbeb87",
+          "command": "python -m pytest test_currency.py test_existing.py -q 2>&1 | tail -3",
+          "test_count": 17,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "baseline",
+      "run": "dflash144-refactor-0",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_f867ab7eaf09fcdd",
+          "command": "python -m unittest -v 2>&1 | tail -20",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_d09cb0567a070887",
+          "command": "python -m unittest -v 2>&1 | tail -15",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_8a9a03346b537c58",
+          "command": "python -m unittest discover -v 2>&1 | tail -15",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_55ddb25dee468892",
+          "command": "python -c \"\nimport ast\nfor f in ['catalog/orders.py','catalog/inventory.py','catalog/pricing.py','catalog/money.py']:\n    ast.parse(open(f).read())\nprint('all parse OK')\n\" && python -m unittest discover -v 2>&1 | tail -8",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_c9c281ec008ca6a8",
+          "command": "python -m unittest discover -v 2>&1",
+          "test_count": 4,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "baseline",
+      "run": "dflash144-bug-1",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_ec551ead8b10e0fa",
+          "command": "python -m unittest discover",
+          "test_count": 4,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "baseline",
+      "run": "dflash144-feature-1",
+      "graded_passed": false,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_8b6af3828f4ad159",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 | tail -20",
+          "test_count": 3,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_4afa5e3f08f2dafb",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 | tail -30",
+          "test_count": 24,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_a45c81619b460b6f",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" 2>&1 | tail -5",
+          "test_count": 24,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_92e6b5aea3bdf1a2",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" 2>&1 | tail -3",
+          "test_count": 24,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_854c1b6f7b1dde1e",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" 2>&1 | tail -3",
+          "test_count": 24,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "baseline",
+      "run": "dflash144-refactor-1",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_4b5619240da9ada3",
+          "command": "python -m unittest test_existing -v",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_766a575aa0bb1ac8",
+          "command": "python -m unittest test_existing -v",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_ac9fc1e2b77c7bb7",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 | tail -20; echo \"---\"; ls catalog/",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_ab0330caa0b9432e",
+          "command": "python -m unittest test_existing -v",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_6f8217f7cc36088e",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 | tail -8",
+          "test_count": 4,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "baseline",
+      "run": "dflash144-bug-2",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_702a26aa7ae4647f",
+          "command": "python -m unittest discover",
+          "test_count": 4,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "baseline",
+      "run": "dflash144-feature-2",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_fef443104d34127b",
+          "command": "python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 | tail -45",
+          "test_count": 22,
+          "successful_test_output_present": true
+        }
+      ]
+    },
+    {
+      "cohort": "baseline",
+      "run": "dflash144-refactor-2",
+      "graded_passed": true,
+      "successful_test_tool_results": [
+        {
+          "tool_id": "toolu_d56a81e5844edf88",
+          "command": "cat catalog/inventory.py && echo \"===RUN===\" && python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 | tail -40",
+          "test_count": 4,
+          "successful_test_output_present": true
+        },
+        {
+          "tool_id": "toolu_82f5f09282332bce",
+          "command": "echo \"=== Running complete unittest suite ===\" && python -m unittest discover -s . -p \"test_*.py\" -v 2>&1 && echo \"\" && echo \"=== Confirming test_existing.py and README.md unchanged ===\" && md5sum test_existing.py README.md 2>/dev/null || echo \"(md5 unavailable, checking content)\" && echo \"--- test_existing.py ---\" && cat test_existing.py && echo \"--- README.md ---\" && cat README.md",
+          "test_count": 4,
+          "successful_test_output_present": true
+        }
+      ]
+    }
+  ]
+}

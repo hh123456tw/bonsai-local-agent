@@ -23,3 +23,5 @@ claude-home/
 # Synthetic evaluation evidence only; personal runtime logs remain excluded.
 !/docs/evaluations/2026-11-03/**/*.jsonl
 !/docs/evaluations/2026-11-03/**/*.log
+!/docs/evaluations/2026-11-03-agent-improvement/**/*.jsonl
+!/docs/evaluations/2026-11-03-agent-improvement/**/*.log

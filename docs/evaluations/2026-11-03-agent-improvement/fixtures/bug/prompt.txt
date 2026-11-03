@@ -1,0 +1,1 @@
+Fix the bug in business_days so the documented inclusive endpoint contract is met. Read the code, make the smallest correct change, and actually run python -m unittest discover. Do not modify test_existing.py or README.md. Do not install dependencies. Report what changed and the actual test result.

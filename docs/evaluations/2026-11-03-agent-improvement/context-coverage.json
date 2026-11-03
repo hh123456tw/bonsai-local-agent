@@ -1,0 +1,22 @@
+{
+  "dflash144": {
+    "max_single_input_tokens": 41754,
+    "cached_input_fraction": 0.9414348930459926,
+    "compaction_events": {},
+    "api_retry_events": 0
+  },
+  "dflash144windows": {
+    "max_single_input_tokens": 32907,
+    "cached_input_fraction": 0.9559865796186521,
+    "compaction_events": {},
+    "api_retry_events": 0
+  },
+  "graph128draft5": {
+    "max_single_input_tokens": 73812,
+    "cached_input_fraction": 0.9335568199986429,
+    "compaction_events": {
+      "system:compact_boundary": 1
+    },
+    "api_retry_events": 0
+  }
+}

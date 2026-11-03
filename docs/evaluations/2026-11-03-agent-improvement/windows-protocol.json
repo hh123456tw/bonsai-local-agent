@@ -1,0 +1,8 @@
+{
+  "registered_at": "2026-11-03T18:12:58.743291+08:00",
+  "change": "Only the appended system guidance adds concrete Windows/python/project-CWD rules; user task, permissions, tests and engine settings unchanged",
+  "guidance": "Local Windows coding environment: Bash already starts in the selected project directory. Use the Python command python, not python3. Do not probe /tmp, /usr/bin or Unix interpreter locations. Run tests as a standalone command such as python -m unittest discover; do not prepend cd or chain unrelated shell commands. Use Glob to find the real project files, then Read them; do not guess a src/ layout. Use Edit for targeted code changes and Write for new files or complete replacements. Avoid modifying code through nested python -c strings or shell heredocs; create a helper with Write if necessary, then run python helper.py. Read error output and change the failing action instead of repeating it unchanged. Check every requested behavior and compatibility requirement, including filters and rounding. Run the test suite and report actual results honestly. Respect the user's scope, protected files and tool permissions.",
+  "profile": "dflash144windows is a byte-identical experimental copy of dflash144",
+  "repeats": 3,
+  "promotion_rule": "Prefer higher verified completion count; if tied require >=10% lower failure-inclusive seconds/success to replace current choice. If no guidance variant improves historical completion or >=10% task time, retain the original launcher behavior. Small n is not statistical certification."
+}

@@ -1,0 +1,15 @@
+{"tests": 9, "failures": 0, "errors": 0, "passed": true}
+test_authored_tests (external_acceptance.Acceptance.test_authored_tests) ... ok
+test_bounds (external_acceptance.Acceptance.test_bounds) ... ok
+test_defaults (external_acceptance.Acceptance.test_defaults) ... ok
+test_invalid (external_acceptance.Acceptance.test_invalid) ... ok
+test_legacy (external_acceptance.Acceptance.test_legacy) ... ok
+test_parse (external_acceptance.Acceptance.test_parse) ... ok
+test_pending (external_acceptance.Acceptance.test_pending) ... ok
+test_report (external_acceptance.Acceptance.test_report) ... ok
+test_sum (external_acceptance.Acceptance.test_sum) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.003s
+
+OK

@@ -1,0 +1,25 @@
+{"tests": 10, "failures": 1, "errors": 0, "passed": false}
+test_api (external_acceptance.Acceptance.test_api) ... ok
+test_discount_reference (external_acceptance.Acceptance.test_discount_reference) ... ok
+test_edges (external_acceptance.Acceptance.test_edges) ... ok
+test_empty (external_acceptance.Acceptance.test_empty) ... ok
+test_invalid (external_acceptance.Acceptance.test_invalid) ... ok
+test_modules_preserved (external_acceptance.Acceptance.test_modules_preserved) ... ok
+test_money_api (external_acceptance.Acceptance.test_money_api) ... FAIL
+test_real_refactor (external_acceptance.Acceptance.test_real_refactor) ... ok
+test_reporting (external_acceptance.Acceptance.test_reporting) ... ok
+test_shipping (external_acceptance.Acceptance.test_shipping) ... ok
+
+======================================================================
+FAIL: test_money_api (external_acceptance.Acceptance.test_money_api)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\outputs\bonsai-agent-improvement-20261103\fixtures\refactor\acceptance.py", line 12, in test_money_api
+    self.assertEqual(parse_money('1.005'),Decimal('1.01'));self.assertEqual(apply_discount('10',25),Decimal('7.50'));self.assertEqual(line_total('1.005',3),Decimal('3.03'))
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Decimal('1.005') != Decimal('1.01')
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.002s
+
+FAILED (failures=1)

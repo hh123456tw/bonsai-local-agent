@@ -23,6 +23,8 @@
 <p class="eyebrow">簡明報告 · 2026.11.03 · i7-12700K / RTX 3080 12GB / RAM 32GB</p>
 <h1>本機 Agent 已接好，<br><span>日常先用 DFlash 144K。</span></h1>
 <p class="lead">目前可用 Claude Code 或 OpenCode 操作專案，由本機 Bonsai 27B 回答。已完成防循環橋接、桌面啟動與實際改檔驗證；長文正確性仍有限制。</p>
+<div class="box" id="improvement-results" style="margin-top:24px"><p class="eyebrow">API與Coding改善 · 2026.11.03</p><h3>保留144K日常版，採用通用改檔指引</h3><p>OpenAI要求16 token並關思考的案例，現在實際生成16 token，約0.42秒；先前生成2048 token、約11秒。日常輸出預設仍為16384，思考1536；工具JSON不足或無效會明確回報，權限與防循環保留。</p><div class="tablewrap"><table><thead><tr><th>比較組</th><th>完成</th><th>含失敗秒／成功件</th></tr></thead><tbody><tr><td>歷史144K控制</td><td>8/9</td><td>154</td></tr><tr><td>144K＋通用指引（採用）</td><td>9/9</td><td>160</td></tr><tr><td>144K＋Windows指引（不採用）</td><td>7/9</td><td>250</td></tr><tr><td>128K Graph／Draft5＋通用指引（實驗）</td><td>8/9</td><td>226</td></tr></tbody></table></div><p class="caption">三種Python任務各重複三次。新組27次與歷史控制分開；小樣本、分時測試，不能當成通用準確率或單一參數因果證明。完成件數較好，尚未證明整體Coding速度提升。Draft5逾時任務含一次約74秒的客戶端壓縮。</p><p>已確認原Claude啟動器與OpenCode可完成實際改檔驗收。<b>照原桌面捷徑新開Claude Code即可使用通用指引</b>，模型仍是144K／Graph關／draft3；不必改環境變數。<a href="evaluations/2026-11-03-agent-improvement/REPORT.md">完整報告、CSV與原始證據</a>。</p></div>
+
 <div class="notice"><b>2026/11/03 API修正：</b>OpenAI明確要求16 token及關閉思考，現在會維持該上限，不再生成2048 token；截斷或無效的工具JSON不放行。新開的本機Claude Code追加Edit／Write優先的改檔指引，權限及防循環保留。<a href="api-budget.zh-TW.md">預算規則與使用方式</a>。<br><b>完整基準：</b>上一輪144K完成8/9、128K Graph完成6/9；極速Draft5只列實驗候選，日常先維持144K。<a href="evaluations/2026-11-03/REPORT.md">218樣本Benchmark與Coding報告</a>。下方較早測速與單次任務紀錄保留為歷史資料，不混算。</div>
 <div class="report-flow"><b>工作流程：</b>你提出任務 → CLI 整理資料 → 橋接檢查 → 模型判斷 → CLI 依授權讀檔／改檔／測試 → 結果回模型。</div>
 <h2>目前完成了什麼？</h2>

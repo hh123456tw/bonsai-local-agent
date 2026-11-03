@@ -1,0 +1,40 @@
+{
+  "decided_at": "2026-11-03T19:19:40.950319+08:00",
+  "selected": "generic",
+  "criterion": "Completion count first; tied variants need >=10% lower failure-inclusive seconds/success to replace current selection",
+  "statistics": {
+    "baseline": {
+      "measured": 9,
+      "not_tested": 0,
+      "passes": 8,
+      "total_seconds": 1235.6260000000184,
+      "seconds_per_success": 154.4532500000023,
+      "tool_calls": 321,
+      "tool_errors": 88
+    },
+    "generic": {
+      "measured": 9,
+      "not_tested": 0,
+      "passes": 9,
+      "total_seconds": 1441.4070000000065,
+      "seconds_per_success": 160.15633333333406,
+      "tool_calls": 312,
+      "tool_errors": 75
+    },
+    "windows": {
+      "measured": 9,
+      "not_tested": 0,
+      "passes": 7,
+      "total_seconds": 1751.9539999999688,
+      "seconds_per_success": 250.2791428571384,
+      "tool_calls": 343,
+      "tool_errors": 74
+    }
+  },
+  "small_sample_and_adaptive_guidance_not_heldout_certification": true,
+  "engine_profile": "dflash144 unchanged",
+  "applied": true,
+  "launcher_sha256": "48ccb67e73e8820ae979c6a92170dca3b84bd243c9ab8ebfbaaa55621359a6aa",
+  "default_guidance": true,
+  "bridge_unchanged": true
+}

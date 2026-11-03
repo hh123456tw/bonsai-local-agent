@@ -1,0 +1,60 @@
+{
+  "finished_at": "2026-11-03T19:22:50.684107+08:00",
+  "implementation_commit": "3ab5cc687e6ba82feef4be694e80f710d12009a3",
+  "model_sha256": "cdc4810b0ff17c40d0f62cf214b6e0bcd08346e9eb05ca53371507037793c14a",
+  "engine_sha256": "cd6be5e8ca872a1044aaab4c219be38d2787ee852429e2dd9b073e635dcf5d3f",
+  "stable_profiles_unchanged": true,
+  "guard_config_unchanged": true,
+  "original_engine_options_restored": true,
+  "actual_running_options_match": true,
+  "engine_pid": 39048,
+  "engine_log": "C:\\AI\\bonsai\\engine.log",
+  "health": {
+    "status": "ok",
+    "service": "bonsai-guard",
+    "max_tool_calls": null,
+    "busy": false
+  },
+  "guidance_selection": "generic",
+  "runtime_sha256": {
+    "bonsai_proxy.py": "0fecc94f5776145da1d9b9f8bb9451a9c2dd0f6b75a2cfa5d3cb90ed5023e9f9",
+    "claude_launch.py": "48ccb67e73e8820ae979c6a92170dca3b84bd243c9ab8ebfbaaa55621359a6aa",
+    "anthropic_bridge.py": "a76ea2b09c390c02b191e7a6d6dca3c7df244452cd058203101ce888b5f7f00b"
+  },
+  "fixture_graders_and_prompts_intact": true,
+  "measured_coding_runs": 27,
+  "not_tested_coding_runs": 0,
+  "group_counts": {
+    "dflash144:bug": 3,
+    "dflash144:feature": 3,
+    "dflash144:refactor": 3,
+    "graph128draft5:bug": 3,
+    "graph128draft5:feature": 3,
+    "graph128draft5:refactor": 3,
+    "dflash144windows:bug": 3,
+    "dflash144windows:feature": 3,
+    "dflash144windows:refactor": 3
+  },
+  "checks": {
+    "unit-tests": "passed",
+    "installer-dry-run": "passed"
+  },
+  "client_validation": {
+    "claude-launcher": {
+      "client_exit": 0,
+      "seconds": 20.719000000011874,
+      "external_pass": true,
+      "protected_files_unchanged": true
+    },
+    "opencode": {
+      "client_exit": 0,
+      "seconds": 13.047000000020489,
+      "external_pass": true,
+      "protected_files_unchanged": true
+    }
+  },
+  "no_model_or_dependency_download": true,
+  "dependency_attempts_blocked_before_execution": 1,
+  "no_new_harness_installed": true,
+  "no_web_publication": true
+}

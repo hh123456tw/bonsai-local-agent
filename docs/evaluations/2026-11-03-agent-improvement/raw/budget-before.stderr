@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "C:\Users\cygnu\Documents\Codex\2026-11-01\i7-12700k-rtx-3080-12gb-32gb\work\repro_bonsai_budget.py", line 8, in <module>
+    assert n<=16,f'Output cap ignored: requested16, actual{n}'
+           ^^^^^
+AssertionError: Output cap ignored: requested16, actual2048

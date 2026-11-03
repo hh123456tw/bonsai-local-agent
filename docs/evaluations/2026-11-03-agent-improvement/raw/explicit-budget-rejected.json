@@ -1,0 +1,16 @@
+{
+  "requested": {
+    "max_tokens": 512,
+    "enable_thinking": true,
+    "thinking_budget": 64
+  },
+  "status": 400,
+  "response": {
+    "error": {
+      "code": null,
+      "message": "thinking_budget must be at least 1024 when set",
+      "param": "thinking_budget",
+      "type": "invalid_request_error"
+    }
+  }
+}

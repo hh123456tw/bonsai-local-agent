@@ -1,0 +1,21 @@
+{"phase": "coding_start", "key": "dflash144-bug-0"}
+{"phase": "coding_done", "key": "dflash144-bug-0", "passed": true, "seconds": 14.421999999991385, "tools": 8, "errors": 2}
+{"phase": "coding_start", "key": "dflash144-feature-0"}
+{"phase": "coding_done", "key": "dflash144-feature-0", "passed": true, "seconds": 320.85899999999674, "tools": 65, "errors": 17}
+{"phase": "coding_start", "key": "dflash144-refactor-0"}
+{"phase": "coding_done", "key": "dflash144-refactor-0", "passed": true, "seconds": 95.34299999999348, "tools": 27, "errors": 4}
+{"phase": "cooldown", "profile": "dflash144", "temperature": 82.0}
+{"phase": "coding_start", "key": "dflash144-bug-1"}
+{"phase": "coding_done", "key": "dflash144-bug-1", "passed": true, "seconds": 9.187999999994645, "tools": 6, "errors": 0}
+{"phase": "coding_start", "key": "dflash144-feature-1"}
+{"phase": "coding_done", "key": "dflash144-feature-1", "passed": true, "seconds": 183.7970000000205, "tools": 42, "errors": 10}
+{"phase": "coding_start", "key": "dflash144-refactor-1"}
+{"phase": "coding_done", "key": "dflash144-refactor-1", "passed": true, "seconds": 338.9690000000119, "tools": 77, "errors": 23}
+{"phase": "cooldown", "profile": "dflash144", "temperature": 87.0}
+{"phase": "coding_start", "key": "dflash144-bug-2"}
+{"phase": "coding_done", "key": "dflash144-bug-2", "passed": true, "seconds": 13.48499999998603, "tools": 7, "errors": 1}
+{"phase": "coding_start", "key": "dflash144-feature-2"}
+{"phase": "coding_done", "key": "dflash144-feature-2", "passed": true, "seconds": 230.46900000001187, "tools": 37, "errors": 12}
+{"phase": "coding_start", "key": "dflash144-refactor-2"}
+{"phase": "coding_done", "key": "dflash144-refactor-2", "passed": true, "seconds": 225.48399999999674, "tools": 43, "errors": 6}
+{"phase": "restored_original"}

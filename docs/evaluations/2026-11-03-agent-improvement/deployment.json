@@ -1,0 +1,13 @@
+{
+  "deployment": "passed",
+  "bridge_pid": 39624,
+  "engine_restarted": false,
+  "stable_profiles_modified": false,
+  "health": {
+    "status": "ok",
+    "service": "bonsai-guard",
+    "max_tool_calls": null,
+    "busy": false
+  },
+  "backup": "rollback\\1793699491814809000"
+}

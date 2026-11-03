@@ -1,0 +1,21 @@
+{"phase": "coding_start", "key": "graph128draft5-bug-0"}
+{"phase": "coding_done", "key": "graph128draft5-bug-0", "passed": true, "seconds": 12.328000000008615, "tools": 9, "errors": 2}
+{"phase": "coding_start", "key": "graph128draft5-feature-0"}
+{"phase": "coding_done", "key": "graph128draft5-feature-0", "passed": true, "seconds": 145.65700000000652, "tools": 37, "errors": 7}
+{"phase": "coding_start", "key": "graph128draft5-refactor-0"}
+{"phase": "coding_done", "key": "graph128draft5-refactor-0", "passed": true, "seconds": 130.73399999999674, "tools": 45, "errors": 12}
+{"phase": "cooldown", "profile": "graph128draft5", "temperature": 88.0}
+{"phase": "coding_start", "key": "graph128draft5-bug-1"}
+{"phase": "coding_done", "key": "graph128draft5-bug-1", "passed": true, "seconds": 8.094000000011874, "tools": 6, "errors": 0}
+{"phase": "coding_start", "key": "graph128draft5-feature-1"}
+{"phase": "coding_done", "key": "graph128draft5-feature-1", "passed": true, "seconds": 242.42199999999139, "tools": 61, "errors": 9}
+{"phase": "coding_start", "key": "graph128draft5-refactor-1"}
+{"phase": "coding_done", "key": "graph128draft5-refactor-1", "passed": true, "seconds": 320.9530000000086, "tools": 79, "errors": 24}
+{"phase": "cooldown", "profile": "graph128draft5", "temperature": 88.0}
+{"phase": "coding_start", "key": "graph128draft5-bug-2"}
+{"phase": "coding_done", "key": "graph128draft5-bug-2", "passed": true, "seconds": 11.5, "tools": 7, "errors": 0}
+{"phase": "coding_start", "key": "graph128draft5-feature-2"}
+{"phase": "coding_done", "key": "graph128draft5-feature-2", "passed": false, "seconds": 480.125, "tools": null, "errors": null}
+{"phase": "coding_start", "key": "graph128draft5-refactor-2"}
+{"phase": "coding_done", "key": "graph128draft5-refactor-2", "passed": true, "seconds": 443.7190000000119, "tools": 110, "errors": 34}
+{"phase": "restored_original"}

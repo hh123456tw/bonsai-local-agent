@@ -1,0 +1,6 @@
+{
+  "pilot_run": "dflash128graph-refactor-0",
+  "reason": "parse_money new-helper rounding contract was ambiguous in initial prompt; original score 9/10 preserved; explicit requirement added before remaining refactor runs",
+  "formal_extra_command": "python scripts/coding.py --profiles dflash128graph --reps 1 --tasks refactor --rep-offset 3",
+  "grading_changed": false
+}
