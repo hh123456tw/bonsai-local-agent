@@ -6,6 +6,13 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 ROOT=pathlib.Path(__file__).resolve().parent
 UPSTREAM='http://127.0.0.1:8080'
 LOCK=threading.Lock()
+MAX_OUTPUT=32768
+MAX_THINKING=1536
+ANSWER_RESERVE=256
+
+class UpstreamOutputError(RuntimeError):
+    def __init__(self,code,message):
+        super().__init__(message);self.code=code
 
 def tool_limit():
     path=ROOT/'guard-config.json'
@@ -24,17 +31,51 @@ def recent_calls(messages):
     last_user=max((i for i,m in enumerate(messages) if m.get('role')=='user'),default=0)
     return [c for m in messages[last_user:] for c in m.get('tool_calls',[])]
 def prepare(body):
+    if not isinstance(body,dict) or not isinstance(body.get('messages'),list) or not body['messages'] or not all(isinstance(m,dict) for m in body['messages']):
+        raise anthropic.ProtocolError('messages must be a non-empty array of objects')
     b=copy.deepcopy(body)
     for m in b.get('messages',[]):
         for field in ('reasoning_content','reasoning','reasoning_text'):m.pop(field,None)
     b['preserve_thinking']=False
-    b['enable_thinking']=True
-    b['thinking_budget']=1536
-    b['max_tokens']=min(max(int(b.get('max_tokens') or b.get('max_completion_tokens') or 16384),2048),32768)
+    limits=[b[k] for k in ('max_tokens','max_completion_tokens') if k in b]
+    if any(not isinstance(v,int) or isinstance(v,bool) or not 1<=v<=MAX_OUTPUT for v in limits):
+        raise anthropic.ProtocolError(f'max_tokens/max_completion_tokens must be an integer from 1 to {MAX_OUTPUT}')
+    if len(limits)==2 and limits[0]!=limits[1]:
+        raise anthropic.ProtocolError('max_tokens and max_completion_tokens must agree when both are supplied')
+    limit=limits[0] if limits else 16384
+    enabled=b.get('enable_thinking')
+    if 'enable_thinking' in b and not isinstance(enabled,bool):
+        raise anthropic.ProtocolError('enable_thinking must be a boolean')
+    budget=b.get('thinking_budget')
+    if 'thinking_budget' in b:
+        if not isinstance(budget,int) or isinstance(budget,bool) or not 0<=budget<=MAX_THINKING:
+            raise anthropic.ProtocolError(f'thinking_budget must be an integer from 0 to {MAX_THINKING}')
+        if enabled is None:enabled=budget>0
+    if enabled is None:enabled=limit>=1280
+    if enabled:
+        if budget is None:budget=min(MAX_THINKING,limit-ANSWER_RESERVE)
+        if budget<1024 or budget+ANSWER_RESERVE>limit:
+            raise anthropic.ProtocolError('This engine needs thinking_budget >=1024 plus at least 256 output tokens; increase max_tokens, use a valid thinking_budget or set enable_thinking=false')
+    else:budget=0
+    b['enable_thinking']=enabled
+    b['thinking_budget']=budget
+    b['max_tokens']=limit
     b.pop('max_completion_tokens',None)
     b['stream']=False;b.pop('stream_options',None)
     b.setdefault('temperature',0.3)
     return b
+
+def validate_tool_calls(calls):
+    if not isinstance(calls,list):raise UpstreamOutputError('invalid_tool_arguments','Upstream tool_calls must be an array; no tool was delivered')
+    for call in calls:
+        function=call.get('function') if isinstance(call,dict) else None
+        if not isinstance(function,dict) or not isinstance(function.get('name'),str) or not function['name']:
+            raise UpstreamOutputError('invalid_tool_arguments','Upstream tool function is invalid; no tool was delivered')
+        try:
+            args=function.get('arguments')
+            if not isinstance(args,str) or not isinstance(json.loads(args),dict):raise ValueError('Tool input must be an object')
+        except (ValueError,TypeError):
+            raise UpstreamOutputError('invalid_tool_arguments','Upstream tool arguments are incomplete or invalid JSON; no tool was delivered. Check the output budget before retrying.')
 def event(kind,**fields):
     with (ROOT/'guard-events.jsonl').open('a',encoding='utf-8') as f:
         f.write(json.dumps({'time':time.time(),'kind':kind,**fields})+'\n')
@@ -57,11 +98,17 @@ def generate(body,anthropic_mode=False):
         with urllib.request.urlopen(req,timeout=900) as r:result=json.load(r)
         view=anthropic.openai_view(result) if anthropic_mode else result
         choice=view['choices'][0];msg=choice['message'];new=msg.get('tool_calls') or []
+        if choice.get('finish_reason')=='length':
+            event('output_truncated',limit=b['max_tokens'],tool_calls=len(new))
+            if new:
+                raise UpstreamOutputError('tool_output_truncated','Upstream tool output reached the requested token limit; no tool in this batch was delivered. Retry with an explicitly larger output budget.')
+            # A truncated empty answer is an exhausted budget, not a loop.
+            # Preserve the client's limit and finish reason instead of retrying.
+            return result
+        validate_tool_calls(new)
         if limit is not None and len(calls)+len(new)>limit:
             event('tool_budget_batch_stop',calls=len(calls),proposed=len(new),limit=limit)
             return finish_stopped(f'已暫停：本輪已記錄 {len(calls)} 次工具呼叫，模型一次提出 {len(new)} 次，將超過橋接上限 {limit} 次；這批工具未放行。任務未完成。請輸入「繼續，先檢查目前進度，再處理剩餘工作」後接續。')
-        if choice.get('finish_reason')=='length':
-            event('output_truncated',limit=b['max_tokens'],tool_calls=len(new))
         repeated=bool(new) and any(history[-2:]==[signature(c)]*2 for c in new)
         empty=not new and not (msg.get('content') or '').strip()
         if not repeated and not empty:
@@ -73,7 +120,7 @@ def generate(body,anthropic_mode=False):
         b['messages'].append({'role':'user','content':('The identical tool call already ran twice and returned no progress. Do not repeat it. Inspect the prior tool outputs, change your diagnosis and use a DIFFERENT concrete action to solve the task. If you cannot proceed, explain the actual blocker honestly.' if repeated else 'Your previous attempt produced no usable answer. Stop extended reasoning and deliver the requested answer or one concrete tool action now.')})
         if anthropic_mode:
             if b['thinking']['type']=='enabled':b['thinking']['budget_tokens']=1024
-        else:b['thinking_budget']=1024
+        else:b['thinking_budget']=min(b['thinking_budget'],1024) if b['enable_thinking'] else 0
         b['temperature']=0.5
 class Handler(BaseHTTPRequestHandler):
     def log_message(self,*args):pass
@@ -82,7 +129,7 @@ class Handler(BaseHTTPRequestHandler):
         if getattr(self,'request_id',None):self.send_header('request-id',self.request_id)
         self.end_headers();self.wfile.write(data)
     def do_GET(self):
-        if self.path in ('/health','/healthz'):return self.send_json(200,{'status':'ok','service':'bonsai-guard','max_tool_calls':tool_limit()})
+        if self.path in ('/health','/healthz'):return self.send_json(200,{'status':'ok','service':'bonsai-guard','max_tool_calls':tool_limit(),'busy':LOCK.locked()})
         try:
             with urllib.request.urlopen(UPSTREAM+self.path,timeout=5) as r:self.send_json(r.status,json.load(r))
         except Exception as e:self.send_json(503,{'error':{'message':str(e)}})
@@ -127,6 +174,9 @@ class Handler(BaseHTTPRequestHandler):
                 except Exception:self.send_json(502,{'error':{'message':str(e)}})
         except (anthropic.ProtocolError,json.JSONDecodeError) as e:
             self.send_json(400,{'type':'error','error':{'type':'invalid_request_error','message':str(e)}} if is_anthropic else {'error':{'message':str(e)}})
+        except UpstreamOutputError as e:
+            event('tool_output_rejected',protocol='anthropic' if is_anthropic else 'openai',reason=e.code)
+            self.send_json(502,{'type':'error','error':{'type':'api_error','message':str(e)}} if is_anthropic else {'error':{'type':'upstream_output_error','code':e.code,'message':str(e)}})
         except (BrokenPipeError,ConnectionResetError):pass
         except Exception as e:self.send_json(502,{'type':'error','error':{'type':'api_error','message':str(e)}} if is_anthropic else {'error':{'message':str(e)}})
 if __name__=='__main__':ThreadingHTTPServer(('127.0.0.1',8081),Handler).serve_forever()

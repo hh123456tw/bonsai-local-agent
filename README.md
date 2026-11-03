@@ -35,6 +35,8 @@ powershell -NoProfile -ExecutionPolicy Bypass -File C:\AI\bonsai\start.ps1
 
 ## 防循環的實際行為
 
+OpenAI輸出額度修正與Claude改檔指引見[API預算說明](docs/api-budget.zh-TW.md)：小額度不再膨脹為2048，明確關閉思考會生效；截斷／無效工具JSON不放行，工具權限與總次數政策保留。
+
 - 已發布的 fusion-kvmem sm_86 引擎：思考重複懲罰 1.0、一般 presence 0。
 - 橋接層設定思考預算，剝除舊 reasoning 欄位，設定 preserve_thinking=false。
 - 相同工具連續執行兩次後，若模型仍要求同一工具，最多糾正重試兩次。
